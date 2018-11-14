@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bigin_install.html" beforeDir="false" afterPath="$PROJECT_DIR$/bigin_install.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="363">
+              <caret line="152" column="40" lean-forward="true" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -167,12 +166,12 @@
       <workItem from="1542099918181" duration="4202000" />
       <workItem from="1542107040656" duration="1282000" />
       <workItem from="1542158422681" duration="9438000" />
-      <workItem from="1542171787781" duration="15000" />
+      <workItem from="1542171787781" duration="401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14937000" />
+    <option name="totallyTimeSpent" value="15323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -185,7 +184,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.31179488" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31179488" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -278,8 +277,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="363">
+          <caret line="152" column="40" lean-forward="true" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
         </state>
       </provider>
     </entry>
