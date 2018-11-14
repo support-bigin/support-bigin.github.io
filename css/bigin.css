@@ -1,0 +1,569 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import './sub_bigin.css';
+body {
+    font-family: 'Spoqa Han Sans', Malgun Gothic, dotum, sans-serif;
+}
+
+pre[class*="language-"] {
+    box-shadow: none;
+}
+
+.box{
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 99%;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* width: 73px; */
+    padding: 3px 5px 2px 5px;
+    color: #4a6785;
+    background-color: #fff;
+}
+/* common header */
+#header {
+    position: fixed;
+    margin:0;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    background-color: rgba(255,255,255,0.9);
+    padding: 0 24px;
+    z-index: 99;
+}
+#header .logo {
+    display: inline-block;
+    margin-top: 20px;
+}
+#header .logo-img {
+    height: 18px;
+    float: left;
+    margin-right: 2px;
+    margin-top: 3px;
+}
+#header .header-menu {
+    float: right;
+    margin-top: 12px;
+}
+
+/* front page */
+#frontpage {
+    /* html settings for footer height */
+    position: relative;
+    min-height: 100%;
+}
+#frontpage body{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 160px; /* Margin bottom by footer height */
+}
+
+#frontpage .content {
+    margin-top: 164px;
+    max-width: 960px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+#frontpage .menu {
+    margin: 80px 0 50px;
+}
+#frontpage .menu p {
+    font-size: 16px;
+}
+
+#frontpage footer {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    background-color: #f2f2f5;
+    color: #95959e;
+    padding: 24px;
+}
+#frontpage footer .copyright {
+    float: left;
+}
+#frontpage footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+#frontpage footer ul li {
+    display: inline;
+    margin-left: 30px;
+}
+#frontpage footer ul li a {
+    color: #777;
+}
+
+/* media queries for 'frontpage' */
+@media screen and (max-width: 360px) {
+    #frontpage footer ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    #frontpage footer ul li {
+        display: inline;
+        float: left;
+        margin: 20px 30px 0 0;
+    }
+}
+
+
+
+/* 토스 결제 시작하기 */
+#bigin-install {
+    margin: 0px auto 80px 0;
+}
+#bigin-install .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: scroll;
+    width: 250px;
+    background-color: #FAFAFA;
+    border-right: 1px solid #e6e6e6;
+}
+#bigin-install .sidebar .logo {
+    background-color: #fff;
+    padding: 20px 24px;
+    font-size: 16px;
+}
+#bigin-install .sidebar .logo img {
+    height: 18px;
+    float: left;
+    margin-right: 2px;
+    margin-top: 3px;
+}
+#bigin-install .sidebar .logo span {
+    color: #212529;
+}
+#bigin-install #guide h1 {
+    margin-top: 0;
+    padding: 12px 25px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+#bigin-install #guide h1 a {
+    color: #555;
+}
+#bigin-install #guide .menu > li.active > .nav {
+    display: block;
+}
+#bigin-install #guide .menu > li.active > .nav  a {
+    font-size: 13px;
+    color: #555;
+}
+#bigin-install #guide .menu > li ul li.active a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: underline;
+}
+#bigin-install #guide .menu > li.active > a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: underline;
+}
+#bigin-install #guide .menu > li a {
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 15px 10px 25px;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -ms-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear; }
+#bigin-install #guide .menu > li a:hover {
+}
+#bigin-install #guide .menu > li > .nav {
+    margin-bottom: 7px;
+    display: none; }
+#bigin-install #guide .menu > li > .nav li a {
+    font-weight: 400;
+    color: #48A0D6;
+    padding: 6px 15px 5px 35px; }
+
+#bigin-install #contents {
+    background: #FFF;
+    margin-left: 250px;
+    max-width: 840px;
+    min-width: 320px;
+}
+#bigin-install #contents #methods {
+    padding-left: 60px;
+    padding-right: 40px;
+}
+#bigin-install #contents #methods .method:first-child .method-description {
+    margin-top: 70px;
+    padding-top: 0px;
+    border-top: 0px; }
+#bigin-install #contents #methods .method:last-child {
+    padding-bottom: 70px; }
+#bigin-install #contents #methods .method .method-description {
+    border-top: 1px solid #E5E7EB;
+    margin-top: 30px;
+    padding-top: 80px; }
+#bigin-install #contents #methods .method .method-description h3 {
+    font-size: 37px;
+    color: #333;
+    margin-top: 0px;
+    margin-bottom: 29px;
+    font-weight: normal;}
+#bigin-install #contents #methods .method .method-description h4 {
+    margin-top: 48px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 26px;
+    color: #000;
+}
+#bigin-install #contents #methods .method .method-description h5 {
+    margin-top: 18px;
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #555;
+}
+#bigin-install #contents #methods .method .method-description p,
+#bigin-install #contents #methods .method .method-description ul,
+#bigin-install #contents #methods .method .method-description ol,
+#bigin-install #contents #methods .method .method-description>div {
+    font-size: 14px;
+    color: #666;
+    line-height: 26px;
+    /*            margin-left: 34px;*/
+    margin-bottom: 8px; }
+#bigin-install #contents #methods .method .method-description ul{
+    list-style-type : disc;
+}
+#bigin-install #contents #methods .method .method-description>div.well {
+    padding: 7px 24px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+#bigin-install #contents #methods .method .method-description img {
+    /*              width: 100%;*/
+    margin-top: 12px;
+    margin-bottom: 6px;
+    border: 1px solid #e8e8e8;
+}
+#bigin-install #contents #methods .method .method-description table {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #666;
+}
+#bigin-install #contents #methods .method .method-description .info {
+    margin-top: 45px;
+    margin-bottom: 40px; }
+#bigin-install #contents #methods .method .method-description .info h4 {
+    font-size: 14px;
+    border-bottom: 1px solid #E4E4E4;
+    padding-bottom: 15px; }
+#bigin-install #contents #methods .method .method-description .info .field {
+    margin-top: 17px;
+    font-size: 13px; }
+#bigin-install #contents #methods .method .method-description .info .field .key {
+    width: 40%;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #333; }
+#bigin-install #contents #methods .method .method-description .info .field .desc {
+    width: 60%;
+    float: right;
+    padding-left: 10px;
+    color: #555;
+    line-height: 21px; }
+#bigin-install #contents #methods .method .method-description .info .field .desc strong {
+    display: block;
+    color: #333;
+    margin-bottom: 5px; }
+#bigin-install #contents #methods .method .method-example {
+    border-top: 1px solid #000;
+    color: #fff;
+    margin-top: 14px;
+    margin-bottom: 16px;
+}
+#bigin-install #contents #methods .method .method-example .languages {
+    position: relative;
+    width: 100%;
+    padding: 5px 0 5px 20px;
+    background: #3B4249;
+}
+#bigin-install #contents #methods .languages .language {
+    display: inline-block;
+    color: #C0CEDD;
+    padding: 5px 15px;
+    font-size: 13px;
+}
+#bigin-install #contents #methods .languages .language.selected {
+    color: #fff;
+}
+#bigin-install #contents #methods .method .method-example pre {
+    background: black!important;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+#bigin-install #contents #methods .method .method-example pre code {
+    background: none;
+    display: none;
+}
+#bigin-install #contents #methods .method .method-example pre code.always-visible {
+    display: block !important; }
+#bigin-install #contents #methods .method .method-example pre code.language-bash {
+    display: block;
+    background: black!important;
+    color: white;
+    white-space: pre;
+    cursor: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+#bigin-install #contents #methods .method .method-example pre code.language-bash .declaration{
+    color : #b43d3d!important;
+    cursor: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+#bigin-install #contents #methods .method .method-example pre code.language-bash .text{
+    cursor: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    color : #1dc116!important
+}
+#bigin-install #contents #methods .method .method-example pre code.language-bash .comment{
+    cursor: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    color : #428bdd!important;
+}
+
+#bigin-install #contents #methods .method .method-example pre code > * {
+    line-height: 20px; }
+
+/* media queries for 'getting started' */
+@media screen and (max-width: 780px) {
+    #bigin-install .sidebar {
+        position: relative;
+        width: 100%;
+    }
+    #bigin-install #guide a{
+        margin-left: 20px;
+    }
+    #bigin-install #contents {
+        background: #FFF;
+        margin-left: 0;
+    }
+}
+
+/* API 문서 */
+#docs {
+}
+#docs #guide {
+    background: #fafafa;
+    border-right: 1px solid #DADFE5;
+    left: 0;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 210px;
+    z-index: 25;
+    height: 100%; }
+#docs #guide .logo {
+    background-color: #fff;
+    padding: 20px 24px;
+    font-size: 16px;
+}
+#docs #guide .logo img {
+    height: 18px;
+    float: left;
+    margin-right: 2px;
+    margin-top: 3px;
+}
+#docs #guide .logo span {
+    color: #212529;
+}
+#docs #guide .menu h5 {
+    padding: 20px 15px 0px 25px;
+    color: #555;
+    font-size: 15px;
+    font-weight: 800;
+}
+#docs #guide .menu > li.active > .nav {
+    display: block; }
+#docs #guide .menu > li.active > a {
+    background: #DEEAF1; }
+#docs #guide .menu > li a {
+    color: #555;
+    font-size: 15px;
+    padding: 10px 15px 10px 25px;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -ms-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear; }
+#docs #guide .menu > li a:hover {
+    background: #DEEAF1; }
+#docs #guide .menu > li > .nav {
+    margin-bottom: 7px;
+    display: none; }
+#docs #guide .menu > li > .nav li a {
+    font-weight: 400;
+    color: #506070;
+    font-size: 14px;
+    padding: 6px 15px 5px 35px; }
+#docs #api-docs {
+    background: #FFF;
+    margin-left: 210px;
+    min-width: 750px; }
+#docs #api-docs #methods {
+    background: #292E33;
+    position: relative;
+    margin-left: 50%; }
+#docs #api-docs #methods .languages {
+    position: fixed;
+    top: 0;
+    margin: 0 0 0 -5px;
+    width: 100%;
+    padding: 5px 0 5px 20px;
+    background: #3B4249;
+    box-shadow: 2px 1px 3px #000;
+    z-index: 999; }
+#docs #api-docs #methods .languages .language {
+    display: inline-block;
+    color: #C0CEDD;
+    padding: 5px 15px;
+    font-size: 13px; }
+#docs #api-docs #methods .languages .language.selected {
+    color: #fff;
+    background-color: #4e7bfa;
+    border-radius: 14px;
+}
+#docs #api-docs #methods .method:nth-child(2) .method-section .method-description {
+    padding-top: 0px;
+    border-top: 0px; }
+#docs #api-docs #methods .method:nth-child(2) .method-section .method-example {
+    padding-top: 35px;
+    border-top: 0;
+    box-shadow: none; }
+#docs #api-docs #methods .method:last-child .method-section {
+    padding-bottom: 70px; }
+#docs #api-docs #methods .method .method-section {
+    margin-left: -100%;
+    position: relative;
+    padding-top: 50px; }
+#docs #api-docs #methods .method .method-section .method-description {
+    width: 50%;
+    float: left;
+    padding: 0 24px 0 30px;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 40px; }
+#docs #api-docs #methods .method .method-section .method-description h3 {
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 20px; }
+#docs #api-docs #methods .method .method-section .method-description p {
+    font-size: 13px;
+    color: #666;
+    line-height: 21px;
+    margin-bottom: 20px; }
+#docs #api-docs #methods .method .method-section .method-description .info {
+    margin-top: 45px;
+    margin-bottom: 40px; }
+#docs #api-docs #methods .method .method-section .method-description .info h4 {
+    text-transform: uppercase;
+    font-size: 13px;
+    /*border-bottom: 1px solid #E4E4E4;*/
+    background-color: #f4f4f4;
+    color: #777;
+    padding: 8px 8px;}
+#docs #api-docs #methods .method .method-section .method-description .info .field {
+    /*margin-top: 17px;*/
+    padding: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #f6f6f6;
+}
+#docs #api-docs #methods .method .method-section .method-description .info .field .key {
+    position: relative;
+    color: #333;
+    font-weight: bold;
+    float: left;
+    overflow-wrap: break-word;
+    text-align: right;
+    width: 30%;
+}
+#docs #api-docs #methods .method .method-section .method-description .info .field .key span {
+    display: block;
+    padding-left: 10px;
+    color: #999;
+    line-height: 21px;
+    font-size: 12px;
+    /*margin-bottom: 5px; */
+}
+#docs #api-docs #methods .method .method-section .method-description .info .field .key .required:before{
+    color: #c25300;
+    content: '필수';
+}
+#docs #api-docs #methods .method .method-section .method-description .info .field .key .use-only{
+    color: #c25300;
+}
+#docs #api-docs #methods .method .method-section .method-description .info .field .desc {
+    width: 65%;
+    float: right;
+    text-align: left;
+    padding-right: 10px;
+    /*font-weight: bold;*/
+    color: #333; }
+#docs #api-docs #methods .method .method-section .method-description .info .field .desc .action-key {
+    font-weight: bold }
+
+#docs #api-docs #methods .method .method-section .method-example {
+    margin-left: 50%;
+    width: 50%;
+    padding: 75px 0 0;
+    border-top: 1px solid #000;
+    box-shadow: inset 0px 1px rgba(255, 255, 255, 0.17);
+    color: #fff; }
+#docs #api-docs #methods .method .method-section .method-example > * {
+    margin : 10px 20px 30px;
+}
+#docs #api-docs #methods .method .method-section .method-example pre {
+    background: none;
+    border: none;
+    padding: 0; }
+#docs #api-docs #methods .method .method-section .method-example pre code {
+    background: none;
+    font-size: 12px;
+    display: none; }
+#docs #api-docs #methods .method .method-section .method-example pre code.always-visible {
+    display: block !important; }
+#docs #api-docs #methods .method .method-section .method-example .title {
+    padding: 10px;
+    margin: 0 0 0 -5px;
+    background-color: #3B4249;
+    box-shadow: 2px 1px 1px #1C1F22;
+    z-index: 999;
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>SDK 추적코드 설치하기</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+        crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://static.toss.im/tds/current/css/tds.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bigin.css"/>
+
+  <!-- javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+          integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+          crossorigin="anonymous"></script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body id="bigin-install" data-spy="scroll" data-target="#guide" data-offset="0">
+
+
+<div class="sidebar">
+  <div class="logo">
+    <a href="index.html">
+      <img class="logo-img" src="images/bigin_logo.png" alt="">
+      <span>bigin 시작하기</span>
+    </a>
+  </div>
+  <div id="guide">
+    <h1>
+      <a href="#">SDK 추적코드 설치</a>
+    </h1>
+    <ul class="menu nav">
+      <li>
+        <a href="#overview">시작하기</a>
+      </li>
+      <li>
+        <a href="#create">기본 추적 스크립트</a>
+        <ul class="nav">
+          <li><a href="#create-1">추적 ID 찾기</a></li>
+          <li><a href="#create-2">추적 코드 스니펫</a></li>
+          <li><a href="#create-3">데이터 수집의 허용</a></li>
+          <li><a href="#create-4">특정 페이지 뷰 추적 사용 중지</a></li>
+          <li><a href="#create-5">SPA(SinglePageApplication)의 페이지 뷰 추적</a></li>
+          <li><a href="#create-6">표시 통화의 설정</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#execute">고유 사용자 식별</a>
+        <ul class="nav">
+          <li><a href="#execute-1">로그인 사용자 식별</a></li>
+          <li><a href="#execute-2">복수 계정 사용자의 추적</a></li>
+          <li><a href="#execute-3">모바일 사용자의 위치정보 수집</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<div id="contents">
+  <div id="methods">
+    <div class="method" id="overview">
+      <div class="method-description">
+        <h3>시작하기</h3>
+
+        <p>bigin의 WEB SDK는 웹사이트에 삽입되는 스크립트 형태로, 웹사이트에 접속한 사용자들의 행동 이벤트를 추적하고, 웹사이트로 유입된 사용자의 구매행동 추적 및 다차원 분석을
+          지원합니다.</p>
+        <p>웹사이트에서 기본 데이터를 수집하는 방법은 다음과 같습니다.</p>
+        <p>발급된 상점 API Key는 결제 생성 / 환불 등 모든 거래에서 인증 수단으로 활용합니다.</p>
+
+        <ol>
+          <li>새로운 bigin 계정을 만들거나 계정에 로그인합니다.</li>
+          <ul>
+            <li>계정을 만들려면 <a href="https://insight.bigin.io/sign-up" target="_blank">무료로 시작하기</a>를 클릭합니다.</li>
+            <li>계정에 로그인하려면 <a href="https://insight.bigin.io/login" target="_blank">로그인</a>을 클릭합니다.</li>
+          </ul>
+          <li>프로젝트를 생성하여 추적코드를 발급받습니다.</li>
+          <li>안내에 따라 웹사이트 또는 모바일 앱에 추적코드를 추가하면 프로젝트의 기본 추적 데이터가 수집됩니다.</li>
+        </ol>
+
+      </div>
+    </div>
+    <div class="method" id="create">
+      <div class="method-description">
+        <h3>기본 추적 스크립트</h3>
+        <ol>
+          <li>추적 스크립트는 프로젝트마다 고유의 추적 ID로 작동합니다. 프로젝트 생성을 완료하면 bigin.js 를 사용할 수 있는 추적코드가 생성됩니다.</li>
+          <li>아래의 설명에 따라 추적 ID를 찾습니다. 추적 코드 스니펫에 이 추적 ID를 사용합니다.</li>
+          <li>bigin.js 추적 코드 스니펫을 복사하여 추적할 각 웹페이지에 삽입합니다. 각 페이지의 시작 태그인 &lt;head &gt; 바로 다음에 추적 코드 스니펫을 추가합니다.</li>
+        </ol>
+        <p class="well">웹사이트의 SDK의 경우 구글 태그매니저(GTM)의 설치를 지원합니다. 구글 태그매니저의 설치방법은 여기를 참고하세요.</p>
+
+        <h4 id="create-1">추적 ID 찾기</h4>
+        <p>추적 ID를 찾으려면 다음 단계를 따르세요.</p>
+        <ol>
+          <li><a href="https://insight.bigin.io/login">insight.bigin.io</a>에 로그인합니다.</li>
+          <li><strong>설정 > 해당 프로젝트</strong>를 클릭합니다.</li>
+          <!--TODO : 추적 아이디 링크 설정 -->
+          <li>추적 ID가 페이지 상단에 표시됩니다.</li>
+        </ol>
+        <p>사이트의 각 페이지에서 &lt;head&gt; 태그 바로 뒤에 다음 스니펫을 삽입합니다. 다음과 같이 <span class="box">PROJECTID</span>를 실제 프로젝트의 추적ID로
+          변경합니다.</p>
+
+        <h4 id="create-2">추적 코드 스니펫</h4>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  (<span class="declaration">function</span>() {
+    <span class="declaration">var</span> biginScript = document.createElement(<span class="text">'script'</span>);
+    biginScript.type = <span class="text">'text/javascript'</span>;
+    biginScript.async = true;
+    biginScript.src = <span class="text">'https://sdk.bigin.io/v0.3/bigin.js'</span>; <span class="comment">// bigin SDK 버전</span>
+    biginScript.onload = function() {
+      bigin.config({
+        projectID: <span class="text">"프로젝트 ID"</span>, <span
+              class="comment">// 프로젝트의 고유 추적 ID 입니다. 'G924TSD55D-2'</span>
+        domain: <span class="text">"https://i.bigin.io/i"</span>, <span class="comment">// 프로젝트의 도메인 url 입니다.</span>
+        track: <span class="text">['sessions', 'views', 'clicks', 'scrolls']</span>, <span class="comment">// 자동 추적(AutoTrack)이 가능한 이벤트와 제스처</span>
+        enableTrackLocation:true, <span class="comment">// 모바일 접속 시 위치정보 수집 허용</span>
+        currencyCode: “KRW” <span class="comment">// 표시 통화</span>
+      });
+    };
+    <span class="declaration">var</span> s = document.getElementsByTagName(<span class="text">'script'</span>)[0];
+    s.parentNode.inserBefore(ab, s);
+  })();
+            </code>
+          </pre>
+        </div>
+        <h4 id="create-3">데이터 수집의 허용</h4>
+        <p>bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있습니다. 아래에서 선택적으로 추적되는 추적항목을 확인하세요.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  track : [
+    <span class="text">'session'</span>, <span
+              class="comment">// 사용자 방문의 단위를 수집하기 위한 단위입니다. 가능한 이 데이터는 추적을 권장합니다.</span>
+    <span class="text">'views'</span>, <span class="comment">// 사용자의 페이지 조회를 수집할 수 있습니다. SPA(SinglePageApplication)은 별도의 설정이 필요합니다.</span>
+    <span class="text">'clicks'</span>, <span class="comment">// 마우스로 클릭하는 모든 클릭이벤트를 수집합니다. 특정 이벤트의 추적은 CustomEvent 의 추적을 이용하세요.</span>
+    <span class="text">'scrolls'</span> <span class="comment">// 웹사이트 내의 스크롤 이벤트를 수집합니다.</span>
+  ]</code>
+          </pre>
+        </div>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  (<span class="declaration">function</span>() {
+    bigin.track(<span class="text">'sessions'</span>);
+    bigin.track(<span class="text">''clicks'</span>);
+    bigin.track(<span class="text">''scrolls'</span>);
+    bigin.track(<span class="text">''links'</span>);
+    bigin.track(<span class="text">''forms'</span>);
+    bigin.track(<span class="text">''errors'</span>);
+  })();</code>
+          </pre>
+        </div>
+        <h4 id="create-4">특정 페이지 뷰 추적 사용 중지</h4>
+        <p>이 스니펫의 기본 동작은 bigin SDK 로 페이지 뷰 조회를 보내는 것입니다. 이것은 대부분의 경우 권장하는 부분입니다. 사이트의 각 페이지에 스니펫을 추가하면 페이지 뷰가 자동으로
+          추적됩니다. 그러나 스니펫이 대시보드로 페이지 뷰 조회를 보내지 않게하려면 send_page_view매개 변수를 false다음 과 같이 설정하십시오 .</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">  ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/page'</span>] <span
+              class="comment">// 추적 사용을 중지할 특정 페이지의 path를 다음과 같이 추가하세요.</span></code>
+          </pre>
+        </div>
+
+        <h4 id="create-5">SPA(SinglePageApplication)의 페이지 뷰 추적</h4>
+        <p>SPA(SinglePageApplication) 단일 페이지 어플리케이션로 개발된 웹사이트의 경우, 페이지 뷰 이벤트의 별도 추적이 필요합니다.</p>
+        <p>아래의 스니펫을 추적할 페이지의 &lt;head&gt; 태그 안에 추가하세요.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  (<span class="declaration">function</span>() {
+    bigin.track(<span class="text">'views'</span>, {
+      page : "/productDetail/12345", <span class="text">// (옵션)pagePath 또는 window.location.pathname 로 추적합니다.</span>
+      <span class="text">ignore : ["/main"]</span> <span class="comment">// (옵션)추적을 허용하지 않는 페이지의 정규식</span>
+    });
+  })();</code>
+          </pre>
+        </div>
+
+        <h4 id="create-6">표시 통화의 설정</h4>
+        <p><a href="https://www.nationsonline.org/oneworld/currencies.htm" target="_blank">ISO 4217 기반 화폐단위</a>를 나타내는 코드로 수집 데이터 중 발생하는 수익의 표시 통화를 나타냅니다.</p>
+        <p>표시통화를 설정하는 방법은 아래와 같으며, 우선 순위의 적용도 다음 순서에 따릅니다.</p>
+        <ol>
+          <li>SDK에서 currencyCode 설정</li>
+          <li><a href="https://insight.bigin.io" target="_blank"><strong>insight.bigin.io</strong></a> > 설정 > 비즈니스 설정 에서 통화 설정 </li>
+          <li>기본 설정 = 대한민국 통화(KRW)</li>
+        </ol>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  (<span class="declaration">function</span>() {
+    bigin.config({
+      currencyCode : <span class="text">"KRW"</span>
+    });
+  })();</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="method" id="execute">
+      <div class="method-description">
+        <h3>고유 사용자 식별</h3>
+        <h4 id="execute-1">로그인 사용자 식별</h4>
+        <p>bigin은 로그인 또는 회원가입 등 회원의 고유정보를 수집하여, 이커머스 및 웹사이트에서 행동하는 이벤트를 개별 사용자의 행동으로 처리할 수 있도록 사용자를 추적합니다. 로그인을 통한 사용자 중심의 분석은 다양한 비즈니스 접점을 한 명의 사용자 중심으로 이어주기 때문에 전체 사용자의 파악과 경로를 통한 분석을 할 수 있습니다.</p>
+        <p>WEB SDK 설치 시 아래와 같이 <span class="box">ID</span> 와  <span class="box">EMAIL</span> 을 설정해야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  (<span class="declaration">function</span>() {
+    bigin.user(<span class="text">"profile"</span>,{
+      <span class="text">'id'</span>: <span class="text">'baf5c122.e9917a0632af'</span>, <span class="comment">// (필수) bigin에서 발급되는 고유 ID 외에 별도의 ID로 사용자를 식별할 수 있습니다.</span>
+      <span class="text">'email'</span>: <span class="text">'support@bigin.io'</span>, <span class="comment">// (필수) 사용자의 이메일</span>
+      <span class="text">'name'</span>: <span class="text">'홍길동'</span>, <span class="comment">// 이름</span>
+      <span class="text">'nickname'</span>: <span class="text">'길동이'</span>, <span class="comment">// 닉네임</span>
+      <span class="text">'phoneNumber'</span>: <span class="text">'01011112222'</span>, <span class="comment">// 전화번호</span>
+      <span class="text">'gender'</span>: <span class="text">'Male'</span>, <span class="comment">// 성별</span>
+      <span class="text">'birth'</span>: <span class="text">'1990'</span>, <span class="comment">// 생년</span>
+      <span class="text">'address'</span>: <span class="text">'서울시 강남구 선릉로 90길 36 미소빌딩 8층 Big Insight'</span>, <span class="comment">// 주소</span>
+      <span class="text">'property'</span>: <span class="text">'Value'</span>, <span class="comment">// 회원의 정보에 추가하고 싶은 항목을 함께 추적할 수 있습니다.</span>
+    });
+  })();</code>
+          </pre>
+        </div>
+        <h4 id="execute-2">복수 계정 사용자의 추적</h4>
+        <p>한 세션 안에서 로그인하지 않은 상태의 행동과 로그인 후의 행동은 로그인 사용자의 행동으로 통합됩니다.</p>
+        <p>만약 세션 안에서 한 계정 외에 다른 계정의 로그인이 복수로 발생할 경우 마지막 로그인 사용자의 계정에 이전의 데이터가 모두 속하게 됩니다.</p>
+        <p>위와 같은 문제를 해결하기 위해서는 로그인을 끊을 수 있는 행동에 아래의 스니펫을 추가하여 기존 로그인 사용자의 세션을 종료하여야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  (<span class="declaration">function</span>() {
+    bigin.user(<span class="text">"logout"</span>);
+  })();</code>
+          </pre>
+        </div>
+        <h4 id="execute-3">모바일 사용자의 위치정보 수집</h4>
+        <p>bigin의 기본적인 사용자 위치를 수집하는 방식은 IP에 기반한 주소로 수집합니다. 더 정확한 위치의 수집이 필요한 경우에는 모바일에서 접속한 사용자의 위도와 경도를 수집할 수 있습니다. 아래의 스니펫을 &lt;head&gt; 태그 사이에 추가하세요. 사용자의 위치정보 수집을 묻고, 허용한다면 사용자의 현재 위치의 위도와 경도를 수집하여 저장할 수 있습니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  (<span class="declaration">function</span>() {
+    bigin.user(<span class="text">"location"</span>); <span class="comment">// 기본 추적코드에 함께 있는 옵션입니다. 별도 적용 또는 기본추적코드의 enableTrackLocation 을 TRUE 로 허용하세요.</span>
+  })();</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(function () {
+    //			hljs.configure({
+    //			  tabReplace: '  ',
+    //			  classPrefix: ''
+    //			})
+    //			hljs.initHighlightingOnLoad();
+    // language toggle
+    var $languages = $(".languages .language");
+    $languages.click(function (e) {
+      e.preventDefault();
+      var lang = $(this).data("lang");
+      $languages.removeClass("selected");
+      $(this).addClass("selected");
+      $("pre code").hide();
+      $("pre code." + lang).css("display", "block");
+    });
+  });
+</script>
+<script src="js/prism.js"></script>
+</body>
+
+</html>
