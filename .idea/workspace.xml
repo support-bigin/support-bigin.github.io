@@ -19,8 +19,8 @@
       <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="117" column="67" lean-forward="true" selection-start-line="117" selection-start-column="67" selection-end-line="117" selection-end-column="67" />
+            <state relative-caret-position="392">
+              <caret line="125" column="85" lean-forward="true" selection-start-line="125" selection-start-column="85" selection-end-line="125" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -155,12 +155,12 @@
       <workItem from="1542099918181" duration="4202000" />
       <workItem from="1542107040656" duration="1282000" />
       <workItem from="1542158422681" duration="9438000" />
-      <workItem from="1542171787781" duration="872000" />
+      <workItem from="1542171787781" duration="1517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15794000" />
+    <option name="totallyTimeSpent" value="16439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -266,8 +266,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="117" column="67" lean-forward="true" selection-start-line="117" selection-start-column="67" selection-end-line="117" selection-end-column="67" />
+        <state relative-caret-position="392">
+          <caret line="125" column="85" lean-forward="true" selection-start-line="125" selection-start-column="85" selection-end-line="125" selection-end-column="85" />
         </state>
       </provider>
     </entry>
