@@ -19,8 +19,8 @@
       <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="152" column="40" lean-forward="true" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
+            <state relative-caret-position="304">
+              <caret line="117" column="67" lean-forward="true" selection-start-line="117" selection-start-column="67" selection-end-line="117" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -37,8 +37,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sidebar</find>
-      <find>gettingstarted</find>
       <find>overview</find>
       <find>bigin_</find>
       <find>.nav</find>
@@ -66,11 +64,15 @@
       <find>create</find>
       <find>active</find>
       <find>ol&gt;li</find>
+      <find>“</find>
+      <find>”</find>
+      <find>'</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
       <replace>bigin-install-gtm</replace>
       <replace>bigin-install</replace>
+      <replace>&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -111,20 +113,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="support-bigin.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="support-bigin.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -166,12 +155,12 @@
       <workItem from="1542099918181" duration="4202000" />
       <workItem from="1542107040656" duration="1282000" />
       <workItem from="1542158422681" duration="9438000" />
-      <workItem from="1542171787781" duration="401000" />
+      <workItem from="1542171787781" duration="872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15323000" />
+    <option name="totallyTimeSpent" value="15794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -184,7 +173,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31179488" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.31179488" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -277,8 +266,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="152" column="40" lean-forward="true" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
+        <state relative-caret-position="304">
+          <caret line="117" column="67" lean-forward="true" selection-start-line="117" selection-start-column="67" selection-end-line="117" selection-end-column="67" />
         </state>
       </provider>
     </entry>
