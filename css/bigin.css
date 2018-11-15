@@ -205,6 +205,12 @@ pre[class*="language-"] {
     padding-left: 60px;
     padding-right: 40px;
 }
+
+#bigin-install #contents #methods .method h2{
+    border-bottom: 0;
+    font-size: 40px;
+    margin-top: 70px;
+}
 #bigin-install #contents #methods .method:first-child .method-description {
     margin-top: 70px;
     padding-top: 0px;
@@ -214,7 +220,11 @@ pre[class*="language-"] {
 #bigin-install #contents #methods .method .method-description {
     border-top: 1px solid #E5E7EB;
     margin-top: 30px;
-    padding-top: 80px; }
+    padding-top: 80px;
+}
+#bigin-install #contents #methods .method .method-description.border-top-0{
+    border-top: 0px !important;
+}
 #bigin-install #contents #methods .method .method-description h3 {
     font-size: 37px;
     color: #333;
@@ -254,7 +264,7 @@ pre[class*="language-"] {
     margin-bottom: 16px;
 }
 #bigin-install #contents #methods .method .method-description img {
-    /*              width: 100%;*/
+    width: 100% !important;
     margin-top: 12px;
     margin-bottom: 6px;
     border: 1px solid #e8e8e8;
@@ -566,4 +576,18 @@ pre[class*="language-"] {
     background-color: #3B4249;
     box-shadow: 2px 1px 1px #1C1F22;
     z-index: 999;
+}
+
+.screenshot{
+    background-size: contain !important;
+    min-width: 320px;
+    max-width: 840px;
+}
+.screenshot.gtm-snippet{
+    background: transparent url("../images/gtm-snippet.png") no-repeat center center;
+    /*min-height: 440px;*/
+}
+.screenshot.gtm-variable{
+    background: transparent url("../images/gtm-variable.png") no-repeat center center;
+    /*min-height: 200px;*/
 }

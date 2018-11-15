@@ -64,12 +64,71 @@
       </li>
 
     </ul>
+    <h1>
+      <a href="#gtm-install">GTM 설치</a>
+    </h1>
+    <ul class="menu nav">
+      <li>
+        <a href="#gtm-bigining">시작하기</a>
+      </li>
+      <li>
+        <a href="#gtm-insert">GTM 기본코드 삽입</a>
+      </li>
+      <li>
+        <a href="#gtm-variable">GTM 변수 생성</a>
+        <ul class="nav">
+        </ul>
+      </li>
+      <li>
+        <a href="#gtm-basic">기본 추적 태그 생성</a>
+        <ul class="nav">
+          <li><a href="#gtm-basic-1">bigin SDK 삽입</a></li>
+          <li><a href="#gtm-basic-2">설정 변경</a></li>
+          <li><a href="#gtm-basic-3">SPA(SinglePageApplication)의 페이지 뷰 추적</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#gtm-identify">사용자 식별 추적 태그 생성</a>
+        <ul class="nav">
+          <li><a href="#gtm-identify-1">로그인</a></li>
+          <li><a href="#gtm-identify-2">로그아웃</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#gtm-custom">커스텀 이벤트 추적 태그 생성</a>
+        <ul class="nav">
+          <li><a href="#gtm-custom-1">사용자 정의 이벤트</a></li>
+        </ul>
+      </li>
+      <!--<li>-->
+        <!--<a href="#gtm-ecommerce">이커머스 추적 태그 생성</a>-->
+        <!--<ul class="nav">-->
+        <!--</ul>-->
+      <!--</li>-->
+      <li>
+        <a href="#gtm-bigin">bigin 정의 이벤트 태그 생성</a>
+        <ul class="nav">
+          <li><a href="#gtm-bigin-1">상품 상세 보기</a></li>
+          <li><a href="#gtm-bigin-2">상품 페이지 이동</a></li>
+          <li><a href="#gtm-bigin-3">장바구니</a></li>
+          <li><a href="#gtm-bigin-4">장바구니 담기</a></li>
+          <li><a href="#gtm-bigin-5">결제진행</a></li>
+          <li><a href="#gtm-bigin-6">결제완료</a></li>
+          <li><a href="#gtm-bigin-7">환불</a></li>
+          <li><a href="#gtm-bigin-8">리뷰</a></li>
+        </ul>
+      </li>
+
+    </ul>
   </div>
 </div>
 
 <div id="contents">
+
   <div id="methods">
+
     <div class="method" id="overview">
+      <h2>SDK 추적코드 설치하기</h2>
       <div class="method-description">
         <h3>시작하기</h3>
 
@@ -96,7 +155,7 @@
           <li>아래의 설명에 따라 추적 ID를 찾습니다. 추적 코드 스니펫에 이 추적 ID를 사용합니다.</li>
           <li>bigin.js 추적 코드 스니펫을 복사하여 추적할 각 웹페이지에 삽입합니다. 각 페이지의 시작 태그인 &lt;head &gt; 바로 다음에 추적 코드 스니펫을 추가합니다.</li>
         </ol>
-        <p class="well">웹사이트의 SDK의 경우 구글 태그매니저(GTM)의 설치를 지원합니다. 구글 태그매니저의 설치방법은 여기를 참고하세요.</p>
+        <p class="well">웹사이트의 SDK의 경우 구글 태그매니저(GTM)의 설치를 지원합니다. 구글 태그매니저의 설치방법은 <a href="#gtm-install">여기</a>를 참고하세요.</p>
 
         <h4 id="create-1">추적 ID 찾기</h4>
         <p>추적 ID를 찾으려면 다음 단계를 따르세요.</p>
@@ -129,7 +188,7 @@
       });
     };
     <span class="declaration">var</span> s = document.getElementsByTagName(<span class="text">'script'</span>)[0];
-    s.parentNode.inserBefore(ab, s);
+    s.parentNode.inserBefore(biginScript, s);
   })();
             </code>
           </pre>
@@ -172,7 +231,7 @@
         </div>
 
         <h4 id="create-5">SPA(SinglePageApplication)의 페이지 뷰 추적</h4>
-        <p>SPA(SinglePageApplication) 단일 페이지 어플리케이션로 개발된 웹사이트의 경우, 페이지 뷰 이벤트의 별도 추적이 필요합니다.</p>
+        <p>SPA(SinglePageApplication) 단일 페이지 어플리케이션으로 개발된 웹사이트의 경우, 페이지 뷰 이벤트의 별도 추적이 필요합니다.</p>
         <p>아래의 스니펫을 추적할 페이지의 &lt;head&gt; 태그 안에 추가하세요.</p>
         <div class="method-example">
           <pre>
@@ -187,11 +246,14 @@
         </div>
 
         <h4 id="create-6">표시 통화의 설정</h4>
-        <p><a href="https://www.nationsonline.org/oneworld/currencies.htm" target="_blank">ISO 4217 기반 화폐단위</a>를 나타내는 코드로 수집 데이터 중 발생하는 수익의 표시 통화를 나타냅니다.</p>
+        <p><a href="https://www.nationsonline.org/oneworld/currencies.htm" target="_blank">ISO 4217 기반 화폐단위</a>를 나타내는
+          코드로 수집 데이터 중 발생하는 수익의 표시 통화를 나타냅니다.</p>
         <p>표시통화를 설정하는 방법은 아래와 같으며, 우선 순위의 적용도 다음 순서에 따릅니다.</p>
         <ol>
           <li>SDK에서 currencyCode 설정</li>
-          <li><a href="https://insight.bigin.io" target="_blank"><strong>insight.bigin.io</strong></a> > 설정 > 비즈니스 설정 에서 통화 설정 </li>
+          <li><a href="https://insight.bigin.io" target="_blank"><strong>insight.bigin.io</strong></a> > 설정 > 비즈니스 설정 에서
+            통화 설정
+          </li>
           <li>기본 설정 = 대한민국 통화(KRW)</li>
         </ol>
         <div class="method-example">
@@ -210,8 +272,9 @@
       <div class="method-description">
         <h3>고유 사용자 식별</h3>
         <h4 id="execute-1">로그인 사용자 식별</h4>
-        <p>bigin은 로그인 또는 회원가입 등 회원의 고유정보를 수집하여, 이커머스 및 웹사이트에서 행동하는 이벤트를 개별 사용자의 행동으로 처리할 수 있도록 사용자를 추적합니다. 로그인을 통한 사용자 중심의 분석은 다양한 비즈니스 접점을 한 명의 사용자 중심으로 이어주기 때문에 전체 사용자의 파악과 경로를 통한 분석을 할 수 있습니다.</p>
-        <p>WEB SDK 설치 시 아래와 같이 <span class="box">ID</span> 와  <span class="box">EMAIL</span> 을 설정해야 합니다.</p>
+        <p>bigin은 로그인 또는 회원가입 등 회원의 고유정보를 수집하여, 이커머스 및 웹사이트에서 행동하는 이벤트를 개별 사용자의 행동으로 처리할 수 있도록 사용자를 추적합니다. 로그인을 통한 사용자
+          중심의 분석은 다양한 비즈니스 접점을 한 명의 사용자 중심으로 이어주기 때문에 전체 사용자의 파악과 경로를 통한 분석을 할 수 있습니다.</p>
+        <p>WEB SDK 설치 시 아래와 같이 <span class="box">ID</span> 와 <span class="box">EMAIL</span> 을 설정해야 합니다.</p>
         <div class="method-example">
           <pre>
             <code class="language-bash">
@@ -221,10 +284,12 @@
       <span class="text">'email'</span>: <span class="text">'support@bigin.io'</span>, <span class="comment">// (필수) 사용자의 이메일</span>
       <span class="text">'name'</span>: <span class="text">'홍길동'</span>, <span class="comment">// 이름</span>
       <span class="text">'nickname'</span>: <span class="text">'길동이'</span>, <span class="comment">// 닉네임</span>
-      <span class="text">'phoneNumber'</span>: <span class="text">'01011112222'</span>, <span class="comment">// 전화번호</span>
+      <span class="text">'phoneNumber'</span>: <span class="text">'01011112222'</span>, <span
+              class="comment">// 전화번호</span>
       <span class="text">'gender'</span>: <span class="text">'Male'</span>, <span class="comment">// 성별</span>
       <span class="text">'birth'</span>: <span class="text">'1990'</span>, <span class="comment">// 생년</span>
-      <span class="text">'address'</span>: <span class="text">'서울시 강남구 선릉로 90길 36 미소빌딩 8층 Big Insight'</span>, <span class="comment">// 주소</span>
+      <span class="text">'address'</span>: <span class="text">'서울시 강남구 선릉로 90길 36 미소빌딩 8층 Big Insight'</span>, <span
+              class="comment">// 주소</span>
       <span class="text">'property'</span>: <span class="text">'Value'</span>, <span class="comment">// 회원의 정보에 추가하고 싶은 항목을 함께 추적할 수 있습니다.</span>
     });
   })();</code>
@@ -243,13 +308,513 @@
           </pre>
         </div>
         <h4 id="execute-3">모바일 사용자의 위치정보 수집</h4>
-        <p>bigin의 기본적인 사용자 위치를 수집하는 방식은 IP에 기반한 주소로 수집합니다. 더 정확한 위치의 수집이 필요한 경우에는 모바일에서 접속한 사용자의 위도와 경도를 수집할 수 있습니다. 아래의 스니펫을 &lt;head&gt; 태그 사이에 추가하세요. 사용자의 위치정보 수집을 묻고, 허용한다면 사용자의 현재 위치의 위도와 경도를 수집하여 저장할 수 있습니다.</p>
+        <p>bigin의 기본적인 사용자 위치를 수집하는 방식은 IP에 기반한 주소로 수집합니다. 더 정확한 위치의 수집이 필요한 경우에는 모바일에서 접속한 사용자의 위도와 경도를 수집할 수 있습니다. 아래의
+          스니펫을 &lt;head&gt; 태그 사이에 추가하세요. 사용자의 위치정보 수집을 묻고, 허용한다면 사용자의 현재 위치의 위도와 경도를 수집하여 저장할 수 있습니다.</p>
         <div class="method-example">
           <pre>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     bigin.user(<span class="text">"location"</span>); <span class="comment">// 기본 추적코드에 함께 있는 옵션입니다. 별도 적용 또는 기본추적코드의 enableTrackLocation 을 TRUE 로 허용하세요.</span>
   })();</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="method" id="gtm-install">
+      <h2>GTM 설치</h2>
+      <div class="method-description border-top-0">
+        <h3 id="gtm-bigining">시작하기</h3>
+        <p>웹사이트의 SDK의 경우 구글 태그매니저(GTM)의 설치를 지원합니다.</p>
+        <p> GTM을 활용한 bigin SDK 설치 방법은 아래와 같습니다. </p>
+        <ol>
+          <li><a href="https://tagmanager.google.com" target="_blank">tagmanager.google.com</a>로 접속 후 태그관리자 계정과 컨테이너를
+            생성합니다.
+          </li>
+          <li>컨테이너를 생성 후, 추적코드를 발급받습니다.</li>
+          <li>안내에 따라 웹사이트에 추적코드를 추가하면 프로젝트의 기본 추적 데이터가 수집됩니다.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="method" id="gtm-insert">
+      <div class="method-description">
+        <h3>GTM 기본코드 삽입</h3>
+        <p>가이드에 따라 GTM 추적코드를 프로젝트 내에 삽입합니다.</p>
+        <div class="screenshot gtm-snippet">
+          <img src="images/gtm-snippet.png">
+        </div>
+      </div>
+    </div>
+    <div class="method" id="gtm-variable">
+      <div class="method-description">
+        <h3>GTM 변수 생성</h3>
+        <p>data, eventName 이름의 데이터 영역 변수를 생성합니다. </p>
+        <div class="screenshot gtm-variable">
+          <img src="images/gtm-variable.png">
+        </div>
+      </div>
+    </div>
+    <div class="method" id="gtm-basic">
+      <div class="method-description">
+        <h3>기본 추적 태그 생성</h3>
+        <p>bigin의 모든 GTM 태그는 맞춤 HTML 태그를 사용합니다.</p>
+        <h4 id="gtm-basic-1">bigin SDK 삽입 태그</h4>
+        <p> bigin SDK 삽입 태그는 페이지뷰 트리거를 사용합니다. 웹사이트 로드 시, 해당 태그가 실행됩니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-config-script.png">
+        </div>
+        <!--<div class="method-example">-->
+          <!--<pre>-->
+            <!--<code class="language-bash">-->
+  <!--&lt;script&gt;(<span class='declaration'>function</span> () {-->
+    <!--var biginScript = document.createElement(<span class="text">'script'</span>);-->
+    <!--biginScript.type = <span class="text">'text/javascript'</span>;-->
+    <!--biginScript.async = true;-->
+
+    <!--// remote-->
+    <!--biginScript.src = <span class="text">'https://sdk.bigin.io/v1/bigin.sdk.js'</span>;-->
+
+    <!--biginScript.onload = <span class="declaration">function</span> () {-->
+      <!--bigin.config({-->
+        <!--app_key: <span class="text">"YOUR_APP_KEY"</span>, <span-->
+              <!--class="comment">// 프로젝트의 고유 추적 ID 입니다. 'G924TSD55D-2' </span>-->
+        <!--url: <span class="text">"https://i.bigin.io"</span>,-->
+        <!--track: [<span class="text">'sessions'</span>, <span class="text">'views'</span>, <span-->
+              <!--class="text">'clicks'</span>, <span class="text">'scrolls'</span>],-->
+        <!--enableAutoStoreGeoPosition: false,-->
+        <!--currencyCode: <span class="text">"KRW"</span>-->
+      <!--});-->
+    <!--};-->
+
+    <!--<span class="declaration">var</span> s = document.getElementsByTagName(<span class="text">'script'</span>)[0];-->
+    <!--s.parentNode.inserBefore(biginScript, s);-->
+  <!--})();-->
+  <!--&lt;/script&gt;-->
+            <!--</code>-->
+          <!--</pre>-->
+        <!--</div>-->
+        <div class="screenshot gtm-config">
+          <img src="images/gtm-config.png">
+        </div>
+        <h4 id="gtm-basic-2">표시 통화의 설정 변경 태그</h4>
+        <p>표시통화를 설정을 변경하는 태그입니다.</p>
+        <!--<p>&lt; 스크립트 &gt;</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  &lt;script&gt;
+    (<span class="declaration">function</span>() {
+      bigin.config({{<span class="text">data</span>}});
+    })();
+  &lt;/script&gt;
+            </code>
+          </pre>
+        </div>-->
+        <div class="screenshot gtm-currency">
+          <img src="images/gtm-currency.png">
+        </div>
+        <div class="screenshot currency-trigger">
+          <img src="images/currency-trigger.png">
+        </div>
+        <p>표시 통화 설정을 변경하기 위해서 아래의 코드를 프로젝트에 추가합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {'data' : undefined},
+    {
+      'event' : <span class="text">'config'</span>,
+      'data' : {currencyCode : <span class="text">'KRW'</span>}
+    }
+  );</code>
+          </pre>
+        </div>
+        <h4 id="gtm-basic-3">SPA(SinglePageApplication)의 페이지뷰 태그</h4>
+        <p>SPA(SinglePageApplication) 단일 페이지 어플리케이션으로 개발된 웹사이트의 경우, 페이지 뷰 이벤트의 별도 추적이 필요합니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-spa-pageview.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/spa-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'views'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'page'</span> : <span class="text">'/productDetail?productId=p12345'</span>,
+        <span class="text">'ignoreList'</span> : [<span class="text">'/main'</span>]
+      }
+    });</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="method" id="gtm-identify">
+      <div class="method-description">
+        <h3>사용자 식별 추적 태그 생성</h3>
+        <h4 id="gtm-identify-1">로그인 사용자 태그</h4>
+        <p>로그인한 사용자를 추적하기 위한 태그입니다.</p>
+        <p>태그 생성 방법을 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-login.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/login-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'login'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'id'</span> : <span class="text">'jqwe492-431jdfa-bdffe23-aaae3sddge'</span>,
+        <span class="text">'name'</span> : <span class="text">'홍길동'</span>,
+        <span class="text">'email'</span> : <span class="text">'cs@bigin.io'</span>,
+        <span class="text">'birth'</span> : <span class="text">'1990-10-23'</span>,
+        <span class="text">'gender'</span> : <span class="text">'Male'</span>,
+        <span class="text">'address'</span> : <span class="text">'서울시 강남구 선릉로 90길 36 미소빌딩 8층 Big Insight'</span>,
+        <span class="text">'phoneNumber'</span> : <span class="text">'01011112222'</span>,
+        <span class="text">'dimensionName'</span> : <span class="text">'dimensionValue'</span>,
+      }
+    });</code>
+          </pre>
+        </div>
+        <h4 id="gtm-identify-2">로그아웃 태그</h4>
+        <p>로그인한 사용자의 세션을 종료하기 위한 태그입니다.</p>
+        <p>태그 생성 방법을 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-logout.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/logout-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {<span class="text">'event'</span> : <span class="text">'logout'</span>});</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="method" id="gtm-custom">
+      <div class="method-description">
+        <h3>커스텀 이벤트</h3>
+        <h4 id="gtm-custom-1">사용자 정의 이벤트 태그</h4>
+        <p>태그 생성 방법을 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-custom.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/custom-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'custom'</span>,
+      <span class="text">'eventName'</span> : <span class="text">'customEvent'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'dimensionName1'</span> : <span class="text">'dimensionValue1'</span>,
+        <span class="text">'dimensionName2'</span> : <span class="text">'dimensionValue2'</span>,
+        <span class="text">'dimensionName3'</span> : <span class="text">'dimensionValue3'</span>
+      }
+    });</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="method" id="gtm-bigin">
+      <div class="method-description">
+        <h3>bigin 정의 이벤트</h3>
+        <h4 id="gtm-bigin-1">상품 상세 보기 태그</h4>
+        <p>태그 생성 방법은 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-itemView.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/itemView-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'itemView'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>,
+        <span class="text">'quantity'</span> : <span class="text">'1'</span>,
+        <span class="text">'name'</span> : <span class="text">'Bigin 바지'</span>,
+        <span class="text">'categories'</span> : <span class="text">['바지']</span>,
+        <span class="text">'brand'</span> : <span class="text">'Bigin'</span>,
+        <span class="text">'variant'</span> : <span class="text">'black'</span>,
+        <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+        <span class="text">'dimensionName3'</span> : <span class="text">'dimensionValue3'</span>
+      }
+    });</code>
+          </pre>
+        </div>
+        <h4 id="gtm-bigin-2">상품 페이지 이동 태그</h4>
+        <p>태그 생성 방법은 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-impression.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/impression-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'impression'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>,
+        <span class="text">'quantity'</span> : <span class="text">'1'</span>,
+        <span class="text">'name'</span> : <span class="text">'Bigin 바지'</span>,
+        <span class="text">'categories'</span> : <span class="text">['바지']</span>,
+        <span class="text">'brand'</span> : <span class="text">'Bigin'</span>,
+        <span class="text">'variant'</span> : <span class="text">'black'</span>,
+        <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+        <span class="text">'list'</span> : <span class="text">'/product-list'</span>,
+        <span class="text">'position'</span> : <span class="text">'3'</span>,
+        <span class="text">'dimensionName3'</span> : <span class="text">'dimensionValue3'</span>
+      }
+    });</code>
+          </pre>
+        </div>
+        <h4 id="gtm-bigin-3">장바구니</h4>
+        <p>태그 생성 방법은 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-cart.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/cart-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'cart'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'items'</span> : [
+          {
+            <span class="text">'id'</span> : <span class="text">'P12345'</span>,
+            <span class="text">'quantity'</span> : <span class="text">'1'</span>,
+            <span class="text">'name'</span> : <span class="text">'Bigin 바지'</span>,
+            <span class="text">'categories'</span> : <span class="text">['바지']</span>,
+            <span class="text">'brand'</span> : <span class="text">'Bigin'</span>,
+            <span class="text">'variant'</span> : <span class="text">'black'</span>,
+            <span class="text">'coupon'</span> : <span class="text">''</span>,
+            <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+          },
+          {
+            <span class="text">'id'</span> : <span class="text">'P12346'</span>,
+            <span class="text">'quantity'</span> : <span class="text">'1'</span>,
+            <span class="text">'name'</span> : <span class="text">'Bigin 셔츠'</span>,
+            <span class="text">'categories'</span> : <span class="text">['셔츠']</span>,
+            <span class="text">'brand'</span> : <span class="text">'Bigin'</span>,
+            <span class="text">'variant'</span> : <span class="text">'white'</span>,
+            <span class="text">'coupon'</span> : <span class="text">''</span>,
+            <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+          }
+        ],
+      }
+    });</code>
+          </pre>
+        </div>
+        <h4 id="gtm-bigin-4">장바구니 담기</h4>
+        <p>태그 생성 방법은 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-toCart.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/toCart-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'toCart'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>,
+        <span class="text">'quantity'</span> : <span class="text">'1'</span>,
+        <span class="text">'name'</span> : <span class="text">'Bigin 바지'</span>,
+        <span class="text">'categories'</span> : <span class="text">['바지']</span>,
+        <span class="text">'brand'</span> : <span class="text">'Bigin'</span>,
+        <span class="text">'variant'</span> : <span class="text">'black'</span>,
+        <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+      }
+    });</code>
+          </pre>
+        </div>
+        <h4 id="gtm-bigin-5">결제진행 태그</h4>
+        <p>태그 생성 방법은 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-checkout.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/checkout-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'checkout'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'step'</span> : <span class="text">'2'</span>,
+        <span class="text">'option'</span> : <span class="text">'FedEx'</span>,
+        <span class="text">'dimensionName'</span> : <span class="text">'dimensionValue'</span>,
+      }
+    });</code>
+          </pre>
+        </div>
+        <h4 id="gtm-bigin-6">결제완료 태그</h4>
+        <p>태그 생성 방법은 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-purchase.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/purchase-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'purchase'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'id'</span> : <span class="text">'T12345'</span>,
+        <span class="text">'affiliation'</span> : <span class="text">'Bigin Store - Online'</span>,
+        <span class="text">'revenue'</span> : <span class="text">'58.40'</span>,
+        <span class="text">'tax'</span> : <span class="text">'5.84'</span>,
+        <span class="text">'shipping'</span> : <span class="text">'5.34'</span>,
+        <span class="text">'coupon'</span> : <span class="text">'SUMMER2018'</span>,
+        <span class="text">'items'</span> : [
+          {
+            <span class="text">'id'</span> : <span class="text">'P12345'</span>,
+            <span class="text">'quantity'</span> : <span class="text">'1'</span>,
+            <span class="text">'name'</span> : <span class="text">'Bigin 바지'</span>,
+            <span class="text">'categories'</span> : <span class="text">['바지']</span>,
+            <span class="text">'brand'</span> : <span class="text">'Bigin'</span>,
+            <span class="text">'variant'</span> : <span class="text">'black'</span>,
+            <span class="text">'coupon'</span> : <span class="text">''</span>,
+            <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+          },
+          {
+            <span class="text">'id'</span> : <span class="text">'P12346'</span>,
+            <span class="text">'quantity'</span> : <span class="text">'1'</span>,
+            <span class="text">'name'</span> : <span class="text">'Bigin 셔츠'</span>,
+            <span class="text">'categories'</span> : <span class="text">['셔츠']</span>,
+            <span class="text">'brand'</span> : <span class="text">'Bigin'</span>,
+            <span class="text">'variant'</span> : <span class="text">'white'</span>,
+            <span class="text">'coupon'</span> : <span class="text">''</span>,
+            <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+          }
+        ],
+        <span class="text">'dimensionName'</span> : <span class="text">'dimensionValue'</span>,
+      }
+    });</code>
+          </pre>
+        </div>
+        <h4 id="gtm-bigin-7">환불 태그</h4>
+        <p>태그 생성 방법은 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-refund.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/refund-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <p>전액환불</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'refund'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'id'</span> : <span class="text">'T12345'</span>,
+        <span class="text">'dimensionName'</span> : <span class="text">'dimensionValue'</span>,
+      }
+    });</code>
+          </pre>
+        </div>
+        <p>부분환불</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'refund'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'id'</span> : <span class="text">'T12345'</span>,
+        <span class="text">'items'</span> : [
+          {
+            <span class="text">'id'</span> : <span class="text">'P12345'</span>,
+            <span class="text">'quantity'</span> : <span class="text">'1'</span>,
+          }
+        ]
+        <span class="text">'dimensionName'</span> : <span class="text">'dimensionValue'</span>,
+      }
+    });</code>
+          </pre>
+        </div>
+        <h4 id="gtm-bigin-8">리뷰 태그</h4>
+        <p>태그 생성 방법은 아래와 같습니다.</p>
+        <div class="screenshot">
+          <img src="images/gtm-review.png">
+        </div>
+        <div class="screenshot">
+          <img src="images/review-trigger.png">
+        </div>
+        <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
+        <div class="method-example">
+          <pre>
+            <code class="language-bash">
+  window.dataLayer.push(
+    {<span class="text">'data'</span> : undefined},
+    {
+      <span class="text">'event'</span> : <span class="text">'review'</span>,
+      <span class="text">'data'</span> : {
+        <span class="text">'id'</span> : <span class="text">'R12345'</span>,
+        <span class="text">'product'</span> : <span class="text">'P12345'</span>,
+        <span class="text">'score'</span> : <span class="text">'1'</span>,
+        <span class="text">'content'</span> : <span class="text">'만족스러워요.'</span>,
+        <span class="text">'dimensionName'</span> : <span class="text">'dimensionValue'</span>,
+      }
+    });</code>
           </pre>
         </div>
       </div>

@@ -2,7 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/images/cart-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/checkout-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/currency-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/custom-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-checkout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-config-script.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-config.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-currency.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-custom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-impression.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-itemView.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-purchase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-refund.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-review.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-snippet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-spa-pageview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-toCart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gtm-variable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/impression-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/itemView-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/login-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/logout-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/purchase-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/refund-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/review-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/spa-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/toCart-trigger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bigin_install.html" beforeDir="false" afterPath="$PROJECT_DIR$/bigin_install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bigin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bigin.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,12 +47,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="125" column="85" lean-forward="true" selection-start-line="125" selection-start-column="85" selection-end-line="125" selection-end-column="85" />
+            <state relative-caret-position="366">
+              <caret line="381" column="88" lean-forward="true" selection-start-line="381" selection-start-column="88" selection-end-line="381" selection-end-column="88" />
+              <folding>
+                <element signature="e#3774#3778#0" expanded="true" />
+                <element signature="e#3783#3787#0" expanded="true" />
+                <element signature="e#4285#4289#0" expanded="true" />
+                <element signature="e#4293#4297#0" expanded="true" />
+                <element signature="e#7831#7835#0" expanded="true" />
+                <element signature="e#7839#7843#0" expanded="true" />
+                <element signature="e#11729#11733#0" expanded="true" />
+                <element signature="e#11737#11741#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bigin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/bigin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -37,36 +88,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>overview</find>
-      <find>bigin_</find>
-      <find>.nav</find>
-      <find>bigin-install-gtm</find>
-      <find>토스 회원</find>
-      <find>orderno</find>
-      <find>테스트용 key</find>
-      <find>list-style</find>
-      <find>ul</find>
-      <find>ul li</find>
-      <find>content</find>
-      <find>before</find>
-      <find>결제 데모 페이지</find>
-      <find>무료로 시작하기</find>
-      <find>alert</find>
-      <find>list-style-type</find>
-      <find>결제 승인하기</find>
-      <find>language-bash</find>
-      <find>cursor</find>
-      <find>list</find>
-      <find>user-select</find>
       <find>user-</find>
       <find>declaration</find>
-      <find>h4</find>
       <find>create</find>
       <find>active</find>
       <find>ol&gt;li</find>
       <find>“</find>
       <find>”</find>
       <find>'</find>
+      <find>h3</find>
+      <find>#method</find>
+      <find>width</find>
+      <find>img</find>
+      <find>ab</find>
+      <find>고유 id</find>
+      <find>config</find>
+      <find>아래의</find>
+      <find>currency</find>
+      <find>spa</find>
+      <find>단일 페이지</find>
+      <find>로그아웃</find>
+      <find>h4</find>
+      <find>basic</find>
+      <find>통화 설정</find>
+      <find>todo</find>
+      <find>gtm</find>
+      <find>여기</find>
+      <find>h2</find>
+      <find>overview</find>
+      <find>method-description</find>
+      <find>시작하기</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -106,18 +157,37 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="1023" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="support-bigin.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="support-bigin.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="support-bigin.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="support-bigin.io" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/westlife/project/bigin/bigin-tech-guide/support-bigin.io/bigin_install.html&#10;indexhtml&#9;FILE&#9;file:///Users/westlife/project/bigin/bigin-tech-guide/support-bigin.io/index.html" />
+    <property name="SearchEverywhereHistoryKey" value="bigin.css&#9;FILE&#9;file:///Users/westlife/project/bigin/bigin-tech-guide/support-bigin.io/css/bigin.css&#10;indexhtml&#9;FILE&#9;file:///Users/westlife/project/bigin/bigin-tech-guide/support-bigin.io/index.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -126,6 +196,9 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
     </key>
@@ -155,12 +228,13 @@
       <workItem from="1542099918181" duration="4202000" />
       <workItem from="1542107040656" duration="1282000" />
       <workItem from="1542158422681" duration="9438000" />
-      <workItem from="1542171787781" duration="1517000" />
+      <workItem from="1542171787781" duration="3682000" />
+      <workItem from="1542257465177" duration="12686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16439000" />
+    <option name="totallyTimeSpent" value="31290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -170,19 +244,19 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.31179488" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +266,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bigin_install.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#3774#3778#0" expanded="true" />
+            <element signature="e#3783#3787#0" expanded="true" />
+            <element signature="e#4285#4289#0" expanded="true" />
+            <element signature="e#4293#4297#0" expanded="true" />
+            <element signature="e#7831#7835#0" expanded="true" />
+            <element signature="e#7839#7843#0" expanded="true" />
+            <element signature="e#11729#11733#0" expanded="true" />
+            <element signature="e#11737#11741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -257,17 +348,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/gtm-snippet.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/bigin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="154" column="22" lean-forward="true" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
+        <state relative-caret-position="315">
+          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="125" column="85" lean-forward="true" selection-start-line="125" selection-start-column="85" selection-end-line="125" selection-end-column="85" />
+        <state relative-caret-position="366">
+          <caret line="381" column="88" lean-forward="true" selection-start-line="381" selection-start-column="88" selection-end-line="381" selection-end-column="88" />
+          <folding>
+            <element signature="e#3774#3778#0" expanded="true" />
+            <element signature="e#3783#3787#0" expanded="true" />
+            <element signature="e#4285#4289#0" expanded="true" />
+            <element signature="e#4293#4297#0" expanded="true" />
+            <element signature="e#7831#7835#0" expanded="true" />
+            <element signature="e#7839#7843#0" expanded="true" />
+            <element signature="e#11729#11733#0" expanded="true" />
+            <element signature="e#11737#11741#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
