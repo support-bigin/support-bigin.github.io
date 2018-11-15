@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/images/cart-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/checkout-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/currency-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/custom-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-checkout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-config-script.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-config.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-currency.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-custom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-impression.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-itemView.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-purchase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-refund.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-review.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-snippet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-spa-pageview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-toCart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gtm-variable.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/impression-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/itemView-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/login-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/logout-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/purchase-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/refund-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/review-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/spa-trigger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/toCart-trigger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bigin_install.html" beforeDir="false" afterPath="$PROJECT_DIR$/bigin_install.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/bigin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bigin.css" afterDir="false" />
@@ -51,18 +22,17 @@
       <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="381" column="88" lean-forward="true" selection-start-line="381" selection-start-column="88" selection-end-line="381" selection-end-column="88" />
-              <folding>
-                <element signature="e#3774#3778#0" expanded="true" />
-                <element signature="e#3783#3787#0" expanded="true" />
-                <element signature="e#4285#4289#0" expanded="true" />
-                <element signature="e#4293#4297#0" expanded="true" />
-                <element signature="e#7831#7835#0" expanded="true" />
-                <element signature="e#7839#7843#0" expanded="true" />
-                <element signature="e#11729#11733#0" expanded="true" />
-                <element signature="e#11737#11741#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="544">
+              <caret line="691" column="6" lean-forward="true" selection-start-line="691" selection-start-column="6" selection-end-line="691" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -70,8 +40,8 @@
       <file leaf-file-name="bigin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/bigin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state relative-caret-position="853">
+              <caret line="613" column="3" lean-forward="true" selection-start-line="613" selection-start-column="3" selection-end-line="613" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -83,17 +53,12 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>user-</find>
-      <find>declaration</find>
-      <find>create</find>
-      <find>active</find>
-      <find>ol&gt;li</find>
-      <find>“</find>
       <find>”</find>
       <find>'</find>
       <find>h3</find>
@@ -118,6 +83,12 @@
       <find>overview</find>
       <find>method-description</find>
       <find>시작하기</find>
+      <find>\n          \&lt;img src\=\&quot;images\/currency\-trigger\.png\&quot;\&gt;</find>
+      <find>code</find>
+      <find>method-example</find>
+      <find>pre</find>
+      <find>itemView</find>
+      <find>position</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -136,6 +107,7 @@
         <option value="$PROJECT_DIR$/bigin_install_gtm.html" />
         <option value="$PROJECT_DIR$/test.md" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/css/bigin.css" />
         <option value="$PROJECT_DIR$/bigin_install.html" />
       </list>
@@ -156,10 +128,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1680" />
-    <option name="height" value="1023" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -172,11 +143,6 @@
             <path>
               <item name="support-bigin.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="support-bigin.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="support-bigin.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="support-bigin.io" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,15 +195,16 @@
       <workItem from="1542107040656" duration="1282000" />
       <workItem from="1542158422681" duration="9438000" />
       <workItem from="1542171787781" duration="3682000" />
-      <workItem from="1542257465177" duration="12686000" />
+      <workItem from="1542257465177" duration="14408000" />
+      <workItem from="1542279974957" duration="6127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31290000" />
+    <option name="totallyTimeSpent" value="39139000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24954791" />
@@ -245,12 +212,12 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.31179488" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -268,18 +235,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5925">
+          <caret line="395" column="43" lean-forward="true" selection-start-line="395" selection-start-column="43" selection-end-line="395" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bigin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigin_install.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="e#3774#3778#0" expanded="true" />
-            <element signature="e#3783#3787#0" expanded="true" />
-            <element signature="e#4285#4289#0" expanded="true" />
-            <element signature="e#4293#4297#0" expanded="true" />
-            <element signature="e#7831#7835#0" expanded="true" />
-            <element signature="e#7839#7843#0" expanded="true" />
-            <element signature="e#11729#11733#0" expanded="true" />
-            <element signature="e#11737#11741#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -351,27 +322,24 @@
     <entry file="file://$PROJECT_DIR$/images/gtm-snippet.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/bigin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="853">
+          <caret line="613" column="3" lean-forward="true" selection-start-line="613" selection-start-column="3" selection-end-line="613" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="381" column="88" lean-forward="true" selection-start-line="381" selection-start-column="88" selection-end-line="381" selection-end-column="88" />
-          <folding>
-            <element signature="e#3774#3778#0" expanded="true" />
-            <element signature="e#3783#3787#0" expanded="true" />
-            <element signature="e#4285#4289#0" expanded="true" />
-            <element signature="e#4293#4297#0" expanded="true" />
-            <element signature="e#7831#7835#0" expanded="true" />
-            <element signature="e#7839#7843#0" expanded="true" />
-            <element signature="e#11729#11733#0" expanded="true" />
-            <element signature="e#11737#11741#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="691" column="6" lean-forward="true" selection-start-line="691" selection-start-column="6" selection-end-line="691" selection-end-column="6" />
         </state>
       </provider>
     </entry>

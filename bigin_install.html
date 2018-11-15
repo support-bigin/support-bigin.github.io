@@ -23,6 +23,7 @@
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <script src="js/common.js"></script>
 </head>
 
 <body id="bigin-install" data-spy="scroll" data-target="#guide" data-offset="0">
@@ -60,6 +61,25 @@
           <li><a href="#execute-1">로그인 사용자 식별</a></li>
           <li><a href="#execute-2">복수 계정 사용자의 추적</a></li>
           <li><a href="#execute-3">모바일 사용자의 위치정보 수집</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#custom">커스텀 이벤트 추적</a>
+        <ul class="nav">
+          <li><a href="#custom-1">커스텀 이벤트</a></li>
+          <li><a href="#custom-2">커스텀 이벤트의 속성 설정</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#ecommerce">이커머스 추적</a>
+        <ul class="nav">
+          <li><a href="#ecommerce-1">개요</a></li>
+          <li><a href="#ecommerce-2">노출데이터</a></li>
+          <li><a href="#ecommerce-3">거래데이터</a></li>
+          <li><a href="#ecommerce-4">구매 활동 데이터</a></li>
+          <li><a href="#ecommerce-5">이커머스 활동 측정</a></li>
+          <li><a href="#ecommerce-6">제품의 노출 또는 링크 클릭</a></li>
+          <li><a href="#ecommerce-7">제품 장바구니 추가/업데이트</a></li>
         </ul>
       </li>
 
@@ -171,6 +191,8 @@
         <h4 id="create-2">추적 코드 스니펫</h4>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div></div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     <span class="declaration">var</span> biginScript = document.createElement(<span class="text">'script'</span>);
@@ -197,6 +219,8 @@
         <p>bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있습니다. 아래에서 선택적으로 추적되는 추적항목을 확인하세요.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
             <code class="language-bash">
   track : [
     <span class="text">'session'</span>, <span
@@ -204,11 +228,14 @@
     <span class="text">'views'</span>, <span class="comment">// 사용자의 페이지 조회를 수집할 수 있습니다. SPA(SinglePageApplication)은 별도의 설정이 필요합니다.</span>
     <span class="text">'clicks'</span>, <span class="comment">// 마우스로 클릭하는 모든 클릭이벤트를 수집합니다. 특정 이벤트의 추적은 CustomEvent 의 추적을 이용하세요.</span>
     <span class="text">'scrolls'</span> <span class="comment">// 웹사이트 내의 스크롤 이벤트를 수집합니다.</span>
-  ]</code>
+  ]
+            </code>
           </pre>
         </div>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div></div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     bigin.track(<span class="text">'sessions'</span>);
@@ -217,7 +244,8 @@
     bigin.track(<span class="text">'links'</span>);
     bigin.track(<span class="text">'forms'</span>);
     bigin.track(<span class="text">'errors'</span>);
-  })();</code>
+  })();
+            </code>
           </pre>
         </div>
         <h4 id="create-4">특정 페이지 뷰 추적 사용 중지</h4>
@@ -225,8 +253,12 @@
           추적됩니다. 그러나 스니펫이 대시보드로 페이지 뷰 조회를 보내지 않게하려면 send_page_view매개 변수를 false다음 과 같이 설정하십시오 .</p>
         <div class="method-example">
           <pre>
-            <code class="language-bash">  ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/page'</span>] <span
-              class="comment">// 추적 사용을 중지할 특정 페이지의 path를 다음과 같이 추가하세요.</span></code>
+            <div class="index">
+<div>1</div></div>
+            <code class="language-bash">
+ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/page'</span>] <span
+              class="comment">// 추적 사용을 중지할 특정 페이지의 path를 다음과 같이 추가하세요.</span>
+            </code>
           </pre>
         </div>
 
@@ -235,14 +267,16 @@
         <p>아래의 스니펫을 추적할 페이지의 &lt;head&gt; 태그 안에 추가하세요.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     bigin.track(<span class="text">'views'</span>, {
       page : "/productDetail/12345", <span class="text">// (옵션)pagePath 또는 window.location.pathname 로 추적합니다.</span>
       <span class="text">ignore : ["/main"]</span> <span class="comment">// (옵션)추적을 허용하지 않는 페이지의 정규식</span>
     });
-  })();</code>
-          </pre>
+  })();</code></pre>
         </div>
 
         <h4 id="create-6">표시 통화의 설정</h4>
@@ -258,6 +292,9 @@
         </ol>
         <div class="method-example">
           <pre>
+                        <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+</div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     bigin.config({
@@ -277,6 +314,9 @@
         <p>WEB SDK 설치 시 아래와 같이 <span class="box">ID</span> 와 <span class="box">EMAIL</span> 을 설정해야 합니다.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
+</div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     bigin.user(<span class="text">"profile"</span>,{
@@ -301,6 +341,9 @@
         <p>위와 같은 문제를 해결하기 위해서는 로그인을 끊을 수 있는 행동에 아래의 스니펫을 추가하여 기존 로그인 사용자의 세션을 종료하여야 합니다.</p>
         <div class="method-example">
           <pre>
+                        <div class="index">
+<div>1</div><div>2</div><div>3</div>
+</div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     bigin.user(<span class="text">"logout"</span>);
@@ -312,10 +355,359 @@
           스니펫을 &lt;head&gt; 태그 사이에 추가하세요. 사용자의 위치정보 수집을 묻고, 허용한다면 사용자의 현재 위치의 위도와 경도를 수집하여 저장할 수 있습니다.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div>
+</div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     bigin.user(<span class="text">"location"</span>); <span class="comment">// 기본 추적코드에 함께 있는 옵션입니다. 별도 적용 또는 기본추적코드의 enableTrackLocation 을 TRUE 로 허용하세요.</span>
   })();</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="method" id="custom">
+      <div class="method-description">
+        <h3>커스텀 이벤트 추적</h3>
+        <h4 id="custom-1">커스텀 이벤트</h4>
+        <p>이벤트는 웹 페이지 또는 화면로드와 독립적으로 추적 할 수있는 컨텐츠와의 사용자 상호 작용입니다. 커스텀 이벤트는 대부분의 bigin 보고서의 기초이며, 사용자가 웹사이트 또는 제품과 상호작용하는 방식을 이해하는데 필수적인 요소입니다. </p>
+        <p>추적을 시작하기 전에 하나의 이벤트를 추적하여 bigin에서 이벤트를 수집, 저장 및 보여주는 형태를 이해하세요. 먼저 커스텀 이벤트의 기본 구조는 아래의 스니펫과 같습니다.</p>
+        <div class="method-example">
+          <pre>
+<div class="index">
+<div>1</div>
+</div>
+            <code class="language-bash">
+  bigin.event(<span class="text">'eventName'</span>)
+            </code>
+          </pre>
+        </div>
+        <h4 id="custom-2">커스텀 이벤트의 속성 설정</h4>
+        <p>bigin.js 에서는 모든 커스텀 이벤트의 속성을 나누어 이벤트의 속성을 보고서의 측정기준 또는 측정항목으로 수집할 수 있습니다. 커스텀 이벤트의 속성을 추가하면 웹페이지에서 발생할 수 있는 여러가지 상황을 하나의 이벤트 스크립트로 설정할 수 있습니다. 속성을 추가하는 경우 아래의 스니펫 구조를 참고하세요. </p>
+        <div class="method-example">
+          <pre>
+                        <div class="index">
+<div>1</div><div>2</div><div>3</div>
+</div>
+            <code class="language-bash">
+  bigin.event(<span class="text">'eventName'</span> , {
+    <span class="text">'property'</span> : <span class="text">'value'</span> <span class="comment">// 이벤트의 속성을 추가할 수 있습니다.</span>
+  })
+</code>
+          </pre>
+        </div>
+        <p>커스텀 이벤트의 속성을 추가하기 위해서는 다음 순서에 따라 진행하세요.</p>
+        <ol>
+          <li>bigin.event("eventName") 의 이벤트명을 설정하세요.</li>
+          <li>"eventName" 의 속성 또는 추가로 수집할 데이터 요소를 계획하고 속성데이터를 추가하세요.</li>
+        </ol>
+        <p>커스텀 이벤트의 예제는 아래와 같습니다.</p>
+        <div class="method-example">
+          <pre>
+                        <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
+</div>
+            <code class="language-bash">
+  bigin.event(<span class="text">'detailSearch'</span> ,{ <span class="comment">// 이벤트명</span>
+    <span class="text">'category'</span> : <span class="text">'shoes'</span>,
+    <span class="text">'color'</span> : [<span class="text">'red'</span>,<span class="text">'black'</span>,]
+    <span class="text">'brand'</span> : <span class="text">'brandName'</span>,
+    <span class="text">'size'</span> : [<span class="text">'265'</span>,<span class="text">'270'</span>,]
+    <span class="text">'keyword'</span> : <span class="text">'스니커즈'</span>
+  })
+</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="method" id="ecommerce">
+      <div class="method-description">
+        <h3>이커머스 추적</h3>
+        <h4 id="ecommerce-1">개요</h4>
+        <p>이커머스 추적을 사용하면 웹사이트에서 발생하는 거래 및 수익을 측정할 수 있습니다. 일반적인 이커머스 사이트에서 사용자의 구매 행동을 거래를 수행하는 웹 서버로 전송됩니다.</p>
+        <p>"제품 구매" 버튼의 클릭 외에도 장바구니, 제품의 노출, 체크아웃 전반적인 구매 상호작용을 추적하고 보고서로 나타낼 수 있습니다.</p>
+        <p>이커머스를 추적하는 것은 커스텀 이벤트의 추적과 크게 다르지 않습니다. 이커머스 추적은 상품 고유 ID와 거래 ID로 사용자의 구매행동을 식별하여 개별 사용자의 구매 여정을 분석할 수 있습니다.</p>
+        <p>bigin.js를 사용하여 보낼 수있는 이커머스 데이터 유형은 노출 데이터 , 제품 데이터 및 행동 데이터 입니다.</p>
+        <h4 id="ecommerce-2">제품 데이터</h4>
+        <p>사용자가 어느 제품과의 상호작용이 이루어졌는지 수집하기 위한 데이터입니다.</p>
+        <table>
+          <tr>
+            <th>키</th>
+            <th>필수</th>
+            <th>설명</th>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>예</td>
+            <td>제품 고유 ID</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>예</td>
+            <td>제품 이름 (예 : Blue Jeans)</td>
+          </tr>
+          <tr>
+            <td>brand</td>
+            <td>아니오</td>
+            <td>제품과 관련된 브랜드 (예 : Bigin)</td>
+          </tr>
+          <tr>
+            <td>categories</td>
+            <td>아니오</td>
+            <td>제품 카테고리 (예 : ACC). 하위 카테고리를 설정할 경우 (예 : 'ACC' , 'RING' , 'Gold')</td>
+          </tr>
+          <tr>
+            <td>variant</td>
+            <td>아니오</td>
+            <td>제품 변형/옵션 (예 : 검정색, 265, XL)</td>
+          </tr>
+          <tr>
+            <td>price</td>
+            <td>아니오</td>
+            <td>제품 가격 (예 : 19200)</td>
+          </tr>
+          <tr>
+            <td>quantity</td>
+            <td>아니오</td>
+            <td>제품 수량 (예 : 2)</td>
+          </tr>
+          <tr>
+            <td>coupon</td>
+            <td>아니오</td>
+            <td>제품과 관련된 쿠폰 코드 (예 : DISCOUNT 10%)</td>
+          </tr>
+          <tr>
+            <td>position</td>
+            <td>아니오</td>
+            <td>목록 또는 컬렉션의 제품 위치 (예 : 2)</td>
+          </tr>
+          <tr>
+            <td>summary</td>
+            <td>아니오</td>
+            <td>제품 설명 요약.</td>
+          </tr>
+          <tr>
+            <td>thumbnail</td>
+            <td>아니오</td>
+            <td>제품의 대표 이미지. *제품 보고서는 제품의 대표 이미지를 포함하여 구성합니다. (선택)</td>
+          </tr>
+        </table>
+        <h4 id="ecommerce-3">노출 데이터</h4>
+        <p>사용자가 웹페이지 내에서 어떤 경로에서 제품을 접하게 됬는지 수집하기 위한 노출 데이터입니다.</p>
+        <table>
+          <tr>
+            <th>키</th>
+            <th>필수</th>
+            <th>설명</th>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>예</td>
+            <td>제품 고유 ID (예 : P-991245M)</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>예</td>
+            <td>제품 이름 (예 : Blue Jeans)</td>
+          </tr>
+          <tr>
+            <td>brand</td>
+            <td>아니오</td>
+            <td>제품과 관련된 브랜드 (예 : Bigin)</td>
+          </tr>
+          <tr>
+            <td>categories</td>
+            <td>아니오</td>
+            <td>제품 카테고리 (예 : ACC). 하위 카테고리를 설정할 경우 (예 : 'ACC' , 'RING' , 'Gold')</td>
+          </tr>
+          <tr>
+            <td>list</td>
+            <td>아니오</td>
+            <td>상품을 조회한 경로 (예 : 검색, 메인화면, 인기 상품)</td>
+          </tr>
+          <tr>
+            <td>price</td>
+            <td>아니오</td>
+            <td>제품 가격 (예 : 19200)</td>
+          </tr>
+          <tr>
+            <td>position</td>
+            <td>아니오</td>
+            <td>목록 또는 컬렉션의 제품 위치 (예 : 2)</td>
+          </tr>
+        </table>
+        <h4 id="ecommerce-4">거래 데이터</h4>
+        <p>사용자의 제품 구매행동에 대한 수익 및 구매단계를 추적하기 위한 데이터입니다.</p>
+        <table>
+          <tr>
+            <th>키</th>
+            <th>필수</th>
+            <th>설명</th>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>예</td>
+            <td>발생한 거래의 고유 ID (예 : T12345) <strong>행동 유형이 purchase</strong> 또는 <strong>refund 이면 필요합니다.</strong></td>
+          </tr>
+          <tr>
+            <td>affiliation</td>
+            <td>아니오</td>
+            <td>이 거래가 발생한 상점 또는 제휴사 (예 : Bigin Store).</td>
+          </tr>
+          <tr>
+            <td>revenue</td>
+            <td>예</td>
+            <td>발생한 거래금액의 총합계 (예 : 364000).</td>
+          </tr>
+          <tr>
+            <td>tax</td>
+            <td>아니오</td>
+            <td>거래와 관련된 총 세금.</td>
+          </tr>
+          <tr>
+            <td>shipping</td>
+            <td>아니오</td>
+            <td>거래와 관련된 운송 비용.</td>
+          </tr>
+          <tr>
+            <td>coupon</td>
+            <td>아니오</td>
+            <td>거래에 적용된 쿠폰.</td>
+          </tr>
+          <tr>
+            <td>products</td>
+            <td>예</td>
+            <td>거래에 포함된 제품 데이터.</td>
+          </tr>
+          <tr>
+            <td>step</td>
+            <td>아니오</td>
+            <td>구매의 단계를 나타내는 숫자입니다.</td>
+          </tr>
+          <tr>
+            <td>option</td>
+            <td>아니오</td>
+            <td>계산 및 구매의 옵션.</td>
+          </tr>
+        </table>
+        <h4 id="ecommerce-5">구매 활동 데이터</h4>
+        <p>제품 구매활동을 측정하는 추적 이벤트는 아래와 같습니다.</p>
+        <table>
+          <tr>
+            <th>키</th>
+            <th>설명</th>
+          </tr>
+          <tr>
+            <td>bg:impression</td>
+            <td>제품의 노출 및 게재위치.</td>
+          </tr>
+          <tr>
+            <td>bg:viewProduct</td>
+            <td>제품 세부사항 보기.</td>
+          </tr>
+          <tr>
+            <td>bg:cart</td>
+            <td>현재 장바구니의 상태를 업데이트.</td>
+          </tr>
+          <tr>
+            <td>bg:addToCart</td>
+            <td>장바구니에 하나 이상의 제품 추가.</td>
+          </tr>
+          <tr>
+            <td>bg:checkout</td>
+            <td>하나 이상의 제품에 대한 구매 단계.</td>
+          </tr>
+          <tr>
+            <td>bg:purchase</td>
+            <td>하나 이상의 제품 구매.</td>
+          </tr>
+          <tr>
+            <td>bg:refund</td>
+            <td>하나 이상의 제품 환불.</td>
+          </tr>
+        </table>
+        <h4 id="ecommerce-6">이커머스 활동 측정</h4>
+        <p>일반적으로 이커머스 추적의 구현은 제품 노출 수 및 다음 작업 중 하나를 측정합니다.</p>
+        <ul>
+          <li>제품의 링크 클릭</li>
+          <li>제품 세부 정보보기</li>
+          <li>장바구니에서 제품 추가 / 제거.</li>
+          <li>장바구니</li>
+          <li>구매 프로세스</li>
+          <li>제품 구매 및 환불</li>
+        </ul>
+        <h4 id ="ecommerce-7">제품의 노출 또는 링크 클릭</h4>
+        <p>이커머스 추적을 구현하기 위해서는 제품의 조회가 측정되어야 합니다. 일반적으로 제품 세부정보 페이지의 조회가 발생할 때 코드를 작동하며, 사용자가 제품을 조회할 때 서버로 전송하는 코드 스니펫의 예제는 아래와 같습니다.</p>
+        <div class="method-example">
+          <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
+</div>
+            <code class="language-bash">
+  bigin.event(<span class="text">'bg:itemView'</span>,{
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
+        <span class="text">'name'</span> : <span class="text">'Blue Jean'</span>, <span class="comment">// (필수) 제품 이름.</span>
+        <span class="text">'categories'</span> : [<span class="text">'남성'</span>,<span class="text">'하의'</span>,<span class="text">'청바지'</span>,], <span class="comment">// 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.</span>
+        <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, <span class="comment">// 제품과 관련된 브랜드</span>
+        <span class="text">'list'</span> : <span class="text">'검색'</span>,<span class="comment"> // 제품을 조회한 경로 (예 : 검색, 메인화면, 인기 상품)</span>
+        <span class="text">'position'</span> : <span class="text">'3'</span>,<span class="comment">// 목록 또는 컬렉션의 제품 위치 (예 : 2) </span>
+        <span class="text">'summary'</span> : <span class="text">'설명'</span>,
+        <span class="text">'thumbnail'</span> : [<span class="text">'imageUrl'</span>]
+        <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+  });
+            </code>
+            <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
+            <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
+          </pre>
+        </div>
+        <p>제품의 세부정보 페이지에서 이전의 제품목록 또는 제품의 게재순서를 가져오지 못 할 경우, 사용자가 제품을 클릭할 때 "bg:impression" 이벤트를 작동하여 추적할 수 있습니다. 코드 스니펫의 예제는 아래와 같습니다.</p>
+        <div class="method-example">
+          <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
+</div>
+            <code class="language-bash">
+  bigin.event(<span class="text">'bg:impression'</span>,{
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
+        <span class="text">'name'</span> : <span class="text">'Blue Jean'</span>, <span class="comment">// (필수) 제품 이름.</span>
+        <span class="text">'categories'</span> : [<span class="text">'남성'</span>,<span class="text">'하의'</span>,<span class="text">'청바지'</span>,], <span class="comment">// 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.</span>
+        <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, <span class="comment">// 제품과 관련된 브랜드</span>
+        <span class="text">'list'</span> : <span class="text">'검색'</span>,<span class="comment"> // 제품을 조회한 경로 (예 : 검색, 메인화면, 인기 상품)</span>
+        <span class="text">'position'</span> : <span class="text">'3'</span>,<span class="comment">// 목록 또는 컬렉션의 제품 위치 (예 : 2) </span>
+        <span class="text">'summary'</span> : <span class="text">'설명'</span>,
+        <span class="text">'thumbnail'</span> : [<span class="text">'imageUrl'</span>]
+        <span class="text">'price'</span> : <span class="text">'25.80'</span>,
+  });
+            </code>
+            <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
+            <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
+          </pre>
+        </div>
+        <h4 id="ecommerce-8">제픔 장바구니 추가/업데이트</h4>
+        <p>이커머스 추적에서 장바구니 데이터 추적은 사용자가 장바구니 페이지의 조회가 발생할 때 코드를 작동하며, 장바구니 페이지에 적용되는 코드 스니펫의 기본 구조는 아래와 같습니다.</p>
+        <div class="method-example">
+          <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div>
+</div>
+            <code class="language-bash">
+  bigin.event(<span class="text">'bg:cart'</span>,{
+    <span class="text">'product'</span>:[
+      {
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
+        <span class="text">'name'</span> : <span class="text">'BlueJean'</span>, <span class="comment">// (필수) 제품 이름.</span>
+        <span class="text">'quantity'</span> : <span class="text">1</span>, <span class="comment">// 제품이 담긴 수량</span>
+        <span class="text">'price'</span> : <span class="text">'19200'</span> <span class="comment">// 제품의 가격</span>
+      },
+      {
+        <span class="text">'id'</span> : <span class="text">'P54321'</span>,
+        <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>,
+        <span class="text">'quantity'</span> : <span class="text">1</span>,
+        <span class="text">'price'</span> : <span class="text">'19200'</span>
+      }
+    ]); </code>
+            <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
+            <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
         </div>
       </div>
@@ -418,6 +810,9 @@
         <p>표시 통화 설정을 변경하기 위해서 아래의 코드를 프로젝트에 추가합니다.</p>
         <div class="method-example">
           <pre>
+<div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {'data' : undefined},
@@ -440,6 +835,9 @@
 
         <div class="method-example">
           <pre>
+                                    <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -470,6 +868,9 @@
 
         <div class="method-example">
           <pre>
+                        <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -500,6 +901,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+                        <div class="index">
+<div>1</div><div>2</div><div>3</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -522,6 +926,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -552,6 +959,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -581,6 +991,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+                        <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -612,6 +1025,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+          <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -655,6 +1071,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -683,6 +1102,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -707,6 +1129,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div>32</div><div>33</div><div>34</div><div>35</div><div>36</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -758,6 +1183,9 @@
         <p>전액환불</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -773,6 +1201,9 @@
         <p>부분환불</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -802,6 +1233,9 @@
         <p>해당 태그를 실행시키기 위해서 아래의 코드를 프로젝트에 삽입해주어야 합니다.</p>
         <div class="method-example">
           <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+</div>
             <code class="language-bash">
   window.dataLayer.push(
     {<span class="text">'data'</span> : undefined},
@@ -823,6 +1257,9 @@
 </div>
 
 
+<script>
+  ///ngFor(4,'id');
+</script>
 <script type="text/javascript">
   $(function () {
     //			hljs.configure({
