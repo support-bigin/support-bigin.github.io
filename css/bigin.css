@@ -42,8 +42,7 @@ pre[class*="language-"] {
 #header .logo-img {
     height: 32px;
     float: left;
-    margin-right: 2px;
-    margin-top: 2px;
+    margin-right: 4px;
 }
 
 #header span {
@@ -52,7 +51,7 @@ pre[class*="language-"] {
 
 #header .header-menu {
     float: right;
-    margin-top: 12px;
+    margin-top: 16px;
 }
 
 /* front page */
@@ -138,21 +137,22 @@ pre[class*="language-"] {
 }
 #bigin-install .sidebar .logo {
     background-color: #fff;
-    padding: 20px 24px;
+    padding: 24px 16px;
     font-size: 16px;
 }
 #bigin-install .sidebar .logo img {
-    height: 18px;
+    height: 32px;
     float: left;
-    margin-right: 2px;
-    margin-top: 3px;
+    margin-right: 4px;
 }
 #bigin-install .sidebar .logo span {
     color: #212529;
+    font-size: 18px;
+    line-height: 32px;
 }
 #bigin-install #guide h1 {
     margin-top: 0;
-    padding: 12px 25px;
+    padding: 12px 24px;
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
     font-size: 14px;
