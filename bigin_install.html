@@ -71,15 +71,21 @@
         </ul>
       </li>
       <li>
-        <a href="#ecommerce">이커머스 추적</a>
+        <a href="#ecommerce">이커머스 추적 이벤트</a>
         <ul class="nav">
           <li><a href="#ecommerce-1">개요</a></li>
-          <li><a href="#ecommerce-2">노출데이터</a></li>
-          <li><a href="#ecommerce-3">거래데이터</a></li>
-          <li><a href="#ecommerce-4">구매 활동 데이터</a></li>
-          <li><a href="#ecommerce-5">이커머스 활동 측정</a></li>
-          <li><a href="#ecommerce-6">제품의 노출 또는 링크 클릭</a></li>
-          <li><a href="#ecommerce-7">제품 장바구니 추가/업데이트</a></li>
+          <li><a href="#ecommerce-2">노출 데이터</a></li>
+          <li><a href="#ecommerce-3">거래 데이터</a></li>
+          <li><a href="#ecommerce-4">리뷰 데이터</a></li>
+          <li><a href="#ecommerce-5">구매 활동 이벤트</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#ecommerce-example">이커머스 추적 예제</a>
+        <ul class="nav">
+          <li><a href="#ecommerce-example1">이커머스 활동 측정</a></li>
+          <li><a href="#ecommerce-example2">제품의 노출 또는 링크 클릭</a></li>
+          <li><a href="#ecommerce-example3">제품 장바구니 추가/업데이트</a></li>
         </ul>
       </li>
 
@@ -691,10 +697,10 @@ ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/p
             <td>하나 이상의 제품 환불.</td>
           </tr>
         </table>
-      <div class="method" id="ecommerce">
+      <div class="method" id="ecommerce-example">
        <div class="method-description">
         <h3>이커머스 추적 예제</h3>
-        <h4 id="ecommerce-7">이커머스 활동 측정</h4>
+        <h4 id="ecommerce-example1">이커머스 활동 측정</h4>
         <p>일반적으로 이커머스 추적의 구현은 제품 노출 수 및 다음 작업 중 하나를 측정합니다.</p>
         <ul>
           <li>제품의 링크 클릭</li>
@@ -704,7 +710,7 @@ ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/p
           <li>구매 프로세스</li>
           <li>제품 구매 및 환불</li>
         </ul>
-        <h4 id ="ecommerce-8">제품의 노출 또는 링크 클릭</h4>
+        <h4 id ="ecommerce-example2">제품의 노출 또는 링크 클릭</h4>
         <p>이커머스 추적을 구현하기 위해서는 제품의 조회가 측정되어야 합니다. 일반적으로 제품 세부정보 페이지의 조회가 발생할 때 코드를 작동하며, 사용자가 제품을 조회할 때 서버로 전송하는 코드 스니펫의 예제는 아래와 같습니다.</p>
         <div class="method-example">
           <pre>
@@ -751,7 +757,7 @@ ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/p
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
         </div>
-        <h4 id="ecommerce-9">제픔 장바구니 추가/업데이트</h4>
+        <h4 id="ecommerce-example3">제픔 장바구니 추가/업데이트</h4>
         <p>이커머스 추적에서 장바구니 데이터 추적은 사용자가 장바구니 페이지의 조회가 발생할 때 코드를 작동하며, 장바구니 페이지에 적용되는 코드 스니펫의 기본 구조는 아래와 같습니다.</p>
         <div class="method-example">
           <pre>
