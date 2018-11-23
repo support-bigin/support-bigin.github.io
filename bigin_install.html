@@ -290,9 +290,9 @@
             <div class="index">
 <div>1</div></div>
             <code class="language-bash">
-ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/page'</span>] <span
-              class="comment">// 추적 사용을 중지할 특정 페이지의 path를 다음과 같이 추가하세요.</span>
-            </code>
+  ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/page'</span>] <span
+                class="comment">// 추적 사용을 중지할 특정 페이지의 path를 다음과 같이 추가하세요.</span>
+              </code>
           </pre>
         </div>
 
@@ -378,7 +378,7 @@ ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/p
       <span class="text">'birth'</span>: <span class="text">'1990'</span>, <span class="comment">// 생년</span>
       <span class="text">'address'</span>: <span class="text">'서울시 강남구 선릉로 90길 36 미소빌딩 8층 Big Insight'</span>, <span
               class="comment">// 주소</span>
-      <span class="text">'property'</span>: <span class="text">'Value'</span>, <span class="comment">// 고유 사용자의 별도 측정기준</span>
+      <span class="text">'property'</span>: <span class="text">'Value'</span> <span class="comment">// 고유 사용자의 별도 측정기준</span>
     });
   })();</code>
           </pre>
@@ -458,9 +458,9 @@ ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/p
             <code class="language-bash">
   bigin.event(<span class="text">"customSearchEvent"</span> ,{ <span class="comment">// 이벤트명</span>
     <span class="text">'category'</span> : <span class="text">'shoes'</span>,
-    <span class="text">'color'</span> : [<span class="text">'red'</span>,<span class="text">'black'</span>,]
+    <span class="text">'color'</span> : [<span class="text">'red'</span>,<span class="text">'black'</span>],
     <span class="text">'brand'</span> : <span class="text">'brandName'</span>,
-    <span class="text">'size'</span> : [<span class="text">'265'</span>,<span class="text">'270'</span>,]
+    <span class="text">'size'</span> : [<span class="text">'265'</span>,<span class="text">'270'</span>],
     <span class="text">'keyword'</span> : <span class="text">'스니커즈'</span>
   });
 </code>
@@ -729,7 +729,7 @@ ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/p
   bigin.event(<span class="text">"bg:viewProduct"</span>,{
         <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
         <span class="text">'name'</span> : <span class="text">'Blue Jean'</span>, <span class="comment">// (필수) 제품 이름.</span>
-        <span class="text">'category'</span> : [<span class="text">'남성'</span>,<span class="text">'하의'</span>,<span class="text">'청바지'</span>,], <span class="comment">// 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.</span>
+        <span class="text">'category'</span> : [<span class="text">'남성'</span>,<span class="text">'하의'</span>,<span class="text">'청바지'</span>], <span class="comment">// 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.</span>
         <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, <span class="comment">// 제품과 관련된 브랜드</span>
         <span class="text">'list'</span> : <span class="text">'검색'</span>,<span class="comment"> // 제품을 조회한 경로 (예 : 검색, 메인화면, 인기 상품)</span>
         <span class="text">'position'</span> : <span class="text">'3'</span>,<span class="comment">// 목록 또는 컬렉션의 제품 위치 (예 : 2) </span>
@@ -749,17 +749,17 @@ ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/p
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
 </div>
             <code class="language-bash">
-  bigin.event(<span class="text">"bg:impression"</span>,{
-        <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
-        <span class="text">'name'</span> : <span class="text">'Blue Jean'</span>, <span class="comment">// (필수) 제품 이름.</span>
-        <span class="text">'category'</span> : [<span class="text">'남성'</span>,<span class="text">'하의'</span>,<span class="text">'청바지'</span>,], <span class="comment">// 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.</span>
-        <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, <span class="comment">// 제품과 관련된 브랜드</span>
-        <span class="text">'list'</span> : <span class="text">'검색'</span>,<span class="comment"> // 제품을 조회한 경로 (예 : 검색, 메인화면, 인기 상품)</span>
-        <span class="text">'position'</span> : <span class="text">'3'</span>,<span class="comment">// 목록 또는 컬렉션의 제품 위치 (예 : 2) </span>
-        <span class="text">'summary'</span> : <span class="text">'설명'</span>,
-        <span class="text">'thumbnail'</span> : [<span class="text">'imageUrl'</span>]
-        <span class="text">'price'</span> : <span class="text">'25.80'</span>
-  });
+    bigin.event(<span class="text">"bg:impression"</span>,{
+          <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
+          <span class="text">'name'</span> : <span class="text">'Blue Jean'</span>, <span class="comment">// (필수) 제품 이름.</span>
+          <span class="text">'category'</span> : [<span class="text">'남성'</span>,<span class="text">'하의'</span>,<span class="text">'청바지'</span>], <span class="comment">// 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.</span>
+          <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, <span class="comment">// 제품과 관련된 브랜드</span>
+          <span class="text">'list'</span> : <span class="text">'검색'</span>,<span class="comment"> // 제품을 조회한 경로 (예 : 검색, 메인화면, 인기 상품)</span>
+          <span class="text">'position'</span> : <span class="text">'3'</span>,<span class="comment">// 목록 또는 컬렉션의 제품 위치 (예 : 2) </span>
+          <span class="text">'summary'</span> : <span class="text">'설명'</span>,
+          <span class="text">'thumbnail'</span> : [<span class="text">'imageUrl'</span>]
+          <span class="text">'price'</span> : <span class="text">'25.80'</span>
+    });
             </code>
             <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
@@ -773,23 +773,23 @@ ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/p
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:addToCart"</span>,{
-  <span class="text">'products'</span>:[
-  {
-    <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
-    <span class="text">'name'</span> : <span class="text">'BlueJean'</span>, <span class="comment">// (필수) 제품 이름.</span>
-    <span class="text">'quantity'</span> : 1, <span class="comment">// 제품이 담긴 수량</span>
-    <span class="text">'variant'</span> : <span class="text">'IndigoBlue'</span>, <span class="comment">// 제품의 변형 옵션</span>
-    <span class="text">'price'</span> : <span class="text">'19200'</span> <span class="comment">// 제품의 가격</span>
-  },
-  {
-    <span class="text">'id'</span> : <span class="text">'P54321'</span>,
-    <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>,
-    <span class="text">'quantity'</span> : 1,
-    <span class="text">'variant'</span> : <span class="text">'White'</span>,
-    <span class="text">'price'</span> : <span class="text">'19200'</span>
-  }
-]); </code>
+  bigin.event(<span class="text">"bg:addToCart"</span>,{
+    <span class="text">'products'</span>:[
+    {
+      <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
+      <span class="text">'name'</span> : <span class="text">'BlueJean'</span>, <span class="comment">// (필수) 제품 이름.</span>
+      <span class="text">'quantity'</span> : 1, <span class="comment">// 제품이 담긴 수량</span>
+      <span class="text">'variant'</span> : <span class="text">'IndigoBlue'</span>, <span class="comment">// 제품의 변형 옵션</span>
+      <span class="text">'price'</span> : <span class="text">'19200'</span> <span class="comment">// 제품의 가격</span>
+    },
+    {
+      <span class="text">'id'</span> : <span class="text">'P54321'</span>,
+      <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>,
+      <span class="text">'quantity'</span> : 1,
+      <span class="text">'variant'</span> : <span class="text">'White'</span>,
+      <span class="text">'price'</span> : <span class="text">'19200'</span>
+    }
+  ]); </code>
             <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
@@ -802,11 +802,11 @@ bigin.event(<span class="text">"bg:addToCart"</span>,{
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:cart"</span>,{
-  <span class="text">'products'</span>:[
-    {product 1},
-    {product 2}
-]); </code>
+  bigin.event(<span class="text">"bg:cart"</span>,{
+    <span class="text">'products'</span>:[
+      {product 1},
+      {product 2}
+  ]); </code>
             <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
@@ -818,23 +818,23 @@ bigin.event(<span class="text">"bg:cart"</span>,{
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:cart"</span>,{
-  <span class="text">'products'</span>:[
-  {
-    <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
-    <span class="text">'name'</span> : <span class="text">'BlueJean'</span>, <span class="comment">// (필수) 제품 이름.</span>
-    <span class="text">'quantity'</span> : 1, <span class="comment">// 제품이 담긴 수량</span>
-    <span class="text">'variant'</span> : <span class="text">'IndigoBlue'</span>, <span class="comment">// 제품의 변형 옵션</span>
-    <span class="text">'price'</span> : <span class="text">'19200'</span> <span class="comment">// 제품의 가격</span>
-  },
-  {
-    <span class="text">'id'</span> : <span class="text">'P54321'</span>,
-    <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>,
-    <span class="text">'quantity'</span> : 1,
-    <span class="text">'variant'</span> : <span class="text">'White'</span>,
-    <span class="text">'price'</span> : <span class="text">'19200'</span>
-  }
-]); </code>
+  bigin.event(<span class="text">"bg:cart"</span>,{
+    <span class="text">'products'</span>:[
+    {
+      <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
+      <span class="text">'name'</span> : <span class="text">'BlueJean'</span>, <span class="comment">// (필수) 제품 이름.</span>
+      <span class="text">'quantity'</span> : 1, <span class="comment">// 제품이 담긴 수량</span>
+      <span class="text">'variant'</span> : <span class="text">'IndigoBlue'</span>, <span class="comment">// 제품의 변형 옵션</span>
+      <span class="text">'price'</span> : <span class="text">'19200'</span> <span class="comment">// 제품의 가격</span>
+    },
+    {
+      <span class="text">'id'</span> : <span class="text">'P54321'</span>,
+      <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>,
+      <span class="text">'quantity'</span> : 1,
+      <span class="text">'variant'</span> : <span class="text">'White'</span>,
+      <span class="text">'price'</span> : <span class="text">'19200'</span>
+    }
+  ]); </code>
             <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
@@ -848,8 +848,8 @@ bigin.event(<span class="text">"bg:cart"</span>,{
 <div>1</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:cart"</span>,{}); 
-            </code>
+  bigin.event(<span class="text">"bg:cart"</span>,{}); 
+              </code>
             <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
@@ -861,16 +861,16 @@ bigin.event(<span class="text">"bg:cart"</span>,{});
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:cart"</span>,{
-  <span class="text">'products'</span>:[
-    {
-      <span class="text">'id'</span> : <span class="text">'P54321'</span>,
-      <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>,
-      <span class="text">'quantity'</span> : 1,
-      <span class="text">'variant'</span> : <span class="text">'White'</span>,
-      <span class="text">'price'</span> : <span class="text">'19200'</span>
-    }
-]); </code>
+  bigin.event(<span class="text">"bg:cart"</span>,{
+    <span class="text">'products'</span>:[
+      {
+        <span class="text">'id'</span> : <span class="text">'P54321'</span>,
+        <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>,
+        <span class="text">'quantity'</span> : 1,
+        <span class="text">'variant'</span> : <span class="text">'White'</span>,
+        <span class="text">'price'</span> : <span class="text">'19200'</span>
+      }
+  ]); </code>
             <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
@@ -885,11 +885,11 @@ bigin.event(<span class="text">"bg:cart"</span>,{
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:checkout"</span>,{
-  <span class="text">'step'</span> : 1,
-  <span class="text">'option'</span> : <span class="text">'Visa'</span>,
-  <span class="text">'property'</span> : <span class="text">Value</span>
-]); </code>
+  bigin.event(<span class="text">"bg:checkout"</span>,{
+    <span class="text">'step'</span> : 1,
+    <span class="text">'option'</span> : <span class="text">'Visa'</span>,
+    <span class="text">'property'</span> : <span class="text">Value</span>
+  ]); </code>
             <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
@@ -904,39 +904,39 @@ bigin.event(<span class="text">"bg:checkout"</span>,{
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div>32</div><div>33</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:purchase"</span>,{
-    <span class="text">'id'</span> : <span class="text">'T12345'</span>, <span class="comment">// (필수) 고유 거래 ID.</span>
-    <span class="text">'revenue'</span> : <span class="text">'38400'</span>, <span class="comment">// (필수) 제품 수익.</span>
-    <span class="text">'affiliation'</span> : <span class="text">'Bigin Store'</span>, 
-    <span class="text">'tax'</span> : <span class="text">'1900'</span>, 
-    <span class="text">'shipping'</span> : <span class="text">'2300'</span>,
-    <span class="text">'coupon'</span> : <span class="text">'PROMO-BIG78CM'</span>,
-    <span class="text">'products'</span> : [
-    {
-      <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
-      <span class="text">'name'</span> : <span class="text">'BlueJean'</span>, <span class="comment">// (필수) 이름.</span>
-      <span class="text">'quantitiy'</span> : 1, <span class="comment">// (필수) 제품 구매 수량.</span>
-      <span class="text">'category'</span> : [<span class="text">'남성'</span>,<span class="text">'하의'</span>,<span class="text">'청바지'</span>], <span class="comment">// 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.</span>
-      <span class="text">'variant'</span> : <span class="text">'33/31'</span>, 
-      <span class="text">'variant2'</span> : <span class="text">'Indigo Blue'</span>, 
-      <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, 
-      <span class="text">'thumbnail'</span> : [<span class="text">'imageURL'</span>],
-      <span class="text">'price'</span> : <span class="text">'19200'</span> 
-    },
-    {
-      <span class="text">'id'</span> : <span class="text">'P12345'</span>, 
-      <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>, 
-      <span class="text">'quantitiy'</span> : 2, 
-      <span class="text">'category'</span> : [<span class="text">'여성'</span>,<span class="text">'상의'</span>,<span class="text">'셔츠/블라우스'</span>], 
-      <span class="text">'variant'</span> : <span class="text">'M'</span>, 
-      <span class="text">'variant2'</span> : <span class="text">'White'</span>, 
-      <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, 
-      <span class="text">'thumbnail'</span> : [<span class="text">'imageURL'</span>],
-      <span class="text">'price'</span> : <span class="text">'19200'</span>
-    }
-  ],
-  <span class="text">'property'</span> : Value
-]); </code>
+  bigin.event(<span class="text">"bg:purchase"</span>,{
+      <span class="text">'id'</span> : <span class="text">'T12345'</span>, <span class="comment">// (필수) 고유 거래 ID.</span>
+      <span class="text">'revenue'</span> : <span class="text">'38400'</span>, <span class="comment">// (필수) 제품 수익.</span>
+      <span class="text">'affiliation'</span> : <span class="text">'Bigin Store'</span>, 
+      <span class="text">'tax'</span> : <span class="text">'1900'</span>, 
+      <span class="text">'shipping'</span> : <span class="text">'2300'</span>,
+      <span class="text">'coupon'</span> : <span class="text">'PROMO-BIG78CM'</span>,
+      <span class="text">'products'</span> : [
+      {
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품의 고유 ID.</span>
+        <span class="text">'name'</span> : <span class="text">'BlueJean'</span>, <span class="comment">// (필수) 이름.</span>
+        <span class="text">'quantitiy'</span> : 1, <span class="comment">// (필수) 제품 구매 수량.</span>
+        <span class="text">'category'</span> : [<span class="text">'남성'</span>,<span class="text">'하의'</span>,<span class="text">'청바지'</span>], <span class="comment">// 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.</span>
+        <span class="text">'variant'</span> : <span class="text">'33/31'</span>, 
+        <span class="text">'variant2'</span> : <span class="text">'Indigo Blue'</span>, 
+        <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, 
+        <span class="text">'thumbnail'</span> : [<span class="text">'imageURL'</span>],
+        <span class="text">'price'</span> : <span class="text">'19200'</span> 
+      },
+      {
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>, 
+        <span class="text">'name'</span> : <span class="text">'WhiteShirts'</span>, 
+        <span class="text">'quantitiy'</span> : 2, 
+        <span class="text">'category'</span> : [<span class="text">'여성'</span>,<span class="text">'상의'</span>,<span class="text">'셔츠/블라우스'</span>], 
+        <span class="text">'variant'</span> : <span class="text">'M'</span>, 
+        <span class="text">'variant2'</span> : <span class="text">'White'</span>, 
+        <span class="text">'brand'</span> : <span class="text">'Bigin'</span>, 
+        <span class="text">'thumbnail'</span> : [<span class="text">'imageURL'</span>],
+        <span class="text">'price'</span> : <span class="text">'19200'</span>
+      }
+    ],
+    <span class="text">'property'</span> : <span class="text">'Value'</span>
+  ]); </code>
             <!--<span class="text">'variant'</span> : <span class="text">'black'</span>,-->
             <!--<span class="text">'quantity'</span> : <span class="text">'1'</span>, <span class="comment"></span>-->
           </pre>
@@ -949,9 +949,9 @@ bigin.event(<span class="text">"bg:purchase"</span>,{
 <div>1</div><div>2</div><div>3</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:refund"</span>,{
-  <span class="text">'id'</span> : <span class="text">'T12345'</span> <span class="comment">// (필수) 고유 거래 ID.</span>
-]); </code>
+  bigin.event(<span class="text">"bg:refund"</span>,{
+    <span class="text">'id'</span> : <span class="text">'T12345'</span> <span class="comment">// (필수) 고유 거래 ID.</span>
+  ]); </code>
           </pre>
         </div>
   <p>거래 중 일부의 제품의 부분 환불은 <strong>bg:refund</strong> 이벤트를 호출할 때, 거래 ID와 환불할 제품의 데이터를 제공해야 합니다.</p>
@@ -961,34 +961,18 @@ bigin.event(<span class="text">"bg:refund"</span>,{
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:refund"</span>,{
-  <span class="text">'id'</span> : <span class="text">'T12345'</span>, <span class="comment">// (필수) 고유 거래 ID.</span>
-  <span class="text">'id'</span> : [
-    {
-      <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 환불 제품의 고유 ID.</span>
-      <span class="text">'quantitiy'</span> : 1 <span class="comment">// (필수) 환불 제품의 수량.</span>
-    }
-  ]
-]); </code>
+  bigin.event(<span class="text">"bg:refund"</span>,{
+    <span class="text">'id'</span> : <span class="text">'T12345'</span>, <span class="comment">// (필수) 고유 거래 ID.</span>
+    <span class="text">'products'</span> : [
+      {
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 환불 제품의 고유 ID.</span>
+        <span class="text">'quantitiy'</span> : 1 <span class="comment">// (필수) 환불 제품의 수량.</span>
+      }
+    ]
+  ]); </code>
           </pre>
         </div>  
-     <h4 id="ecommerce-example9">제품 리뷰의 수집</h4>
-  <p>사용자가 작성한 제품 리뷰 데이터를 수집하세요. 제품 리뷰의 만족도와 내용을 수집할 수 있습니다.</p>
-       <div class="method-example">
-          <pre>
-            <div class="index">
-<div>1</div><div>2</div><div>3</div>
-</div>
-            <code class="language-bash">
-bigin.event(<span class="text">"bg:review"</span>,{
-  <span class="text">'id'</span> : <span class="text">'R12345'</span>, <span class="comment">// (필수) 리뷰 ID.</span>
-  <span class="text">'product'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품 고유 ID.</span>
-  <span class="text">'score'</span> : <span class="text">'4.5'</span>, <span class="comment">// 제품 리뷰의 점수.</span>
-  <span class="text">'content'</span> : <span class="text">'제품 리뷰의 내용입니다.'</span>, <span class="comment">// 제품 리뷰의 내용.</span>
-  <span class="text">'property'</span> : <span class="text">'Value'</span>
-]); </code>
-          </pre>
-        </div>
+
   <p>전체 거래를 환불 받으려면 <strong>bg:refund</strong> 이벤트를 호출하며 거래 ID를 제공하십시오. 아래의 코드 스니펫을 참고하십시오.</p>
        <div class="method-example">
           <pre>
@@ -996,17 +980,35 @@ bigin.event(<span class="text">"bg:review"</span>,{
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
 </div>
             <code class="language-bash">
-bigin.event(<span class="text">"bg:refund"</span>,{
-    <span class="text">'id'</span> : <span class="text">'T12345'</span>, <span class="comment">// (필수) 고유 거래 ID.</span>
-    <span class="text">'id'</span> : [
-    {
-      <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 환불 제품의 고유 ID.</span>
-      <span class="text">'quantitiy'</span> : 1, <span class="comment">// (필수) 환불 제품의 수량.</span>
-    }
-  ]
-]); </code>
+  bigin.event(<span class="text">"bg:refund"</span>,{
+      <span class="text">'id'</span> : <span class="text">'T12345'</span>, <span class="comment">// (필수) 고유 거래 ID.</span>
+      <span class="text">'id'</span> : [
+      {
+        <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 환불 제품의 고유 ID.</span>
+        <span class="text">'quantitiy'</span> : 1 <span class="comment">// (필수) 환불 제품의 수량.</span>
+      }
+    ]
+  ]); </code>
           </pre>
         </div>  
+         
+   <h4 id="ecommerce-example9">제품 리뷰의 수집</h4>
+  <p>사용자가 작성한 제품 리뷰 데이터를 수집하세요. 제품 리뷰의 만족도와 내용을 수집할 수 있습니다.</p>
+       <div class="method-example">
+          <pre>
+            <div class="index">
+<div>1</div><div>2</div><div>3</div>
+</div>
+            <code class="language-bash">
+  bigin.event(<span class="text">"bg:review"</span>,{
+    <span class="text">'id'</span> : <span class="text">'R12345'</span>, <span class="comment">// (필수) 리뷰 ID.</span>
+    <span class="text">'product'</span> : <span class="text">'P12345'</span>, <span class="comment">// (필수) 제품 고유 ID.</span>
+    <span class="text">'score'</span> : <span class="text">'4.5'</span>, <span class="comment">// 제품 리뷰의 점수.</span>
+    <span class="text">'content'</span> : <span class="text">'제품 리뷰의 내용입니다.'</span>, <span class="comment">// 제품 리뷰의 내용.</span>
+    <span class="text">'property'</span> : <span class="text">'Value'</span>
+  ]); </code>
+          </pre>
+        </div>
     <div class="method" id="gtm-install">
       <h2>GTM 설치</h2>
       <div class="method-description border-top-0">
