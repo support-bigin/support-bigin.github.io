@@ -223,7 +223,7 @@
         domain: <span class="text">"https://i.bigin.io"</span>, <span class="comment">// 프로젝트의 도메인 url 입니다.</span>
         track: [<span class="text">'session'</span>, <span class="text">'view'</span>, <span class="text">'click'</span>, <span
               class="text">'scroll'</span>], <span class="comment">// 자동 추적(AutoTrack)이 가능한 이벤트와 제스처</span>
-        TrackLocation: FALSE, <span class="comment">// 모바일 접속 시 위치정보 수집 허용</span>
+        trackLocation: false, <span class="comment">// 모바일 접속 시 위치정보 수집 허용</span>
         currencyCode: <span class="text">"KRW"</span> <span class="comment">// 표시 통화</span>
       });
     };
@@ -417,7 +417,7 @@
 </div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
-    bigin.user(<span class="text">"location"</span>); <span class="comment">// 기본 추적코드에 함께 있는 옵션입니다. 별도 적용 또는 기본추적코드의 enableTrackLocation 을 TRUE 로 허용하세요.</span>
+    bigin.user(<span class="text">"location"</span>); <span class="comment">// 기본 추적코드에 함께 있는 옵션입니다. 별도 적용 또는 기본추적코드의 trackLocation 을 true 로 허용하세요.</span>
   })();</code>
           </pre>
         </div>
