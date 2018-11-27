@@ -134,7 +134,13 @@ pre[class*="language-"] {
     width: 250px;
     background-color: #FAFAFA;
     border-right: 1px solid #e6e6e6;
+    -ms-overflow-style: none;
 }
+
+#bigin-install .sidebar ::-webkit-scrollbar{
+    display: none;
+}
+
 #bigin-install .sidebar .logo {
     background-color: #fff;
     padding: 24px 16px;
