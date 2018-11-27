@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css/bigin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bigin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigin_install.html" beforeDir="false" afterPath="$PROJECT_DIR$/bigin_install.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="209" column="34" lean-forward="true" selection-start-line="209" selection-start-column="34" selection-end-line="209" selection-end-column="34" />
+            <state relative-caret-position="343">
+              <caret line="550" column="14" lean-forward="true" selection-start-line="550" selection-start-column="14" selection-end-line="550" selection-end-column="14" />
               <folding>
                 <element signature="e#12447#12451#0" expanded="true" />
                 <element signature="e#12455#12459#0" expanded="true" />
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bigin.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bigin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/bigin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="344" column="24" lean-forward="true" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
+            <state relative-caret-position="232">
+              <caret line="347" column="1" lean-forward="true" selection-start-line="347" selection-start-column="1" selection-end-line="347" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -71,7 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ab</find>
       <find>고유 id</find>
       <find>config</find>
       <find>아래의</find>
@@ -101,6 +100,7 @@
       <find>pre</find>
       <find>&lt;pre&gt;</find>
       <find>index</find>
+      <find>커스텀 이벤트</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -120,8 +120,8 @@
         <option value="$PROJECT_DIR$/test.md" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/bigin_install.html" />
         <option value="$PROJECT_DIR$/css/bigin.css" />
+        <option value="$PROJECT_DIR$/bigin_install.html" />
       </list>
     </option>
   </component>
@@ -216,12 +216,12 @@
       <workItem from="1542257465177" duration="14408000" />
       <workItem from="1542279974957" duration="6588000" />
       <workItem from="1542962081624" duration="2677000" />
-      <workItem from="1543280435847" duration="821000" />
+      <workItem from="1543280435847" duration="970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43098000" />
+    <option name="totallyTimeSpent" value="43247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -235,7 +235,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32988167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3106509" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3106509" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,23 +370,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/bigin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="347" column="1" lean-forward="true" selection-start-line="347" selection-start-column="1" selection-end-line="347" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="209" column="34" lean-forward="true" selection-start-line="209" selection-start-column="34" selection-end-line="209" selection-end-column="34" />
+        <state relative-caret-position="343">
+          <caret line="550" column="14" lean-forward="true" selection-start-line="550" selection-start-column="14" selection-end-line="550" selection-end-column="14" />
           <folding>
             <element signature="e#12447#12451#0" expanded="true" />
             <element signature="e#12455#12459#0" expanded="true" />
             <element signature="e#17449#17453#0" expanded="true" />
             <element signature="e#17457#17461#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bigin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="344" column="24" lean-forward="true" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
         </state>
       </provider>
     </entry>
