@@ -208,7 +208,8 @@
         <h4 id="create-2">추적 코드 스니펫</h4>
         <div class="method-example">
           <pre><div class="index">
-<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div></div>
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div>
+</div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     <span class="declaration">var</span> biginScript = document.createElement(<span class="text">'script'</span>);
@@ -236,7 +237,8 @@
         <p>bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있습니다. 아래에서 선택적으로 추적되는 추적항목을 확인하세요.</p>
         <div class="method-example">
           <pre><div class="index">
-<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
             <code class="language-bash">
   track : [
     <span class="text">'session'</span>, <span
@@ -250,7 +252,8 @@
         </div>
         <div class="method-example">
           <pre><div class="index">
-<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div></div>
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div>
+</div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
     bigin.track(<span class="text">'session'</span>);
@@ -291,7 +294,8 @@
           그러나 스니펫이 대시보드로 페이지 뷰 조회를 보내지 않게하려면 <span class="box">ignore</span> 매개 변수를 다음 과 같이 설정하십시오.</p>
         <div class="method-example">
           <pre><div class="index">
-<div>1</div></div>
+<div>1</div>
+</div>
             <code class="language-bash">
   ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/page'</span>] <span
               class="comment">// 추적 사용을 중지할 특정 페이지의 path를 다음과 같이 추가하세요.</span>
@@ -423,7 +427,8 @@
         <p>추적을 시작하기 전에 하나의 이벤트를 추적하여 bigin에서 이벤트를 수집, 저장 및 보여주는 형태를 이해하세요. 먼저 커스텀 이벤트의 기본 구조는 아래의 스니펫과 같습니다.</p>
         <div class="method-example">
           <pre><div class="index">
-<div>1</div></div>
+<div>1</div>
+</div>
             <code class="language-bash">
   bigin.event(<span class="text">"eventName"</span>);
             </code>
@@ -855,7 +860,9 @@
         <p>장바구니에 담긴 제품의 삭제는 장바구니 상태 업데이트 스크립트의 빈 제품 목록을 새로 호출합니다. 사용자가 삭제 또는 거래완료로 인한 삭제 등 사용자의 장바구니에서
           제품의 수량이 변동될 때 장바구니의 상태를 새로 호출합니다. 장바구니 페이지에 적용되는 코드 스니펫의 기본 구조는 아래와 같습니다.</p>
         <div class="method-example">
-          <pre><div class="index"><div>1</div></div>
+          <pre><div class="index">
+<div>1</div>
+</div>
             <code class="language-bash">
   bigin.event(<span class="text">"bg:cart"</span>,{}); 
               </code>
