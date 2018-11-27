@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/bigin_install.html" beforeDir="false" afterPath="$PROJECT_DIR$/bigin_install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bigin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bigin.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="809" column="60" lean-forward="true" selection-start-line="809" selection-start-column="60" selection-end-line="809" selection-end-column="60" />
+            <state relative-caret-position="109">
+              <caret line="209" column="34" lean-forward="true" selection-start-line="209" selection-start-column="34" selection-end-line="209" selection-end-column="34" />
               <folding>
                 <element signature="e#12447#12451#0" expanded="true" />
                 <element signature="e#12455#12459#0" expanded="true" />
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bigin.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bigin.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/bigin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="116" column="2" selection-start-line="116" selection-start-column="2" selection-end-line="116" selection-end-column="2" />
+            <state relative-caret-position="187">
+              <caret line="344" column="24" lean-forward="true" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -71,7 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img</find>
       <find>ab</find>
       <find>고유 id</find>
       <find>config</find>
@@ -101,6 +100,7 @@
       <find>sidebar</find>
       <find>pre</find>
       <find>&lt;pre&gt;</find>
+      <find>index</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -120,8 +120,8 @@
         <option value="$PROJECT_DIR$/test.md" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/bigin.css" />
         <option value="$PROJECT_DIR$/bigin_install.html" />
+        <option value="$PROJECT_DIR$/css/bigin.css" />
       </list>
     </option>
   </component>
@@ -216,12 +216,12 @@
       <workItem from="1542257465177" duration="14408000" />
       <workItem from="1542279974957" duration="6588000" />
       <workItem from="1542962081624" duration="2677000" />
-      <workItem from="1543280435847" duration="694000" />
+      <workItem from="1543280435847" duration="821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42971000" />
+    <option name="totallyTimeSpent" value="43098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -370,23 +370,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/bigin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="116" column="2" selection-start-line="116" selection-start-column="2" selection-end-line="116" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="809" column="60" lean-forward="true" selection-start-line="809" selection-start-column="60" selection-end-line="809" selection-end-column="60" />
+        <state relative-caret-position="109">
+          <caret line="209" column="34" lean-forward="true" selection-start-line="209" selection-start-column="34" selection-end-line="209" selection-end-column="34" />
           <folding>
             <element signature="e#12447#12451#0" expanded="true" />
             <element signature="e#12455#12459#0" expanded="true" />
             <element signature="e#17449#17453#0" expanded="true" />
             <element signature="e#17457#17461#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bigin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="344" column="24" lean-forward="true" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
         </state>
       </provider>
     </entry>

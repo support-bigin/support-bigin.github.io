@@ -341,7 +341,7 @@ pre[class*="language-"] {
     padding: 0 !important;
 }
 #bigin-install #contents #methods .method .method-example pre .index {
-    width: 40px;
+    /*width: 40px;*/
     line-height:inherit;
     text-align: center;
     border-right: 1px solid #cccccc;
