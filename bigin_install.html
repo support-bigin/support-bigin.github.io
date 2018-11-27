@@ -207,8 +207,7 @@
 
         <h4 id="create-2">추적 코드 스니펫</h4>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div></div>
             <code class="language-bash">
   (<span class="declaration">function</span>() {
@@ -236,8 +235,7 @@
         <h4 id="create-3">데이터 수집의 허용</h4>
         <p>bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있습니다. 아래에서 선택적으로 추적되는 추적항목을 확인하세요.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
             <code class="language-bash">
   track : [
@@ -292,8 +290,7 @@
           스니펫을 추가하면 페이지 뷰가 자동으로 추적됩니다. 
           그러나 스니펫이 대시보드로 페이지 뷰 조회를 보내지 않게하려면 <span class="box">ignore</span> 매개 변수를 다음 과 같이 설정하십시오.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div></div>
             <code class="language-bash">
   ignore : [<span class="text">'/pagePath'</span>, <span class="text">'/pagePath/page'</span>] <span
@@ -306,8 +303,7 @@
         <p>SPA(SinglePageApplication) 단일 페이지 어플리케이션으로 개발된 웹사이트의 경우, 페이지 뷰 이벤트의 별도 추적이 필요합니다.</p>
         <p>아래의 스니펫을 추적할 페이지의 <span class="box">&lt;head&gt;</span> 태그 안에 추가하세요.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
 </div>
             <code class="language-bash">
@@ -331,8 +327,7 @@
           <li>기본 설정 = 대한민국 통화(KRW)</li>
         </ol>
         <div class="method-example">
-          <pre>
-                        <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
 </div>
             <code class="language-bash">
@@ -368,8 +363,7 @@
           </tr>
         </table>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
 </div>
             <code class="language-bash">
@@ -396,8 +390,7 @@
         <p>만약 세션 안에서 한 계정 외에 다른 계정의 로그인이 복수로 발생할 경우 마지막 로그인 사용자의 계정에 이전의 데이터가 모두 속하게 됩니다.</p>
         <p>위와 같은 문제를 해결하기 위해서는 로그인을 끊을 수 있는 행동에 아래의 스니펫을 추가하여 기존 로그인 사용자의 세션을 종료하여야 합니다.</p>
         <div class="method-example">
-          <pre>
-                        <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div>
 </div>
             <code class="language-bash">
@@ -410,8 +403,7 @@
         <p>bigin의 기본적인 사용자 위치를 수집하는 방식은 IP에 기반한 주소로 수집합니다. 더 정확한 위치의 수집이 필요한 경우에는 모바일에서 접속한 사용자의 위도와 경도를 수집할 수 있습니다. 아래의
           스니펫을 &lt;head&gt; 태그 사이에 추가하세요. 사용자의 위치정보 수집을 묻고, 허용한다면 사용자의 현재 위치의 위도와 경도를 수집하여 저장할 수 있습니다.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div>
 </div>
             <code class="language-bash">
@@ -430,10 +422,7 @@
           방식을 이해하는데 필수적인 요소입니다. </p>
         <p>추적을 시작하기 전에 하나의 이벤트를 추적하여 bigin에서 이벤트를 수집, 저장 및 보여주는 형태를 이해하세요. 먼저 커스텀 이벤트의 기본 구조는 아래의 스니펫과 같습니다.</p>
         <div class="method-example">
-          <pre>
-<div class="index">
-<div>1</div>
-</div>
+          <pre><div class="index"><div>1</div></div>
             <code class="language-bash">
   bigin.event(<span class="text">"eventName"</span>);
             </code>
@@ -443,8 +432,7 @@
         <p>bigin.js 에서는 모든 커스텀 이벤트의 속성을 나누어 이벤트의 속성을 보고서의 측정기준 또는 측정항목으로 수집할 수 있습니다. 커스텀 이벤트의 속성을 추가하면 웹페이지에서 발생할 수 있는
           여러가지 상황을 하나의 이벤트 스크립트로 설정할 수 있습니다. 속성을 추가하는 경우 아래의 스니펫 구조를 참고하세요. </p>
         <div class="method-example">
-          <pre>
-                        <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div>
 </div>
             <code class="language-bash">
@@ -462,8 +450,7 @@
         </ol>
         <p>커스텀 이벤트의 예제는 아래와 같습니다.</p>
         <div class="method-example">
-          <pre>
-                        <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
 </div>
             <code class="language-bash">
@@ -734,8 +721,7 @@
         <p>이커머스 추적을 구현하기 위해서는 제품의 조회가 측정되어야 합니다. 일반적으로 제품 세부정보 페이지의 조회가 발생할 때 코드를 작동하며, 사용자가 제품을 조회할 때 서버로 전송하는 코드 스니펫의
           예제는 아래와 같습니다.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
 </div>
             <code class="language-bash">
@@ -762,8 +748,7 @@
         <p>제품의 세부정보 페이지에서 이전의 제품목록 또는 제품의 게재순서를 가져오지 못 할 경우, 사용자가 제품을 클릭할 때 "bg:impression" 이벤트를 작동하여 추적할 수 있습니다. 코드
           스니펫의 예제는 아래와 같습니다.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
 </div>
             <code class="language-bash">
@@ -790,8 +775,7 @@
         <h4 id="ecommerce-example3">제픔 장바구니 추가</h4>
         <p>이커머스 추적에서 장바구니 데이터 추적은 사용자가 장바구니 페이지의 조회가 발생할 때 코드를 작동하며, 장바구니 페이지에 적용되는 코드 스니펫의 기본 구조는 아래와 같습니다.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div>
 </div>
             <code class="language-bash">
@@ -822,8 +806,7 @@
         <h4 id="ecommerce-example4">제픔 장바구니 업데이트</h4>
         <p>사용자가 조회한 제품 세부정보 페이지에서 일어난 장바구니에 담는 행동을 추적하기 위해서는 장바구니 버튼에 별도의 추적이벤트 수집이 필요합니다.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
 </div>
             <code class="language-bash">
@@ -839,8 +822,7 @@
         <p>사용자가 장바구니 페이지를 조회할 때 담겨있는 제품의 데이터를 <span class="text">bg:cart</span> 스크립트로 호출합니다. 장바구니 페이지에 적용되는 코드 스니펫의 예제는
           아래와 같습니다. </p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div>
 </div>
             <code class="language-bash">
@@ -872,10 +854,7 @@
         <p>장바구니에 담긴 제품의 삭제는 장바구니 상태 업데이트 스크립트의 빈 제품 목록을 새로 호출합니다. 사용자가 삭제 또는 거래완료로 인한 삭제 등 사용자의 장바구니에서
           제품의 수량이 변동될 때 장바구니의 상태를 새로 호출합니다. 장바구니 페이지에 적용되는 코드 스니펫의 기본 구조는 아래와 같습니다.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
-<div>1</div>
-</div>
+          <pre><div class="index"><div>1</div></div>
             <code class="language-bash">
   bigin.event(<span class="text">"bg:cart"</span>,{}); 
               </code>
@@ -886,8 +865,7 @@
         <p>제품 장바구니에서 부분적으로 제품이 남아있을 수 있습니다. 남아있는 제품이 있는 경우에는 아직 담겨있는 제품의 정보와 장바구니 업데이트 스크립트를 호출합니다. 코드 스니펫의 예제는 아래와
           같습니다. </p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
 </div>
             <code class="language-bash">
@@ -911,8 +889,7 @@
           같습니다.
         </p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
 </div>
             <code class="language-bash">
@@ -931,8 +908,7 @@
           합니다. 코드 스니펫의 예제는 아래와 같습니다.
         </p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div>32</div><div>33</div>
 </div>
             <code class="language-bash">
@@ -982,8 +958,7 @@
         <h4 id="ecommerce-example8">제품의 환불 처리</h4>
         <p>전체 거래를 환불 받으려면 <strong>bg:refund</strong> 이벤트를 호출하며 거래 ID를 제공하십시오. 아래의 코드 스니펫을 참고하십시오.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div>
 </div>
             <code class="language-bash">
@@ -994,8 +969,7 @@
         </div>
         <p>거래 중 일부의 제품의 부분 환불은 <strong>bg:refund</strong> 이벤트를 호출할 때, 거래 ID와 환불할 제품의 데이터를 제공해야 합니다.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
 </div>
             <code class="language-bash">
@@ -1014,8 +988,7 @@
 
         <p>전체 거래를 환불 받으려면 <strong>bg:refund</strong> 이벤트를 호출하며 거래 ID를 제공하십시오. 아래의 코드 스니펫을 참고하십시오.</p>
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
 </div>
             <code class="language-bash">
@@ -1037,8 +1010,7 @@
         <p>사용자가 작성한 제품 리뷰 데이터를 수집하세요. 제품 리뷰의 만족도와 내용을 수집할 수 있습니다.</p>
 
         <div class="method-example">
-          <pre>
-            <div class="index">
+          <pre><div class="index">
 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
 </div>
             <code class="language-bash">

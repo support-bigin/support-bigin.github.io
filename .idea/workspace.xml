@@ -19,8 +19,8 @@
       <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="253" column="34" lean-forward="true" selection-start-line="253" selection-start-column="34" selection-end-line="253" selection-end-column="34" />
+            <state relative-caret-position="172">
+              <caret line="809" column="60" lean-forward="true" selection-start-line="809" selection-start-column="60" selection-end-line="809" selection-end-column="60" />
               <folding>
                 <element signature="e#12447#12451#0" expanded="true" />
                 <element signature="e#12455#12459#0" expanded="true" />
@@ -71,7 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>width</find>
       <find>img</find>
       <find>ab</find>
       <find>고유 id</find>
@@ -94,13 +93,14 @@
       <find>\n          \&lt;img src\=\&quot;images\/currency\-trigger\.png\&quot;\&gt;</find>
       <find>code</find>
       <find>method-example</find>
-      <find>pre</find>
       <find>itemView</find>
       <find>position</find>
       <find>sidemenu</find>
       <find>false</find>
       <find>FALSE</find>
       <find>sidebar</find>
+      <find>pre</find>
+      <find>&lt;pre&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -216,12 +216,12 @@
       <workItem from="1542257465177" duration="14408000" />
       <workItem from="1542279974957" duration="6588000" />
       <workItem from="1542962081624" duration="2677000" />
-      <workItem from="1543280435847" duration="517000" />
+      <workItem from="1543280435847" duration="694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42794000" />
+    <option name="totallyTimeSpent" value="42971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -379,8 +379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="253" column="34" lean-forward="true" selection-start-line="253" selection-start-column="34" selection-end-line="253" selection-end-column="34" />
+        <state relative-caret-position="172">
+          <caret line="809" column="60" lean-forward="true" selection-start-line="809" selection-start-column="60" selection-end-line="809" selection-end-column="60" />
           <folding>
             <element signature="e#12447#12451#0" expanded="true" />
             <element signature="e#12455#12459#0" expanded="true" />
