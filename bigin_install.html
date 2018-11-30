@@ -220,19 +220,21 @@
       bigin.config({
         projectID: <span class="text">"프로젝트 ID"</span>, <span
               class="comment">// 프로젝트의 고유 추적 ID 입니다. 'G924TSD55D-2'</span>
-        domain: <span class="text">"https://i.bigin.io"</span>, <span class="comment">// 프로젝트의 도메인 url 입니다.</span>
+        domain: <span class="text">"https://i.bigin.io"</span>,
         track: [<span class="text">'session'</span>, <span class="text">'view'</span>, <span class="text">'click'</span>, <span
               class="text">'scroll'</span>], <span class="comment">// 자동 추적(AutoTrack)이 가능한 이벤트와 제스처</span>
-        TrackLocation: FALSE, <span class="comment">// 모바일 접속 시 위치정보 수집 허용</span>
+        TrackLocation: false, <span class="comment">// 모바일 접속 시 위치정보 수집 허용</span>
         currencyCode: <span class="text">"KRW"</span> <span class="comment">// 표시 통화</span>
       });
     };
     <span class="declaration">var</span> s = document.getElementsByTagName(<span class="text">'script'</span>)[0];
-    s.parentNode.inserBefore(biginScript, s);
+    s.parentNode.insertBefore(biginScript, s);
   })();
             </code>
           </pre>
         </div>
+        <p>이벤트 추적은 추적코드 스니펫이 기술된 biginScript 스크립트가 로드된 이후부터 가능합니다. <br>
+        추적데이터를 서버로 전송하는 코드는 biginScript가 로드된 시점 이후부터 호출되어야합니다.</p>
         <h4 id="create-3">데이터 수집의 허용</h4>
         <p>bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있습니다. 아래에서 선택적으로 추적되는 추적항목을 확인하세요.</p>
         <div class="method-example">
