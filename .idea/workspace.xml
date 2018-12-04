@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bigin_install.html" beforeDir="false" afterPath="$PROJECT_DIR$/bigin_install.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="994" column="16" lean-forward="true" selection-start-line="994" selection-start-column="16" selection-end-line="994" selection-end-column="16" />
+            <state relative-caret-position="289">
+              <caret line="923" column="55" lean-forward="true" selection-start-line="923" selection-start-column="55" selection-end-line="923" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -66,7 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>currency</find>
       <find>spa</find>
       <find>단일 페이지</find>
       <find>로그아웃</find>
@@ -96,6 +94,7 @@
       <find>ignore</find>
       <find>특정 페이지</find>
       <find>id</find>
+      <find>bg:checkout</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -214,12 +213,12 @@
       <workItem from="1543280435847" duration="1516000" />
       <workItem from="1543471893939" duration="169000" />
       <workItem from="1543543018317" duration="783000" />
-      <workItem from="1543914101951" duration="31000" />
+      <workItem from="1543914101951" duration="673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44776000" />
+    <option name="totallyTimeSpent" value="45418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -232,7 +231,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32988167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3075862" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30620688" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -461,8 +460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bigin_install.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="994" column="16" lean-forward="true" selection-start-line="994" selection-start-column="16" selection-end-line="994" selection-end-column="16" />
+        <state relative-caret-position="289">
+          <caret line="923" column="55" lean-forward="true" selection-start-line="923" selection-start-column="55" selection-end-line="923" selection-end-column="55" />
         </state>
       </provider>
     </entry>
