@@ -997,26 +997,6 @@
           </pre>
         </div>
 
-        <p>전체 거래를 환불 받으려면 <strong>bg:refund</strong> 이벤트를 호출하며 거래 ID를 제공하십시오. 아래의 코드 스니펫을 참고하십시오.</p>
-        <div class="method-example">
-          <pre><div class="index">
-<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
-</div>
-            <code class="language-bash">
-  bigin.event(<span class="text">"bg:refund"</span>,{
-      <span class="text">'id'</span> : <span class="text">'T12345'</span>, <span
-              class="comment">// (필수) 고유 거래 ID.</span>
-      <span class="text">'products'</span> : [
-      {
-        <span class="text">'id'</span> : <span class="text">'P12345'</span>, <span
-              class="comment">// (필수) 환불 제품의 고유 ID.</span>
-        <span class="text">'quantity'</span> : 1 <span class="comment">// (필수) 환불 제품의 수량.</span>
-      }
-    ]
-  ]); </code>
-          </pre>
-        </div>
-
         <h4 id="ecommerce-example9">제품 리뷰의 수집</h4>
         <p>사용자가 작성한 제품 리뷰 데이터를 수집하세요. 제품 리뷰의 만족도와 내용을 수집할 수 있습니다.</p>
 
