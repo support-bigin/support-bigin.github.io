@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/bigin_install.html" beforeDir="false" afterPath="$PROJECT_DIR$/bigin_install.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bigin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bigin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sub_bigin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/sub_bigin.css" afterDir="false" />
-    </list>
+    <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="62" column="60" lean-forward="true" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+            <state relative-caret-position="308">
+              <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -39,17 +35,17 @@
       <file leaf-file-name="sub_bigin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/sub_bigin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="128">
+              <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bigin.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bigin.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/bigin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="250" column="1" lean-forward="true" selection-start-line="250" selection-start-column="1" selection-end-line="250" selection-end-column="1" />
+            <state relative-caret-position="263">
+              <caret line="244" column="22" lean-forward="true" selection-start-line="244" selection-start-column="22" selection-end-line="244" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -67,8 +63,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>h2</find>
-      <find>overview</find>
       <find>시작하기</find>
       <find>\n          \&lt;img src\=\&quot;images\/currency\-trigger\.png\&quot;\&gt;</find>
       <find>code</find>
@@ -97,6 +91,8 @@
       <find>method-description</find>
       <find>특정 페이지</find>
       <find>create-4</find>
+      <find>48px</find>
+      <find>padding-top: 48</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -218,12 +214,12 @@
       <workItem from="1543543018317" duration="783000" />
       <workItem from="1543914101951" duration="1219000" />
       <workItem from="1543968881052" duration="3293000" />
-      <workItem from="1544054290657" duration="1695000" />
+      <workItem from="1544054290657" duration="1886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50952000" />
+    <option name="totallyTimeSpent" value="51143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="864" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -505,24 +501,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bigin_install.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/sub_bigin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="128">
+          <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bigin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="250" column="1" lean-forward="true" selection-start-line="250" selection-start-column="1" selection-end-line="250" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bigin_install.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="62" column="60" lean-forward="true" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+        <state relative-caret-position="263">
+          <caret line="244" column="22" lean-forward="true" selection-start-line="244" selection-start-column="22" selection-end-line="244" selection-end-column="22" />
         </state>
       </provider>
     </entry>
