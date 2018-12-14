@@ -97,8 +97,8 @@
       </li>
 
     </ul>
-    <!--<h1>
-      <a href="#gtm-install">GTM 설치</a>
+    <h1>
+      <a href="#gtm-install">GTM 연동 설치</a>
     </h1>
     <ul class="menu nav">
       <li>
@@ -133,11 +133,11 @@
           <li><a href="#gtm-custom-1">사용자 정의 이벤트</a></li>
         </ul>
       </li>
-      &lt;!&ndash;<li>&ndash;&gt;
-        &lt;!&ndash;<a href="#gtm-ecommerce">이커머스 추적 태그 생성</a>&ndash;&gt;
-        &lt;!&ndash;<ul class="nav">&ndash;&gt;
-        &lt;!&ndash;</ul>&ndash;&gt;
-      &lt;!&ndash;</li>&ndash;&gt;
+      <!--<li>-->
+        <!--<a href="#gtm-ecommerce">이커머스 추적 태그 생성</a>-->
+        <!--<ul class="nav">-->
+        <!--</ul>-->
+      <!--</li>-->
       <li>
         <a href="#gtm-bigin">bigin 정의 이벤트 태그 생성</a>
         <ul class="nav">
@@ -152,7 +152,7 @@
         </ul>
       </li>
 
-    </ul>-->
+    </ul>
   </div>
 </div>
 
@@ -1024,21 +1024,20 @@
           </pre>
         </div>
         <!--TODO : GTM 설치-->
-        <!--<div class="method" id="gtm-install">
-          <h2>GTM 설치</h2>
+        <div class="method" id="gtm-install">
+          <h2>GTM 연동 설치</h2>
           <div class="method-description border-top-0">
             <h3 id="gtm-bigining">시작하기</h3>
-            <p>웹사이트의 SDK의 경우 구글 태그매니저(GTM)의 설치를 지원합니다.</p>
+            <p>웹사이트의 SDK는 구글 태그매니저(GTM)를 통해 설치할 수 있습니다.</p>
             <p> GTM을 활용한 bigin SDK 설치 방법은 아래와 같습니다. </p>
             <ol>
-              <li><a href="https://tagmanager.google.com" target="_blank">tagmanager.google.com</a>로 접속 후 태그관리자 계정과
-                컨테이너를
-                생성합니다.
-              </li>
+              <li><a href="https://tagmanager.google.com" target="_blank">tagmanager.google.com</a>로 접속 후 태그관리자 계정과 컨테이너를 생성합니다.</li>
               <li>컨테이너를 생성 후, 추적코드를 발급받습니다.</li>
-              <li>안내에 따라 웹사이트에 추적코드를 추가하면 프로젝트의 기본 추적 데이터가 수집됩니다.</li>
+              <li>아래의 안내에 따라 웹사이트에 추적코드를 추가하면 프로젝트의 기본 추적 데이터가 수집됩니다.</li>
             </ol>
+            <p>또는 간편한 설치를 위하여 컨테이너 파일을 제공합니다. 제공되는 json 파일을 통해서 컨테이너를 구성할 수 있습니다.</p>
           </div>
+
         </div>
         <div class="method" id="gtm-insert">
           <div class="method-description">
@@ -1057,11 +1056,11 @@
               <img src="images/gtm-variable.png">
             </div>
           </div>
-        </div>-->
+        </div>
       </div>
     </div>
     <!--TODO : GTM 설치-->
-    <!--<div class="method" id="gtm-basic">
+    <div class="method" id="gtm-basic">
       <div class="method-description">
         <h3>기본 추적 태그 생성</h3>
         <p>bigin의 모든 GTM 태그는 맞춤 HTML 태그를 사용합니다.</p>
@@ -1070,42 +1069,42 @@
         <div class="screenshot">
           <img src="images/gtm-config-script.png">
         </div>
-        &lt;!&ndash;<div class="method-example">&ndash;&gt;
-        &lt;!&ndash;<pre>&ndash;&gt;
-        &lt;!&ndash;<code class="language-bash">&ndash;&gt;
-        &lt;!&ndash;&lt;script&gt;(<span class='declaration'>function</span> () {&ndash;&gt;
-        &lt;!&ndash;var biginScript = document.createElement(<span class="text">'script'</span>);&ndash;&gt;
-        &lt;!&ndash;biginScript.type = <span class="text">'text/javascript'</span>;&ndash;&gt;
-        &lt;!&ndash;biginScript.async = true;&ndash;&gt;
+        <div class="method-example">
+        <pre>
+        <code class="language-bash">
+        &lt;script&gt;(<span class='declaration'>function</span> () {
+        var biginScript = document.createElement(<span class="text">'script'</span>);
+        biginScript.type = <span class="text">'text/javascript'</span>;
+        biginScript.async = true;
 
-        &lt;!&ndash;// remote&ndash;&gt;
-        &lt;!&ndash;biginScript.src = <span class="text">'https://sdk.bigin.io/v1/bigin.sdk.js'</span>;&ndash;&gt;
+        // remote
+        biginScript.src = <span class="text">'https://sdk.bigin.io/v1/bigin.sdk.js'</span>;
 
-        &lt;!&ndash;biginScript.onload = <span class="declaration">function</span> () {&ndash;&gt;
-        &lt;!&ndash;bigin.config({&ndash;&gt;
-        &lt;!&ndash;app_key: <span class="text">"YOUR_APP_KEY"</span>, <span&ndash;&gt;
-        &lt;!&ndash;class="comment">// 프로젝트의 고유 추적 ID 입니다. 'G924TSD55D-2' </span>&ndash;&gt;
-        &lt;!&ndash;url: <span class="text">"https://i.bigin.io"</span>,&ndash;&gt;
-        &lt;!&ndash;track: [<span class="text">'sessions'</span>, <span class="text">'views'</span>, <span&ndash;&gt;
-        &lt;!&ndash;class="text">'clicks'</span>, <span class="text">'scrolls'</span>],&ndash;&gt;
-        &lt;!&ndash;enableAutoStoreGeoPosition: false,&ndash;&gt;
-        &lt;!&ndash;currencyCode: <span class="text">"KRW"</span>&ndash;&gt;
-        &lt;!&ndash;});&ndash;&gt;
-        &lt;!&ndash;};&ndash;&gt;
+        biginScript.onload = <span class="declaration">function</span> () {
+        bigin.config({
+        app_key: <span class="text">"YOUR_APP_KEY"</span>, <span
+        class="comment">// 프로젝트의 고유 추적 ID 입니다. 'G924TSD55D-2' </span>
+        url: <span class="text">"https://i.bigin.io"</span>,
+        track: [<span class="text">'sessions'</span>, <span class="text">'views'</span>, <span
+        class="text">'clicks'</span>, <span class="text">'scrolls'</span>],
+        enableAutoStoreGeoPosition: false,
+        currencyCode: <span class="text">"KRW"</span>
+        });
+        };
 
-        &lt;!&ndash;<span class="declaration">var</span> s = document.getElementsByTagName(<span class="text">'script'</span>)[0];&ndash;&gt;
-        &lt;!&ndash;s.parentNode.inserBefore(biginScript, s);&ndash;&gt;
-        &lt;!&ndash;})();&ndash;&gt;
-        &lt;!&ndash;&lt;/script&gt;&ndash;&gt;
-        &lt;!&ndash;</code>&ndash;&gt;
-        &lt;!&ndash;</pre>&ndash;&gt;
-        &lt;!&ndash;</div>&ndash;&gt;
+        <span class="declaration">var</span> s = document.getElementsByTagName(<span class="text">'script'</span>)[0];
+        s.parentNode.inserBefore(biginScript, s);
+        })();
+        &lt;/script&gt;
+        </code>
+        </pre>
+        </div>
         <div class="screenshot gtm-config">
           <img src="images/gtm-config.png">
         </div>
         <h4 id="gtm-basic-2">표시 통화의 설정 변경 태그</h4>
         <p>표시통화를 설정을 변경하는 태그입니다.</p>
-        &lt;!&ndash;<p>&lt; 스크립트 &gt;</p>
+        <!--<p>&lt; 스크립트 &gt;</p>
         <div class="method-example">
           <pre>
             <code class="language-bash">
@@ -1116,7 +1115,7 @@
   &lt;/script&gt;
             </code>
           </pre>
-        </div>&ndash;&gt;
+        </div>-->
         <div class="screenshot gtm-currency">
           <img src="images/gtm-currency.png">
         </div>
@@ -1568,7 +1567,31 @@
           </pre>
         </div>
       </div>
-    </div>-->
+    </div>
+
+    <div class="method" >
+      <div class="method-description">
+        <h4>간편 설치</h4>
+        <p>구글 태그매니저의 "컨테이너 내보내기 및 가져오기" 를 통해 간편하게 작업공간을 구성할 수 있습니다.</p>
+        <p>설정방법은 아래와 같습니다.</p>
+        <ul>
+          <li><a href="./assets/container.json" download>container.json</a> 파일을 저장합니다.</li>
+          <li><a href="https://tagmanager.google.com">구글 태그매니저</a>에서 계정선택을 한 후, "관리자" 탭을 클릭합니다.</li>
+          <div class="screenshot">
+            <img src="images/workspace.png">
+          </div>
+          <li>컨테이너 영역에서 "컨테이너 가져오기" 버튼을 클릭합니다.</li>
+          <div class="screenshot">
+            <img src="images/tagmanager_admin.png">
+          </div>
+          <li>"가져올 파일 선택" 에서 내려받은 컨테이너 파일을 등록합니다.</li>
+          <li>작업공간과 옵션을 설정한 후, 확인 버튼을 클릭합니다.</li>
+          <div class="screenshot">
+            <img src="images/get_container.png">
+          </div>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 

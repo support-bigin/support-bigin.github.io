@@ -1,0 +1,784 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2018-12-12 00:48:39",
+    "containerVersion": {
+        "path": "accounts/4389721360/containers/10365777/versions/2",
+        "accountId": "4389721360",
+        "containerId": "10365777",
+        "containerVersionId": "2",
+        "name": "v2",
+        "container": {
+            "path": "accounts/4389721360/containers/10365777",
+            "accountId": "4389721360",
+            "containerId": "10365777",
+            "name": "believe-nature",
+            "publicId": "CHANGE-YOUR-CONTAINER-ID",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1541652147590",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4389721360/containers/10365777/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "1",
+                "name": "Bigin SPA 페이지뷰",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.track('views', {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244808",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "2",
+                "name": "Bigin 구매",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:purchase\",{{data}} );\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244809",
+                "firingTriggerId": [
+                    "6"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "3",
+                "name": "Bigin 로그아웃",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n(function () {\n   bigin.user(\"logout\");\n})();  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244809",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "4",
+                "name": "Bigin 로그인",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n(function () {\n    bigin.user(\"profile\", {{data}});\n})();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244810",
+                "firingTriggerId": [
+                    "8"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "5",
+                "name": "Bigin 리뷰",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n    bigin.event(\"bg:review\", {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244811",
+                "firingTriggerId": [
+                    "9"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "6",
+                "name": "Bigin 삽입",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>(function () {\n  var biginScript = document.createElement('script');\n  biginScript.type = 'text/javascript';\n  biginScript.async = false;\n    console.log('loadstart');\n\n  // remote\n\tbiginScript.src = 'https://sdk.bigin.io/v1/bigin.sdk.js';\n\n  biginScript.onload = function () {\n    console.log('config');\n    bigin.config({\n      app_key: \"87b6441d80904a26a5ddd9461d55c986\",\n      url: \"https://i.bigin.io\",\n      track: ['sessions', 'views', 'clicks', 'scrolls'],\n      enableAutoStoreGeoPosition: false,\n      currencyCode: \"KRW\"\n    });\n  };\n\n  var s = document.getElementsByTagName('script')[0];\n  s.parentNode.insertBefore(biginScript, s);\n})();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1542954395993",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "7",
+                "name": "Bigin 상품보기",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:itemView\", {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244812",
+                "firingTriggerId": [
+                    "10"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "8",
+                "name": "Bigin 설정",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  (function() {\n      bigin.config({{data}});\n  })();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244813",
+                "firingTriggerId": [
+                    "11"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "9",
+                "name": "Bigin 쇼핑카트",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\nbigin.event(\"bg:cart\", {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244813",
+                "firingTriggerId": [
+                    "12"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "10",
+                "name": "Bigin 임프레션",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n    (function () {\nbigin.event(\"bg:impression\", {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244814",
+                "firingTriggerId": [
+                    "13"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "11",
+                "name": "Bigin 장바구니 추가",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n      bigin.event('bg:toCart', {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244815",
+                "firingTriggerId": [
+                    "14"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "12",
+                "name": "Bigin 체크아웃",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:checkout\", {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244816",
+                "firingTriggerId": [
+                    "15"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "13",
+                "name": "Bigin 커스텀 이벤트",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n      bigin.event({{eventName}}, {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244816",
+                "firingTriggerId": [
+                    "16"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "tagId": "14",
+                "name": "Bigin 환불",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\t    bigin.event(\"bg:refund\", {{data}});\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1541651244817",
+                "firingTriggerId": [
+                    "18"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "5",
+                "name": "SPA 페이지 뷰",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "views"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244803"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "6",
+                "name": "구매",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "purchase"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244803"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "7",
+                "name": "로그아웃",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "logout"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244803"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "8",
+                "name": "로그인",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "login"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244804"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "9",
+                "name": "리뷰",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "review"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244804"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "10",
+                "name": "상품 보기",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "itemView"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244804"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "11",
+                "name": "설정",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "config"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244804"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "12",
+                "name": "쇼핑카트",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244804"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "13",
+                "name": "임프레션",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "impression"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244805"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "14",
+                "name": "장바구니 추가",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "toCart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244805"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "15",
+                "name": "체크아웃",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "checkout"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244805"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "16",
+                "name": "커스텀",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "custom"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244805"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "17",
+                "name": "페이지 시작",
+                "type": "PAGEVIEW",
+                "fingerprint": "1541651244806"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "triggerId": "18",
+                "name": "환불",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "refund"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1541651244806"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "variableId": "1",
+                "name": "data",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "data"
+                    }
+                ],
+                "fingerprint": "1541651244806",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "variableId": "2",
+                "name": "eventName",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventName"
+                    }
+                ],
+                "fingerprint": "1541651244807",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "4389721360",
+                "containerId": "10365777",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1542954409412",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/4389721360/containers/10365777/versions/2?apiLink=version"
+    }
+}
