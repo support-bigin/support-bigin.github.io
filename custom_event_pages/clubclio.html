@@ -4,7 +4,21 @@
   <meta charset="UTF-8">
   <title>ClubClio</title>
   <script>
-
+    window.parseQuery = function(queryString){
+      var query = {};
+      var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+      for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i].split('=');
+        query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+      }
+      return query;
+    }
+  </script>
+  <script>
+    queryParams = window.parseQuery(window.location.search);
+    if(queryParams.key != '123'){
+      window.location = 'https://support-bigin.github.io'
+    }
   </script>
 </head>
 <body>
