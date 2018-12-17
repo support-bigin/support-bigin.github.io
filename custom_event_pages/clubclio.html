@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>ClubClio</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     window.parseQuery = function(queryString){
       var query = {};
@@ -14,14 +15,28 @@
       return query;
     }
   </script>
+  <!--<script>-->
+    <!--queryParams = window.parseQuery(window.location.search);-->
+    <!--if(queryParams.key != '123'){-->
+      <!--window.location = 'https://support-bigin.github.io'-->
+    <!--}-->
+  <!--</script>-->
+
   <script>
-    queryParams = window.parseQuery(window.location.search);
-    if(queryParams.key != '123'){
-      window.location = 'https://support-bigin.github.io'
+    url = '../markdown/clubclio.md';
+    if(window.XMLHttpRequest){
+      xmlhttp=new XMLHttpRequest();
+    }else{
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open('get', url, true);
+    xmlhttp.send();
+    xmlhttp.onload = function(res){
+      document.getElementById('body').innerHTML = marked(xmlhttp.responseText);
     }
   </script>
 </head>
-<body>
+<body id="body">
 
 </body>
 </html>
