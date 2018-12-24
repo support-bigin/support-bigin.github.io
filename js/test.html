@@ -1,0 +1,75 @@
+<!--------------bigin----------->
+<script>
+  var biginProductInfo = {};
+  biginProductInfo.descriptionImages = ["<!--/new_product@image_s/-->"];
+  biginProductInfo.price = "<!--/number/new_product@price_sell/-->";
+  biginProductInfo.name = "<!--/notag/new_product@name/-->";
+  if ("<!--/new_product@is_soldout/-->") {
+  }
+  console.log(biginProductInfo);
+</script>
+<!--------------bigin----------->
+
+
+<!--------------bigin product info ----------->
+<script>
+  var productInfo = {};
+  productInfo['price'] = "<!--/number/price_sell/-->";
+  productInfo.name = "<!--/name/-->";
+</script>
+<!--------------bigin product info ----------->
+
+<!-------------bigin login------------>
+<script>
+  var userInfo = {};
+  userInfo.id = "<!--/user_id/-->";
+  userInfo.email = "<!--/user_email/-->";
+  userInfo.name = "<!--/user_name/-->";
+  console.log(userInfo);
+
+</script>
+<!-------------bigin login------------>
+
+
+<!-------------bigin basket------------>
+<script>
+  window.cart = window.cart || [];
+
+  var productInfo = {};
+  productInfo.position = "<!--/basket@number/-->";
+  productInfo.descriptionImages = ["<!--/basket@image_s/-->"];
+  productInfo.name = "<!--/basket@name/-->";
+  productInfo.price = "<!--/number/basket@price_sell/-->";
+  console.log(productInfo);
+
+  window.cart.push(productInfo);
+</script>
+<!-------------bigin basket------------>
+
+<!-------------bigin basket------------>
+<script>
+  window.addEventListener('load', function () {
+    console.log(window.cart);
+  })
+</script>
+<!-------------bigin basket------------>
+
+<script>
+  (function () {
+    var biginScript = document.createElement('script');
+    biginScript.type = 'text/javascript';
+    biginScript.async = true;
+    biginScript.src = 'https://sdk.bigin.io/v1/bigin.sdk.js';
+    biginScript.onload = function () {
+      bigin.config({
+        projectID: "7I1WO6CSK0-8",
+        domain: "https://i.bigin.io",
+        track: ['session', 'view', 'click', 'scroll'],
+        trackLocation: false,
+        currencyCode: "KRW"
+      });
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(biginScript, s);
+  })();
+</script>
