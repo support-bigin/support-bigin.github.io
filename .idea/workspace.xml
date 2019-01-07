@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/css/github-markdown.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_event_pages/clubclio.html" beforeDir="false" afterPath="$PROJECT_DIR$/custom_event_pages/clubclio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/markdown/clubclio.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/clubclio.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +22,8 @@
       <file leaf-file-name="bigin_install.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bigin_install.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="76" lean-forward="true" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+            <state>
+              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -29,8 +31,17 @@
       <file leaf-file-name="clubclio.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/custom_event_pages/clubclio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="510">
+              <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="github-markdown.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/github-markdown.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -44,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clubclio.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clubclio.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/markdown/clubclio.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="117" column="6" lean-forward="true" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+            <state relative-caret-position="1202">
+              <caret line="83" column="3" lean-forward="true" selection-start-line="83" selection-start-column="3" selection-end-line="83" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -76,20 +87,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pre</find>
-      <find>index</find>
-      <find>커스텀 이벤트</find>
-      <find>&lt;pre&gt;</find>
-      <find>ignore</find>
-      <find>id</find>
       <find>bg:checkout</find>
       <find>phoneNumber</find>
       <find>제픔</find>
@@ -114,12 +119,19 @@
       <find>장바구니</find>
       <find>제품 장바구니에서 삭제</find>
       <find>체크아웃 프로세스</find>
+      <find>table</find>
+      <find>table</find>
+      <find>mark</find>
+      <find>.markdow</find>
+      <find>icon</find>
+      <find>f6f8fa</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
       <replace>bigin-install-gtm</replace>
       <replace>bigin-install</replace>
       <replace>&quot;</replace>
+      <replace>body</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -134,11 +146,12 @@
         <option value="$PROJECT_DIR$/css/sub_bigin.css" />
         <option value="$PROJECT_DIR$/css/bigin.css" />
         <option value="$PROJECT_DIR$/assets/container.json" />
-        <option value="$PROJECT_DIR$/custom_event_pages/clubclio.html" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/js/test.html" />
         <option value="$PROJECT_DIR$/bigin_install.html" />
+        <option value="$PROJECT_DIR$/custom_event_pages/clubclio.html" />
         <option value="$PROJECT_DIR$/markdown/clubclio.md" />
+        <option value="$PROJECT_DIR$/css/github-markdown.css" />
       </list>
     </option>
   </component>
@@ -172,16 +185,6 @@
             <path>
               <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="support-bigin.github.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="support-bigin.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="custom_event_pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="support-bigin.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,25 +252,26 @@
       <workItem from="1545005551863" duration="1386000" />
       <workItem from="1545023836851" duration="6841000" />
       <workItem from="1545611219576" duration="2603000" />
-      <workItem from="1546820751690" duration="1450000" />
+      <workItem from="1546820751690" duration="5292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77413000" />
+    <option name="totallyTimeSpent" value="81255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12537673" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.12537673" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32988167" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.11384615" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.11384615" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -276,7 +280,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,13 +289,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/sub_bigin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4875">
-          <caret line="325" selection-start-line="325" selection-end-line="325" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bigin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3660">
@@ -585,20 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bigin_install.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="76" lean-forward="true" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -613,17 +595,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bigin_install.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/custom_event_pages/clubclio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="510">
+          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/markdown/clubclio.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="117" column="6" lean-forward="true" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+        <state relative-caret-position="1202">
+          <caret line="83" column="3" lean-forward="true" selection-start-line="83" selection-start-column="3" selection-end-line="83" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/github-markdown.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
