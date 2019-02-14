@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>bigin-support</title>
+<link rel="stylesheet" type="text/css" href="../css/detail.css"/>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link rel="stylesheet" href="/support-bigin.github.io/css/github-markdown.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="detail-section">
+  <div class="header">
+    <div class="inner-header">
+      <div class="bigin-logo"></div>
+      <div class="input-wrapper">
+        <div class="search-icon"></div>
+        <input placeholder="도움말을 검색하세요.">
+      </div>
+      <div class="header-nav home">홈으로</div>
+      <div class="header-nav dashboard">대시보드로 이동</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="content-wrapper">
+      <div class="side left">
+        <div class="side-title">시작하기 및 설치</div>
+        <div class="side-nav">계정 생성</div>
+        <div class="side-nav">프로젝트 생성</div>
+        <div class="side-nav">기본 추적 스크립트</div>
+        <div class="side-nav">고유 사용자 식별</div>
+        <div class="side-nav">커스텀 이벤트 추적</div>
+        <div class="side-nav">이커머스 추적 이벤트</div>
+        <div class="side-nav">이커머스 추적 예제</div>
+
+        <div class="side-title">인사이트</div>
+        <div class="side-nav">인사이트 리포트란?</div>
+        <div class="side-nav">인사이트 리포트 발행</div>
+        <div class="side-nav">인사이트 활용하기</div>
+
+        <div class="side-title">사용자</div>
+        <div class="side-nav">사용자 속성</div>
+        <div class="side-nav">사용자 그룹 관리</div>
+        <div class="side-nav">활성 타임라인</div>
+
+        <div class="side-title">라이브</div>
+        <div class="side-nav">라이브 개요</div>
+        <div class="side-nav">제한 이벤트</div>
+
+
+        <div class="side-title">계정 및 프로젝트 관리</div>
+        <div class="side-nav">계정,프로젝트 계층구조</div>
+        <div class="side-nav">비즈니스 설정</div>
+        <div class="side-nav">계정 관리</div>
+        <div class="side-nav">플랜 변경 및 결제 내역</div>
+        <div class="side-nav">프로젝트 설정</div>
+        <div class="side-nav">추적 정보</div>
+        <div class="side-nav">데이터 수집 필터</div>
+
+        <div class="side-title">시스템 요구사항</div>
+        <div class="side-nav">지원되는 브라우저</div>
+        <div class="side-nav">사욪 가능한 언어</div>
+        <div class="side-nav">데이터 한도 및 처리가간</div>
+      </div>
+
+      <div class="inner-content" id="innerContent">
+
+      </div>
+      <div class="side right">
+
+      </div>
+    </div>
+
+  </div>
+  <div class="footer">
+    <div class="footer-nav">개인정보처리방침</div>
+    <div class="footer-nav">이용약관</div>
+    <div class="footer-copyright">
+      Copyright ⓒ 2019 biginsight All rights reserved.
+    </div>
+  </div>
+</div>
+
+<script>
+  url = '../markdown/installation.md';
+
+  h2List = [];
+
+  if(window.XMLHttpRequest){
+    xmlhttp=new XMLHttpRequest();
+  }else{
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xmlhttp.open('get', url, true);
+  xmlhttp.send();
+  xmlhttp.onload = function(res){
+    document.getElementById('innerContent').innerHTML = marked(xmlhttp.responseText);
+    $('.content h2').each(function(){
+      h2List.push(this.innerText);
+      let sideNav = document.createElement('div');
+      sideNav.classList.add('side-nav');
+      sideNav.classList.add('no');
+      sideNav.innerText = this.innerText;
+      document.querySelector('.side.right').appendChild(sideNav);
+    })
+  }
+
+
+</script>
+</body>
+</html>
