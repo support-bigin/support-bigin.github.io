@@ -201,6 +201,7 @@
     }
 
     .side.left {
+        display: block;
         padding-top: 80px;
         width: 220px;
         height: calc(100vh - 112px);
