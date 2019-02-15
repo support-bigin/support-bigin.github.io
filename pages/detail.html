@@ -335,7 +335,7 @@
   }
 
 
-  $('.open-icon').bind('touchend',function(){
+  $('.open-icon').bind('touchend, click',function(){
     if(this.classList.contains('open')){
       $('.side.left').css('display', 'none');
       $('.inner-content').css('display', 'block')
@@ -347,7 +347,7 @@
     }
   })
 
-  $('.side.left .side-nav').bind("touchend" , function(){
+  $('.side.left .side-nav').bind("touchend, click" , function(){
     $('.side.left').css('display', 'none');
     $('.inner-content').css('display', 'block')
     document.querySelector('.open-icon').classList.remove('open');
