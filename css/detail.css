@@ -1,5 +1,12 @@
 @media only screen and (min-width: 700px) {
 
+    .header .bigin-logo.pc{
+
+    }
+    .header .bigin-logo.mobile{
+        display: none;
+
+    }
 
     .mobile-input-form-wrapper{
         display: none;

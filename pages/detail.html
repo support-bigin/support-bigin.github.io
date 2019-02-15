@@ -136,10 +136,10 @@
   xmlhttp.onload = function (res) {
     document.getElementById('innerContent').innerHTML = marked(xmlhttp.responseText);
 
-    if(window.innerWidth < 700){
+    // if(window.innerWidth < 700){
       mobileInnerContentHeader = $('h1').text();
       $('.inner-content-header').find('span').html(mobileInnerContentHeader);
-    }
+    // }
 
 
 
