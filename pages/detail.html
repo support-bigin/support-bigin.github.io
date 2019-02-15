@@ -348,10 +348,12 @@
   })
 
   $('.side.left .side-nav').bind("touchend, click" , function(){
-    $('.side.left').css('display', 'none');
-    $('.inner-content').css('display', 'block')
-    document.querySelector('.open-icon').classList.remove('open');
-    window.open(this.href , '_self')
+    if(window.innerWidth < 700){
+      $('.side.left').css('display', 'none');
+      $('.inner-content').css('display', 'block')
+      document.querySelector('.open-icon').classList.remove('open');
+      window.open(this.href , '_self')
+    }
   });
 
 
