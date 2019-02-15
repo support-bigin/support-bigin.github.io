@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko" id="frontpage">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content=" width=device-width, initial-scale=1 , maximum-scale=1.0, user-scalable=no,
+        shrink-to-fit=no"/>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <!--<meta http-equiv="REFRESH" content="0;url=https://support-bigin.github.io/bigin_install.html">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>bigin-support</title>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" href="https://static.toss.im/tds/current/css/tds.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/search.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="../js/global.js"></script>
+</head>
+
+<body>
+<div class="search-section">
+  <div class="input-wrapper">
+    <div class="search-icon"></div>
+    <input placeholder="도움말을 검색하세요."
+           oninput="openSearchList(this.value)"
+           onblur="closeSearchList()">
+    <div class="cancel-icon"
+        onclick="window.open('http://localhost:63342/support-bigin.github.io/pages/main.html', '_self')"></div>
+  </div>
+
+  <script>
+    var markdownNameList = [
+      {name : '시작하기 및 설치', link : 'detail.html?kind=installation#installation_0'},
+      {name : '기본 추적 스크립트', link : 'detail.html?kind=installation#installation_1'},
+      {name : '고유 사용자 식별', link : 'detail.html?kind=installation#installation_2'},
+      {name : '커스텀 이벤트 추적', link : 'detail.html?kind=installation#installation_3'},
+      {name : '이커머스 추적 이벤트', link : 'detail.html?kind=installation#installation_4'},
+      {name : '이커머스 추적 에제', link : 'detail.html?kind=installation#installation_5'},
+    ];
+    function openSearchList(search) {
+
+      let searchList = document.querySelector(".search-list");
+
+      if (!searchList) {
+        searchList = document.createElement('div');
+        searchList.classList.add('search-list');
+      } else {
+        $(".search-item").remove();
+      }
+
+
+      let inputWrapper = document.querySelector('.input-wrapper');
+      inputWrapper.appendChild(searchList);
+
+      markdownNameList.forEach(function (element) {
+        if (RegExp(search).test(element.name) && search != '') {
+          let tempResult = [];
+          tempResult.push(element);
+          let searchItem = document.createElement('a');
+          searchItem.classList.add('search-item');
+          searchItem.innerText = element.name;
+          searchItem.href = element.link
+
+          searchList.appendChild(searchItem);
+        }
+      })
+
+      if (searchList.children.length == 0) {
+        let searchItem = document.createElement('div');
+        searchItem.classList.add('search-item');
+        searchItem.classList.add('no');
+        searchItem.innerText = '검색 결과가 없습니다.';
+        searchList.appendChild(searchItem);
+      }
+    }
+
+    function closeSearchList() {
+      let searchList = $('.search-list');
+      // let isHover = searchList.is(":hover");
+
+      if (searchList.length > 0 && !$('.search-list').is(":hover")) {
+        $(".search-list").remove();
+      }
+
+    }
+  </script>
+</div>
+</body>
+</html>

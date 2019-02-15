@@ -4,77 +4,98 @@
 <title>bigin-support</title>
 <link rel="stylesheet" type="text/css" href="../css/detail.css"/>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<meta name="viewport" content=" width=device-width, initial-scale=1 , maximum-scale=1.0, user-scalable=no,
+        shrink-to-fit=no"/>
+
 <link rel="stylesheet" href="/support-bigin.github.io/css/github-markdown.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
 <div class="detail-section">
   <div class="header">
     <div class="inner-header">
-      <div class="bigin-logo"></div>
+      <div class="bigin-logo pc" onclick="window.open('main.html', '_self')"></div>
+      <div class="bigin-logo mobile" onclick="window.open('main.html', '_self')"></div>
       <div class="input-wrapper">
-        <div class="search-icon"></div>
-        <input placeholder="도움말을 검색하세요.">
+        <div class="search-icon" onclick="showHeaderInput()"></div>
+        <input placeholder="도움말을 검색하세요." oninput="openSearchList(this.value)" onblur="closeSearchList()">
       </div>
-      <div class="header-nav home">홈으로</div>
-      <div class="header-nav dashboard">대시보드로 이동</div>
+      <div class="header-nav home" onclick="window.open('https://www.bigin.io', '_self')">홈으로</div>
+      <div class="header-nav dashboard" onclick="window.open('https://insight.bigin.io', '_self')">대시보드로 이동</div>
+    </div>
+    
+    <div class="mobile-input-form-wrapper"
+          >
+      <div class="search-icon"></div>
+      <input placeholder="도움말을 검색하세요." oninput="openMobileSearchList(this.value)" onblur="closeMobileSearchList">
+      <div class="cancel-icon"></div>
     </div>
   </div>
 
   <div class="content">
     <div class="content-wrapper">
-      <div class="side left">
-        <div class="side-title">시작하기 및 설치</div>
-        <div class="side-nav">계정 생성</div>
-        <div class="side-nav">프로젝트 생성</div>
-        <div class="side-nav">기본 추적 스크립트</div>
-        <div class="side-nav">고유 사용자 식별</div>
-        <div class="side-nav">커스텀 이벤트 추적</div>
-        <div class="side-nav">이커머스 추적 이벤트</div>
-        <div class="side-nav">이커머스 추적 예제</div>
+      <div class="side left menu nav">
+        <a class="side-title" href="detail.html?kind=installation#installation_0">시작하기 및 설치</a>
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_1">계정 생성</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_2">프로젝트 생성</a>-->
+        <a class="side-nav" href="detail.html?kind=installation#installation_1">기본 추적 스크립트</a>
+        <a class="side-nav" href="detail.html?kind=installation#installation_2">고유 사용자 식별</a>
+        <a class="side-nav" href="detail.html?kind=installation#installation_3">커스텀 이벤트 추적</a>
+        <a class="side-nav" href="detail.html?kind=installation#installation_4">이커머스 추적 이벤트</a>
+        <a class="side-nav" href="detail.html?kind=installation#installation_5">이커머스 추적 예제</a>
 
-        <div class="side-title">인사이트</div>
-        <div class="side-nav">인사이트 리포트란?</div>
-        <div class="side-nav">인사이트 리포트 발행</div>
-        <div class="side-nav">인사이트 활용하기</div>
+        <!--<a class="side-title" href="detail.html?kind=insight#insight_0">인사이트</a>
+        <a class="side-nav" href="detail.html?kind=insight#insight_1">인사이트 리포트란?</a>
+        <a class="side-nav" href="detail.html?kind=insight#insight_2">인사이트 리포트 발행</a>
+        <a class="side-nav" href="detail.html?kind=insight#insight_3">인사이트 활용하기</a>-->
 
-        <div class="side-title">사용자</div>
-        <div class="side-nav">사용자 속성</div>
-        <div class="side-nav">사용자 그룹 관리</div>
-        <div class="side-nav">활성 타임라인</div>
+        <!--<a class="side-title">사용자</a>
+        <a class="side-nav">사용자 속성</a>
+        <a class="side-nav">사용자 그룹 관리</a>
+        <a class="side-nav">활성 타임라인</a>-->
 
-        <div class="side-title">라이브</div>
-        <div class="side-nav">라이브 개요</div>
-        <div class="side-nav">제한 이벤트</div>
+        <!--<a class="side-title">라이브</a>
+        <a class="side-nav">라이브 개요</a>
+        <a class="side-nav">제한 이벤트</a>-->
 
 
-        <div class="side-title">계정 및 프로젝트 관리</div>
-        <div class="side-nav">계정,프로젝트 계층구조</div>
-        <div class="side-nav">비즈니스 설정</div>
-        <div class="side-nav">계정 관리</div>
-        <div class="side-nav">플랜 변경 및 결제 내역</div>
-        <div class="side-nav">프로젝트 설정</div>
-        <div class="side-nav">추적 정보</div>
-        <div class="side-nav">데이터 수집 필터</div>
+        <!--<a class="side-title">계정 및 프로젝트 관리</a>
+        <a class="side-nav">계정,프로젝트 계층구조</a>
+        <a class="side-nav">비즈니스 설정</a>
+        <a class="side-nav">계정 관리</a>
+        <a class="side-nav">플랜 변경 및 결제 내역</a>
+        <a class="side-nav">프로젝트 설정</a>
+        <a class="side-nav">추적 정보</a>
+        <a class="side-nav">데이터 수집 필터</a>-->
 
-        <div class="side-title">시스템 요구사항</div>
-        <div class="side-nav">지원되는 브라우저</div>
-        <div class="side-nav">사욪 가능한 언어</div>
-        <div class="side-nav">데이터 한도 및 처리가간</div>
+        <!--<a class="side-title">시스템 요구사항</a>-->
+        <!--<a class="side-nav">지원되는 브라우저</a>-->
+        <!--<a class="side-nav">사욪 가능한 언어</a>-->
+        <!--<a class="side-nav">데이터 한도 및 처리가간</a>-->
+
+        <!--<a class="side-title">FAQs</a>-->
+        <!--<a class="side-nav">프로젝트는 하나만 등록할 수 있나요?</a>-->
+        <!--<a class="side-nav">프로젝트는 하나만 등록할 수 있나요?</a>-->
       </div>
-
+      <div class="inner-content-header">
+        <span></span>
+        <div class="open-icon">
+        </div>
+      </div>
       <div class="inner-content" id="innerContent">
 
       </div>
-      <div class="side right">
+      <div class="side right menu nav">
 
       </div>
     </div>
 
   </div>
   <div class="footer">
-    <div class="footer-nav">개인정보처리방침</div>
-    <div class="footer-nav">이용약관</div>
+    <div class="footer-nav"  onclick="window.open('usage-policy.html?kind=privacy', '_self')">개인정보처리방침</div>
+    <div class="footer-nav" onclick="window.open('usage-policy.html?kind=service', '_self')">이용약관</div>
     <div class="footer-copyright">
       Copyright ⓒ 2019 biginsight All rights reserved.
     </div>
@@ -92,28 +113,270 @@
     return query;
   }
 
+  var kind = parseQuery(window.location.search).kind;
   url = '../markdown/' + parseQuery(window.location.search).kind + '.md';
 
   h2List = [];
+  h2Elements = [];
+  h2Offsets = [];
 
-  if(window.XMLHttpRequest){
-    xmlhttp=new XMLHttpRequest();
-  }else{
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
+
+
+
+  var activeH2;
+  var mobileInnerContentHeader = '';
 
   xmlhttp.open('get', url, true);
   xmlhttp.send();
-  xmlhttp.onload = function(res){
+  xmlhttp.onload = function (res) {
     document.getElementById('innerContent').innerHTML = marked(xmlhttp.responseText);
-    $('.content h2').each(function(){
+
+    if(window.innerWidth < 700){
+      mobileInnerContentHeader = $('h1').text();
+      $('.inner-content-header').find('span').html(mobileInnerContentHeader);
+    }
+
+
+
+    $('.content h2').each(function (i) {
+      var id = kind + '_' + i;
+      this.setAttribute('id', id);
       h2List.push(this.innerText);
-      let sideNav = document.createElement('div');
+      h2Elements.push(this);
+      let sideNav = document.createElement('li');
       sideNav.classList.add('side-nav');
       sideNav.classList.add('no');
+      sideNav.setAttribute('href', '#' + id);
+      sideNav.classList.add( 'side' + id);
       sideNav.innerText = this.innerText;
       document.querySelector('.side.right').appendChild(sideNav);
     })
+  }
+
+  window.addEventListener('load', function(){
+
+  })
+
+  function arrayMin(arr) {
+    return arr.reduce(function (p, v) {
+      return ( p < v ? p : v );
+    });
+  }
+
+  function indexOfMin(arr) {
+    if (arr.length === 0) {
+      return -1;
+    }
+
+    var min = arr[0];
+    var minIndex = 0;
+
+    for (var i = 1; i < arr.length; i++) {
+      if (arr[i] < min) {
+        minIndex = i;
+        min = arr[i];
+      }
+    }
+
+    return minIndex;
+  }
+
+  $('.inner-content').scroll(function(){
+
+
+    if(window.innerWidth > 700){
+      var fromTop = $(this).scrollTop();
+
+      h2Elements.forEach(function(i, index){
+        if($(i).offset().top - 50 < 0){
+          h2Offsets[index] = 10000000;
+        }else{
+          h2Offsets[index] = $(i).offset().top - 50;
+        }
+      })
+
+
+      activeH2 = h2Elements[indexOfMin(h2Offsets)];
+      $('.side'+ activeH2.getAttribute('id')).addClass('active');
+
+      min = arrayMin(h2Offsets);
+      h2Offsets.forEach(function(i, index){
+        if(i > 9000000){
+          // console.log(h2Elements[index]);
+          // console.log($(h2Elements[index]));
+          $('.side'+ h2Elements[index].getAttribute('id')).removeClass('active');
+        }
+        if(i > min){
+          $('.side'+ h2Elements[index].getAttribute('id')).removeClass('active');
+        }
+      })
+    }else{
+
+    }
+    // console.log(fromTop);
+    // console.log($(h2Elements[0]).offset().top - 50);
+  })
+
+
+  var markdownNameList = [
+    {name : '시작하기 및 설치', link : 'detail.html?kind=installation#installation_0'},
+    {name : '기본 추적 스크립트', link : 'detail.html?kind=installation#installation_1'},
+    {name : '고유 사용자 식별', link : 'detail.html?kind=installation#installation_2'},
+    {name : '커스텀 이벤트 추적', link : 'detail.html?kind=installation#installation_3'},
+    {name : '이커머스 추적 이벤트', link : 'detail.html?kind=installation#installation_4'},
+    {name : '이커머스 추적 에제', link : 'detail.html?kind=installation#installation_5'},
+  ];
+
+
+
+  function openMobileSearchList(search){
+    let searchList = document.querySelector(".search-list");
+
+    if (!searchList) {
+      searchList = document.createElement('div');
+      searchList.classList.add('search-list');
+    } else {
+      $(".search-item").remove();
+    }
+
+
+    let inputWrapper = document.querySelector('.mobile-input-form-wrapper');
+    inputWrapper.appendChild(searchList);
+
+    markdownNameList.forEach(function (element) {
+      if (RegExp(search).test(element.name) && search != '') {
+        let tempResult = [];
+        tempResult.push(element.name);
+        let searchItem = document.createElement('a');
+        searchItem.classList.add('search-item');
+        searchItem.innerText = element.name;
+        searchItem.setAttribute('href', element.link);
+        searchList.appendChild(searchItem);
+
+        $('.search-item').click(function(){
+          document.querySelector('input').value = '';
+          $(".search-list").remove();
+        })
+      }
+    })
+
+    if (searchList.children.length == 0) {
+      let searchItem = document.createElement('div');
+      searchItem.classList.add('search-item');
+      searchItem.classList.add('no');
+      searchItem.innerText = '검색 결과가 없습니다.';
+      searchList.appendChild(searchItem);
+    }
+  }
+
+  function closeMobileSearchList(){
+    let searchList = $('.search-list');
+    // let isHover = searchList.is(":hover");
+
+    if (searchList.length > 0 && !$('.search-list').is(":hover")) {
+      $(".search-list").remove();
+    }
+  }
+
+  function openSearchList(search) {
+
+    let searchList = document.querySelector(".search-list");
+
+    if (!searchList) {
+      searchList = document.createElement('div');
+      searchList.classList.add('search-list');
+    } else {
+      $(".search-item").remove();
+    }
+
+
+    let inputWrapper = document.querySelector('.input-wrapper');
+    inputWrapper.appendChild(searchList);
+
+    markdownNameList.forEach(function (element) {
+      if (RegExp(search).test(element.name) && search != '') {
+        let tempResult = [];
+        tempResult.push(element.name);
+        let searchItem = document.createElement('a');
+        searchItem.classList.add('search-item');
+        searchItem.innerText = element.name;
+        searchItem.setAttribute('href', element.link);
+        searchList.appendChild(searchItem);
+
+        $('.search-item').click(function(){
+          document.querySelector('input').value = '';
+          $(".search-list").remove();
+        })
+      }
+    })
+
+    if (searchList.children.length == 0) {
+      let searchItem = document.createElement('div');
+      searchItem.classList.add('search-item');
+      searchItem.classList.add('no');
+      searchItem.innerText = '검색 결과가 없습니다.';
+      searchList.appendChild(searchItem);
+    }
+  }
+
+  function closeSearchList() {
+    let searchList = $('.search-list');
+    // let isHover = searchList.is(":hover");
+
+    if (searchList.length > 0 && !$('.search-list').is(":hover")) {
+      $(".search-list").remove();
+    }
+
+  }
+
+
+  $('.open-icon').bind('touchend',function(){
+    if(this.classList.contains('open')){
+      $('.side.left').css('display', 'none');
+      $('.inner-content').css('display', 'block')
+      this.classList.remove('open');
+    }else{
+      this.classList.add('open');
+      $('.side.left').css('display', 'block');
+      $('.inner-content').css('display', 'none')
+    }
+  })
+
+  $('.side.left .side-nav').bind("touchend" , function(){
+    $('.side.left').css('display', 'none');
+    $('.inner-content').css('display', 'block')
+    document.querySelector('.open-icon').classList.remove('open');
+    window.open(this.href , '_self')
+  });
+
+
+  $('.search-item').click(function(){
+    $(".search-list").remove();
+  })
+
+
+  $('.cancel-icon').click(function(){
+    let searchList = $('.search-list');
+    // let isHover = searchList.is(":hover");
+
+    if (searchList.length > 0 && !$('.search-list').is(":hover")) {
+      $(".search-list").remove();
+    }
+
+    $('.mobile-input-form-wrapper').css('display' , 'none');
+    $('.inner-header').css('display' , 'flex');
+  })
+
+  function showHeaderInput(){
+    if(window.innerWidth < 700){
+      $('.mobile-input-form-wrapper').css('display', 'flex');
+      $('.inner-header').css('display', 'none');
+    }
   }
 
 
