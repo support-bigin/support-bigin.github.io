@@ -3,7 +3,10 @@
 <meta charset="UTF-8">
 <title>bigin-support</title>
 <link rel="stylesheet" type="text/css" href="../css/detail.css"/>
+<link rel="stylesheet" type="text/css" href="../css/prism.css"/>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="../js/prism.js"></script>
+
 <meta name="viewport" content=" width=device-width, initial-scale=1 , maximum-scale=1.0, user-scalable=no,
         shrink-to-fit=no"/>
 
@@ -13,6 +16,7 @@
 
 </head>
 <body>
+
 <div class="detail-section">
   <div class="header">
     <div class="inner-header">
@@ -20,14 +24,16 @@
       <div class="bigin-logo mobile" onclick="window.open('main.html', '_self')"></div>
       <div class="input-wrapper">
         <div class="search-icon" onclick="showHeaderInput()"></div>
-        <input placeholder="도움말을 검색하세요." oninput="openSearchList(this.value)" onblur="closeSearchList()">
+        <input placeholder="도움말을 검색하세요."
+               oninput="openSearchList(this.value)"
+               onblur="closeSearchList()">
       </div>
       <div class="header-nav home" onclick="window.open('https://www.bigin.io', '_self')">홈으로</div>
       <div class="header-nav dashboard" onclick="window.open('https://insight.bigin.io', '_self')">대시보드로 이동</div>
     </div>
-    
+
     <div class="mobile-input-form-wrapper"
-          >
+    >
       <div class="search-icon"></div>
       <input placeholder="도움말을 검색하세요." oninput="openMobileSearchList(this.value)" onblur="closeMobileSearchList">
       <div class="cancel-icon"></div>
@@ -37,9 +43,10 @@
   <div class="content">
     <div class="content-wrapper">
       <div class="side left menu nav">
-        <a class="side-title" href="detail.html?kind=installation#installation_0">시작하기 및 설치</a>
+        <li class="side-title" >시작하기 및 설치</li>
         <!--<a class="side-nav" href="detail.html?kind=installation#installation_1">계정 생성</a>-->
         <!--<a class="side-nav" href="detail.html?kind=installation#installation_2">프로젝트 생성</a>-->
+        <a class="side-nav" href="detail.html?kind=installation#installation_0">설치 시작하기</a>
         <a class="side-nav" href="detail.html?kind=installation#installation_1">기본 추적 스크립트</a>
         <a class="side-nav" href="detail.html?kind=installation#installation_2">고유 사용자 식별</a>
         <a class="side-nav" href="detail.html?kind=installation#installation_3">커스텀 이벤트 추적</a>
@@ -84,8 +91,12 @@
         <div class="open-icon">
         </div>
       </div>
-      <div class="inner-content" id="innerContent">
-
+      <div class="inner-content">
+        <div class="inner-inner-content" id="innerContent"></div>
+        <div class="question-wrapper">
+          도움이 더 필요하신가요?<br>
+          <a href="https://www.bigin.io/contact-us" target="_blank">문의</a>를 남겨주시면 이메일을 통해 자세히 답변드리겠습니다.
+        </div>
       </div>
       <div class="side right menu nav">
 
@@ -94,7 +105,7 @@
 
   </div>
   <div class="footer">
-    <div class="footer-nav"  onclick="window.open('usage-policy.html?kind=privacy', '_self')">개인정보처리방침</div>
+    <div class="footer-nav" onclick="window.open('usage-policy.html?kind=privacy', '_self')">개인정보처리방침</div>
     <div class="footer-nav" onclick="window.open('usage-policy.html?kind=service', '_self')">이용약관</div>
     <div class="footer-copyright">
       Copyright ⓒ 2019 biginsight All rights reserved.
@@ -103,6 +114,25 @@
 </div>
 
 <script>
+
+  var markdownNameList = [
+    {name: '시작하기 및 설치', link: 'detail.html?kind=installation#installation_0'},
+    {name: '기본 추적 스크립트', link: 'detail.html?kind=installation#installation_1'},
+    {name: '고유 사용자 식별', link: 'detail.html?kind=installation#installation_2'},
+    {name: '커스텀 이벤트 추적', link: 'detail.html?kind=installation#installation_3'},
+    {name: '이커머스 추적 이벤트', link: 'detail.html?kind=installation#installation_4'},
+    {name: '이커머스 추적 에제', link: 'detail.html?kind=installation#installation_5'},
+  ];
+
+
+  var kind = parseQuery(window.location.search).kind;
+  url = '../markdown/' + parseQuery(window.location.search).kind + '.md';
+
+  h2List = [];
+  h2Elements = [];
+  h2Offsets = [];
+
+
   function parseQuery(queryString) {
     var query = {};
     var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
@@ -113,12 +143,10 @@
     return query;
   }
 
-  var kind = parseQuery(window.location.search).kind;
-  url = '../markdown/' + parseQuery(window.location.search).kind + '.md';
 
-  h2List = [];
-  h2Elements = [];
-  h2Offsets = [];
+  var activeH2;
+  var mobileInnerContentHeader = '';
+
 
   if (window.XMLHttpRequest) {
     xmlhttp = new XMLHttpRequest();
@@ -127,44 +155,17 @@
   }
 
 
-
-  var activeH2;
-  var mobileInnerContentHeader = '';
-
-  xmlhttp.open('get', url, true);
-  xmlhttp.send();
-  xmlhttp.onload = function (res) {
-    document.getElementById('innerContent').innerHTML = marked(xmlhttp.responseText);
-
-    // if(window.innerWidth < 700){
-      mobileInnerContentHeader = $('h1').text();
-      $('.inner-content-header').find('span').html(mobileInnerContentHeader);
-    // }
+  // 마크다운 파일 파싱 후, 출력
+  parseMarkdown();
 
 
-
-    $('.content h2').each(function (i) {
-      var id = kind + '_' + i;
-      this.setAttribute('id', id);
-      h2List.push(this.innerText);
-      h2Elements.push(this);
-      let sideNav = document.createElement('li');
-      sideNav.classList.add('side-nav');
-      sideNav.classList.add('no');
-      sideNav.setAttribute('href', '#' + id);
-      sideNav.classList.add( 'side' + id);
-      sideNav.innerText = this.innerText;
-      document.querySelector('.side.right').appendChild(sideNav);
-    })
-  }
-
-  window.addEventListener('load', function(){
+  window.addEventListener('load', function () {
 
   })
 
   function arrayMin(arr) {
     return arr.reduce(function (p, v) {
-      return ( p < v ? p : v );
+      return (p < v ? p : v);
     });
   }
 
@@ -186,55 +187,48 @@
     return minIndex;
   }
 
-  $('.inner-content').scroll(function(){
+
+  $('.inner-content').scroll(function () {
 
 
-    if(window.innerWidth > 700){
+    if (window.innerWidth > 700) {
+
       var fromTop = $(this).scrollTop();
 
-      h2Elements.forEach(function(i, index){
-        if($(i).offset().top - 50 < 0){
-          h2Offsets[index] = 10000000;
-        }else{
+      h2Elements.forEach(function (i, index) {
+        if ($(i).offset().top - 50 < 0) {
+          h2Offsets[index] = 1000000000000;
+        } else {
           h2Offsets[index] = $(i).offset().top - 50;
         }
       })
 
 
       activeH2 = h2Elements[indexOfMin(h2Offsets)];
-      $('.side'+ activeH2.getAttribute('id')).addClass('active');
+      $('.side' + activeH2.getAttribute('id')).addClass('active');
 
       min = arrayMin(h2Offsets);
-      h2Offsets.forEach(function(i, index){
-        if(i > 9000000){
-          // console.log(h2Elements[index]);
-          // console.log($(h2Elements[index]));
-          $('.side'+ h2Elements[index].getAttribute('id')).removeClass('active');
+      h2Offsets.forEach(function (i, index) {
+        if (i > 900000000000) {
+
+          $('.side' + h2Elements[index].getAttribute('id')).removeClass('active');
         }
-        if(i > min){
-          $('.side'+ h2Elements[index].getAttribute('id')).removeClass('active');
+        if (i > min) {
+          $('.side' + h2Elements[index].getAttribute('id')).removeClass('active');
         }
       })
-    }else{
+
+      blockBodyScroll();
+
+    } else {
 
     }
-    // console.log(fromTop);
-    // console.log($(h2Elements[0]).offset().top - 50);
+
+
   })
 
 
-  var markdownNameList = [
-    {name : '시작하기 및 설치', link : 'detail.html?kind=installation#installation_0'},
-    {name : '기본 추적 스크립트', link : 'detail.html?kind=installation#installation_1'},
-    {name : '고유 사용자 식별', link : 'detail.html?kind=installation#installation_2'},
-    {name : '커스텀 이벤트 추적', link : 'detail.html?kind=installation#installation_3'},
-    {name : '이커머스 추적 이벤트', link : 'detail.html?kind=installation#installation_4'},
-    {name : '이커머스 추적 에제', link : 'detail.html?kind=installation#installation_5'},
-  ];
-
-
-
-  function openMobileSearchList(search){
+  function openMobileSearchList(search) {
     let searchList = document.querySelector(".search-list");
 
     if (!searchList) {
@@ -258,7 +252,7 @@
         searchItem.setAttribute('href', element.link);
         searchList.appendChild(searchItem);
 
-        $('.search-item').click(function(){
+        $('.search-item').click(function () {
           document.querySelector('input').value = '';
           $(".search-list").remove();
         })
@@ -274,7 +268,7 @@
     }
   }
 
-  function closeMobileSearchList(){
+  function closeMobileSearchList() {
     let searchList = $('.search-list');
     // let isHover = searchList.is(":hover");
 
@@ -308,7 +302,7 @@
         searchItem.setAttribute('href', element.link);
         searchList.appendChild(searchItem);
 
-        $('.search-item').click(function(){
+        $('.search-item').click(function () {
           document.querySelector('input').value = '';
           $(".search-list").remove();
         })
@@ -335,34 +329,34 @@
   }
 
 
-  $('.open-icon').bind('touchend, click',function(){
-    if(this.classList.contains('open')){
+  $('.open-icon').bind('touchend, click', function () {
+    if (this.classList.contains('open')) {
       $('.side.left').css('display', 'none');
       $('.inner-content').css('display', 'block')
       this.classList.remove('open');
-    }else{
+    } else {
       this.classList.add('open');
       $('.side.left').css('display', 'block');
       $('.inner-content').css('display', 'none')
     }
   })
 
-  $('.side.left .side-nav').bind("touchend, click" , function(){
-    if(window.innerWidth < 700){
+  $('.side.left .side-nav').bind("touchend, click", function () {
+    if (window.innerWidth < 700) {
       $('.side.left').css('display', 'none');
       $('.inner-content').css('display', 'block')
       document.querySelector('.open-icon').classList.remove('open');
-      window.open(this.href , '_self')
+      window.open(this.href, '_self')
     }
   });
 
 
-  $('.search-item').click(function(){
+  $('.search-item').click(function () {
     $(".search-list").remove();
   })
 
 
-  $('.cancel-icon').click(function(){
+  $('.cancel-icon').click(function () {
     let searchList = $('.search-list');
     // let isHover = searchList.is(":hover");
 
@@ -370,21 +364,79 @@
       $(".search-list").remove();
     }
 
-    $('.mobile-input-form-wrapper').css('display' , 'none');
-    $('.inner-header').css('display' , 'flex');
+    $('.mobile-input-form-wrapper').css('display', 'none');
+    $('.inner-header').css('display', 'flex');
   })
 
-  function showHeaderInput(){
-    if(window.innerWidth < 700){
+  function showHeaderInput() {
+    if (window.innerWidth < 700) {
       $('.mobile-input-form-wrapper').css('display', 'flex');
       $('.inner-header').css('display', 'none');
     }
   }
 
+  function blockBodyScroll() {
 
+    var innerContent = document.querySelector('.inner-content');
+    var scrollHeight = innerContent.scrollHeight - innerContent.clientHeight;
+    var fromTop = $(innerContent).scrollTop();
+
+    // console.log(scrollHeight - fromTop);
+    if ((scrollHeight - fromTop) < 58) {
+      document.querySelector(".footer").style.bottom = '-' + (scrollHeight - fromTop) + 'px';
+    } else {
+      document.querySelector(".footer").style.bottom = '-60px';
+    }
+  }
+
+
+
+  function parseMarkdown() {
+    xmlhttp.open('get', url, true);
+    xmlhttp.send();
+    xmlhttp.onload = function (res) {
+      // var markdown = document.createElement('div');
+      // markdown.innerHTML = marked(xmlhttp.responseText);
+      // document.getElementById('innerContent').insertBefor(markdown);
+
+      var innerContent = document.getElementById('innerContent');
+      document.getElementById('innerContent').innerHTML = marked(xmlhttp.responseText);
+
+      // if(window.innerWidth < 700){
+      mobileInnerContentHeader = $('h1').text();
+      $('.inner-content-header').find('span').html(mobileInnerContentHeader);
+      // }
+
+
+      $('.content h2').each(function (i) {
+        var id = kind + '_' + i;
+        this.setAttribute('id', id);
+        h2List.push(this.innerText);
+        h2Elements.push(this);
+        let sideNav = document.createElement('a');
+        sideNav.classList.add('side-nav');
+        sideNav.classList.add('no');
+        sideNav.setAttribute('href', '#' + id);
+        sideNav.classList.add('side' + id);
+        sideNav.innerText = this.innerText;
+        document.querySelector('.side.right').appendChild(sideNav);
+      })
+
+
+      usePrismJs();
+
+    }
+  }
+
+  function usePrismJs(){
+    var event = new Event('markdownRendered');
+    window.dispatchEvent(event);
+  }
 
 
 
 </script>
+
+
 </body>
 </html>

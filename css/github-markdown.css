@@ -492,12 +492,13 @@ body h6:hover .anchor .octicon-link {
 }
 
 body h1 {
-    padding-bottom: 0.3em;
+    /*padding-bottom: 0.3em;*/
     font-size: 2em;
-    border-bottom: 1px solid #eaecef;
+    /*border-bottom: 1px solid #eaecef;*/
 }
 
 body h2 {
+    margin-top : 60px;
     padding-bottom: 0.3em;
     font-size: 1.5em;
     border-bottom: 1px solid #eaecef;
@@ -634,7 +635,7 @@ body .highlight pre {
 
 body .highlight pre,
 body pre {
-    padding: 16px;
+    padding: 16px 32px 16px 16px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
