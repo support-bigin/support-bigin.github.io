@@ -7,10 +7,9 @@ body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     line-height: 1.5;
-    color: #24292e;
+    color: #222233;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 14px;
     word-wrap: break-word;
     width: min-content;
     margin : auto;
@@ -210,7 +209,7 @@ body input {
 }
 
 body a {
-    color: #0366d6;
+    color: #0060ad;
     text-decoration: none;
 }
 
@@ -635,7 +634,7 @@ body .highlight pre {
 
 body .highlight pre,
 body pre {
-    padding: 16px 32px 16px 16px;
+    padding: 16px 40px 16px 16px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
@@ -653,6 +652,11 @@ body pre code {
     word-wrap: normal;
     background-color: transparent;
     border: 0;
+}
+
+body pre code.language-javascript{
+    font-size : 13px;
+    /*padding-right : 20px;*/
 }
 
 body .full-commit .btn-outline:not(:disabled):hover {

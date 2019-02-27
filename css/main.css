@@ -81,6 +81,10 @@
         border: solid 1px #bbbbcc;
     }
 
+    .header .header-nav.dashboard:hover{
+        border: solid 1px #555566;
+    }
+
     .content {
         padding: 0 60px;
     }
@@ -219,14 +223,43 @@
     .nav-container > .nav > .nav-icon {
         width: 80px;
         height: 80px;
-        background: transparent url('../images/installation.png') no-repeat center center;
-        background-size: contain;
+        /*background: transparent url('../images/installation.png') no-repeat center center;*/
+        /*background-size: contain;*/
+        /*background-size : 25px 20px;*/
+        border-radius : 38px;
+    }
+
+    .nav-container > .nav-1 > .nav-icon {
+        background:  #222233 url('../images/category_start.png') no-repeat center center;
+        background-size : 35px 35px;
+
+    }
+    .nav-container > .nav-2 > .nav-icon {
+        background: #222233  url('../images/category_insight.png') no-repeat center center;
+        background-size : 35px 35px;
+    }
+    .nav-container > .nav-3 > .nav-icon {
+        background: #222233  url('../images/category_user.png') no-repeat center center;
+        background-size : 35px 35px;
+    }
+    .nav-container > .nav-4 > .nav-icon {
+        background: #222233  url('../images/category_live.png') no-repeat center center;
+        background-size : 35px 35px;
+    }
+    .nav-container > .nav-5 > .nav-icon {
+        background: #222233  url('../images/category_management.png') no-repeat center center;
+        background-size : 35px 35px;
+    }
+    .nav-container > .nav-6 > .nav-icon {
+        background: #222233  url('../images/category_system.png') no-repeat center center;
+        background-size : 35px 35px;
     }
 
     .nav-container > .nav > .nav-icon:hover {
         width: 84px;
         height: 84px;
-        border-radius : 42px;
+        border-radius : 40px;
+        background-color : #333344;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
@@ -364,7 +397,7 @@
     .header {
 
         width: 100vw;
-        height: 56px;
+        height: 68px;
         border-bottom: 1px solid #ededf2;
 
         /*padding: 0 60px;*/
@@ -384,8 +417,8 @@
     }
 
     .header .bigin-logo {
-        height: 30px;
-        width: 180px;
+        height: 39px;
+        width: 150px;
         background: transparent url('../images/logo_support.png') no-repeat center center;
         background-size: contain;
         margin-right: auto;
@@ -572,11 +605,39 @@
         margin: 0 20px 32px 20px;
     }
 
+    .nav-container > .nav-1 > .nav-icon {
+        background:  #222233 url('../images/category_start.png') no-repeat center center;
+        background-size : 30px 30px;
+
+    }
+    .nav-container > .nav-2 > .nav-icon {
+        background: #222233  url('../images/category_insight.png') no-repeat center center;
+        background-size : 30px 30px;
+    }
+    .nav-container > .nav-3 > .nav-icon {
+        background: #222233  url('../images/category_user.png') no-repeat center center;
+        background-size : 30px 30px;
+    }
+    .nav-container > .nav-4 > .nav-icon {
+        background: #222233  url('../images/category_live.png') no-repeat center center;
+        background-size : 30px 30px;
+    }
+    .nav-container > .nav-5 > .nav-icon {
+        background: #222233  url('../images/category_management.png') no-repeat center center;
+        background-size : 30px 30px;
+    }
+    .nav-container > .nav-6 > .nav-icon {
+        background: #222233  url('../images/category_system.png') no-repeat center center;
+        background-size : 30px 30px;
+    }
+
+
     .nav-container > .nav > .nav-icon {
-        width: 80px;
-        height: 80px;
-        background: transparent url('../images/installation.png') no-repeat center center;
-        background-size: contain;
+        width: 64px;
+        height: 64px;
+        border-radius: 30px;
+        /*background: transparent url('../images/installation.png') no-repeat center center;*/
+        /*background-size: contain;*/
     }
 
     .nav-container > .nav > .nav-text {
@@ -588,6 +649,9 @@
         color: #222233;
         white-space: nowrap;
     }
+
+
+
 
     .faq-container {
         max-width: 1000px;

@@ -48,7 +48,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1em;
+    padding: 1em 3rem 1rem 1rem;
     margin: .5em 0;
     overflow: auto;
 }
@@ -68,11 +68,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: slategray;
+    color: #a50;
 }
 
 .token.punctuation {
-    color: #999;
+    color: #223;
 }
 
 .namespace {
@@ -85,7 +85,7 @@ pre[class*="language-"] {
 .token.number,
 .token.constant,
 .token.symbol {
-    color: #905;
+    color: #164;
 }
 
 .token.selector,
@@ -93,7 +93,7 @@ pre[class*="language-"] {
 .token.string,
 .token.char,
 .token.builtin {
-    color: #690;
+    color: #a11;
 }
 
 .token.operator,
@@ -102,18 +102,18 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-    color: #a67f59;
+    color: #222233;
     background: hsla(0, 0%, 100%, .5);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: #07a;
+    color: #30a;
 }
 
 .token.function {
-    color: #DD4A68;
+    color: #708;
 }
 
 .token.regex,

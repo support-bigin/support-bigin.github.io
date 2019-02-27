@@ -244,6 +244,11 @@
         text-decoration: none;
     }
 
+    .side.left a.side-nav.active{
+        color : #222233;
+        font-weight : bold;
+    }
+
     .side.left li.side-nav{
         padding:8px 0px;
         text-decoration: none;
@@ -283,6 +288,8 @@
         background-color: #f5f5fa;
         color: #222233;
         text-decoration: none;
+
+        cursor: pointer;
     }
 
     .side .side-title {
@@ -293,6 +300,9 @@
         display: block;
 
         padding: 8px 0px;
+
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .side .side-nav {
@@ -727,6 +737,11 @@
     .side.left .side-nav:hover {
         border-radius: 2px;
         background-color: #f5f5fa;
+    }
+
+    .side.left .side-nav.active{
+        color : #222233;
+        font-weight : bold;
     }
 
     .side.right {

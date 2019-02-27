@@ -44,33 +44,41 @@
   <div class="content">
     <div class="content-wrapper">
       <div class="side left menu nav">
-        <li class="side-title">시작하기 및 설치</li>
-        <!--<a class="side-nav" href="detail.html?kind=installation#installation_1">계정 생성</a>-->
-        <!--<a class="side-nav" href="detail.html?kind=installation#installation_2">프로젝트 생성</a>-->
-        <a class="side-nav" href="detail.html?kind=installation#installation_0">설치 시작하기</a>
-        <a class="side-nav" href="detail.html?kind=installation#installation_1">기본 추적 스크립트</a>
-        <a class="side-nav" href="detail.html?kind=installation#installation_2">고유 사용자 식별</a>
-        <a class="side-nav" href="detail.html?kind=installation#installation_3">커스텀 이벤트 추적</a>
-        <a class="side-nav" href="detail.html?kind=installation#installation_4">이커머스 추적 이벤트</a>
-        <a class="side-nav" href="detail.html?kind=installation#installation_5">이커머스 추적 예제</a>
 
-        <!--<a class="side-title" href="detail.html?kind=insight#insight_0">인사이트</a>
-        <a class="side-nav" href="detail.html?kind=insight#insight_1">인사이트 리포트란?</a>
+        <li class="side-title">시작하기 및 설치</li>
+
+        <a class="side-nav installation" href="detail.html?kind=installation#installation_0">SDK 추적코드 설치하기(bigin.js)</a>
+        <!--<a class="side-nav" href="detail.html?kind=installation2#installation2_0">예시 2</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation3#installation3_0">예시 3</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_2">프로젝트 생성</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_0">설치 시작하기</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_1">기본 추적 스크립트</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_2">고유 사용자 식별</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_3">커스텀 이벤트 추적</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_4">이커머스 추적 이벤트</a>-->
+        <!--<a class="side-nav" href="detail.html?kind=installation#installation_5">이커머스 추적 예제</a>-->
+
+        <li class="side-title">인사이트</li>
+        <a class="side-nav insight" href="detail.html?kind=insight#insight_0">인사이트</a>
+        <!--<a class="side-nav" href="detail.html?kind=insight#insight_1">인사이트 리포트란?</a>
         <a class="side-nav" href="detail.html?kind=insight#insight_2">인사이트 리포트 발행</a>
         <a class="side-nav" href="detail.html?kind=insight#insight_3">인사이트 활용하기</a>-->
 
-        <!--<a class="side-title">사용자</a>
-        <a class="side-nav">사용자 속성</a>
+        <li class="side-title">사용자</li>
+        <a class="side-nav user" href="detail.html?kind=user#user_0">사용자</a>
+        <!--<a class="side-nav">사용자 속성</a>
         <a class="side-nav">사용자 그룹 관리</a>
         <a class="side-nav">활성 타임라인</a>-->
 
-        <!--<a class="side-title">라이브</a>
-        <a class="side-nav">라이브 개요</a>
+        <li class="side-title">라이브</li>
+        <a class="side-nav live" href="detail.html?kind=live#live_0">라이브</a>
+        <!--<a class="side-nav">라이브 개요</a>
         <a class="side-nav">제한 이벤트</a>-->
 
 
-        <!--<a class="side-title">계정 및 프로젝트 관리</a>
-        <a class="side-nav">계정,프로젝트 계층구조</a>
+        <li class="side-title">계정 및 프로젝트 관리</li>
+        <a class="side-nav management" href="detail.html?kind=management#management_0">계정 및 프로젝트 관리</a>
+        <!--<a class="side-nav">계정,프로젝트 계층구조</a>
         <a class="side-nav">비즈니스 설정</a>
         <a class="side-nav">계정 관리</a>
         <a class="side-nav">플랜 변경 및 결제 내역</a>
@@ -78,7 +86,8 @@
         <a class="side-nav">추적 정보</a>
         <a class="side-nav">데이터 수집 필터</a>-->
 
-        <!--<a class="side-title">시스템 요구사항</a>-->
+        <li class="side-title">시스템 요구사항</li>
+        <a class="side-nav system" href="detail.html?kind=system#system_0">시스템 요구사항</a>
         <!--<a class="side-nav">지원되는 브라우저</a>-->
         <!--<a class="side-nav">사욪 가능한 언어</a>-->
         <!--<a class="side-nav">데이터 한도 및 처리가간</a>-->
@@ -125,11 +134,16 @@
 
   var markdownNameList = [
     {name: '시작하기 및 설치', link: 'detail.html?kind=installation#installation_0'},
+    {name: '설치 시작하기', link: 'detail.html?kind=installation#installation_0'},
     {name: '기본 추적 스크립트', link: 'detail.html?kind=installation#installation_1'},
     {name: '고유 사용자 식별', link: 'detail.html?kind=installation#installation_2'},
     {name: '커스텀 이벤트 추적', link: 'detail.html?kind=installation#installation_3'},
-    {name: '이커머스 추적 이벤트', link: 'detail.html?kind=installation#installation_4'},
-    {name: '이커머스 추적 에제', link: 'detail.html?kind=installation#installation_5'},
+    {name: '이커머스 추적', link: 'detail.html?kind=installation#installation_4'},
+    {name: '인사이트', link: 'detail.html?kind=insight#insight_0'},
+    {name: '사용자', link: 'detail.html?kind=user#user_0'},
+    {name: '라이브', link: 'detail.html?kind=live#live_0'},
+    {name: '계정 및 프로젝트 관리', link: 'detail.html?kind=management#management_0'},
+    {name: '시스템 요구사항', link: 'detail.html?kind=system#system_0'},
   ];
 
   var kind = parseQuery(window.location.search).kind;
@@ -213,7 +227,6 @@
 
   $('.inner-content').scroll(function () {
 
-
     if (window.innerWidth > 700) {
 
       var fromTop = $(this).scrollTop();
@@ -247,10 +260,7 @@
     } else {
 
     }
-
-
   })
-
 
   $('.open-icon').bind('touchend, click', function () {
     if (this.classList.contains('open')) {
@@ -291,6 +301,15 @@
     $('.inner-header').css('display', 'flex');
   })
 
+
+  window.addEventListener('load', function () {
+    focusLeftNav();
+  })
+
+  window.addEventListener('hashchange', function () {
+    var hash = window.location.hash.replace("#", '');
+    goToH2(null, hash)
+  })
 
   /********************************
    *
@@ -412,7 +431,7 @@
     var innerContent = document.querySelector('.inner-content');
     var scrollHeight = innerContent.scrollHeight - innerContent.clientHeight;
     var fromTop = $(innerContent).scrollTop();
-    console.log((scrollHeight - fromTop));
+    // console.log((scrollHeight - fromTop));
     // console.log(scrollHeight - fromTop);
     if ((scrollHeight - fromTop) < 58) {
       document.querySelector(".footer").style.bottom = '-' + (scrollHeight - fromTop) + 'px';
@@ -439,7 +458,7 @@
       // }
 
 
-      $('.content h2').each(function (i) {
+      $('.content h2').each(function (i, element) {
         var id = kind + '_' + i;
         this.setAttribute('id', id);
         h2List.push(this.innerText);
@@ -447,21 +466,56 @@
         let sideNav = document.createElement('a');
         sideNav.classList.add('side-nav');
         sideNav.classList.add('no');
-        sideNav.setAttribute('href', '#' + id);
+        // sideNav.setAttribute('href', '#' + id);
         sideNav.classList.add('side' + id);
         sideNav.innerText = this.innerText;
         document.querySelector('.side.right').appendChild(sideNav);
+
+        sideNav.addEventListener('click', () => {
+          var element = this;
+          goToH2(element);
+        });
+
       })
 
 
       usePrismJs();
-
     }
   }
 
   function usePrismJs() {
     var event = new Event('markdownRendered');
     window.dispatchEvent(event);
+  }
+
+
+  function goToH2(element, str) {
+    var innerContent = document.querySelector('.inner-content');
+    var scrollHeight = innerContent.scrollHeight - innerContent.clientHeight;
+    var fromTop = $(innerContent).scrollTop();
+
+    if (!str) {
+      $(innerContent).animate({
+        scrollTop: (fromTop + $('#' + element.id).offset().top - 100)
+      }, 500);
+    }
+    else {
+      $(innerContent).animate({
+        scrollTop: (fromTop + $('#' + str).offset().top - 100)
+      }, 0);
+    }
+
+  }
+
+
+  function focusLeftNav() {
+    var kind = parseQuery(window.location.search).kind;
+
+    $('.side.left .side-nav').each(function (index, element) {
+      if (element.classList.contains(kind)) {
+        element.classList.add('active')
+      }
+    })
   }
 
 
