@@ -6,6 +6,13 @@
     -webkit-font-smoothing: antialiased
 }
 
+
+.spinner{
+    width: 100vw;
+    height : 100vh;
+    background: white;
+}
+
 @media only screen and (min-width: 700px) {
     body {
         overflow: hidden;
