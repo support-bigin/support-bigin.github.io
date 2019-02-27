@@ -446,7 +446,7 @@
   function parseMarkdown() {
 
     // 스피너
-    // var spinner = createSpinner();
+    var spinner = createSpinner();
 
     xmlhttp.open('get', url, true);
     xmlhttp.send();
@@ -485,7 +485,7 @@
       })
 
       // 스피너
-      // spinner.stop();
+      spinner.stop();
       usePrismJs();
     }
   }
