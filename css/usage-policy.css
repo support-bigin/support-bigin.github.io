@@ -1,10 +1,10 @@
 
 .usage-policy-container {
   width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+  /*height: 100vh;*/
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
 
   /*.usage-policy-header {
     width: 100%;
@@ -55,10 +55,22 @@
 .usage-policy-header {
   width: 668px;
   margin: 112px auto 0 auto;
+
+  padding-left : 96px;
   /*padding-left: 5rem;*/
   display: flex;
   justify-content: flex-start;
 
+
+  box-sizing: border-box;
+}
+
+.usage-policy-header img{
+  width: 56px;
+  height: 56px;
+  position: fixed;
+  top : 48px;
+  left : 48px;
 }
 .prev-button {
   cursor: pointer;
@@ -86,13 +98,17 @@
 
 .usage-policy-content {
   /*height: 100vh;*/
+
+
+  padding-left : 96px;
+
   width: 668px;
   /*padding-left: 5rem;*/
-  margin: auto;
+  margin: 20px auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-bottom: 30px;
+  /*padding-bottom: 30px;*/
   position: relative;
 
 }
@@ -113,11 +129,13 @@
  }
 .usage-policy-flip-btn-container {
   background: white;
-  height: 4rem;
+  height: 40px;
   width: 100%;
   display: flex;
   align-items: center;
 
+
+  border-bottom : 1px solid #ededf2;
 /*  //&::before{
   //  content:'';
   //  position: absolute;
@@ -130,7 +148,7 @@
 
 }
 .usage-policy-flip-btn-wrapper {
-  margin-right: 24px;
+  /*margin-right: 24px;*/
   padding-right: 16px;
   padding-left: 16px;
   cursor: pointer;
@@ -165,12 +183,15 @@
 .service-usage-policy {
   /*width: 1088px;*/
   width : 100%;
+  height: 360px;
+
+
   margin-top: 36px;
   padding: 16px;
   box-sizing: border-box;
 
   overflow-y: auto;
-  height: calc(100vh - 500px );
+  /*height: calc(100vh - 500px );*/
 
   border-radius: 4px;
   border: solid 1px #ededf2;
@@ -212,7 +233,8 @@
   /*width: 1088px;*/
   width : 100%;
   overflow-y: auto;
-  height: calc(100vh - 500px);
+  /*height: calc(100vh - 500px);*/
+  height: 360px;
 
 
   border-radius: 4px;
@@ -225,14 +247,14 @@
 .usage-policy-info-title-wrapper {
   font-size: 18px;
   color: #222233;
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
 }
 .usage-policy-info-content-wrapper {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.71;
   color: #777788;
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
 }
 .table {
   display: table;
@@ -267,7 +289,7 @@
 
 .cancel-button-wrapper{
   width: 668px;
-  margin : 32px auto;
+  margin : 24px auto;
 
   display: flex;
   justify-content: flex-end;
