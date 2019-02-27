@@ -424,7 +424,7 @@
 
     .search-container {
         max-width: 800px;
-        height: 376px;
+        height: 360px;
         margin: auto;
 
         background: transparent url('../images/main.png') no-repeat center center;
@@ -451,7 +451,7 @@
     }
 
     .search-container > .input-wrapper {
-        margin: 32px auto 0 auto;
+        margin: 19px auto 0 auto;
         max-width: 624px;
         /*width : 100%;*/
         height: 56px;
