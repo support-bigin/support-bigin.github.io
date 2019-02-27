@@ -43,7 +43,7 @@
   <div class="content">
     <div class="content-wrapper">
       <div class="side left menu nav">
-        <li class="side-title" >시작하기 및 설치</li>
+        <li class="side-title">시작하기 및 설치</li>
         <!--<a class="side-nav" href="detail.html?kind=installation#installation_1">계정 생성</a>-->
         <!--<a class="side-nav" href="detail.html?kind=installation#installation_2">프로젝트 생성</a>-->
         <a class="side-nav" href="detail.html?kind=installation#installation_0">설치 시작하기</a>
@@ -115,6 +115,13 @@
 
 <script>
 
+
+  /********************************
+   *
+   *         Variables
+   *
+   *********************************/
+
   var markdownNameList = [
     {name: '시작하기 및 설치', link: 'detail.html?kind=installation#installation_0'},
     {name: '기본 추적 스크립트', link: 'detail.html?kind=installation#installation_1'},
@@ -124,24 +131,13 @@
     {name: '이커머스 추적 에제', link: 'detail.html?kind=installation#installation_5'},
   ];
 
-
   var kind = parseQuery(window.location.search).kind;
+
   url = '../markdown/' + parseQuery(window.location.search).kind + '.md';
 
   h2List = [];
   h2Elements = [];
   h2Offsets = [];
-
-
-  function parseQuery(queryString) {
-    var query = {};
-    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
-    for (var i = 0; i < pairs.length; i++) {
-      var pair = pairs[i].split('=');
-      query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
-    }
-    return query;
-  }
 
 
   var activeH2;
@@ -155,20 +151,35 @@
   }
 
 
-  // 마크다운 파일 파싱 후, 출력
-  parseMarkdown();
+  /********************************
+   *
+   *         Util Functions
+   *
+   *********************************/
 
 
-  window.addEventListener('load', function () {
 
-  })
+  // href 파싱하는 함수
+  function parseQuery(queryString) {
+    var query = {};
+    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+    for (var i = 0; i < pairs.length; i++) {
+      var pair = pairs[i].split('=');
+      query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+    }
+    return query;
+  }
 
+
+  // array 최소값
   function arrayMin(arr) {
     return arr.reduce(function (p, v) {
       return (p < v ? p : v);
     });
   }
 
+
+  // array 최소값의 index;
   function indexOfMin(arr) {
     if (arr.length === 0) {
       return -1;
@@ -186,6 +197,17 @@
 
     return minIndex;
   }
+
+
+  /********************************
+   *
+   *         Callbacks
+   *
+   *********************************/
+
+
+  // 마크다운 파일 파싱 후, 출력
+  parseMarkdown();
 
 
   $('.inner-content').scroll(function () {
@@ -208,6 +230,7 @@
       $('.side' + activeH2.getAttribute('id')).addClass('active');
 
       min = arrayMin(h2Offsets);
+
       h2Offsets.forEach(function (i, index) {
         if (i > 900000000000) {
 
@@ -226,6 +249,53 @@
 
 
   })
+
+
+  $('.open-icon').bind('touchend, click', function () {
+    if (this.classList.contains('open')) {
+      $('.side.left').css('display', 'none');
+      $('.inner-content').css('display', 'block')
+      this.classList.remove('open');
+    } else {
+      this.classList.add('open');
+      $('.side.left').css('display', 'block');
+      $('.inner-content').css('display', 'none')
+    }
+  })
+
+  $('.side.left .side-nav').bind("touchend, click", function () {
+    if (window.innerWidth < 700) {
+      $('.side.left').css('display', 'none');
+      $('.inner-content').css('display', 'block')
+      document.querySelector('.open-icon').classList.remove('open');
+      window.open(this.href, '_self')
+    }
+  });
+
+
+  $('.search-item').click(function () {
+    $(".search-list").remove();
+  })
+
+
+  $('.cancel-icon').click(function () {
+    let searchList = $('.search-list');
+    // let isHover = searchList.is(":hover");
+
+    if (searchList.length > 0 && !$('.search-list').is(":hover")) {
+      $(".search-list").remove();
+    }
+
+    $('.mobile-input-form-wrapper').css('display', 'none');
+    $('.inner-header').css('display', 'flex');
+  })
+
+
+  /********************************
+   *
+   *         Help Functions
+   *
+   *********************************/
 
 
   function openMobileSearchList(search) {
@@ -329,45 +399,6 @@
   }
 
 
-  $('.open-icon').bind('touchend, click', function () {
-    if (this.classList.contains('open')) {
-      $('.side.left').css('display', 'none');
-      $('.inner-content').css('display', 'block')
-      this.classList.remove('open');
-    } else {
-      this.classList.add('open');
-      $('.side.left').css('display', 'block');
-      $('.inner-content').css('display', 'none')
-    }
-  })
-
-  $('.side.left .side-nav').bind("touchend, click", function () {
-    if (window.innerWidth < 700) {
-      $('.side.left').css('display', 'none');
-      $('.inner-content').css('display', 'block')
-      document.querySelector('.open-icon').classList.remove('open');
-      window.open(this.href, '_self')
-    }
-  });
-
-
-  $('.search-item').click(function () {
-    $(".search-list").remove();
-  })
-
-
-  $('.cancel-icon').click(function () {
-    let searchList = $('.search-list');
-    // let isHover = searchList.is(":hover");
-
-    if (searchList.length > 0 && !$('.search-list').is(":hover")) {
-      $(".search-list").remove();
-    }
-
-    $('.mobile-input-form-wrapper').css('display', 'none');
-    $('.inner-header').css('display', 'flex');
-  })
-
   function showHeaderInput() {
     if (window.innerWidth < 700) {
       $('.mobile-input-form-wrapper').css('display', 'flex');
@@ -380,7 +411,7 @@
     var innerContent = document.querySelector('.inner-content');
     var scrollHeight = innerContent.scrollHeight - innerContent.clientHeight;
     var fromTop = $(innerContent).scrollTop();
-
+    console.log((scrollHeight - fromTop));
     // console.log(scrollHeight - fromTop);
     if ((scrollHeight - fromTop) < 58) {
       document.querySelector(".footer").style.bottom = '-' + (scrollHeight - fromTop) + 'px';
@@ -388,7 +419,6 @@
       document.querySelector(".footer").style.bottom = '-60px';
     }
   }
-
 
 
   function parseMarkdown() {
@@ -428,11 +458,10 @@
     }
   }
 
-  function usePrismJs(){
+  function usePrismJs() {
     var event = new Event('markdownRendered');
     window.dispatchEvent(event);
   }
-
 
 
 </script>

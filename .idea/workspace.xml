@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/prism.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/prism.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/github-markdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/github-markdown.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,86 +17,117 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/detail.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-                  <folding>
-                    <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="prism.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/prism.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="284">
-                  <caret line="192" column="48" selection-start-line="192" selection-start-column="40" selection-end-line="192" selection-end-column="48" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/main.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1536">
-                  <caret line="115" column="10" lean-forward="true" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="detail.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/detail.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="131">
-                  <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/css/main.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="145">
-                  <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="detail.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/css/detail.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
-                  <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="github-markdown.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/github-markdown.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
-                  <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/detail.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="633" column="28" lean-forward="true" selection-start-line="633" selection-start-column="28" selection-end-line="633" selection-end-column="28" />
+              <folding>
+                <element signature="e#149#262#0" />
+                <element signature="e#317#350#0" />
+                <element signature="e#379#387#0" />
+                <element signature="e#420#451#0" />
+                <element signature="e#484#514#0" />
+                <element signature="e#542#572#0" />
+                <element signature="e#580#617#0" />
+                <element signature="e#631#668#0" />
+                <element signature="e#682#979#0" />
+                <element signature="e#1009#1194#0" />
+                <element signature="e#1220#1515#0" />
+                <element signature="e#1541#1706#0" />
+                <element signature="e#1737#1765#0" />
+                <element signature="e#1796#1938#0" />
+                <element signature="e#1974#2173#0" />
+                <element signature="e#2202#2423#0" />
+                <element signature="e#2467#2663#0" />
+                <element signature="e#2700#2958#0" />
+                <element signature="e#3008#3039#0" />
+                <element signature="e#3063#3187#0" />
+                <element signature="e#3206#3483#0" />
+                <element signature="e#3517#3793#0" />
+                <element signature="e#3833#3931#0" />
+                <element signature="e#4261#4488#0" />
+                <element signature="e#4511#4624#0" />
+                <element signature="e#4645#4674#0" />
+                <element signature="e#4691#4862#0" />
+                <element signature="e#4889#4953#0" />
+                <element signature="e#4981#5044#0" />
+                <element signature="e#5080#5110#0" />
+                <element signature="e#5143#5238#0" />
+                <element signature="e#5256#5401#0" />
+                <element signature="e#5438#5468#0" />
+                <element signature="e#5515#5621#0" />
+                <element signature="e#5654#5751#0" />
+                <element signature="e#5775#5936#0" />
+                <element signature="e#5958#6094#0" />
+                <element signature="e#6119#6150#0" />
+                <element signature="e#6182#6306#0" />
+                <element signature="e#6327#6477#0" />
+                <element signature="e#6517#6547#0" />
+                <element signature="e#6808#6875#0" />
+                <element signature="e#6890#7122#0" />
+                <element signature="e#7150#7315#0" />
+                <element signature="e#7349#7608#0" />
+                <element signature="e#7665#7768#0" />
+                <element signature="e#7796#8002#0" />
+                <element signature="e#8035#8118#0" />
+                <element signature="e#8157#8351#0" />
+                <element signature="e#8395#8437#0" />
+                <element signature="e#8445#8482#0" />
+                <element signature="e#8496#8533#0" />
+                <element signature="e#8547#8869#0" />
+                <element signature="e#8899#9084#0" />
+                <element signature="e#9110#9309#0" />
+                <element signature="e#9338#9368#0" />
+                <element signature="e#9401#9605#0" />
+                <element signature="e#9631#9814#0" />
+                <element signature="e#9845#10007#0" />
+                <element signature="e#10043#10270#0" />
+                <element signature="e#10299#10527#0" />
+                <element signature="e#10571#10767#0" />
+                <element signature="e#10804#11146#0" />
+                <element signature="e#11196#11227#0" />
+                <element signature="e#11268#11481#0" />
+                <element signature="e#11535#11731#0" />
+                <element signature="e#11778#12036#0" />
+                <element signature="e#12082#12303#0" />
+                <element signature="e#12357#12633#0" />
+                <element signature="e#13013#13290#0" />
+                <element signature="e#13342#13618#0" />
+                <element signature="e#13676#13743#0" />
+                <element signature="e#14089#14319#0" />
+                <element signature="e#14425#14484#0" />
+                <element signature="e#14501#14835#0" />
+                <element signature="e#14868#14938#0" />
+                <element signature="e#14956#15149#0" />
+                <element signature="e#15190#15322#0" />
+                <element signature="e#15346#15508#0" />
+                <element signature="e#15530#15743#0" />
+                <element signature="e#15768#15799#0" />
+                <element signature="e#15831#15929#0" />
+                <element signature="e#15950#16100#0" />
+                <element signature="e#16114#16419#0" />
+                <element signature="e#16447#16612#0" />
+                <element signature="e#16646#16900#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -114,11 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>inner-content</find>
-      <find>content</find>
-      <find>bigin-logo</find>
-      <find>문의하기</find>
-      <find>input</find>
       <find>input-wrapper</find>
       <find>1168</find>
       <find>1240</find>
@@ -133,9 +154,7 @@
       <find>trigger</find>
       <find>addEvent</find>
       <find>javascript</find>
-      <find>language</find>
       <find>h2Elements</find>
-      <find>markdownNameList</find>
       <find>left</find>
       <find>side-nav</find>
       <find>11px</find>
@@ -144,6 +163,13 @@
       <find>side-title</find>
       <find>hover</find>
       <find>header-nav</find>
+      <find>language</find>
+      <find>markdownNameList</find>
+      <find>56px auto</find>
+      <find>inner-content</find>
+      <find>question</find>
+      <find>onblur</find>
+      <find>search-item.no</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -190,8 +216,8 @@
         <option value="$PROJECT_DIR$/css/github-markdown.css" />
         <option value="$PROJECT_DIR$/css/prism.css" />
         <option value="$PROJECT_DIR$/js/prism.js" />
-        <option value="$PROJECT_DIR$/pages/detail.html" />
         <option value="$PROJECT_DIR$/css/detail.css" />
+        <option value="$PROJECT_DIR$/pages/detail.html" />
       </list>
     </option>
   </component>
@@ -246,7 +272,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="instal&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;mark&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;maincss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;mainhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;detailhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;detail&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;detailcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;detail.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;main.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;indexhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;searchhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;searchcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/search.css&#10;sear&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;usage&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;mainscss&#9;null&#9;null&#10;insig&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;install&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;detailscss&#9;null&#9;null&#10;bigin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;installhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;detacss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/user.md&#10;insta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;system&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;package&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/package.json&#10;index.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;main.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;global&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/global.js&#10;bigin_install.html&#9;FILE&#9;file:///Users/westlife/Desktop/project/bigin/bigin-tech-guide/support-bigin.io/bigin_install.html&#10;bigin.css&#9;FILE&#9;file:///Users/westlife/project/bigin/bigin-tech-guide/support-bigin.io/css/bigin.css" />
+    <property name="SearchEverywhereHistoryKey" value="detail.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;detailhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;instal&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;mark&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;maincss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;mainhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;detail&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;detailcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;detail.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;main.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;indexhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;searchhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;searchcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/search.css&#10;sear&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;usage&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;mainscss&#9;null&#9;null&#10;insig&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;install&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;detailscss&#9;null&#9;null&#10;bigin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;installhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;detacss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/user.md&#10;insta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;system&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;package&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/package.json&#10;index.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;main.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;global&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/global.js&#10;bigin_install.html&#9;FILE&#9;file:///Users/westlife/Desktop/project/bigin/bigin-tech-guide/support-bigin.io/bigin_install.html&#10;bigin.css&#9;FILE&#9;file:///Users/westlife/project/bigin/bigin-tech-guide/support-bigin.io/css/bigin.css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -312,12 +338,13 @@
       <workItem from="1550201438285" duration="2110000" />
       <workItem from="1550211143090" duration="2793000" />
       <workItem from="1550453652810" duration="163000" />
-      <workItem from="1551139656083" duration="16644000" />
+      <workItem from="1551139656083" duration="17348000" />
+      <workItem from="1551223892102" duration="1085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136869000" />
+    <option name="totallyTimeSpent" value="138658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="0" />
@@ -327,6 +354,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32988167" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -339,7 +367,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,13 +376,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bigin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9195">
@@ -643,6 +663,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CNAME">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="232" column="56" selection-start-line="232" selection-start-column="56" selection-end-line="232" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/prism.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -653,10 +683,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main.html">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1536">
-          <caret line="115" column="10" lean-forward="true" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+        <state relative-caret-position="17">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -667,28 +697,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/detail.html">
+    <entry file="file://$PROJECT_DIR$/css/detail.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="534">
+          <caret line="633" column="28" lean-forward="true" selection-start-line="633" selection-start-column="28" selection-end-line="633" selection-end-column="28" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#149#262#0" />
+            <element signature="e#317#350#0" />
+            <element signature="e#379#387#0" />
+            <element signature="e#420#451#0" />
+            <element signature="e#484#514#0" />
+            <element signature="e#542#572#0" />
+            <element signature="e#580#617#0" />
+            <element signature="e#631#668#0" />
+            <element signature="e#682#979#0" />
+            <element signature="e#1009#1194#0" />
+            <element signature="e#1220#1515#0" />
+            <element signature="e#1541#1706#0" />
+            <element signature="e#1737#1765#0" />
+            <element signature="e#1796#1938#0" />
+            <element signature="e#1974#2173#0" />
+            <element signature="e#2202#2423#0" />
+            <element signature="e#2467#2663#0" />
+            <element signature="e#2700#2958#0" />
+            <element signature="e#3008#3039#0" />
+            <element signature="e#3063#3187#0" />
+            <element signature="e#3206#3483#0" />
+            <element signature="e#3517#3793#0" />
+            <element signature="e#3833#3931#0" />
+            <element signature="e#4261#4488#0" />
+            <element signature="e#4511#4624#0" />
+            <element signature="e#4645#4674#0" />
+            <element signature="e#4691#4862#0" />
+            <element signature="e#4889#4953#0" />
+            <element signature="e#4981#5044#0" />
+            <element signature="e#5080#5110#0" />
+            <element signature="e#5143#5238#0" />
+            <element signature="e#5256#5401#0" />
+            <element signature="e#5438#5468#0" />
+            <element signature="e#5515#5621#0" />
+            <element signature="e#5654#5751#0" />
+            <element signature="e#5775#5936#0" />
+            <element signature="e#5958#6094#0" />
+            <element signature="e#6119#6150#0" />
+            <element signature="e#6182#6306#0" />
+            <element signature="e#6327#6477#0" />
+            <element signature="e#6517#6547#0" />
+            <element signature="e#6808#6875#0" />
+            <element signature="e#6890#7122#0" />
+            <element signature="e#7150#7315#0" />
+            <element signature="e#7349#7608#0" />
+            <element signature="e#7665#7768#0" />
+            <element signature="e#7796#8002#0" />
+            <element signature="e#8035#8118#0" />
+            <element signature="e#8157#8351#0" />
+            <element signature="e#8395#8437#0" />
+            <element signature="e#8445#8482#0" />
+            <element signature="e#8496#8533#0" />
+            <element signature="e#8547#8869#0" />
+            <element signature="e#8899#9084#0" />
+            <element signature="e#9110#9309#0" />
+            <element signature="e#9338#9368#0" />
+            <element signature="e#9401#9605#0" />
+            <element signature="e#9631#9814#0" />
+            <element signature="e#9845#10007#0" />
+            <element signature="e#10043#10270#0" />
+            <element signature="e#10299#10527#0" />
+            <element signature="e#10571#10767#0" />
+            <element signature="e#10804#11146#0" />
+            <element signature="e#11196#11227#0" />
+            <element signature="e#11268#11481#0" />
+            <element signature="e#11535#11731#0" />
+            <element signature="e#11778#12036#0" />
+            <element signature="e#12082#12303#0" />
+            <element signature="e#12357#12633#0" />
+            <element signature="e#13013#13290#0" />
+            <element signature="e#13342#13618#0" />
+            <element signature="e#13676#13743#0" />
+            <element signature="e#14089#14319#0" />
+            <element signature="e#14425#14484#0" />
+            <element signature="e#14501#14835#0" />
+            <element signature="e#14868#14938#0" />
+            <element signature="e#14956#15149#0" />
+            <element signature="e#15190#15322#0" />
+            <element signature="e#15346#15508#0" />
+            <element signature="e#15530#15743#0" />
+            <element signature="e#15768#15799#0" />
+            <element signature="e#15831#15929#0" />
+            <element signature="e#15950#16100#0" />
+            <element signature="e#16114#16419#0" />
+            <element signature="e#16447#16612#0" />
+            <element signature="e#16646#16900#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/detail.css">
+    <entry file="file://$PROJECT_DIR$/pages/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
