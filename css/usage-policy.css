@@ -49,12 +49,11 @@
     }
   }*/
 
-  // 새로운 이용약관 header
 
 }
 .usage-policy-header {
   width: 668px;
-  margin: 112px auto 0 auto;
+  margin: 200px auto 0 auto;
 
   padding-left : 48px;
   padding-right : 48px;
@@ -161,8 +160,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-sizing: border-box;
 }
-.usage-policy-flip-btn-wrapper .span {
+.usage-policy-flip-btn-wrapper span {
   font-size: 14px;
   font-weight: normal;
   color: #bbbbcc;
