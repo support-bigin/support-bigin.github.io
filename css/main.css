@@ -169,6 +169,7 @@
         top: 56px;
         left: 0;
         right: 0;
+        z-index: 10;
 
     }
 
@@ -252,6 +253,17 @@
         top : -1px;
         bottom: -1px;
     }
+
+    /*.nav-container > .nav:hover > .nav-icon {*/
+        /*width: 84px;*/
+        /*height: 84px;*/
+        /*border-radius : 40px;*/
+        /*background-color : #333344;*/
+        /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+        /*background-size : 35px 35px;*/
+        /*top : -1px;*/
+        /*bottom: -1px;*/
+    /*}*/
 
     .nav-container > .nav-1 > .nav-icon {
         background:  #222233 url('../images/category_start.png') no-repeat center center;
