@@ -146,10 +146,11 @@
     </div>
   </div>
 
-
   <div class="footer">
-    <div class="footer-nav" onclick="window.open('usage-policy.html?kind=privacy', '_self')">개인정보처리방침</div>
-    <div class="footer-nav" onclick="window.open('usage-policy.html?kind=service', '_self')">이용약관</div>
+    <!--<div class="footer-nav" onclick="window.open('usage-policy.html?kind=privacy', '_self')">개인정보처리방침</div>-->
+    <!--<div class="footer-nav" onclick="window.open('usage-policy.html?kind=service', '_self')">이용약관</div>-->
+    <div class="footer-nav" onclick="goToUsagePolicy('privacy')">개인정보처리방침</div>
+    <div class="footer-nav" onclick="goToUsagePolicy('service')">이용약관</div>
     <div class="footer-copyright">
       Copyright ⓒ 2019 biginsight All rights reserved.
     </div>
@@ -259,43 +260,20 @@
   }
 
 
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   main = document.getElementById('search_input_react');
-  //   pc = document.getElementsByClassName('doc-gnb-search-input')[0];
-  //   mobile = document.getElementsByClassName('doc-gnb-search')[0];
-  //
-  //   main.onkeydown = handleChangeInput;
-  //   pc.onkeydown = handleChangeInput;
-  //   mobile.onkeydown = handleChangeInput;
-  //
-  //   var navButton = document.getElementsByClassName('abr_search_toggler')[0];
-  //   var navPrev = document.getElementsByClassName('doc-gnb-search-back')[0];
-  //
-  //   navButton.addEventListener('click', toggleMobileNavigation);
-  //   navPrev.addEventListener('click', toggleMobileNavigation);
-  //
-  //   // Btn click
-  //   var enBtn = document.getElementsByClassName('link-en');
-  //   var koBtn = document.getElementsByClassName('link-ko');
-  //
-  //   var pathnames = window.location.pathname.split('/');
-  //
-  //   var ko = '/'
-  //   var en = '/en';
-  //
-  //   if (pathnames[1] === 'docs') {
-  //     if(pathnames[2].includes('-en')) {
-  //       en = pathnames[2];
-  //       ko = pathnames[2].replace('-en', '');
-  //     } else {
-  //       ko = pathnames[2];
-  //       en = pathnames[2].replace('.html', '-en.html');
-  //     }
-  //   }
-  //
-  //   setHref(enBtn, en);
-  //   setHref(koBtn, ko);
-  // });
+  function goToUsagePolicy(which){
+    try{
+      localStorage.setItem("prevLocation" , window.location.href);
+    }catch(e){
+      document.cookie = "prevLocation="+window.location.href;
+    }
+
+    if(which == 'privacy'){
+      window.open('usage-policy.html?kind=privacy', '_self')
+    }else{
+      window.open('usage-policy.html?kind=service', '_self')
+    }
+  }
+
 </script>
 </body>
 </html>

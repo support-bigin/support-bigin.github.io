@@ -117,8 +117,10 @@
 
   </div>
   <div class="footer">
-    <div class="footer-nav" onclick="window.open('usage-policy.html?kind=privacy', '_self')">개인정보처리방침</div>
-    <div class="footer-nav" onclick="window.open('usage-policy.html?kind=service', '_self')">이용약관</div>
+    <!--<div class="footer-nav" onclick="window.open('usage-policy.html?kind=privacy', '_self')">개인정보처리방침</div>-->
+    <!--<div class="footer-nav" onclick="window.open('usage-policy.html?kind=service', '_self')">이용약관</div>-->
+    <div class="footer-nav" onclick="goToUsagePolicy('privacy')">개인정보처리방침</div>
+    <div class="footer-nav" onclick="goToUsagePolicy('service')">이용약관</div>
     <div class="footer-copyright">
       Copyright ⓒ 2019 biginsight All rights reserved.
     </div>
@@ -559,6 +561,20 @@
     return spinner;
   }
 
+
+  function goToUsagePolicy(which){
+    try{
+      localStorage.setItem("prevLocation" , window.location.href);
+    }catch(e){
+      document.cookie = "prevLocation="+window.location.href;
+    }
+
+    if(which == 'privacy'){
+      window.open('usage-policy.html?kind=privacy', '_self')
+    }else{
+      window.open('usage-policy.html?kind=service', '_self')
+    }
+  }
 </script>
 
 
