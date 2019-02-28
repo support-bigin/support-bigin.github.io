@@ -449,13 +449,19 @@ body kbd {
     box-shadow: inset 0 -1px 0 #959da5;
 }
 
-body h1,
 body h2,
 body h3,
 body h4,
 body h5,
 body h6 {
     margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+body h1{
+    margin-top : 4px;
     margin-bottom: 16px;
     font-weight: 600;
     line-height: 1.25;
@@ -659,6 +665,10 @@ body pre code.language-javascript{
     /*padding-right : 20px;*/
 }
 
+
+body pre.language-javascript{
+    background-color : #fafafc;
+}
 body .full-commit .btn-outline:not(:disabled):hover {
     color: #005cc5;
     border-color: #005cc5;

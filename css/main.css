@@ -79,10 +79,16 @@
         height: 36px;
         border-radius: 2px;
         border: solid 1px #bbbbcc;
+
+        -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -moz-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -ms-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -o-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
     }
 
     .header .header-nav.dashboard:hover{
-        border: solid 1px #555566;
+        border: solid 1px #778;
     }
 
     .content {
@@ -160,7 +166,7 @@
         background-color: #ffffff;
 
         position: absolute;
-        top: 56px;
+        top: 56px
         left: 0;
         right: 0;
 
@@ -175,7 +181,7 @@
         font-size: 14px;
         font-weight: normal;
         line-height: 1.43;
-        color: #334;
+        color: #778;
 
         display: flex;
         align-items: center;
@@ -184,6 +190,8 @@
     .search-container .search-list > .search-item:hover {
         background-color: #f5f5fa;
         cursor: pointer;
+
+        color : #445;
     }
 
     .search-container .search-list > .search-item.no {
@@ -227,6 +235,12 @@
         /*background-size: contain;*/
         /*background-size : 25px 20px;*/
         border-radius : 38px;
+
+        -webkit-transition: background-color 0.2s ease;
+        -moz-transition: background-color 0.2s ease;
+        -ms-transition: background-color 0.2s ease;
+        -o-transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease;
     }
 
     .nav-container > .nav-1 > .nav-icon {
@@ -261,6 +275,16 @@
         border-radius : 40px;
         background-color : #333344;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-size : 35px 35px;
+        position: relative;
+        top : -2px;
+        /*width : 100px;*/
+        /*height : 100px;*/
+        /*-webkit-border-radius: 50px;*/
+        /*-moz-border-radius: 50px;*/
+        /*border-radius: 50px;*/
+        /*top : -6px;*/
+        /*left : 15px;*/
     }
 
     .nav-container > .nav > .nav-text {

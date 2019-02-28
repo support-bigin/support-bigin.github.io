@@ -117,6 +117,17 @@
         height: 36px;
         border-radius: 2px;
         border: solid 1px #bbbbcc;
+
+        -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -moz-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -ms-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -o-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+    }
+
+    .header .header-nav.dashboard:hover{
+        border: solid 1px #778;
+        /*border: 1px solid red;*/
     }
 
     .header .input-wrapper {
@@ -185,7 +196,7 @@
         font-size: 14px;
         font-weight: normal;
         line-height: 1.43;
-        color: #333344;
+        color: #778;
 
         display: flex;
         align-items: center;
@@ -195,6 +206,8 @@
         background-color: #f5f5fa;
         cursor: pointer;
         text-decoration: none;
+
+        color : #445;
     }
 
 
@@ -236,12 +249,16 @@
     }
 
     .inner-content {
+
+        padding-top : 120px;
         flex-grow: 1;
     }
 
     .side.left {
         display: block;
-        padding-top: 136px;
+        /*padding-top: 136px;*/
+        padding-top : 120px;
+        /*padding-top : 256px;*/
         width: 220px;
         height: calc(100vh - 112px);
         overflow-y: auto;
@@ -276,7 +293,9 @@
 
     .side.right {
         margin-left: 40px;
-        padding-top: 136px;
+        /*padding-top: 136px;*/
+        /*padding-top : 256px;*/
+        padding-top : 120px;
         width: 220px;
         height: calc(100vh - 52px);
         overflow-y: auto;
@@ -334,7 +353,8 @@
     }
 
     .inner-content {
-        padding-top: 136px;
+        /*padding-top: 136px;*/
+        padding-top : 120px;
         padding-bottom: 100px;
         height: calc(100vh - 52px);
         overflow-y: auto;
@@ -361,7 +381,7 @@
     }
 
     .question-wrapper a {
-        color: #4e65ff;
+        color: #0060ad;
         text-decoration: underline;
     }
 
