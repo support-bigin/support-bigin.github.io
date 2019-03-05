@@ -139,7 +139,7 @@
       도움이 더 필요하신가요? 문의를 남겨주시면 이메일을 통해 자세히 답변해드리겠습니다.
     </div>
     <div class="question-button"
-         onclick="window.open('https://www.bigin.io/contact-us' , '_blank')">
+         onclick="goToContactUs()">
       문의하기
     </div>
   </div>
@@ -274,6 +274,19 @@
       window.open('usage-policy.html?kind=service', '_self')
     }
   }
+
+  function goToContactUs() {
+
+    try {
+      localStorage.setItem("prevLocation", window.location.href);
+    } catch (e) {
+      document.cookie = "prevLocation=" + window.location.href;
+    }
+
+    window.open('contact-us.html', '_self')
+
+  }
+
 
 </script>
 </body>
