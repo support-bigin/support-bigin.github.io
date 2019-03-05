@@ -94,9 +94,9 @@
         <!--<a class="side-nav">사욪 가능한 언어</a>-->
         <!--<a class="side-nav">데이터 한도 및 처리가간</a>-->
 
-        <!--<a class="side-title">FAQs</a>-->
-        <!--<a class="side-nav">프로젝트는 하나만 등록할 수 있나요?</a>-->
-        <!--<a class="side-nav">프로젝트는 하나만 등록할 수 있나요?</a>-->
+
+        <li class="side-title">FAQs</li>
+        <a class="side-nav" href="detail.html?kind=faq#faq_0">FAQs</a>
       </div>
       <div class="inner-content-header">
         <span></span>
@@ -479,7 +479,7 @@
         sideNav.innerText = this.innerText;
         document.querySelector('.side.right').appendChild(sideNav);
 
-        sideNav.addEventListener('click', function(){
+        sideNav.addEventListener('click', function () {
           // var element = this;
           goToH2(element);
           // console.log(element);
@@ -564,7 +564,7 @@
       // left: '50%', // Left position relative to parent
       shadow: '0 0 1px transparent', // Box-shadow for the lines
       position: 'absolute', // Element positioning
-      background : '#ffffff',
+      background: '#ffffff',
     };
 
     var target = document.getElementById('spinner');
@@ -575,16 +575,16 @@
   }
 
 
-  function goToUsagePolicy(which){
-    try{
-      localStorage.setItem("prevLocation" , window.location.href);
-    }catch(e){
-      document.cookie = "prevLocation="+window.location.href;
+  function goToUsagePolicy(which) {
+    try {
+      localStorage.setItem("prevLocation", window.location.href);
+    } catch (e) {
+      document.cookie = "prevLocation=" + window.location.href;
     }
 
-    if(which == 'privacy'){
+    if (which == 'privacy') {
       window.open('usage-policy.html?kind=privacy', '_self')
-    }else{
+    } else {
       window.open('usage-policy.html?kind=service', '_self')
     }
   }

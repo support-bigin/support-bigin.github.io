@@ -269,7 +269,7 @@
 
 
   function setCloseCategoryList(elem) {
-    $(elem).bind("click, touchend", function () {
+    elem.addEventListener("click", function () {
       closeCategoryList();
     })
   }
@@ -281,7 +281,7 @@
       var elem = document.createElement("div");
       elem.innerText = categoryList[i].value;
       elem.classList.add('select-button-wrap');
-      $(elem).bind("click, touchend", function () {
+      $(elem).bind("click", function () {
         selectCategory(this.innerText);
       })
       selectBox.appendChild(elem);
@@ -373,17 +373,17 @@
 
 
 
-    $(button).bind("click, touchend", function (event) {
+    button.addEventListener("click", function (event) {
       closeDialog(param);
       event.stopPropagation();
     })
 
-    $(dialogContainer).bind('click, touchend', function (event) {
+    dialogContainer.addEventListener('click', function (event) {
         event.stopPropagation();
       }
     )
 
-    $(dialogBackDrop).bind("click, touchend", function () {
+    dialogBackDrop.addEventListener("click", function () {
       closeDialog(param);
     })
   }
