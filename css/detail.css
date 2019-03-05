@@ -366,6 +366,8 @@
 
     .inner-content::-webkit-scrollbar {
         display: none;
+
+        -ms-overflow-style: none;
     }
 
     .question-wrapper{
