@@ -263,6 +263,8 @@
         height: calc(100vh - 112px);
         overflow-y: auto;
         margin-right: 40px;
+
+        -ms-overflow-style: none;
     }
 
     .side.left a.side-nav{
