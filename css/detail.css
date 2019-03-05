@@ -362,12 +362,12 @@
         overflow-y: auto;
 
         width: 648px;
+
+        -ms-overflow-style: none;
     }
 
     .inner-content::-webkit-scrollbar {
         display: none;
-
-        -ms-overflow-style: none;
     }
 
     .question-wrapper{
