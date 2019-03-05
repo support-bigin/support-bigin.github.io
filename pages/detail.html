@@ -479,7 +479,7 @@
         sideNav.innerText = this.innerText;
         document.querySelector('.side.right').appendChild(sideNav);
 
-        sideNav.addEventListener('click', () => {
+        sideNav.addEventListener('click', function(){
           var element = this;
           goToH2(element);
         });
