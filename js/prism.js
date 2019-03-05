@@ -375,7 +375,7 @@ var Prism = (function(){
       // TODO : 수정
       // document.addEventListener('DOMContentLoaded', _.highlightAll);
       // window.addEventListener('markdownRendered', _.highlightAll);
-      window.addEventListener("markdownRendered" , ()=>{
+      window.addEventListener("markdownRendered" , function(){
         _.highlightAll();
       })
     }
