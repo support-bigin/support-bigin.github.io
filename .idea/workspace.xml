@@ -19,8 +19,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="484" column="11" lean-forward="true" selection-start-line="484" selection-start-column="11" selection-end-line="484" selection-end-column="11" />
+            <state relative-caret-position="229">
+              <caret line="483" column="26" lean-forward="true" selection-start-line="483" selection-start-column="26" selection-end-line="483" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -252,12 +252,12 @@
       <workItem from="1551242379289" duration="13885000" />
       <workItem from="1551329191087" duration="10081000" />
       <workItem from="1551664680763" duration="6781000" />
-      <workItem from="1551741887120" duration="4277000" />
+      <workItem from="1551741887120" duration="4712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175206000" />
+    <option name="totallyTimeSpent" value="175641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -271,7 +271,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32988167" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5029586" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5029586" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -733,8 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="484" column="11" lean-forward="true" selection-start-line="484" selection-start-column="11" selection-end-line="484" selection-end-column="11" />
+        <state relative-caret-position="229">
+          <caret line="483" column="26" lean-forward="true" selection-start-line="483" selection-start-column="26" selection-end-line="483" selection-end-column="26" />
         </state>
       </provider>
     </entry>
