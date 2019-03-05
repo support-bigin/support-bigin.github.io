@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="482" column="32" lean-forward="true" selection-start-line="482" selection-start-column="32" selection-end-line="482" selection-end-column="32" />
+            <state relative-caret-position="383">
+              <caret line="509" column="25" lean-forward="true" selection-start-line="509" selection-start-column="25" selection-end-line="509" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/detail.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="367" column="22" lean-forward="true" selection-start-line="367" selection-start-column="22" selection-end-line="367" selection-end-column="22" />
+            <state relative-caret-position="173">
+              <caret line="370" column="5" lean-forward="true" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -50,7 +51,6 @@
       <find>fade</find>
       <find>opacity</find>
       <find>drawLines</find>
-      <find>spin</find>
       <find>18</find>
       <find>18px</find>
       <find>spinner</find>
@@ -77,6 +77,7 @@
       <find>()=&gt;</find>
       <find>scroll</find>
       <find>scrollbar</find>
+      <find>spin</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -128,8 +129,8 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/pages/main.html" />
         <option value="$PROJECT_DIR$/js/prism.js" />
-        <option value="$PROJECT_DIR$/pages/detail.html" />
         <option value="$PROJECT_DIR$/css/detail.css" />
+        <option value="$PROJECT_DIR$/pages/detail.html" />
       </list>
     </option>
   </component>
@@ -261,12 +262,12 @@
       <workItem from="1551242379289" duration="13885000" />
       <workItem from="1551329191087" duration="10081000" />
       <workItem from="1551664680763" duration="6781000" />
-      <workItem from="1551741887120" duration="4906000" />
+      <workItem from="1551741887120" duration="5098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175835000" />
+    <option name="totallyTimeSpent" value="176027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -280,7 +281,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32988167" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5029586" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5029586" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -733,17 +734,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/detail.html">
+    <entry file="file://$PROJECT_DIR$/css/detail.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="482" column="32" lean-forward="true" selection-start-line="482" selection-start-column="32" selection-end-line="482" selection-end-column="32" />
+        <state relative-caret-position="173">
+          <caret line="370" column="5" lean-forward="true" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/detail.css">
+    <entry file="file://$PROJECT_DIR$/pages/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="367" column="22" lean-forward="true" selection-start-line="367" selection-start-column="22" selection-end-line="367" selection-end-column="22" />
+        <state relative-caret-position="383">
+          <caret line="509" column="25" lean-forward="true" selection-start-line="509" selection-start-column="25" selection-end-line="509" selection-end-column="25" />
         </state>
       </provider>
     </entry>
