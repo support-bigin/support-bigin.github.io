@@ -198,10 +198,14 @@
   }
 
   window.addEventListener('load', function () {
-    closeSearchList();
+    // closeSearchList();
   })
 
   function openSearchList(search) {
+
+    if(!search){
+      return;
+    }
 
     let searchList = document.querySelector(".search-list");
 
