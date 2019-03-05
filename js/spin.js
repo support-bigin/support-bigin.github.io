@@ -154,14 +154,19 @@ function drawLines(el, opts) {
     var degrees = ~~(360 / opts.lines * i + opts.rotate);
     var backgroundLine = css(document.createElement('div'), {
       position: 'absolute',
-      top: -opts.width / 2 + "px",
-      width: (opts.length + opts.width) + 'px',
+      // top: -opts.width / 2 + "px",
+      top : 0,
+      // width : 16,
+      width: (opts.length) + 'px',
       height: opts.width + 'px',
       background: getColor(opts.fadeColor, i),
       borderRadius: borderRadius,
       transformOrigin: 'left',
       transform: "rotate(" + degrees + "deg) translateX(" + opts.radius + "px)",
     });
+
+
+
     var delay = i * opts.direction / opts.lines / opts.speed;
     delay -= 1 / opts.speed; // so initial animation state will include trail
     var line = css(document.createElement('div'), {
@@ -171,6 +176,13 @@ function drawLines(el, opts) {
       borderRadius: borderRadius,
       boxShadow: normalizeShadow(shadows, degrees),
       animation: 1 / opts.speed + "s linear " + delay + "s infinite " + opts.animation,
+      
+      borderWidth : 2+'px',
+      borderStyle : 'solid',
+      borderTopColor: '#f3f3f3',
+      borderBottomColor: "#0d86ff",
+      borderLeftColor: "#0d86ff",
+      borderRightColor: "#0d86ff",
     });
     backgroundLine.appendChild(line);
     el.appendChild(backgroundLine);

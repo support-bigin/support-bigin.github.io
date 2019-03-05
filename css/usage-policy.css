@@ -1,8 +1,11 @@
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css');
 
-* {
+div, span{
   font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
   -webkit-font-smoothing: antialiased
 }
+
 
 body{
   margin: 0;
@@ -61,7 +64,7 @@ body{
 
 }
 .usage-policy-header {
-  width: 668px;
+  width: 784px;
   margin: 112px auto 0 auto;
 
   padding-left : 48px;
@@ -122,6 +125,7 @@ body{
 //}*/
 .usage-policy-title {
   font-size: 24px;
+  line-height:24px;
   font-weight: normal;
   color: #222233;
 }
@@ -133,9 +137,9 @@ body{
   padding-left : 48px;
   padding-right : 48px;
 
-  width: 668px;
+  width: 784px;
   /*padding-left: 5rem;*/
-  margin: 20px auto;
+  margin: 20px auto 30px auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -145,7 +149,7 @@ body{
 }
 .usage-policy-inner-content {
   /*height: 100vh;*/
-  padding-bottom: 30px;
+  /*padding-bottom: 30px;*/
   margin: auto;
   /*width: 1168px;*/
   width: 100%;
@@ -244,19 +248,36 @@ body{
   padding-bottom: 30px;
 
 }
-.usage-policy-info-wrapper {
-  padding-top: 30px;
+.privacy-usage-policy .usage-policy-info-wrapper {
+  padding-bottom: 60px;
 }
-.usage-policy-info-title-wrapper {
+.privacy-usage-policy .usage-policy-info-title-wrapper {
+  font-size: 18px;
+  line-height: 18px;
+  color: #222233;
+  padding-bottom: 60px;
+}
+
+.service-usage-policy .usage-policy-info-wrapper {
+  /*padding-top: 30px;*/
+}
+.service-usage-policy .usage-policy-info-title-wrapper {
+  line-height: 18px;
   font-size: 18px;
   color: #222233;
-  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.service-usage-policy .usage-policy-info-content-wrapper{
+  padding-top: 30px;
 }
 .usage-policy-info-content-wrapper {
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.71;
+  line-height: 14px;
   color: #777788;
+
+  word-break: keep-all;
 }
 .privacy-usage-policy {
   margin-top: 36px;
@@ -329,7 +350,7 @@ body{
 
 
 .cancel-button-wrapper{
-  width: 668px;
+  width: 784px;
   margin : 24px auto;
 
   -webkit-box-sizing: border-box;
@@ -400,7 +421,7 @@ body{
 
 
   .usage-policy-header {
-    width: 668px;
+    width: 784px;
     margin: 112px auto 0 auto;
 
     padding-left : 48px;

@@ -8,19 +8,41 @@
 }
 
 @keyframes spinner-line-fade-quick {
-    0%, 39%, 100% {
-        opacity: 0.25; /* minimum opacity */
+    /*0%, 39%, 100% {*/
+        /*opacity: 0.25; !* minimum opacity *!*/
+    /*}*/
+    /*40% {*/
+        /*opacity: 1;*/
+    /*}*/
+
+    /*0%, 100% {*/
+        /*!*opacity: 0.22; !* minimum opacity *!*!*/
+        /*background: black;*/
+        /*opacity: 1;*/
+    /*}*/
+    /*25% {*/
+        /*!*opacity: 1;*!*/
+        /*background: white;*/
+        /*opacity: 1;*/
+    /*}*/
+
+    from {
+        transform: rotateZ(0deg);
     }
-    40% {
-        opacity: 1;
+    to {
+        transform: rotateZ(360deg);
     }
+
 }
 
 @keyframes spinner-line-fade-default {
     0%, 100% {
-        opacity: 0.22; /* minimum opacity */
+        /*opacity: 0.22; !* minimum opacity *!*/
+        background: black;
     }
-    1% {
-        opacity: 1;
+    25% {
+        /*opacity: 1;*/
+        background: white;
     }
 }
+
