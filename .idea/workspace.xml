@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/contact-us.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/arrow_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/arrow_right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/arrow_right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/contact-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/usage-policy.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/usage-policy.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,127 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contact-us.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
+      <file leaf-file-name="usage-policy.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/usage-policy.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact-us.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/contact-us.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="23" column="58" lean-forward="true" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-              <folding>
-                <element signature="e#149#312#0" />
-                <element signature="e#318#337#0" />
-                <element signature="e#353#361#0" />
-                <element signature="e#409#586#0" />
-                <element signature="e#635#779#0" />
-                <element signature="e#840#869#0" />
-                <element signature="e#930#959#0" />
-                <element signature="e#1006#1190#0" />
-                <element signature="e#1238#1292#0" />
-                <element signature="e#1359#1388#0" />
-                <element signature="e#1475#1502#0" />
-                <element signature="e#1601#1711#0" />
-                <element signature="e#1804#1999#0" />
-                <element signature="e#2098#2136#0" />
-                <element signature="e#2242#2270#0" />
-                <element signature="e#2356#2493#0" />
-                <element signature="e#2591#2701#0" />
-                <element signature="e#2800#3091#0" />
-                <element signature="e#3201#3239#0" />
-                <element signature="e#3351#3403#0" />
-                <element signature="e#3524#3551#0" />
-                <element signature="e#3668#3867#0" />
-                <element signature="e#3992#4047#0" />
-                <element signature="e#4181#4314#0" />
-                <element signature="e#4460#4649#0" />
-                <element signature="e#4815#5060#0" />
-                <element signature="e#5234#5322#0" />
-                <element signature="e#5499#5559#0" />
-                <element signature="e#5739#5972#0" />
-                <element signature="e#6160#6215#0" />
-                <element signature="e#6387#6449#0" />
-                <element signature="e#6635#6676#0" />
-                <element signature="e#6870#6925#0" />
-                <element signature="e#6993#7056#0" />
-                <element signature="e#7133#7375#0" />
-                <element signature="e#7479#7532#0" />
-                <element signature="e#7631#7684#0" />
-                <element signature="e#7784#7837#0" />
-                <element signature="e#7927#7980#0" />
-                <element signature="e#8063#8101#0" />
-                <element signature="e#8168#8223#0" />
-                <element signature="e#8295#8327#0" />
-                <element signature="e#8390#8482#0" />
-                <element signature="e#8552#8583#0" />
-                <element signature="e#8657#8871#0" />
-                <element signature="e#8951#8992#0" />
-                <element signature="e#9073#9114#0" />
-                <element signature="e#9189#9486#0" />
-                <element signature="e#9566#9594#0" />
-                <element signature="e#9694#9721#0" />
-                <element signature="e#9803#10029#0" />
-                <element signature="e#10116#10144#0" />
-                <element signature="e#10251#10278#0" />
-                <element signature="e#10373#10560#0" />
-                <element signature="e#10676#10853#0" />
-                <element signature="e#10941#11019#0" />
-                <element signature="e#11108#11243#0" />
-                <element signature="e#11327#11400#0" />
-                <element signature="e#11611#11638#0" />
-                <element signature="e#11715#11744#0" />
-                <element signature="e#11767#12029#0" />
-                <element signature="e#12052#12216#0" />
-                <element signature="e#12236#12349#0" />
-                <element signature="e#12372#12484#0" />
-                <element signature="e#12505#12836#0" />
-                <element signature="e#12911#13093#0" />
-                <element signature="e#13142#13287#0" />
-                <element signature="e#13348#13377#0" />
-                <element signature="e#13438#13523#0" />
-                <element signature="e#13570#13690#0" />
-                <element signature="e#13738#13809#0" />
-                <element signature="e#13876#13937#0" />
-                <element signature="e#14024#14051#0" />
-                <element signature="e#14150#14247#0" />
-                <element signature="e#14340#14570#0" />
-                <element signature="e#14924#14962#0" />
-                <element signature="e#14669#14707#0" />
-                <element signature="e#14793#14937#0" />
-                <element signature="e#15035#15132#0" />
-                <element signature="e#15231#15549#0" />
-                <element signature="e#15659#15697#0" />
-                <element signature="e#15809#15869#0" />
-                <element signature="e#15990#16017#0" />
-                <element signature="e#16134#16349#0" />
-                <element signature="e#16474#16534#0" />
-                <element signature="e#16668#16801#0" />
-                <element signature="e#16947#17136#0" />
-                <element signature="e#17302#17569#0" />
-                <element signature="e#17743#17831#0" />
-                <element signature="e#18003#18065#0" />
-                <element signature="e#18133#18173#0" />
-                <element signature="e#18250#18477#0" />
-                <element signature="e#18581#18608#0" />
-                <element signature="e#18707#18734#0" />
-                <element signature="e#18834#18861#0" />
-                <element signature="e#18951#18978#0" />
-                <element signature="e#19061#19099#0" />
-                <element signature="e#19162#19259#0" />
-                <element signature="e#19329#19360#0" />
-                <element signature="e#19504#19533#0" />
-                <element signature="e#19610#19878#0" />
-                <element signature="e#19964#20080#0" />
-                <element signature="e#20172#20245#0" />
-                <element signature="e#20328#20406#0" />
-                <element signature="e#20490#20625#0" />
-              </folding>
+            <state relative-caret-position="182">
+              <caret line="297" lean-forward="true" selection-start-line="297" selection-end-line="297" />
             </state>
           </provider>
         </entry>
@@ -160,7 +38,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;form</find>
       <find>submit</find>
       <find>form</find>
       <find>/form</find>
@@ -190,6 +67,7 @@
       <find>click</find>
       <find>addEvent</find>
       <find>dispatch</find>
+      <find>scroll</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -238,7 +116,6 @@
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/css/spin.css" />
         <option value="$PROJECT_DIR$/js/spin.js" />
-        <option value="$PROJECT_DIR$/css/usage-policy.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/prism.js" />
         <option value="$PROJECT_DIR$/pages/detail.html" />
@@ -247,6 +124,7 @@
         <option value="$PROJECT_DIR$/pages/main.html" />
         <option value="$PROJECT_DIR$/pages/contact-us.html" />
         <option value="$PROJECT_DIR$/css/contact-us.css" />
+        <option value="$PROJECT_DIR$/css/usage-policy.css" />
       </list>
     </option>
   </component>
@@ -301,7 +179,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="conta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact-us.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;usage&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;mainhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;svg&#9;null&#9;null&#10;main.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;sp&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;detailhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;detailcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;prism.js&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/prism.js&#10;detail.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;maincss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;usagepolicycss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;spinjs&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;spin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/spin.css&#10;main.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;main&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;usage-&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;markdown.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;searchhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;prism.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/prism.css&#10;mar&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;insta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation3.md&#10;u&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;detail.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;instal&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;mark&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;detail&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;indexhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;searchcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/search.css&#10;sear&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;mainscss&#9;null&#9;null&#10;insig&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;install&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;detailscss&#9;null&#9;null&#10;bigin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;installhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;detacss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/user.md&#10;system&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;package&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/package.json&#10;index.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;global&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/global.js&#10;bigin_install.html&#9;FILE&#9;file:///Users/westlife/Desktop/project/bigin/bigin-tech-guide/support-bigin.io/bigin_install.html&#10;bigin.css&#9;FILE&#9;file:///Users/westlife/project/bigin/bigin-tech-guide/support-bigin.io/css/bigin.css" />
+    <property name="SearchEverywhereHistoryKey" value="usage&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;conta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact-us.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;mainhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;svg&#9;null&#9;null&#10;main.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;sp&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;detailhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;detailcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;prism.js&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/prism.js&#10;detail.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;maincss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;usagepolicycss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;spinjs&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;spin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/spin.css&#10;main.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;main&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;usage-&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;markdown.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;searchhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;prism.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/prism.css&#10;mar&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;insta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation3.md&#10;u&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;detail.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;instal&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;mark&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;detail&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;indexhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;searchcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/search.css&#10;sear&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;mainscss&#9;null&#9;null&#10;insig&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;install&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;detailscss&#9;null&#9;null&#10;bigin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;installhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;detacss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/user.md&#10;system&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;package&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/package.json&#10;index.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;global&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/global.js&#10;bigin_install.html&#9;FILE&#9;file:///Users/westlife/Desktop/project/bigin/bigin-tech-guide/support-bigin.io/bigin_install.html&#10;bigin.css&#9;FILE&#9;file:///Users/westlife/project/bigin/bigin-tech-guide/support-bigin.io/css/bigin.css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -374,12 +252,12 @@
       <workItem from="1551329191087" duration="10081000" />
       <workItem from="1551664680763" duration="6781000" />
       <workItem from="1551741887120" duration="9333000" />
-      <workItem from="1551759266094" duration="14380000" />
+      <workItem from="1551759266094" duration="15001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194642000" />
+    <option name="totallyTimeSpent" value="195263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
@@ -393,7 +271,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32988167" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.36717063" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36717063" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -647,13 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/usage-policy.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="247" column="23" lean-forward="true" selection-start-line="247" selection-start-column="23" selection-end-line="247" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/detail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -782,17 +653,10 @@
     <entry file="file://$PROJECT_DIR$/images/cancel.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/contact-us.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="58" lean-forward="true" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+        <state relative-caret-position="285">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="e#149#312#0" />
             <element signature="e#318#337#0" />
@@ -900,6 +764,20 @@
             <element signature="e#20328#20406#0" />
             <element signature="e#20490#20625#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/usage-policy.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="297" lean-forward="true" selection-start-line="297" selection-end-line="297" />
         </state>
       </provider>
     </entry>

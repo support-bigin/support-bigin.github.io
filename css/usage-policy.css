@@ -296,12 +296,12 @@ body{
 
 }
 
-.privacy-usage-policy::-webkit-scrollbar{
-  display: none;
-}
-.service-usage-policy::-webkit-scrollbar{
-  display: none;
-}
+/*.privacy-usage-policy::-webkit-scrollbar{*/
+  /*display: none;*/
+/*}*/
+/*.service-usage-policy::-webkit-scrollbar{*/
+  /*display: none;*/
+/*}*/
 
 .usage-policy-info-wrapper {
 
