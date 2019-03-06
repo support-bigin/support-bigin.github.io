@@ -54,7 +54,9 @@
 .input-wrapper > input::placeholder {
     color: #bbbbcc;
 }
-
+.input-wrapper > input::-ms-clear {
+    display : none;
+}
 .input-wrapper > input:-ms-input-placeholder {
     color: #bbbbcc !important;
 }
