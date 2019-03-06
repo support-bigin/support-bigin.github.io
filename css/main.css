@@ -156,6 +156,12 @@
     .search-container > .input-wrapper > input::placeholder {
         color: #bbbbcc;
     }
+    .search-container > .input-wrapper > input:-ms-input-placeholder {
+        color: #bbbbcc !important;
+    }
+    .search-container > .input-wrapper > input::-ms-input-placeholder {
+        color: #bbbbcc !important;
+    }
 
     .search-container .search-list {
         padding: 16px 4px;
@@ -603,6 +609,12 @@
 
     .search-container > .input-wrapper > input::placeholder {
         color: #bbbbcc;
+    }
+    .search-container > .input-wrapper > input:-ms-input-placeholder {
+        color: #bbbbcc !important;
+    }
+    .search-container > .input-wrapper > input::-ms-input-placeholder {
+        color: #bbbbcc !important;
     }
 
     .search-container .search-list {
