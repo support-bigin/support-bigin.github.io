@@ -526,6 +526,11 @@ input:-webkit-autofill:active  {
     .contact-us-container .contact-us-content .business-info-box .business-info-item input::placeholder {
         color : #bbc
     }
+
+    .contact-us-container .contact-us-content .business-info-box .business-info-item input:-ms-input-placeholder {
+        color : #bbc !important;
+    }
+
     .contact-us-container .contact-us-content .business-info-box .business-info-item input::-ms-input-placeholder {
         color : #bbc !important;
     }
