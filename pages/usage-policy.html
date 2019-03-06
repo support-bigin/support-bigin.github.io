@@ -8,6 +8,8 @@
   <meta name="viewport" content=" width=device-width, initial-scale=1 , maximum-scale=1.0, user-scalable=no,
         shrink-to-fit=no"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css"  href="../css/scrollbar.css" />
+  <script src="../js/scrollbar.js" ></script>
 
 </head>
 <body>
@@ -55,8 +57,7 @@
         <div class="blur-shadow"
         ></div>
       </section>
-      <section class="service-usage-policy"
-      >
+      <section class="service-usage-policy" data-mcs-theme="minimal-dark">
 
         <div class="usage-policy-info-container">
           <div class="usage-policy-info-wrapper">
@@ -760,6 +761,14 @@
     }
 
   }
+</script>
+
+<script>
+  (function($){
+    $(window).on("load",function(){
+      $(".service-usage-policy").mCustomScrollbar();
+    });
+  })(jQuery);
 </script>
 </body>
 </html>
