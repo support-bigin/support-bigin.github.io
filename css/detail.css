@@ -634,6 +634,18 @@
         width: 100%;
     }
 
+    .header .mobile-input-form-wrapper input::placeholder {
+        color: #bbc !important;
+    }
+
+    .header .mobile-input-form-wrapper input:-ms-input-placeholder {
+        color: #bbc !important;
+    }
+
+    .header .mobile-input-form-wrapper input::-ms-input-placeholder {
+        color: #bbc !important;
+    }
+
     .mobile-input-form-wrapper .cancel-icon {
         cursor: pointer;
         width: 20px;
