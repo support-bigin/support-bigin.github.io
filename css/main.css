@@ -247,12 +247,12 @@
 
     .nav-container > .nav > .nav-icon::after {
         content: '';
-        border: 3px solid white;
+        border: 4px solid white;
         position: absolute;
-        top: -3px;
-        left: -3px;
-        right: -3px;
-        bottom: -3px;
+        top: -7px;
+        left: -7px;
+        right: -7px;
+        bottom: -7px;
         border-radius: 50%;
     }
 
@@ -260,10 +260,10 @@
         content: '';
         border: 0px solid white;
         position: absolute;
-        top: -3px;
-        left: -3px;
-        right: -3px;
-        bottom: -3px;
+        top: -7px;
+        left: -7px;
+        right: -7px;
+        bottom: -7px;
         border-radius: 50%;
     }
 
