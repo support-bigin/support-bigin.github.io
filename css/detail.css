@@ -166,6 +166,12 @@
     .header .input-wrapper > input::placeholder {
         color: #bbbbcc;
     }
+    .header .input-wrapper > input:-ms-input-placeholder {
+        color: #bbbbcc !important;
+    }
+    .header .input-wrapper > input::-ms-input-placeholder {
+        color: #bbbbcc !important;
+    }
 
     .search-container {
         background: transparent url('../images/main.png') no-repeat center center;
@@ -588,6 +594,12 @@
 
     .header .input-wrapper > input::placeholder {
         color: #bbbbcc;
+    }
+    .header .input-wrapper > input:-ms-input-placeholder {
+        color: #bbbbcc !important;
+    }
+    .header .input-wrapper > input::-ms-input-placeholder {
+        color: #bbbbcc !important;
     }
 
     .header .mobile-input-form-wrapper {
