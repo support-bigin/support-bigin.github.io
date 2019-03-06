@@ -394,7 +394,8 @@
       goBack();
     }
 
-    document.querySelector('.dialog-backdrop').remove();
+    var dialogBackdrop = document.querySelector('.dialog-backdrop');
+    document.body.removeChild(dialogBackdrop);
   }
 
 

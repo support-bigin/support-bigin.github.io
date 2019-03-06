@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css/contact-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contact-us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact-us.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,19 +16,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contact-us.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contact-us.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="34" column="38" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="38" />
+            <state relative-caret-position="159">
+              <caret line="397" column="46" lean-forward="true" selection-start-line="397" selection-start-column="46" selection-end-line="397" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact-us.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact-us.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/contact-us.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="172">
               <caret line="536" lean-forward="true" selection-start-line="536" selection-end-line="536" />
               <folding>
                 <element signature="e#149#312#0" />
@@ -60,7 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>option-wrap</find>
       <find>icon-close</find>
       <find>contact-header-wrap</find>
       <find>label-text</find>
@@ -90,6 +89,7 @@
       <find>business-info-item</find>
       <find>-ms-input-placeholder</find>
       <find>placeholder</find>
+      <find>remove</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -140,13 +140,13 @@
         <option value="$PROJECT_DIR$/images/icomoon.svg" />
         <option value="$PROJECT_DIR$/css/usage-policy.css" />
         <option value="$PROJECT_DIR$/markdown/faq.md" />
-        <option value="$PROJECT_DIR$/pages/contact-us.html" />
         <option value="$PROJECT_DIR$/css/detail.css" />
         <option value="$PROJECT_DIR$/pages/main.html" />
         <option value="$PROJECT_DIR$/pages/detail.html" />
         <option value="$PROJECT_DIR$/css/spin.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/contact-us.css" />
+        <option value="$PROJECT_DIR$/pages/contact-us.html" />
       </list>
     </option>
   </component>
@@ -275,12 +275,12 @@
       <workItem from="1551664680763" duration="6781000" />
       <workItem from="1551741887120" duration="9333000" />
       <workItem from="1551759266094" duration="18712000" />
-      <workItem from="1551831928694" duration="4607000" />
+      <workItem from="1551831928694" duration="4801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203581000" />
+    <option name="totallyTimeSpent" value="203775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -611,21 +611,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/contact-us.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="172">
           <caret line="536" lean-forward="true" selection-start-line="536" selection-end-line="536" />
           <folding>
             <element signature="e#149#312#0" />
             <element signature="e#318#337#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="397" column="46" lean-forward="true" selection-start-line="397" selection-start-column="46" selection-end-line="397" selection-end-column="46" />
         </state>
       </provider>
     </entry>
