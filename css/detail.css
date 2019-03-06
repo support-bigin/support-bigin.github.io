@@ -387,6 +387,7 @@
     .question-wrapper a {
         color: #0060ad;
         text-decoration: underline;
+        cursor: pointer;
     }
 
 

@@ -95,8 +95,8 @@
         <!--<a class="side-nav">데이터 한도 및 처리가간</a>-->
 
 
-        <li class="side-title">FAQs</li>
-        <a class="side-nav" href="detail.html?kind=faq#faq_0">FAQs</a>
+        <!--<li class="side-title">FAQs</li>-->
+        <!--<a class="side-nav" href="detail.html?kind=faq#faq_0">FAQs</a>-->
       </div>
       <div class="inner-content-header">
         <span></span>
@@ -107,7 +107,7 @@
         <div class="inner-inner-content" id="innerContent"></div>
         <div class="question-wrapper">
           도움이 더 필요하신가요?<br>
-          <a href="https://www.bigin.io/contact-us" target="_blank">문의</a>를 남겨주시면 이메일을 통해 자세히 답변드리겠습니다.
+          <a onclick="goToContactUs()">문의</a>를 남겨주시면 이메일을 통해 자세히 답변드리겠습니다.
         </div>
       </div>
       <div class="side right menu nav">
@@ -587,6 +587,18 @@
     } else {
       window.open('usage-policy.html?kind=service', '_self')
     }
+  }
+
+  function goToContactUs() {
+
+    try {
+      localStorage.setItem("prevLocation", window.location.href);
+    } catch (e) {
+      document.cookie = "prevLocation=" + window.location.href;
+    }
+
+    window.open('contact-us.html', '_self')
+
   }
 </script>
 
