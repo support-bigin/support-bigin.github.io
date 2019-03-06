@@ -55,6 +55,13 @@
     color: #bbbbcc;
 }
 
+.input-wrapper > input:-ms-input-placeholder {
+    color: #bbbbcc !important;
+}
+.input-wrapper > input::-ms-input-placeholder{
+    color: #bbbbcc !important;
+}
+
 .search-list {
 
 
