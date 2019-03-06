@@ -258,7 +258,7 @@
 
     .nav-container > .nav > .nav-icon:hover::after {
         content: '';
-        border: 0px solid white;
+        border: 6px solid white;
         position: absolute;
         top: -7px;
         left: -7px;
