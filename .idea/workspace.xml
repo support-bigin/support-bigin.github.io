@@ -19,8 +19,8 @@
       <file leaf-file-name="contact-us.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="397" column="46" lean-forward="true" selection-start-line="397" selection-start-column="46" selection-end-line="397" selection-end-column="46" />
+            <state relative-caret-position="189">
+              <caret line="299" column="20" lean-forward="true" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -60,7 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon-close</find>
       <find>contact-header-wrap</find>
       <find>label-text</find>
       <find>m-submit-btn</find>
@@ -90,6 +89,7 @@
       <find>-ms-input-placeholder</find>
       <find>placeholder</find>
       <find>remove</find>
+      <find>ajax</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -275,12 +275,12 @@
       <workItem from="1551664680763" duration="6781000" />
       <workItem from="1551741887120" duration="9333000" />
       <workItem from="1551759266094" duration="18712000" />
-      <workItem from="1551831928694" duration="4801000" />
+      <workItem from="1551831928694" duration="4904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203775000" />
+    <option name="totallyTimeSpent" value="203878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -624,8 +624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="397" column="46" lean-forward="true" selection-start-line="397" selection-start-column="46" selection-end-line="397" selection-end-column="46" />
+        <state relative-caret-position="189">
+          <caret line="299" column="20" lean-forward="true" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="20" />
         </state>
       </provider>
     </entry>

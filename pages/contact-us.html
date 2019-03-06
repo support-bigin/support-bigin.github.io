@@ -295,8 +295,8 @@
   function submit() {
     if (validation.content && validation.sender && validation.category) {
       $.ajax({
-        // url : 'https://api.bigin.io/member/sendContactMail',
-        url: 'http://localhost:3000/member/sendContactMail',
+        url : 'https://api.bigin.io/member/sendContactMail',
+        // url: 'http://localhost:3000/member/sendContactMail',
         async: true,
         type: "POST",
         data: formData,
