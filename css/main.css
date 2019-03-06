@@ -34,7 +34,7 @@
 
     .header > .inner-header {
         /*max-width: 1168px;*/
-        max-width : 1320px;
+        max-width: 1320px;
         width: 100%;
         margin: 0 auto;
         height: 100%;
@@ -81,13 +81,13 @@
         border: solid 1px #bbbbcc;
 
         -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
-        -moz-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
-        -ms-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
-        -o-transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
-        transition: color  0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        -o-transition: color 0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
+        transition: color 0.2s ease, border-bottom-color 0.2s ease, border-top-color 0.2s ease, border-left-color 0.2s ease, border-right-color 0.2s ease;
     }
 
-    .header .header-nav.dashboard:hover{
+    .header .header-nav.dashboard:hover {
         border: solid 1px #778;
     }
 
@@ -192,7 +192,7 @@
         background-color: #f5f5fa;
         cursor: pointer;
 
-        color : #445;
+        color: #445;
     }
 
     .search-container .search-list > .search-item.no {
@@ -232,31 +232,52 @@
     .nav-container > .nav > .nav-icon {
         width: 84px;
         height: 84px;
-        border-radius : 38px;
+        border-radius: 38px;
 
         border: 4px solid white;
         -webkit-transition: background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
-        -moz-transition:  background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
+        -moz-transition: background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
         -ms-transition: background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
         -o-transition: background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
         transition: background-color .2s ease, border-width .2s ease, box-shadow .2s ease;
 
-        position : relative;
+        position: relative;
         /*top : 1px;*/
+    }
+
+    .nav-container > .nav > .nav-icon::after {
+        content: '';
+        border: 3px solid white;
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border-radius: 50%;
+    }
+
+    .nav-container > .nav > .nav-icon:hover::after {
+        content: '';
+        border: 0px solid white;
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border-radius: 50%;
     }
 
     .nav-container > .nav > .nav-icon:hover {
         width: 84px;
         height: 84px;
-        border-radius : 40px;
+        border-radius: 40px;
         border: 0 solid white;
-        background-color : #333344;
-        /*background-color: white;*/
+        background-color: #333344;
 
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        background-size : 35px 35px;
+        background-size: 35px 35px;
         -webkit-transition: background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
-        -moz-transition:  background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
+        -moz-transition: background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
         -ms-transition: background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
         -o-transition: background-color 0.2s ease, border-width 0.2s ease, box-shadow 0.2s ease;
         transition: background-color .2s ease, border-width .2s ease, box-shadow .2s ease;
@@ -266,43 +287,45 @@
     }
 
     /*.nav-container > .nav:hover > .nav-icon {*/
-        /*width: 84px;*/
-        /*height: 84px;*/
-        /*border-radius : 40px;*/
-        /*background-color : #333344;*/
-        /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
-        /*background-size : 35px 35px;*/
-        /*top : -1px;*/
-        /*bottom: -1px;*/
+    /*width: 84px;*/
+    /*height: 84px;*/
+    /*border-radius : 40px;*/
+    /*background-color : #333344;*/
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    /*background-size : 35px 35px;*/
+    /*top : -1px;*/
+    /*bottom: -1px;*/
     /*}*/
-
     .nav-container > .nav-1 > .nav-icon {
-        background:  #222233 url('../images/category_start.png') no-repeat center center;
-        background-size : 35px 35px;
+        background: #222233 url('../images/category_start.png') no-repeat center center;
+        background-size: 35px 35px;
 
     }
+
     .nav-container > .nav-2 > .nav-icon {
-        background: #222233  url('../images/category_insight.png') no-repeat center center;
-        background-size : 35px 35px;
+        background: #222233 url('../images/category_insight.png') no-repeat center center;
+        background-size: 35px 35px;
     }
+
     .nav-container > .nav-3 > .nav-icon {
-        background: #222233  url('../images/category_user.png') no-repeat center center;
-        background-size : 35px 35px;
+        background: #222233 url('../images/category_user.png') no-repeat center center;
+        background-size: 35px 35px;
     }
+
     .nav-container > .nav-4 > .nav-icon {
-        background: #222233  url('../images/category_live.png') no-repeat center center;
-        background-size : 35px 35px;
+        background: #222233 url('../images/category_live.png') no-repeat center center;
+        background-size: 35px 35px;
     }
+
     .nav-container > .nav-5 > .nav-icon {
-        background: #222233  url('../images/category_management.png') no-repeat center center;
-        background-size : 35px 35px;
+        background: #222233 url('../images/category_management.png') no-repeat center center;
+        background-size: 35px 35px;
     }
+
     .nav-container > .nav-6 > .nav-icon {
-        background: #222233  url('../images/category_system.png') no-repeat center center;
-        background-size : 35px 35px;
+        background: #222233 url('../images/category_system.png') no-repeat center center;
+        background-size: 35px 35px;
     }
-
-
 
     .nav-container > .nav > .nav-text {
         font-size: 14px;
@@ -346,7 +369,7 @@
         vertical-align: top;
         /*padding-top: 16px;*/
         height: 36px;
-        margin-bottom : 16px;
+        margin-bottom: 16px;
         font-size: 14px;
         font-weight: normal;
         line-height: 1.43;
@@ -394,12 +417,12 @@
         color: #ffffff;
     }
 
-    .question-section > .question-button:hover{
+    .question-section > .question-button:hover {
         border-radius: 4px;
         background-color: #657bff;
     }
 
-    .question-section > .question-button:active{
+    .question-section > .question-button:active {
         border-radius: 4px;
         box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.3);
         background-color: #5469f2;
@@ -456,7 +479,7 @@
         border-bottom: 1px solid #ededf2;
 
         /*padding: 0 60px;*/
-        padding : 0 24px;
+        padding: 0 24px;
 
         display: flex;
         align-items: center;
@@ -661,31 +684,35 @@
     }
 
     .nav-container > .nav-1 > .nav-icon {
-        background:  #222233 url('../images/category_start.png') no-repeat center center;
-        background-size : 30px 30px;
+        background: #222233 url('../images/category_start.png') no-repeat center center;
+        background-size: 30px 30px;
 
     }
+
     .nav-container > .nav-2 > .nav-icon {
-        background: #222233  url('../images/category_insight.png') no-repeat center center;
-        background-size : 30px 30px;
-    }
-    .nav-container > .nav-3 > .nav-icon {
-        background: #222233  url('../images/category_user.png') no-repeat center center;
-        background-size : 30px 30px;
-    }
-    .nav-container > .nav-4 > .nav-icon {
-        background: #222233  url('../images/category_live.png') no-repeat center center;
-        background-size : 30px 30px;
-    }
-    .nav-container > .nav-5 > .nav-icon {
-        background: #222233  url('../images/category_management.png') no-repeat center center;
-        background-size : 30px 30px;
-    }
-    .nav-container > .nav-6 > .nav-icon {
-        background: #222233  url('../images/category_system.png') no-repeat center center;
-        background-size : 30px 30px;
+        background: #222233 url('../images/category_insight.png') no-repeat center center;
+        background-size: 30px 30px;
     }
 
+    .nav-container > .nav-3 > .nav-icon {
+        background: #222233 url('../images/category_user.png') no-repeat center center;
+        background-size: 30px 30px;
+    }
+
+    .nav-container > .nav-4 > .nav-icon {
+        background: #222233 url('../images/category_live.png') no-repeat center center;
+        background-size: 30px 30px;
+    }
+
+    .nav-container > .nav-5 > .nav-icon {
+        background: #222233 url('../images/category_management.png') no-repeat center center;
+        background-size: 30px 30px;
+    }
+
+    .nav-container > .nav-6 > .nav-icon {
+        background: #222233 url('../images/category_system.png') no-repeat center center;
+        background-size: 30px 30px;
+    }
 
     .nav-container > .nav > .nav-icon {
         width: 64px;
@@ -704,9 +731,6 @@
         color: #222233;
         white-space: nowrap;
     }
-
-
-
 
     .faq-container {
         max-width: 1000px;
