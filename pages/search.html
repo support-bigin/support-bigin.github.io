@@ -46,6 +46,10 @@
     ];
     function openSearchList(search) {
 
+      if(!search){
+        return;
+      }
+
       let searchList = document.querySelector(".search-list");
 
       if (!searchList) {
