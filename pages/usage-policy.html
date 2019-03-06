@@ -382,7 +382,7 @@
 
         </div>
       </section>
-      <section class="privacy-usage-policy"
+      <section class="privacy-usage-policy" data-mcs-theme="minimal-dark"
       >
         <div class="usage-policy-info-wrapper">
           <!--<div class="usage-policy-info-title-wrapper">-->
@@ -720,6 +720,8 @@
       $('.privacy-usage-policy').css('display', 'none')
 
       $('.usage-policy-flip-btn-wrapper.service')[0].classList.add('active')
+
+      $(".service-usage-policy").mCustomScrollbar();
     }
 
     if(usageKind == 'privacy'){
@@ -727,6 +729,8 @@
       $('.privacy-usage-policy').css('display', 'block')
 
       $('.usage-policy-flip-btn-wrapper.privacy')[0].classList.add('active')
+
+      $(".privacy-usage-policy").mCustomScrollbar();
     }
   }
 
@@ -763,13 +767,13 @@
   }
 </script>
 
-<script>
-  (function($){
-    $(window).on("load",function(){
-      $(".service-usage-policy").mCustomScrollbar();
-    });
-  })(jQuery);
-</script>
+<!--<script>-->
+  <!--(function($){-->
+    <!--$(window).on("load",function(){-->
+      <!--$(".service-usage-policy").mCustomScrollbar();-->
+    <!--});-->
+  <!--})(jQuery);-->
+<!--</script>-->
 </body>
 </html>
 
