@@ -241,7 +241,9 @@ input:-webkit-autofill:active  {
         font-size: .875rem;
         line-height : 0.875rem;
         resize: none;
-        outline: 0
+        outline: 0;
+
+        overflow:hidden;
     }
 
     .contact-us-container .contact-us-content .textarea-container textarea::-webkit-input-placeholder {
@@ -516,6 +518,9 @@ input:-webkit-autofill:active  {
     .contact-us-container .contact-us-content .business-info-box .business-info-item input::placeholder {
         color : #bbc
     }
+    .contact-us-container .contact-us-content .business-info-box .business-info-item input::-ms-input-placeholder {
+        color : #bbc
+    }
 
     .contact-us-container .contact-us-content .business-info-box .business-info-item input:focus {
         border: 1px solid #bbc
@@ -631,7 +636,9 @@ input:-webkit-autofill:active  {
         font-size: 3.88888889vw;
         line-height : 3.88888889vw;
         resize: none;
-        outline: 0
+        outline: 0;
+
+        overflow:hidden;
     }
 
     .contact-us-container .contact-us-content .textarea-container textarea::-webkit-input-placeholder {
