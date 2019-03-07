@@ -372,9 +372,12 @@ var Prism = (function(){
     _.filename = script.src;
     
     if (document.addEventListener && !script.hasAttribute('data-manual')) {
+      
       // TODO : 수정
       // document.addEventListener('DOMContentLoaded', _.highlightAll);
       // window.addEventListener('markdownRendered', _.highlightAll);
+      
+      // 마크다운 내부의 코드스니펫의 스타일 변경
       window.addEventListener("markdownRendered" , function(){
         _.highlightAll();
       })

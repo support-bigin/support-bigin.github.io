@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="../css/main.css"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="../js/global.js"></script>
+  <script type="application/json" src="../data/data.json"></script>
 </head>
 
 <body>
@@ -160,23 +161,12 @@
 
 
 <script>
-  // url = '../markdown/';
-  //
-  // if(window.XMLHttpRequest){
-  //   xmlhttp=new XMLHttpRequest();
-  // }else{
-  //   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  // }
-  //
-  // xmlhttp.open('get', url, true);
-  // xmlhttp.send();
-  // xmlhttp.onload = function(res){
-  //   document.getElementById('body').innerHTML = marked(xmlhttp.responseText);
-  // }
 
-  // var markdownNameList = [
-  //   '시작하기 및 설치','기본 추적 스크립트', '고유 사용자 식별', '커스텀 이벤트 추적', '이커머스 추적 이벤트' , '이커머스 추적 에제'
-  // ];
+  /********************************
+   *
+   *         Variables
+   *
+   *********************************/
 
   var markdownNameList = [
     {name: '시작하기 및 설치', link: 'detail.html?kind=installation#installation_0'},
@@ -193,16 +183,22 @@
     {name: '시스템 요구사항', link: 'detail.html?kind=system#system_0'},
   ];
 
-  var result = [];
 
-
-  function storeMDFiles() {
-
-  }
+  /********************************
+   *
+   *         Callbacks
+   *
+   *********************************/
 
   window.addEventListener('load', function () {
     // closeSearchList();
   })
+
+  /********************************
+   *
+   *         Helper Functions
+   *
+   *********************************/
 
   function openSearchList(search) {
 
@@ -255,14 +251,6 @@
   }
 
 
-  function handleChangeInput(e) {
-    const value = e.target.value;
-
-    if (main) main.value = value;
-    if (pc) pc.value = value;
-    if (mobile) mobile.value = value;
-  }
-
 
   function goToUsagePolicy(which) {
     try {
@@ -289,6 +277,9 @@
     window.open('contact-us.html', '_self')
 
   }
+
+
+
 
 
 </script>

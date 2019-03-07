@@ -218,6 +218,25 @@
   }
 
 
+  // ie 호환 new Event();
+  function createNewEvent(eventName) {
+    var event;
+    if (typeof(Event) === 'function') {
+      event = new Event(eventName);
+    } else {
+      event = document.createEvent('Event');
+      event.initEvent(eventName, true, true);
+    }
+    return event;
+  }
+
+  function usePrismJs() {
+    // markdownRendered trigger 발송
+    // "markdownRendered" 이벤트리스너가 prism.js 에 존재함
+    var event = createNewEvent('markdownRendered');
+    window.dispatchEvent(event);
+  }
+
   /********************************
    *
    *         Callbacks
@@ -231,6 +250,8 @@
 
   $('.inner-content').scroll(function () {
 
+
+    // web version (not mobile)
     if (window.innerWidth > 700) {
 
       var fromTop = $(this).scrollTop();
@@ -261,7 +282,10 @@
 
       blockBodyScroll();
 
-    } else {
+    }
+
+    // mobile version
+    else {
 
     }
   })
@@ -317,7 +341,7 @@
 
   /********************************
    *
-   *         Help Functions
+   *         Helper Functions
    *
    *********************************/
 
@@ -457,6 +481,9 @@
       // markdown.innerHTML = marked(xmlhttp.responseText);
       // document.getElementById('innerContent').insertBefor(markdown);
 
+
+      // 1. markdown --> html
+      // 2. 파싱된 마크다운을 inner-content 태그에 삽입
       var innerContent = document.getElementById('innerContent');
       document.getElementById('innerContent').innerHTML = marked(xmlhttp.responseText);
 
@@ -471,51 +498,34 @@
         this.setAttribute('id', id);
         h2List.push(this.innerText);
         h2Elements.push(this);
+
+
+        // 우측 사이드 메뉴 생성 start
         let sideNav = document.createElement('a');
         sideNav.classList.add('side-nav');
         sideNav.classList.add('no');
-        // sideNav.setAttribute('href', '#' + id);
         sideNav.classList.add('side' + id);
         sideNav.innerText = this.innerText;
         document.querySelector('.side.right').appendChild(sideNav);
-
         sideNav.addEventListener('click', function () {
-          // var element = this;
           goToH2(element);
-          // console.log(element);
         });
+        // 우측 사이드 메뉴 생성 end
 
       })
 
-      // 스피너
-      // setTimeout(()=>{
-      //   spinner.stop();
-      // } , 2000)
+
+      // 마크다운 화면 출력 후, 스피너 종료
       spinner.stop();
+
+      // 마크다운 내부 코드스니펫에 prism.css 적용시키는 함수.
       usePrismJs();
     }
   }
 
-  function createNewEvent(eventName) {
-    var event;
-    if (typeof(Event) === 'function') {
-      event = new Event(eventName);
-    } else {
-      event = document.createEvent('Event');
-      event.initEvent(eventName, true, true);
-    }
-    return event;
-  }
-
-  function usePrismJs() {
-
-    // var event = new Event('markdownRendered');
-    var event = createNewEvent('markdownRendered');
-    window.dispatchEvent(event);
-  }
-
 
   function goToH2(element, str) {
+
     var innerContent = document.querySelector('.inner-content');
     var scrollHeight = innerContent.scrollHeight - innerContent.clientHeight;
     var fromTop = $(innerContent).scrollTop();
@@ -576,6 +586,8 @@
 
 
   function goToUsagePolicy(which) {
+
+    // "뒤로가기"를 위해서 현 주소 저장
     try {
       localStorage.setItem("prevLocation", window.location.href);
     } catch (e) {
@@ -591,6 +603,7 @@
 
   function goToContactUs() {
 
+    // "뒤로가기"를 위해서 현 주소 저장
     try {
       localStorage.setItem("prevLocation", window.location.href);
     } catch (e) {

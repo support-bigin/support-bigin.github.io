@@ -107,6 +107,37 @@ input:-webkit-autofill:active  {
     .contact-us-container .contact-us-content .business-info-box .business-info-item input::-ms-input-placeholder {
         color : #bbc !important;
     }
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper{
+
+        display: none;
+    }
+
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper.shown.dirty{
+        display : flex;
+        margin-top : 12px;
+        align-items: center;
+    }
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper.hidden{
+        display: none;
+    }
+
+
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper.shown.dirty .input-error-img{
+        width : 12px;
+        height : 12px;
+        background: transparent url("../images/warning_circle_fill.png") no-repeat center center;
+        background-size : cover;
+
+        margin-right : 10px;
+    }
+
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper.shown.dirty .input-error-msg{
+        font-size: 14px;
+        font-weight: normal;
+        line-height: normal;
+        color: #e65c5c;
+    }
+
 
     .contact-us-container .contact-us-content .business-info-box .select-sub-option {
         width: 100%;
@@ -240,6 +271,16 @@ input:-webkit-autofill:active  {
         margin-bottom: 1.5rem
     }
 
+    .contact-us-container .contact-us-content .textarea-container.shown.dirty {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem
+    }
+
+    .contact-us-container .contact-us-content .textarea-container.hidden {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem
+    }
+
     .contact-us-container .contact-us-content .textarea-container textarea {
         padding: 1rem;
         border: 1px solid #ededf2;
@@ -317,7 +358,7 @@ input:-webkit-autofill:active  {
     }
 
     .contact-us-container .contact-us-content .btn-container .submit-btn {
-        cursor: pointer;
+        cursor: default;
         border: none;
         width: 10.5rem;
         height: 3rem;

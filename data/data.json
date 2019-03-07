@@ -1,0 +1,16 @@
+{
+  "markdownNameList" : [
+    {"name": "시작하기 및 설치", "link": "detail.html?kind=installation#installation_0"},
+    {"name": "설치 시작하기", "link": "detail.html?kind=installation#installation_0"},
+    {"name": "기본 추적 스크립트", "link": "detail.html?kind=installation#installation_1"},
+    {"name": "고유 사용자 식별", "link": "detail.html?kind=installation#installation_2"},
+    {"name": "커스텀 이벤트 추적", "link": "detail.html?kind=installation#installation_3"},
+    {"name": "이커머스 추적", "link": "detail.html?kind=installation#installation_4"},
+    {"name": "인사이트", "link": "detail.html?kind=insight#insight_0"},
+    {"name": "사용자", "link": "detail.html?kind=user#user_0"},
+    {"name": "라이브", "link": "detail.html?kind=live#live_0"},
+    {"name": "계정 및 프로젝트 관리", "link": "detail.html?kind=management#management_0"},
+    {"name": "시스템 요구사항", "link": "detail.html?kind=system#system_0"},
+  ]
+}
+
