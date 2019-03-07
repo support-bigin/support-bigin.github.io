@@ -53,8 +53,7 @@
           <div class="label-text">분류</div>
 
           <div class="option-wrap" onclick="showCategoryList()">
-            <div class="select-text"
-            >
+            <div class="select-text">
 
             </div>
 
@@ -79,8 +78,7 @@
       <div class="textarea-container">
         <textarea placeholder="문의내용을 입력하세요."
                   id="question"
-                  cols="30" rows="10"
-        ></textarea>
+                  cols="30" rows="10"></textarea>
       </div>
 
       <div class="btn-container">
@@ -105,8 +103,7 @@
           </div>
         </div>
         <div class="m-submit-btn"
-             onclick="submit()"
-        >
+             onclick="submit()">
           전송하기
         </div>
       </div>
@@ -443,7 +440,6 @@
 
       errorMsg.innerText = "이메일을 입력해주세요.";
 
-      console.log(errorMsg.innerText);
     }
     else if (!emailReg.test(value)) {
       errorEle.classList.remove('hidden');
@@ -454,8 +450,6 @@
 
       errorMsg.innerText = "잘못된 이메일 형식입니다.";
 
-      console.log(errorMsg.innerText);
-
     }
     else {
       errorEle.classList.remove('shown');
@@ -463,7 +457,6 @@
 
       textareaContainer.classList.remove('shown');
       textareaContainer.classList.add('hidden');
-      console.log(errorEle.classList);
     }
   }
 
