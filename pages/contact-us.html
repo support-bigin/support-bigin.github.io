@@ -149,7 +149,7 @@
   var emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   var errorEle;
-
+  var errorMsg;
   var textareaContainer;
 
   /********************************
@@ -163,6 +163,7 @@
     selectBox = document.querySelector(".custom-select-option-button-wrap");
     selectBoxBackDrop = document.querySelector(".select-list-backdrop");
     errorEle = document.querySelector(".input-error-wrapper");
+    errorMsg = errorEle.querySelector(".input-error-msg");
     textareaContainer = document.querySelector(".textarea-container");
 
     setCloseCategoryList(selectBoxBackDrop);
@@ -433,19 +434,35 @@
 
   function listenInputChange(value) {
 
-    if (emailReg.test(value)) {
-      errorEle.classList.remove('shown');
-      errorEle.classList.add('hidden');
-
-      textareaContainer.classList.remove('shown');
-      textareaContainer.classList.add('hidden');
-      console.log(errorEle.classList);
-    } else {
+    if(value.length < 1){
       errorEle.classList.remove('hidden');
       errorEle.classList.add('shown');
 
       textareaContainer.classList.remove('hidden');
       textareaContainer.classList.add('shown');
+
+      errorMsg.innerText = "이메일을 입력해주세요.";
+
+      console.log(errorMsg.innerText);
+    }
+    else if (!emailReg.test(value)) {
+      errorEle.classList.remove('hidden');
+      errorEle.classList.add('shown');
+
+      textareaContainer.classList.remove('hidden');
+      textareaContainer.classList.add('shown');
+
+      errorMsg.innerText = "잘못된 이메일 형식입니다.";
+
+      console.log(errorMsg.innerText);
+
+    }
+    else {
+      errorEle.classList.remove('shown');
+      errorEle.classList.add('hidden');
+
+      textareaContainer.classList.remove('shown');
+      textareaContainer.classList.add('hidden');
       console.log(errorEle.classList);
     }
   }

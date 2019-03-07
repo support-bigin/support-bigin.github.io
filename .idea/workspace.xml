@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/data/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/warning_circle_fill.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/contact-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contact-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/prism.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/prism.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +21,8 @@
           <file leaf-file-name="contact-us.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="608">
-                  <caret line="437" column="39" lean-forward="true" selection-start-line="437" selection-start-column="39" selection-end-line="437" selection-end-column="39" />
+                <state relative-caret-position="301">
+                  <caret line="452" column="47" lean-forward="true" selection-start-line="452" selection-start-column="47" selection-end-line="452" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -50,8 +43,8 @@
           <file leaf-file-name="contact-us.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/contact-us.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="310">
-                  <caret line="273" column="47" selection-start-line="273" selection-start-column="47" selection-end-line="273" selection-end-column="47" />
+                <state relative-caret-position="283">
+                  <caret line="269" column="25" lean-forward="true" selection-start-line="269" selection-start-column="25" selection-end-line="269" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -159,8 +152,8 @@
         <option value="$PROJECT_DIR$/pages/main.html" />
         <option value="$PROJECT_DIR$/js/prism.js" />
         <option value="$PROJECT_DIR$/pages/detail.html" />
-        <option value="$PROJECT_DIR$/pages/contact-us.html" />
         <option value="$PROJECT_DIR$/css/contact-us.css" />
+        <option value="$PROJECT_DIR$/pages/contact-us.html" />
       </list>
     </option>
   </component>
@@ -293,12 +286,12 @@
       <workItem from="1551831928694" duration="7844000" />
       <workItem from="1551857302358" duration="2458000" />
       <workItem from="1551918881677" duration="497000" />
-      <workItem from="1551933663848" duration="2623000" />
+      <workItem from="1551933663848" duration="3590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212396000" />
+    <option name="totallyTimeSpent" value="213363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="23" width="1657" height="1022" extended-state="0" />
@@ -312,7 +305,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32988167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3668639" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3664865" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -704,17 +697,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
+    <entry file="file://$PROJECT_DIR$/css/contact-us.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="437" column="39" lean-forward="true" selection-start-line="437" selection-start-column="39" selection-end-line="437" selection-end-column="39" />
+        <state relative-caret-position="172">
+          <caret line="577" lean-forward="true" selection-start-line="577" selection-end-line="577" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/contact-us.css">
+    <entry file="file://$PROJECT_DIR$/pages/contact-us.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="273" column="47" selection-start-line="273" selection-start-column="47" selection-end-line="273" selection-end-column="47" />
+        <state relative-caret-position="301">
+          <caret line="452" column="47" lean-forward="true" selection-start-line="452" selection-start-column="47" selection-end-line="452" selection-end-column="47" />
         </state>
       </provider>
     </entry>
