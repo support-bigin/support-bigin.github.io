@@ -580,6 +580,37 @@ input:-webkit-autofill:active  {
         border: 1px solid #bbc
     }
 
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper{
+
+        display: none;
+    }
+
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper.shown.dirty{
+        display : flex;
+        margin-top : 12px;
+        align-items: center;
+    }
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper.hidden{
+        display: none;
+    }
+
+
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper.shown.dirty .input-error-img{
+        width : 3.37407407vw;;
+        height : 3.37407407vw;;
+        background: transparent url("../images/warning_circle_fill.png") no-repeat center center;
+        background-size : contain;
+
+        margin-right : 10px;
+    }
+
+    .contact-us-container .contact-us-content .business-info-box .business-info-item .input-error-wrapper.shown.dirty .input-error-msg{
+        font-size: 3.07407407vw;
+        font-weight: normal;
+        line-height: normal;
+        color: #e65c5c;
+    }
+
     .contact-us-container .contact-us-content .business-info-box .select-sub-option {
         margin-top: 5.18518519vw;
         width: 100%;
