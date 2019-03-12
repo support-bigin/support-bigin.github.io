@@ -8,18 +8,20 @@
 
 ## gtm 컨테이너 내려받기
 
-[container.json]([http://www.google.co.kr](http://www.google.co.kr/)) 파일을 내려받은 후, 사용할 gtm 컨테이너에 병합합니다.  
-container.json 파일은 bigin 기본 추적 스크립트의 삽입부터 모든 추적 코드들을 구현해놓은 gtm 컨테이너입니다.
+[container.json]([http://www.google.co.kr](http://www.google.co.kr/))  파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 병합합니다.  
+container.json 파일은 bigin 기본 추적 스크립트의 삽입부터 모든 추적 코드들을 구현한 태그와 트리거, 변수로 구성된 gtm 컨테이너입니다.
+
+gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설명은 [이곳](https://support.google.com/tagmanager/answer/6106997?hl=en)를 참조해주세요.
 
 
 
 #### 1. 태그
 
-생성된 bigin 객체의 내장 메소드들을 활용하여 **고유 사용자 식별**, **이벤트 추적**,**페이지 추적** 등을 구현합니다.
+container.json의 **태그**들은 **bigin** 객체의 내장 메소드들을 활용하여 **고유 사용자 식별**, **이벤트 추적**, **페이지 추적** 등을 구현합니다.
 
 | 태그명             | 구성                                                         | 설명                                                         |
 | :----------------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
-| bigin 제품링크클릭 | <pre class="language-javascript"><code class="language-javascript">&lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:impression",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script></code></pre> | bg:impression 이벤트 추적을 수행하는 태그입니다. <br />사용자가 제품 링크를 클릭할 때, 해당하는 제품 데이터를 추적합니다. |
+| bigin 제품링크클릭 | <pre class="language-javascript"><code class="language-javascript">&lt;script><br />(function () {bigin.event("bg:impression",<br>{{data}});})();&lt;/script></code></pre> | bg:impression 이벤트 추적을 수행하는 태그입니다. <br />사용자가 제품 링크를 클릭할 때, 해당하는 제품 데이터를 추적합니다. |
 | bigin 제품상세보기 | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:viewProduct",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:viewProduct 이벤트 추적을 수행하는 태그입니다.<br /> 사용자가 제품의 상세페이지에 진입할 때, 제품의 상세정보를 추적합니다. |
 | bigin 장바구니추가 | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:addToCart",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:addToCart 이벤트 추적을 수행하는 태그입니다.<br /> 장바구니에 추가되는 제품 데이터를 추적합니다. |
 | bigin 장바구니갱신 | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:cart",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:cart 이벤트 추적을 수행하는 태그입니다.<br /> 현재 장바구니의 상태를 추적합니다. |

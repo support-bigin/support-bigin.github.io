@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigin_install.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/gtm_guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/gtm_guide.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="331" lean-forward="true" selection-start-line="331" selection-end-line="331" />
+            <state relative-caret-position="325">
+              <caret line="479" column="47" lean-forward="true" selection-start-line="479" selection-start-column="47" selection-end-line="479" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -40,12 +40,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>placeholder</find>
-      <find>도움말을 검색하세</find>
-      <find>mobile-input-form-wrapper</find>
-      <find>closeSearchList</find>
-      <find>openSe</find>
-      <find>question-wrapper</find>
       <find>local</find>
       <find>'</find>
       <find>handleChangeInput</find>
@@ -70,6 +64,12 @@
       <find>define</find>
       <find>hash</find>
       <find>window.addEvent</find>
+      <find>parsemarkdown</find>
+      <find>parseMarkdown</find>
+      <find>parseQuery</find>
+      <find>xmlhttp</find>
+      <find>gtm</find>
+      <find>window.open</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -269,12 +269,13 @@
       <workItem from="1552294850470" duration="387000" />
       <workItem from="1552295372865" duration="7000" />
       <workItem from="1552295381842" duration="976000" />
-      <workItem from="1552356523011" duration="131000" />
+      <workItem from="1552356523011" duration="783000" />
+      <workItem from="1552359467287" duration="1212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219172000" />
+    <option name="totallyTimeSpent" value="221036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="23" width="1657" height="1022" extended-state="0" />
@@ -284,6 +285,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32972974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -296,7 +298,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="331" lean-forward="true" selection-start-line="331" selection-end-line="331" />
+        <state relative-caret-position="325">
+          <caret line="479" column="47" lean-forward="true" selection-start-line="479" selection-start-column="47" selection-end-line="479" selection-end-column="47" />
         </state>
       </provider>
     </entry>
