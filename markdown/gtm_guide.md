@@ -2,7 +2,7 @@
 
 
 
-구글 태그매니저를 활용하여 bigin 웹 sdk의 설치 방법을 설명합니다. 
+구글 태그매니저를 활용한 bigin 웹 sdk의 설치 방법을 설명합니다. 
 
 
 
@@ -19,31 +19,29 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 container.json의 **태그**들은 **bigin** 객체의 내장 메소드들을 활용하여 **고유 사용자 식별**, **이벤트 추적**, **페이지 추적** 등을 구현합니다.
 
-| 태그명             | 구성                                                         | 설명                                                         |
+| 태그명             | 내용                                                         | 설명                                                         |
 | :----------------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
-| bigin 제품링크클릭 | <pre class="language-javascript"><code class="language-javascript">&lt;script><br />(function () {bigin.event("bg:impression",<br>{{data}});})();&lt;/script></code></pre> | bg:impression 이벤트 추적을 수행하는 태그입니다. <br />사용자가 제품 링크를 클릭할 때, 해당하는 제품 데이터를 추적합니다. |
-| bigin 제품상세보기 | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:viewProduct",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:viewProduct 이벤트 추적을 수행하는 태그입니다.<br /> 사용자가 제품의 상세페이지에 진입할 때, 제품의 상세정보를 추적합니다. |
-| bigin 장바구니추가 | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:addToCart",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:addToCart 이벤트 추적을 수행하는 태그입니다.<br /> 장바구니에 추가되는 제품 데이터를 추적합니다. |
-| bigin 장바구니갱신 | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:cart",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:cart 이벤트 추적을 수행하는 태그입니다.<br /> 현재 장바구니의 상태를 추적합니다. |
-| bigin 장바구니제거 | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:removeCart",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:removeCart 이벤트 추적을 수행하는 태그입니다.<br /> 장바구니에서 제거되는 제품의 정보를 추적합니다. |
-| bigin 체크아웃     | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:checkout",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:checkout 이벤트 추적을 수행하는 태그입니다.<br /> 구매할 제품 정보, 체크아웃 프로세스의 단계 및 옵션 정보를 추적합니다. |
-| bigin 구매         | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:purchase",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:purchase 이벤트 추적을 수행하는 태그입니다.<br /> 거래 정보와 구매한 제품의 정보를 추적합니다. |
-| bigin 환불         | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:refund",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:refund 이벤트 추적을 수행하는 태그입니다.<br /> 완료된 환불 내역을 추적합니다. |
-| bigin 리뷰         | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.event("bg:review",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | bg:review 이벤트 추적을 수행하는 태그입니다.<br /> 작성된 상품 리뷰에 대한 정보를 추적합니다. |
-| bigin 로그인       | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.user("profile",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | 로그안 사용자 식별을 수행하는 태그입니다.                    |
-| bigin 로그아웃     | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.user("logout");}<br />&nbsp;&nbsp;)();<br />&lt;/script> | 복수 계정 사용자의 추적을 수행하는 태그입니다.               |
-| bigin 설정         | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.config({{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | 기본 설정 변경을 수행하는 태그입니다.                        |
-| bigin 삽입         |                                                              | bigin 의 추적 코드 스크립트의 삽입을 수행하는 태그입니다.    |
-| bigin SPA 페이지뷰 | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.track("views",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | SPA(Single Page Application)의 페이지 조회 수집을 수행하는 태그입니다. |
+| bigin 제품링크클릭 | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:impression"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:impression 이벤트 추적을 수행하는 태그입니다. <br />사용자가 제품 링크를 클릭할 때, 해당 제품 데이터와 게재 위치정보를 추적합니다. |
+| bigin 제품상세보기 | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:viewProduct"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:viewProduct 이벤트 추적을 수행하는 태그입니다.<br /> 사용자가 제품의 상세페이지에 진입할 때, 제품의 상세정보를 추적합니다. |
+| bigin 장바구니추가 | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:addToCart"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:addToCart 이벤트 추적을 수행하는 태그입니다.<br /> 장바구니에 추가되는 제품 데이터를 추적합니다. |
+| bigin 장바구니갱신 | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:cart"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:cart 이벤트 추적을 수행하는 태그입니다.<br /> 현재 장바구니의 제품 목록을 추적합니다. |
+| bigin 장바구니제거 | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:removeCart"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:removeCart 이벤트 추적을 수행하는 태그입니다.<br /> 장바구니에서 제거되는 제품의 정보를 추적합니다. |
+| bigin 체크아웃     | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:checkout"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:checkout 이벤트 추적을 수행하는 태그입니다.<br /> 구매할 제품 정보, 체크아웃 프로세스의 단계 및 옵션 정보를 추적합니다. |
+| bigin 구매         | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:purchase"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:purchase 이벤트 추적을 수행하는 태그입니다.<br /> 거래 정보와 구매한 제품의 정보를 추적합니다. |
+| bigin 환불         | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:refund"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:refund 이벤트 추적을 수행하는 태그입니다.<br /> 완료된 환불 내역을 추적합니다. |
+| bigin 리뷰         | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>(<span style="color:#a11;">"bg:review"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | bg:review 이벤트 추적을 수행하는 태그입니다.<br /> 작성된 상품 리뷰에 대한 정보를 추적합니다. |
+| bigin 로그인       | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">user</span>(<span style="color:#a11;">"profile"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | 로그안 사용자 식별을 수행하는 태그입니다.                    |
+| bigin 로그아웃     | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">user</span>(<span style="color:#a11;">"logout"</span>)<br /> })()<br />&lt;/script></code></pre> | 복수 계정 사용자의 추적을 수행하는 태그입니다.               |
+| bigin 설정         | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">config</span>({{data}})<br /> })()<br />&lt;/script></code></pre> | 기본 설정 변경을 수행하는 태그입니다.                        |
+| bigin 삽입         | 기본 추적 스크립트                                           | bigin 의 추적 코드 스크립트의 삽입을 수행하는 태그입니다.    |
+| bigin SPA 페이지뷰 | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">track</span>(<span style="color:#a11;">"views"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | SPA(Single Page Application)의 페이지 조회 수집을 수행하는 태그입니다. |
 | bigin 커스텀       | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.track("views",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | 커스텀 이벤트 추적을 수행하는 태그입니다.                    |
 
 
 
 #### 2. 트리거
 
-모든 트리거는 "맞춤 이벤트" 와 "페이지 뷰" 로 구성됩니다. 
-
-"맞춤 이벤트" 형식의 트리거는 dataLayer로 push 되는 "event" 변수의 값과 이벤트 이름이 동일할 때, 활성화됩니다.  
+[container.json](http://support.bigin.io)의 모든 트리거는 "맞춤 이벤트" 와 "페이지 뷰" 로 구성됩니다. 
 
 | 트리거명                  | 형식                                      | 이벤트 이름 |
 | :------------------------ | ----------------------------------------- | ----------- |
@@ -109,21 +107,9 @@ dataLayer.push({
 
 ## google 태그 관리자 설치 코드 삽입
 
+gtm 컨테이너를 프로젝트에 적용시키기 위해서 **google 태그 관리자 설치 코드**를 프로젝트의 모든 페이지에 삽입해야합니다.
 
-
-~~~html
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','YOUR_TRACKING_CODE');</script>
-<!-- End Google Tag Manager -->
-~~~
-
-상기 코드 스니펫을 프로젝트의 소스코드 내부에 삽입해야합니다.
-
-자세한 코드삽입의 방법은 [태그 관리자 고객센터](https://support.google.com/tagmanager/answer/6103696?hl=ko)를 참고하여 진행하며, "YOUR_TRACKING_CODE"의 값을 컨테이너 ID로 치환합니다.
+[태그 관리자 고객센터 바로가기](https://support.google.com/tagmanager/answer/6103696?hl=ko) <br>[태그 관리자 개발가이드 바로가기](https://developers.google.com/tag-manager/quickstart)
 
 
 
@@ -134,12 +120,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-#### 추적 코드 스니펫
+### 추적 코드 스니펫
 
 [container.json]([http://www.google.co.kr](http://www.google.co.kr/)) 의 태그 중 **"bigin  삽입"** 태그를 통해서 bigin.sdk.js 가 프로젝트 내부에 로드됩니다.
 **bigin 삽입** 태그의 내용은 아래와 같습니다. 
 
-```html
+```javascript
 <script>
 (function() {
     var biginScript = document.createElement('script');
@@ -162,10 +148,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ```
 
 **bigin 삽입** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.
+`projectID` 가 실제 프로젝트의 추적ID와 같도록 변경합니다.
 
 
 
-#### SPA(Single Page Application)의 페이지 조회 수집
+
+
+### SPA(Single Page Application)의 페이지 조회 수집
 
 단일 페이지 어플리케이션 (SPA; Single Page Application) 으로 개발된 웹사이트의 경우, 별도의 추적이 필요합니다.
 
@@ -173,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 태그의 구성과 트리거는 아래와 같습니다. 
 
-```html
+```javascript
   <script>
     (function () {
 		bigin.track('views', {{data}});
@@ -181,7 +170,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 ```
 
-![스크린샷 2019-03-11 오후 5.23.33](/Users/westlife/Desktop/스크린샷 2019-03-11 오후 5.23.33.png)
+![views_trigger.png](http://support.bigin.io/images/views_trigger.png)
 
 
 
@@ -202,7 +191,7 @@ dataLayer.push({
 
 태그의 구성과 트리거는 아래와 같습니다. 
 
-```html
+```javascript
 <script>
 	(function() {
 		bigin.config({{data}});        
@@ -237,7 +226,7 @@ bigin.sdk.js 의 고유 사용자 식별에 대한 자세한 설명은 [bigin �
 
 태그의 구성과 트리거는 아래와 같습니다. 
 
-```html
+```javascript
 <script>
 (function () {
     bigin.user("profile", {{data}});
@@ -273,7 +262,7 @@ dataLayer.push({
 
 태그의 구성과 트리거는 아래와 같습니다. 
 
-```html
+```javascript
 <script>
 (function () {
     bigin.user("logout");
@@ -297,7 +286,7 @@ dataLayer.push({
 
 태그의 구성과 트리거는 아래와 같습니다. 
 
-```html
+```javascript
 <script>
 (function () {
     bigin.use("location");
@@ -330,7 +319,7 @@ bigin 기본 추적 스크립트은 bigin 객체를 생성합니다.
 생성된 bigin 객체의 내장 메소드 중 event 메소드를 통해서 이커머스 추적이 진행됩니다.
 [container.json]([http://www.google.co.kr](http://www.google.co.kr/)) 의 이머커스 관련 태그와 트리거들은 
 
-~~~html
+~~~javascript
 // 태그
 <script>
 	(function(){
