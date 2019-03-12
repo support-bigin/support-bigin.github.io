@@ -35,7 +35,7 @@ container.json의 **태그**들은 **bigin** 객체의 내장 메소드들을 �
 | bigin 설정         | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">config</span>({{data}})<br /> })()<br />&lt;/script></code></pre> | 기본 설정 변경을 수행하는 태그입니다.                        |
 | bigin 삽입         | 기본 추적 스크립트                                           | bigin 의 추적 코드 스크립트의 삽입을 수행하는 태그입니다.    |
 | bigin SPA 페이지뷰 | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">track</span>(<span style="color:#a11;">"views"</span>,{{data}})<br /> })()<br />&lt;/script></code></pre> | SPA(Single Page Application)의 페이지 조회 수집을 수행하는 태그입니다. |
-| bigin 커스텀       | &lt;script><br />&nbsp;&nbsp;(function () &nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;bigin.track("views",{{data}});}<br />&nbsp;&nbsp;)();<br />&lt;/script> | 커스텀 이벤트 추적을 수행하는 태그입니다.                    |
+| bigin 커스텀       | <pre class="language-html"><code class="language-html"><br />&lt;script><br /> (<span style="color:#30a">function</span>(){<br />&nbsp;&nbsp;bigin.<span style="color:#708;">event</span>({{eventName}},{{data}})<br /> })()<br />&lt;/script></code></pre> | 커스텀 이벤트 추적을 수행하는 태그입니다.                    |
 
 
 
@@ -43,33 +43,35 @@ container.json의 **태그**들은 **bigin** 객체의 내장 메소드들을 �
 
 [container.json](http://support.bigin.io)의 모든 트리거는 "맞춤 이벤트" 와 "페이지 뷰" 로 구성됩니다. 
 
-| 트리거명                  | 형식                                      | 이벤트 이름 |
-| :------------------------ | ----------------------------------------- | ----------- |
-| bigin 제품링크클릭 트리거 | 맞춤 이벤트                               | impression  |
-| bigin 제품상세보기 트리거 | 맞춤 이벤트                               | viewProduct |
-| bigin 장바구니추가 트리거 | 맞춤 이벤트                               | addToCart   |
-| bigin 장바구니갱신 트리거 | 맞춤 이벤트                               | cart        |
-| bigin 장바구니제거 트리거 | 맞춤 이벤트                               | removeCart  |
-| bigin 체크아웃 트리거     | 맞춤 이벤트                               | checkout    |
-| bigin 구매 트리거         | 맞춤 이벤트                               | purchase    |
-| bigin 환불 트리거         | 맞춤 이벤트                               | refund      |
-| bigin 리뷰 트리거         | 맞춤 이벤트                               | review      |
-| bigin 로그인 트리거       | 맞춤 이벤트                               | login       |
-| bigin 로그아웃 트리거     | 맞춤 이벤트                               | logout      |
-| bigin 설정 트리거         | 맞춤 이벤트                               | config      |
-| bigin 삽입 트리거         | 페이지 뷰                                 |             |
-| bigin SPA 페이지뷰 트리거 | 맞춤 이벤트                               | views       |
-| bigin 커스텀 트리거       | 커스텀 이벤트 추적을 수행하는 태그입니다. |             |
+| 트리거명                  | 형식        | 이벤트 이름 |
+| ------------------------- | ----------- | ----------- |
+| bigin 제품링크클릭 트리거 | 맞춤 이벤트 | impression  |
+| bigin 제품상세보기 트리거 | 맞춤 이벤트 | viewProduct |
+| bigin 장바구니추가 트리거 | 맞춤 이벤트 | addToCart   |
+| bigin 장바구니갱신 트리거 | 맞춤 이벤트 | cart        |
+| bigin 장바구니제거 트리거 | 맞춤 이벤트 | removeCart  |
+| bigin 체크아웃 트리거     | 맞춤 이벤트 | checkout    |
+| bigin 구매 트리거         | 맞춤 이벤트 | purchase    |
+| bigin 환불 트리거         | 맞춤 이벤트 | refund      |
+| bigin 리뷰 트리거         | 맞춤 이벤트 | review      |
+| bigin 로그인 트리거       | 맞춤 이벤트 | login       |
+| bigin 로그아웃 트리거     | 맞춤 이벤트 | logout      |
+| bigin 설정 트리거         | 맞춤 이벤트 | config      |
+| bigin 삽입 트리거         | 페이지 뷰   |             |
+| bigin SPA 페이지뷰 트리거 | 맞춤 이벤트 | views       |
+| bigin 커스텀이벤트 트리거 | 맞춤 이벤트 | custom      |
 
 
 
 #### 3. 변수 
 
-기본 제공 변수인 "Event"와 사용자 정의 변수인 "data"가 사용됩니다. 
+기본 제공 변수인 `Event`와 사용자 정의 변수인 `data`, `eventName`이 사용됩니다. 
 
-"data" 변수는 제품 데이터, 구매 데이터, 거래 데이터, 리뷰 데이터, 유저 데이터, 설정 데이터를 저장하며, 활성화된 태그로 전달됩니다.
+`Event` 변수는 **맞춤 이벤트** 형식의 트리거 활성화에 사용됩니다. 
 
-"Event" 변수는 트리거의 활성화를 위해 사용됩니다.  
+`data` 변수는 **데이터 영역 변수**로써 제품 데이터, 구매 데이터, 거래 데이터, 리뷰 데이터, 유저 데이터, 설정 데이터를 태그 관리자 컨테이너로 전달합니다.
+
+`eventName` 변수는 **데이터 영역 변수**로써 커스텀 이벤트의 이름으로 사용되며, 커스텀 이벤트 이름을 태그 관리자 컨테이너로 전달합니다.
 
 ex)
 
@@ -92,14 +94,15 @@ dataLayer.push({
 }) 
 ~~~
 
-   
-
-| 변수명 | 설명                                                    |
-| :----- | ------------------------------------------------------- |
-| event  | "맞춤 이벤트" 형식의 트리거 활성화를 위해서 사용됩니다. |
-| data   | 추적 데이터를 저장하는 변수입니다.                      |
-
-
+```javascript
+dataLayer.push({
+    event : "custom", // "bigin 커스텀이벤트 트리거" 활성화,
+    eventName : "sortBy",  // "커스텀 이벤트 이름"
+    data : {
+        sort : "조회순"
+    } // "bigin 커스텀이벤트" 태그로 전달
+}) 
+```
 
 
 
@@ -107,9 +110,8 @@ dataLayer.push({
 
 ## google 태그 관리자 설치 코드 삽입
 
-gtm 컨테이너를 프로젝트에 적용시키기 위해서 **google 태그 관리자 설치 코드**를 프로젝트의 모든 페이지에 삽입해야합니다.
-
-[태그 관리자 고객센터 바로가기](https://support.google.com/tagmanager/answer/6103696?hl=ko) <br>[태그 관리자 개발가이드 바로가기](https://developers.google.com/tag-manager/quickstart)
+gtm 컨테이너를 프로젝트에 적용시키기 위해서 **google 태그 관리자 설치 코드**를 프로젝트의 모든 페이지에 삽입해야합니다.<br>
+[구글 태그 관리자 고객센터](https://support.google.com/tagmanager/answer/6103696?hl=ko)  또는 [구글 태그 관리자 개발가이드](https://developers.google.com/tag-manager/quickstart)에서 자세한 설치법을 알아보세요.
 
 
 
@@ -147,20 +149,15 @@ gtm 컨테이너를 프로젝트에 적용시키기 위해서 **google 태그 �
 </script>
 ```
 
-**bigin 삽입** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.
-`projectID` 가 실제 프로젝트의 추적ID와 같도록 변경합니다.
-
-
+**bigin 삽입** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경합니다.
 
 <br><br>
 
 ### SPA(Single Page Application)의 페이지 조회 수집
 
-단일 페이지 어플리케이션 (SPA; Single Page Application) 으로 개발된 웹사이트의 경우, 별도의 추적이 필요합니다.
+단일 페이지 어플리케이션 (SPA; Single Page Application) 으로 개발된 웹사이트의 경우, 별도의 페이지 추적이 필요합니다.
 
-**"bigin SPA 페이지뷰"** 태그를 통해 페이지 뷰을 추적합니다.
-
-태그의 구성과 트리거는 아래와 같습니다. 
+**"bigin SPA 페이지뷰"**  태그를 통해 각각의 페이지를 추적하며, 태그의 구성과 트리거는 아래와 같습니다. 
 
 
 
@@ -240,7 +237,7 @@ bigin.sdk.js 의 고유 사용자 식별에 대한 자세한 설명은 [bigin �
 </script>
 ```
 
-![스크린샷 2019-03-11 오후 5.52.42](/Users/westlife/Desktop/스크린샷 2019-03-11 오후 5.52.42.png)
+![login_trigger.png](http://support.bigin.io/images/login_trigger.png)
 
 ```javascript
 dataLayer.push({
@@ -276,7 +273,7 @@ dataLayer.push({
 </script>
 ```
 
-![스크린샷 2019-03-11 오후 5.56.26](/Users/westlife/Desktop/스크린샷 2019-03-11 오후 5.56.26.png)
+![logout_trigger.png](http://support.bigin.io/images/logout_trigger.png)
 
 ```javascript
 dataLayer.push({
