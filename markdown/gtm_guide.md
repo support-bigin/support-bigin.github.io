@@ -205,7 +205,7 @@ dataLayer.push({
 </script>
 ```
 
-![스크린샷 2019-03-11 오후 5.27.59](/Users/westlife/Desktop/스크린샷 2019-03-11 오후 5.27.59.png)
+![config_trigger.png](http://support.bigin.io/images/config_trigger.png)
 
 ```javascript
 dataLayer.push({
