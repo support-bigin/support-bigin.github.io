@@ -152,7 +152,7 @@ gtm 컨테이너를 프로젝트에 적용시키기 위해서 **google 태그 �
 
 
 
-
+<br><br>
 
 ### SPA(Single Page Application)의 페이지 조회 수집
 
@@ -162,17 +162,21 @@ gtm 컨테이너를 프로젝트에 적용시키기 위해서 **google 태그 �
 
 태그의 구성과 트리거는 아래와 같습니다. 
 
+
+
 ```javascript
-  <script>
-    (function () {
+<script>
+	(function () {
 		bigin.track('views', {{data}});
     })();
-  </script>
+</script>
 ```
 
 ![views_trigger.png](http://support.bigin.io/images/views_trigger.png)
 
 
+
+예시)
 
 ```javascript
 dataLayer.push({
@@ -184,6 +188,8 @@ dataLayer.push({
 ```
 
 
+
+<br><br>
 
 ### 현지 통화의 설정
 
