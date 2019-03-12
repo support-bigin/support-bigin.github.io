@@ -292,12 +292,12 @@ dataLayer.push({
 ```javascript
 <script>
 (function () {
-    bigin.use("location");
+    bigin.user("location");
 })();
 </script>
 ```
 
-
+![location_trigger](http://support.bigin.io/images/location_trigger.png)
 
 ```javascript
 dataLayer.push({
