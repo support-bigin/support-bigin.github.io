@@ -347,7 +347,7 @@ bigin.sdk.js 의 커스텀 이벤트 추적에 대한 자세한 설명은 [bigin
 </script>
 ```
 
-![location_trigger](http://support.bigin.io/images/location_trigger.png)
+![custom_trigger](http://support.bigin.io/images/custom_trigger.png)
 
 
 
@@ -355,7 +355,11 @@ bigin.sdk.js 의 커스텀 이벤트 추적에 대한 자세한 설명은 [bigin
 
 ```javascript
 dataLayer.push({
-    event : "location",
+    event : "custom",
+    eventName : "sortBy",
+    data : {
+        sort : "조회순"
+    }
 })
 ```
 
@@ -367,36 +371,6 @@ dataLayer.push({
 
 이 장에선 구글 태그매니저를 활용한 bigin.sdk.js 의 이커머스 추적 방식만을 설명합니다. 
 bigin.sdk.js 의 이커머스 추적에 대한 자세한 설명은 [bigin 이커머스 추적 가이드](http://support.bigin.io/pages/detail.html?kind=installation#installation_4)를 참조해주세요.
-
-
-
-bigin 기본 추적 스크립트은 bigin 객체를 생성합니다. 
-생성된 bigin 객체의 내장 메소드 중 event 메소드를 통해서 이커머스 추적이 진행됩니다.
-[container.json]([http://www.google.co.kr](http://www.google.co.kr/)) 의 이머커스 관련 태그와 트리거들은 
-
-~~~javascript
-// 태그
-<script>
-	(function(){
-        bigin.event("bg:eventName", {{data}})
-	})()
-</script>
-~~~
-
-![스크린샷 2019-03-11 오후 4.09.22](/Users/westlife/Desktop/스크린샷 2019-03-11 오후 4.09.22.png)
-
-의 형식을 취합니다. 
-
-
-
-```javascript
-dataLayer.push({
-    event : 'eventName',
-    data : {
-        // 전송할 데이터
-    }
-})
-```
 
 
 

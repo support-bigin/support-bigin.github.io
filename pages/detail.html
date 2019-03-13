@@ -137,6 +137,7 @@
 
   var markdownNameList = [
     {name: '시작하기 및 설치', link: 'detail.html?kind=installation#installation_0'},
+    {name: 'gtm 활용하여 bigin sdk 설치', link: 'detail.html?kind=gtm_guide#gtm_guide_0'},
     {name: '설치 시작하기', link: 'detail.html?kind=installation#installation_0'},
     {name: '기본 추적 스크립트', link: 'detail.html?kind=installation#installation_1'},
     {name: '고유 사용자 식별', link: 'detail.html?kind=installation#installation_2'},
@@ -475,9 +476,9 @@
     // 스피너
     var spinner = createSpinner();
 
-    if(url.indexOf('gtm_guide') > -1){
-      window.open('http://support.bigin.io/pages/detail.html?kind=installation', "_self");
-    }
+    // if(url.indexOf('gtm_guide') > -1){
+    //   window.open('http://support.bigin.io/pages/detail.html?kind=installation', "_self");
+    // }
 
     xmlhttp.open('get', url, true);
     xmlhttp.send();
