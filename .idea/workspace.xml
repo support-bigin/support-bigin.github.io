@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/js/download.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/github-markdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/github-markdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/gtm_guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/gtm_guide.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,29 +21,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="477" lean-forward="true" selection-start-line="477" selection-end-line="477" />
+            <state relative-caret-position="418">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="167" column="4" lean-forward="true" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
+            <state relative-caret-position="308">
+              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/search.html">
+      <file leaf-file-name="download.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/download.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="41" column="65" lean-forward="true" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gtm_guide.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/markdown/gtm_guide.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -57,12 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>goToH2</find>
-      <find>business-info-item</find>
-      <find>regex</find>
-      <find>input</find>
-      <find>remove</find>
-      <find>listenInputChange</find>
       <find>input-error</find>
       <find>onChage</find>
       <find>textarea-container</find>
@@ -87,6 +100,12 @@
       <find>활용하여</find>
       <find>gtm</find>
       <find>gtm_guide</find>
+      <find>callback</find>
+      <find>a</find>
+      <find>a {</find>
+      <find>a:</find>
+      <find>addEventLis</find>
+      <find>function parse</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -127,7 +146,6 @@
         <option value="$PROJECT_DIR$/markdown/system.md" />
         <option value="$PROJECT_DIR$/markdown/insight.md" />
         <option value="$PROJECT_DIR$/css/prism.css" />
-        <option value="$PROJECT_DIR$/css/github-markdown.css" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/js/spin.js" />
         <option value="$PROJECT_DIR$/images/icomoon.svg" />
@@ -145,11 +163,13 @@
         <option value="$PROJECT_DIR$/pages/contact-us.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/scrollbar.js" />
-        <option value="$PROJECT_DIR$/markdown/gtm_guide.md" />
         <option value="$PROJECT_DIR$/markdown/installation.md" />
-        <option value="$PROJECT_DIR$/pages/main.html" />
         <option value="$PROJECT_DIR$/pages/search.html" />
+        <option value="$PROJECT_DIR$/js/download.js" />
+        <option value="$PROJECT_DIR$/css/github-markdown.css" />
         <option value="$PROJECT_DIR$/pages/detail.html" />
+        <option value="$PROJECT_DIR$/pages/main.html" />
+        <option value="$PROJECT_DIR$/markdown/gtm_guide.md" />
       </list>
     </option>
   </component>
@@ -194,7 +214,7 @@
             <path>
               <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="support-bigin.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -204,7 +224,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="detailhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;searchhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;mainhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;install&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;main&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;usage&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;maincss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;main.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;contact-us.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contactuscss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;prism.js&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/prism.js&#10;mainht&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;detailcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;searchcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/search.css&#10;scrollcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/scrollbar.css&#10;contactushtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;spin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/spin.css&#10;conta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact-us.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;svg&#9;null&#9;null&#10;main.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;sp&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;detail.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;usagepolicycss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;spinjs&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;usage-&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;markdown.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;prism.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/prism.css&#10;mar&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;insta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation3.md&#10;u&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;detail.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;instal&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;mark&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;detail&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;indexhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;sear&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;mainscss&#9;null&#9;null&#10;insig&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;detailscss&#9;null&#9;null&#10;bigin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;installhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;detacss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/user.md&#10;system&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;package&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/package.json&#10;index.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;global&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/global.js&#10;bigin_install.html&#9;FILE&#9;file:///Users/westlife/Desktop/project/bigin/bigin-tech-guide/support-bigin.io/bigin_install.html" />
+    <property name="SearchEverywhereHistoryKey" value="gtm&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/gtm_guide.md&#10;mainhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;gtm_guide&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/gtm_guide.md&#10;d&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/download.js&#10;detail.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;markdown.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;mark&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;detailhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;searchhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;install&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;main&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;usage&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;maincss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;main.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;contact-us.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contactuscss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;prism.js&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/prism.js&#10;mainht&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;detailcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;searchcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/search.css&#10;scrollcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/scrollbar.css&#10;contactushtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;spin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/spin.css&#10;conta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact-us.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;svg&#9;null&#9;null&#10;main.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;sp&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;usagepolicycss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;spinjs&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;usage-&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;prism.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/prism.css&#10;mar&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;insta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation3.md&#10;u&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;detail.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;instal&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;detail&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;indexhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/index.html&#10;sear&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;mainscss&#9;null&#9;null&#10;insig&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;detailscss&#9;null&#9;null&#10;bigin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;installhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/bigin_install.html&#10;detacss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/user.md&#10;system&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;package&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/package.json" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -220,6 +240,7 @@
       <recent name="$PROJECT_DIR$/images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/markdown" />
       <recent name="$PROJECT_DIR$" />
@@ -288,12 +309,14 @@
       <workItem from="1552295381842" duration="976000" />
       <workItem from="1552356523011" duration="783000" />
       <workItem from="1552359467287" duration="4270000" />
-      <workItem from="1552455179297" duration="1952000" />
+      <workItem from="1552455179297" duration="4643000" />
+      <workItem from="1552469148777" duration="557000" />
+      <workItem from="1552522975859" duration="824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226046000" />
+    <option name="totallyTimeSpent" value="230118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
@@ -303,19 +326,19 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.37473002" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,20 +353,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/bigin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="244" column="22" selection-start-line="244" selection-start-column="22" selection-end-line="244" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/container.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/gtm-itemView.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -454,13 +463,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/docsearch.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/github-markdown.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="668" column="29" lean-forward="true" selection-start-line="668" selection-start-column="29" selection-end-line="668" selection-end-column="29" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -597,16 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/markdown/gtm_guide.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="336">
-            <caret line="54" column="77" lean-forward="true" selection-start-line="54" selection-start-column="77" selection-end-line="54" selection-end-column="77" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -624,10 +616,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main.html">
+    <entry file="file://$PROJECT_DIR$/css/github-markdown.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="167" column="4" lean-forward="true" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
+        <state relative-caret-position="115">
+          <caret line="377" column="19" lean-forward="true" selection-start-line="377" selection-start-column="19" selection-end-line="377" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/container.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -640,8 +639,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="477" lean-forward="true" selection-start-line="477" selection-end-line="477" />
+        <state relative-caret-position="418">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/download.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markdown/gtm_guide.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>

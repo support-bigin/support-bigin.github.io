@@ -147,6 +147,8 @@ body .octicon {
 
 body a {
     background-color: transparent;
+    cursor: pointer;
+    color: #0060ad;
 }
 
 body a:active,
@@ -387,8 +389,9 @@ body>*:last-child {
 }
 
 body a:not([href]) {
-    color: inherit;
-    text-decoration: none;
+
+    /*color: inherit;*/
+    /*text-decoration: none;*/
 }
 
 body .anchor {

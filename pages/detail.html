@@ -9,6 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="../js/prism.js"></script>
 <script src="../js/spin.js"></script>
+<script src="../js/download.js"></script>
 
 <meta name="viewport" content=" width=device-width, initial-scale=1 , maximum-scale=1.0, user-scalable=no,
         shrink-to-fit=no"/>
@@ -42,6 +43,8 @@
       <div class="cancel-icon"></div>
     </div>
   </div>
+
+
 
   <div class="content">
     <div class="content-wrapper">
@@ -341,6 +344,9 @@
     goToH2(null, hash)
   })
 
+
+
+
   /********************************
    *
    *         Helper Functions
@@ -523,6 +529,10 @@
 
       // 마크다운 내부 코드스니펫에 prism.css 적용시키는 함수.
       usePrismJs();
+      // anchor 태그의 download 속성이 동작하지 않아서 javascript 로 파일 다운로드 구현 ;
+      document.querySelector('.container-json').addEventListener('click',function(){
+        download('http://support.bigin.io/data/container.json');
+      })
     }
   }
 
