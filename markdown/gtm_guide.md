@@ -108,6 +108,7 @@ dataLayer.push({
 
 
 
+<span class="end-point"></span>
 
 ## google 태그 관리자 설치 코드 삽입
 
@@ -115,6 +116,7 @@ gtm 컨테이너를 프로젝트에 적용시키기 위해서 **google 태그 �
 [구글 태그 관리자 고객센터](https://support.google.com/tagmanager/answer/6103696?hl=ko)  또는 [구글 태그 관리자 개발가이드](https://developers.google.com/tag-manager/quickstart)에서 자세한 설치법을 알아보세요.
 
 
+<span class="end-point"></span>
 
 ## 기본 추적 스크립트
 
@@ -219,6 +221,7 @@ dataLayer.push({
 ```
 
 
+<span class="end-point"></span>
 
 ## 고유 사용자 식별
 
@@ -325,6 +328,7 @@ dataLayer.push({
 ```
 
 
+<span class="end-point"></span>
 
 ## 커스텀 이벤트 추적
 
@@ -365,7 +369,7 @@ dataLayer.push({
 
 
 
-
+<span class="end-point"></span>
 
 ## 이커머스 추적
 
@@ -647,3 +651,4 @@ dataLayer.push({
 })
 ```
 
+<span class="end-point"></span>

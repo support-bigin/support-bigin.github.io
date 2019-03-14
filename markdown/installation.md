@@ -17,7 +17,7 @@ bigin의 WEB SDK는 웹사이트에 삽입되는 스크립트 형채로, 웹사�
 3. 안내에 따라 웹사이트 또는 모바일 앱에 추적코드를 설치하면 프로젝트의 기본 추적 데이터가 수집됩니다.
 
 
-
+<span class="end-point"></span>
 ## 기본 추적 스크립트 (bigin.js)
 
 1. 추적 스크립트는 프로젝트마다 발행되는 고유의 추적 ID가 명시되어야만 작동합니다. 프로젝트 생성을 완료하면 bigin.js를 사용할 수 있는 추적코드가 생성됩니다.
@@ -135,7 +135,7 @@ track : [
 ```
 
 
-
+<span class="end-point"></span>
 ## 고유 사용자 식별
 
 
@@ -197,7 +197,7 @@ bigin.user("location"); // 기본 추적코드에 함께 있는 옵션입니다.
 ```
 
 
-
+<span class="end-point"></span>
 ## 커스텀 이벤트 추적
 
 
@@ -242,7 +242,7 @@ bigin.event("customSearchEvent" ,{ // 이벤트명
 ```
 
 
-
+<span class="end-point"></span>
 ## 이커머스 추적
 
 
@@ -332,6 +332,8 @@ bigin.js를 사용하여 보낼 수있는 이커머스 데이터 유형은 **구
 | `product` | **예** | 제품 고유 ID (예: P12345) |
 | `score`   | 아니오 | 제품 리뷰 점수 (예: 4.5)  |
 | `content` | 아니오 | 제품 리뷰의 내용.         |
+
+<span class="end-point"></span>
 
 ## 이커머스 추적 예제
 
@@ -571,3 +573,4 @@ bigin.event("bg:review",{
 }); 
 ```
 
+<span class="end-point"></span>

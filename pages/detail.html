@@ -160,6 +160,8 @@
   h2List = [];
   h2Elements = [];
   h2Offsets = [];
+  endPoints = [];
+
 
 
   var activeH2;
@@ -253,14 +255,15 @@
 
   $('.inner-content').scroll(function () {
 
-
     // web version (not mobile)
     if (window.innerWidth > 700) {
 
-      var fromTop = $(this).scrollTop();
-
+      /*
+      * html 태그의 offset 이란
+      * 해당 엘리먼트와 viewport 상단과의 거리를 의미함.
+      */
       h2Elements.forEach(function (i, index) {
-        if ($(i).offset().top - 50 < 0) {
+        if ($(i).offset().top < 50 && $(".inner-content").scrollTop() - endPoints[index] > 50) {
           h2Offsets[index] = 1000000000000;
         } else {
           h2Offsets[index] = $(i).offset().top - 50;
@@ -285,6 +288,7 @@
 
       blockBodyScroll();
 
+      console.log(h2Offsets);
     }
 
     // mobile version
@@ -336,7 +340,8 @@
   window.addEventListener('load', function () {
     focusLeftNav();
     var hash = window.location.hash.replace("#", '');
-    goToH2(null, hash)
+    goToH2(null, hash);
+    initEndPoints();
   })
 
   window.addEventListener('hashchange', function () {
@@ -352,6 +357,13 @@
    *         Helper Functions
    *
    *********************************/
+
+  function initEndPoints(){
+    var spanList = document.getElementsByClassName('end-point');
+    for(var i = 0 ; i < spanList.length; i++){
+      endPoints[i] = $(spanList[i]).offset().top;
+    }
+  }
 
 
   function openMobileSearchList(search) {
@@ -529,10 +541,7 @@
 
       // 마크다운 내부 코드스니펫에 prism.css 적용시키는 함수.
       usePrismJs();
-      // anchor 태그의 download 속성이 동작하지 않아서 javascript 로 파일 다운로드 구현 ;
-      document.querySelector('.container-json').addEventListener('click',function(){
-        download('http://support.bigin.io/data/container.json');
-      })
+
     }
   }
 
