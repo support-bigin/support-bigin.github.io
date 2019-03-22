@@ -373,7 +373,7 @@ function(){
 
 **트리거 : impressionTrg**
 
-![impressionTrg](/Users/westlife/Desktop/impressionTrg.png)
+![impressionTrg](http://support.bigin.io/images/cafe24-impressionTrg.png)
 
 
 
@@ -443,7 +443,7 @@ function(){
 
 **트리거 : viewProductTrg**
 
-![viewProductTrg](/Users/westlife/Desktop/viewProductTrg.png)
+![viewProductTrg](http://support.bigin.io/images/cafe24-viewProductTrg.png)
 
 **일부 페이지뷰** 유형의 트리거를 사용하며, <code>path name</code> 의 값을 통해서 페이지 식별을 함.
 
@@ -492,7 +492,7 @@ function(){
 
 **트리거 : addToCartTrg**
 
-![addToCartTrg](/Users/westlife/Desktop/addToCartTrg.png)
+![addToCartTrg](http://support.bigin.io/images/cafe24-addToCartTrg.png)
 
 
 
@@ -538,7 +538,7 @@ function(){
 
 **트리거 : cartTrg**
 
-![cartTrg](/Users/westlife/Desktop/cartTrg.png)
+![cartTrg](http://support.bigin.io/images/cafe24-cartTrg.png)
 
 
 
@@ -575,7 +575,7 @@ function(){
 
 **트리거 : removeCartTrg**
 
-![removeCartTrg](/Users/westlife/Desktop/removeCartTrg.png)
+![removeCartTrg](http://support.bigin.io/images/cafe24-removeCartTrg.png)
 
 
 
@@ -642,7 +642,7 @@ function(){
 
 **트리거 : checkoutStepNTrg**
 
-![checkoutStepNTrg](/Users/westlife/Desktop/checkoutStepNTrg.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-checkoutStepNTrg.png)
 
 
 
@@ -759,7 +759,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 ~~~html
 <script>
     (function(){
-        bigin.event("bg:purchase" , {{data})
+        bigin.event("bg:purchase" , {{data}})
     })()
 </script>
 ~~~
@@ -768,7 +768,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 **트리거 : purchaseTrg**
 
-![purchaseTrg](/Users/westlife/Desktop/purchaseTrg.png)
+![purchaseTrg](http://support.bigin.io/images/cafe24-purchaseTrg.png)
 
 
 
@@ -806,36 +806,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 **트리거 : refundTrg**
 
-![refundTrg](/Users/westlife/Desktop/refundTrg.png)
-
-
-
-
-
-
-
-## 고도몰 bigin SDK 설치하기
-
-
-
-### gtm 컨테이너 내려받기
-
-[godomall_container.json](http://support.bigin.io/data/container.json) 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 병합합니다.
-godomall_container.json 파일은 bigin 기본 추적 스크립트의 삽입부터 모든 추적 코드들을 구현한 gtm 컨테이너입니다.
-
-gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설명은 [이곳](https://support.google.com/tagmanager/answer/6106997?hl=en)를 참조해주세요.
-
-
-
-### 구글 태그매니저 설치 
-
-고도몰 관리자페이지에 접속한 후, **레이아웃의 페이지 소스 **상에 **구글 태그매니저 스니펫**을 삽입합니다. 
-모든 페이지들은 **상단 레이아웃** 과 **하단 레이아웃**을 포함합니다.  
-**구글 태그매니저 스니펫** 을 레이아웃의 html 에 삽입함으로써 모든 페이지에서 컨테이너의 정보를 가진 **gtm.js**에 접근할 수 있습니다. 
-
-[구글 태그 관리자 고객센터](https://support.google.com/tagmanager/answer/6103696?hl=ko) 또는 [구글 태그 관리자 개발가이드](https://developers.google.com/tag-manager/quickstart)에서 자세한 설치법을 알아보세요.
-
-
-
+![refundTrg](http://support.bigin.io/image/cafe24-refundTrg.png)
 
 

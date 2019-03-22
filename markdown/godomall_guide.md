@@ -985,7 +985,7 @@ function(){
 ```html
 <script>
     (function(){
-        bigin.event("bg:purchase" , {{data})
+        bigin.event("bg:purchase" , {{data}})
     })()
 </script>
 ```
