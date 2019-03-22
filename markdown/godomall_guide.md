@@ -10,7 +10,7 @@ bigin sdk를 고도몰 기반 쇼핑몰에 설치하기 위해 아래의 방식�
 
 2. **DOM scraping 방식**
 
-   - 임대형 쇼핑몰의 특성 상, 데이터 처리에 관여하는 비즈니스 로직을 공개하지 않는 경우가 있습니다.
+   - 고도몰 쇼핑몰의 특성 상, 데이터 처리에 관여하는 비즈니스 로직을 공개하지 않는 경우가 있습니다.
 
    - ​	1) **상품리스트** 페이지에서의 **상품 데이터 조회**,  
 
@@ -18,47 +18,53 @@ bigin sdk를 고도몰 기반 쇼핑몰에 설치하기 위해 아래의 방식�
 
      ​	3) 상품 주문 시, **결제 정보 생성** 등
 
-     과 같은 비즈니스 로직은 관리자페이지에서 접근 할 수 없는 임대형 쇼핑몰이 존재합니다.
+     과 같은 비즈니스 로직은 관리자페이지에서 접근 할 수 없는 경우가 존재합니다.	
      이와 같은 경우에 **DOM scraping** 방식을 사용합니다.
 
    
 
-   - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접적으로 접근하여 필요한 데이터를 가져오는 방식입니다. 손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden div 태그를 추가하는 코드가 필요합니다.
+   - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접 접근하여 필요한 데이터를 가져오는 방식입니다. 	
+     손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden div 태그**를 추가하는 코드가 필요합니다.	
 
      
 
+<span class="end-point"></span>
+
 ## gtm 컨테이너 내려받기
 
-[godomall_container.json](http://support.bigin.io/data/container.json) 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 병합합니다.
-godomall_container.json 파일은 bigin 기본 추적 스크립트의 삽입부터 모든 추적 코드들을 구현한 gtm 컨테이너입니다.
+[godomall_container.json](http://support.bigin.io/data/container.json) 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 병합합니다.	
+godomall_container.json 파일은 bigin 기본 추적 스크립트의 삽입부터 대부분의 추적 코드들을 구현한 gtm 컨테이너입니다.
 
 gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설명은 [이곳](https://support.google.com/tagmanager/answer/6106997?hl=en)를 참조해주세요.
 
 
 
-## google 태그 관리자 설치코드 삽입 
+## 구글 태그매니저 설치 
 
-고도몰 관리자페이지에 접속한 후, **레이아웃의 페이지 소스 **상에 **구글 태그매니저 스니펫**을 삽입합니다. 
-모든 페이지들은 **상단 레이아웃** 과 **하단 레이아웃**을 포함합니다.  
+고도몰 관리자페이지에 접속한 후, **레이아웃의 페이지 소스** 내부에 **구글 태그매니저 스니펫**을 삽입합니다.	
+고도몰 쇼핑몰의 모든 페이지들은 **상단 레이아웃 html** 과 **하단 레이아웃 html**을 포함하며,  
 **구글 태그매니저 스니펫** 을 레이아웃의 html 에 삽입함으로써 모든 페이지에서 컨테이너의 정보를 가진 **gtm.js**에 접근할 수 있습니다. 
 
 [구글 태그 관리자 고객센터](https://support.google.com/tagmanager/answer/6103696?hl=ko) 또는 [구글 태그 관리자 개발가이드](https://developers.google.com/tag-manager/quickstart)에서 자세한 설치법을 알아보세요.
 
-세한 설치법을 알아보세요.
+
+
+<span class="end-point"></span>
 
 
 
-## 기본 추적 스크립트 삽입 - 고도몰
+## 기본 추적 스크립트 삽입
 
 
 
 #### 추적 코드 스니펫
 
-[godomall_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin 삽입"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **bigin 삽입** 태그의 내용은 아래와 같습니다.
+[godomall_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin 삽입"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다.	
+**bigin 삽입** 태그의 내용은 아래와 같습니다.
 
 
 
-```html
+```javascript
 <script>
 (function() {
     var biginScript = document.createElement('script');
@@ -80,13 +86,15 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 </script>
 ```
 
-
+<br>
 
 **bigin 삽입** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다..
 
 
 
+<br>
 
+<span class="end-point"></span>
 
 ## 고유 사용자 식별
 
@@ -94,28 +102,45 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 **{ ? gd_is_login() }**  치환코드를 활용하여 사용자의 로그인 유무를 판별할 수 있습니다. 
 
+
+
+~~~javascript
 <!--{ ? gd_is_login() === false }-->
- (로그인전)    
+
+    (로그인전)  
+    //ex) <button>login</button>
+    //ex) <button>join</button>
 <!--{ : }-->
- (로그인후)   
 
-로그인 상태에서는 **(로그인후)** 영역이 활성화되어 해당 UI가 출력됩니다. ex) <code>로그아웃</code> , <code>회원정보</code> 버튼 활성화
-반대로 로그아웃인 상태에선 **(로그인전)** 가 활성화되며 해당하는 UI가 출력됩니다. ex) <code>로그인</code>  버튼 활성화
+     (로그인후)
+    //ex) <button>logout</button>
+    //ex) <button>mypage</button>
+~~~
 
-**(로그인후)** 영역 내부에 로그인 사용자 정보를 기록한 **hidden div 태그** 들을 추가합니다. 
-그리고 **hidden div 태그** 를 **DOM scraping** 하여 로그인 사용자 식별을 시도합니다.  
+<br>
+
+로그인 상태에서는 **(로그인후)** 영역이 활성화되어 해당 UI가 출력됩니다. ex) <code>로그아웃</code> , <code>회원정보</code> 버튼 활성화	
+반대로 로그아웃인 상태에선 **(로그인전)** 가 활성화되며 해당하는 UI가 출력됩니다. ex) <code>로그인</code>  버튼 활성화	
+
+**(로그인후)** 영역 내부에 로그인 사용자 정보를 기록한 **hidden div 태그** 들을 추가합니다. 	
+그리고 **hidden div 태그** 를 **DOM scraping** 하여 로그인 사용자 식별을 시도합니다.  	
 
 
 
 ### 로그인 사용자 식별 
 
+**"bigin 로그인"** 태그와 **"biginUserExistingTrg"** 트리거가 사용됩니다.
+
+**"bigin 로그인"** 태그는 DOM scraping 과 bigin 로그인 사용자 식별을 수행하는 코드로 구성되며, 
+**"biginUserExistingTrg"** 트리거는 **모든 페이지뷰**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
 
 
-#### { ? gd _is_login() } 치환코드 수정 
+
+#### 템플릿 : { ? gd _is_login() } 치환코드 수정 
 
 상단 헤더 파일의 **{ ? gd_is_login() }** 치환코드 내부를 아래와 같이 수정합니다. 
 
-```html
+```javascript
 <!--{ ? gd_is_login() === false }-->
 <li>
     <a href="../member/login.php">로그인</a>
@@ -140,20 +165,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 <!--{ / }-->
 ```
 
+<br> 
 
+####  **태그 : bigin 로그인** 
 
-#### 로그인 사용자 식별을 위한 gtm 컨테이너 구성 
-
-**"bigin 로그인"** 태그와 **"biginUserExistingTrg"** 트리거가 사용됩니다.
-
-**"bigin 로그인"** 태그는 DOM scraping 과 bigin 로그인 사용자 식별을 수행하는 코드로 구성되며, 
-**"biginUserExistingTrg"** 트리거는 **모든 페이지뷰**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
-
- 
-
- **태그 : bigin 로그인** 
-
-```html
+```javascript
 <script>
 	function biginLoad(biginUser) {
 	    var timer = 0;
@@ -197,15 +213,13 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
- **트리거 : biginUserExistingTrg** 
+#### **트리거 : biginUserExistingTrg** 
 
-![godo-loginTrg](/Users/westlife/Desktop/godo-loginTrg.png)
+![godo-loginTrg](http://support.bigin.io/images/godo-loginTrg.png)
 
 
 
- **변수 : pageViewVar** 
-
-맞춤 자바스크립트 유형의 변수를 사용합니다. 
+#### **변수 : pageViewVar** 
 
 ```javascript
 function(){
@@ -213,36 +227,30 @@ function(){
   	if(document.querySelector(".bigin-user")){
       	var biginUser = document.querySelector(".bigin-user .bigin-user-id");
       	if(biginUser){
-	    	flag = true;        
+	    	flag = 'login';        
         }
     }
-  	console.log(flag);
 	return flag;
 }
 ```
 
-
+<br>
 
 ### 로그아웃 추적  
 
+로그인 사용자의 로그아웃 행동을 추적합니다.	
+**bigin 로그아웃** 태그와 **logoutTrg** 트리거가 사용됩니다.	
+**logoutTrg** 는 요소 클릭 형식의 트리거로써 **clickVar** 변수를 사용합니다.
 
 
-#### Layout_stateLogon 모듈 수정 
 
-
-
-#### 로그아웃 추적을 위한 gtm 컨테이너 구성 
-
-**"cafe24 bigin 로그아웃"** 태그와 **"logoutButtonClickedTrg"** 트리거가 사용됩니다.
-
-**"cafe24 bigin 로그아웃"** 태그는 즉시실행함수의 형태로 bigin 로그아웃 추적 코드를 실행합니다.
-**"logoutButtonClickedTrg"** 트리거는 **클릭 - 모든 요소**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
+<br>
 
  
 
- **태그 : bigin 로그아웃** 
+####  **태그 : bigin 로그아웃** 
 
-```html
+```javascript
 <script>
   (function(){
   	bigin.user("logout")
@@ -252,13 +260,13 @@ function(){
 
 
 
- **트리거 : logoutButtonClickedTrg** 
+####  **트리거 : logoutButtonClickedTrg** 
 
-![cafe24_logout_trigger](http://support.bigin.io/images/cafe24_logout_trigger.png)
+![godo_logoutTrg](http://support.bigin.io/images/godo-logoutTrg.png)
 
 
 
- **변수 : buttonClickedVar** 
+#### **변수 : clickVar** 
 
 맞춤 자바스크립트 유형의 변수를 사용합니다. 
 
@@ -278,7 +286,7 @@ function(){
 
 
 
-
+<span class="end-point"></span>
 
 ## 이커머스 추적 
 
@@ -295,9 +303,9 @@ function(){
 
 
 
-**상품목록 템플릿 수정** 
+#### **템플릿 : 상품목록 템플릿 수정** 
 
-고도몰의 상품 리스트 페이제이 게재되는 상품들에 대한 치환코드는  보통 <code>goods/list/list-[seq]</code> 페이지에 기록되어 있습니다.
+고도몰의 상품 리스트 페이지에 게재되는 상품들에 대한 치환코드는 보통 <code>goods/list/list-[seq]</code> 페이지에 기록되어 있습니다.	
 <code>goods/list/list-[seq]</code> 페이지를 아래와 같이 수정해주세요.
 
 ```javascript
@@ -348,9 +356,9 @@ function(){
 
 ```
 
+<br>
 
-
-**태그 : bigin 상품링크클릭**
+#### **태그 : bigin 상품링크클릭**
 
 ```javascript
 <script>
@@ -385,13 +393,13 @@ function(){
 
 
 
-**트리거 : impressionTrg**
+#### **트리거 : impressionTrg**
 
 ![impressionTrg](http://support.bigin.io/images/cafe24-impressionTrg.png)
 
+<br>
 
-
-변수 : clickVar
+#### **변수 : clickVar**
 
 ```javascript
 function(){
@@ -408,19 +416,21 @@ function(){
 }
 ```
 
-
+<br>
 
 ### 제품의 노출
 
 **제품 상세 페이지**의 조회 시에 노출되는 제품의 상세정보들을 추적합니다. 
 
+**bigin 제품노출** 태그와 **viewProductTrg** 트리거가 사용됩니다. 
 
+<br>
 
-**상품상세화면 템플릿 수정**
+#### **템플릿 : 상품상세화면 템플릿 수정**
 
 <code>goods/goods_view.html</code>를 아래와 같이 수정합니다.
 
-```html
+```javascript
 {*** 상품상세화면 | goods/goods_view.php ***}
 { # header }
 <div class="content_box">
@@ -456,9 +466,9 @@ function(){
 
 ```
 
+<br>
 
-
-**태그 : viewProduct**
+#### **태그 : viewProduct**
 
 ~~~html
 <script>
@@ -468,13 +478,13 @@ function(){
 </script>
 ~~~
 
+<br>
+
+#### **트리거 : viewProductTrg**
 
 
-**트리거 : viewProductTrg**
 
-
-
-![godo-viewProductTrg](/Users/westlife/Desktop/godo-viewProductTrg.png)
+![godo-viewProductTrg](http://support.bigin.io/images/godo-viewProductTrg.png)
 
 
 
@@ -482,18 +492,22 @@ function(){
 
 
 
+<br>
+
 ### 장바구니 추가
 
 상품상세화면 html 페이지에서 **장바구니 추가**에 해당 기능을 수행하는 함수가 공개되는 경우, 해당 함수를 활용하며, 
 그렇지 않은 경우, 아래의 가이드를 따라주시기 바랍니다.
 
+장바구니 추가 이벤트를 추적하기 위해서 **bigin 장바구니 추가** 태그와 **addToCartTrg** 트리거를 사용합니다.
 
+<br>
 
-**상품상세화면 템플릿 수정**
+#### **템플릿 : 상품상세화면 템플릿 수정**
 
 <code>goods/goods_view.html</code>를 아래와 같이 수정합니다.
 
-~~~html
+~~~javascript
 {*** 상품상세화면 | goods/goods_view.php ***}
 { # header }
 <div class="content_box">
@@ -545,11 +559,11 @@ function(){
 
 
 
+<br>
 
+#### **태그 : addToCart**
 
-**태그 : addToCart**
-
-~~~html
+~~~javascript
 <script>
     (function(){
         bigin.event("bg:addToCart" , {{data}})
@@ -559,17 +573,24 @@ function(){
 
 
 
+<br>
 
 
-**트리거 : addToCartTrg**
 
-![godo-addToCartTrg](/Users/westlife/Desktop/godo-addToCartTrg.png)
+#### **트리거 : addToCartTrg**
+
+![godo-addToCartTrg](http://support.bigin.io/images/godo-addToCartTrg.png)
 
 
 
 ### 장바구니 조회
 
 
+
+장바구니 페이지 조회 시, 장바구니 담긴 상품들의 정보를 추적합니다.
+
+**bigin 장바구니 조회** 태그와 **cartTrg**트리거가 사용됩니다.	
+**cartTrg** 트리거는 맞춤 이벤트 형식으로 <code>cart</code>라는 이름을 사용합니다.
 
 **장바구니 템플릿 수정**
 
@@ -652,13 +673,19 @@ function(){
 
 
 
+<br>
+
 ### 장바구니 제거 
 
+장바구니에 담긴 상품의 제거 시, 해당 행동과 제거되는 상품의 정보를 추적합니다.	
+**bigin 장바구니 제거** 태그와 **removeCartTrg** 트리거가 사용됩니다.	
+**removeCartTrg** 트리거는 맞춤이벤트 형식의 트리거로써 <code>removeCart</code> 를 이벤트 이름으로 취합니다.
 
+<br>
 
-**장바구니 템플릿 수정**
+#### **템플릿 : 장바구니 템플릿 수정**
 
-```html
+```javascript
 {*** 장바구니 | front/order/cart.php ***}
 { # header }
 
@@ -731,11 +758,11 @@ function(){
 
 
 
+<br>
 
+#### **태그 : bigin 장바구니 제거**
 
-**태그 : bigin 장바구니 제거**
-
-```html
+```javascript
 <script>
     (function(){
         bigin.event("bg:removeCart" , {{data}})
@@ -743,9 +770,9 @@ function(){
 </script>
 ```
 
+<br>
 
-
-**트리거 : removeCartTrg**
+#### **트리거 : removeCartTrg**
 
 ![godo-removeCartTrg](/Users/westlife/Desktop/godo-removeCartTrg.png)
 
@@ -753,11 +780,13 @@ function(){
 
 ### 체크아웃 프로세스 시작
 
+장바구니 페이지에서 체크아웃 프로세스를 진행하는 경우, 	
+**bigin 체크아웃 step 0** 태그와 **checkoutStep0Trg** 트리거를 통해서 체크아웃 프로세스 추적을 진행합니다.	
+**checkoutStep0Trg**는 맞춤이벤트 형식의 트리거로써 <code>checkoutStep0</code> 이벤트이름으로 취합니다.
 
+#### **템플릿 : 장바구니 템플릿 수정**
 
-**장바구니 템플릿 수정**
-
-```html
+```javascript
 {*** 장바구니 | front/order/cart.php ***}
 { # header }
 
@@ -842,11 +871,11 @@ function(){
 
 
 
+<br>
 
+#### **태그 : bigin 체크아웃 step 0**
 
-**태그 : bigin 체크아웃 step 0**
-
-```html
+```javascript
 <script>
     (function(){
         bigin.event("bg:checkout" , {{data}})
@@ -856,21 +885,29 @@ function(){
 
 
 
-**트리거 : checkoutStep0Trg**
+<br>
+
+#### **트리거 : checkoutStep0Trg**
 
 ![godo-checkoutStep0Trg](/Users/westlife/Desktop/godo-checkoutStep0Trg.png)
 
 
 
-
+<br>
 
 ### 체크아웃 프로세스 추적
 
 
 
+체크아웃 프로세스에 진입한 후, 각 단계와 옵션 정보를 추적합니다.	
+체크아웃 프로세스 추적을 위해 **bigin 체크아웃 프로세스 추적** 태그와 **checkoutStepNTrg** 트리거를 사용되며,	
+**checkoutStepNTrg** 트리거는 요소클릭 형식의 트리거로 **clickVar** 변수를 사용합니다.
+
+
+
 **태그 : bigin 체크아웃 프로세스 추적**
 
-```html
+```javascript
 <script>
   (function(){
   	var checkedInput = document.querySelector("input[id*='settleKind']:checked");
@@ -888,7 +925,7 @@ function(){
 
 **트리거 : checkoutStepNTrg**
 
-![checkoutStepNTrg](/Users/westlife/Desktop/checkoutStepNTrg.png)
+![checkoutStepNTrg](http://support.bigin.io/images/godo-checkoutStepNTrg.png)
 
 
 
