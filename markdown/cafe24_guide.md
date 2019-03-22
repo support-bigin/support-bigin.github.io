@@ -24,51 +24,56 @@ bigin sdk를 cafe24 기반의 쇼핑몰에 설치하기 위해 아래의 방식�
 
 
 
-   - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접적으로 접근하여 필요한 데이터를 가져오는 방식입니다. 손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden div 태그 **를 추가하는 부분이 필요합니다.
+   - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접적으로 접근하여 필요한 데이터를 가져오는 방식입니다. 
+     손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden div 태그**를 추가하는 부분이 필요합니다.
 
       
 
    
 
-
+<span class="end-point"></span>
 
 ## 카페24 bigin sdk 설치하기 
 
 카페24는 모듈과 변수이라는 개념을 통해서 페이지의 템플릿, 스타일, 기능을 구현합니다.
+
 [카페24의 모듈과 변수에 대한 사전 지식](<https://sdsupport.cafe24.com/board/tip/read_intro.html?no=191&board_no=5>)을 숙지하신 후, bigin sdk 설치를 시작해주시기 바랍니다.
 
-//모듈은 html, css, javascript 등으로 구성되며, 모듈을 삽입함으로써 모듈이 제공하는 기능을 사용할 수 있게 됩니다.
+<span class="end-point"></span>
 
-
-
-### gtm 컨테이너 내려받기
+## gtm 컨테이너 내려받기
 
 [cafe24_container.json](http://support.bigin.io/data/container.json) 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 병합합니다.
+
 cafe24_container.json 파일은 bigin 기본 추적 스크립트의 삽입부터 모든 추적 코드들을 구현한 gtm 컨테이너입니다.
 
 gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설명은 [이곳](https://support.google.com/tagmanager/answer/6106997?hl=en)를 참조해주세요.
 
 
 
-### 구글 태그매니저 설치 
+<span class="end-point"></span>
+
+## 구글 태그매니저 설치 
 
 스마트 디자인 편집창을 열고 **기본 레이아웃**, **공통 레이아웃**에 **구글 태그매니저 스니펫**을 삽입합니다. 
-모든 페이지들은 **기본 레이아웃** 또는 **공통 레이아웃**, **팝업 레이아웃** 등의 레이아웃 내부에 위치합니다.  
+모든 페이지들은 **기본 레이아웃** 또는 **공통 레이아웃**, **팝업 레이아웃** 등의 레이아웃 내부에 위치합니다. 
 **구글 태그매니저 스니펫** 을 레이아웃의 html 에 삽입함으로써 모든 페이지에서 컨테이너의 정보를 가진 **gtm.js**에 접근할 수 있습니다. 
 
 [구글 태그 관리자 고객센터](https://support.google.com/tagmanager/answer/6103696?hl=ko) 또는 [구글 태그 관리자 개발가이드](https://developers.google.com/tag-manager/quickstart)에서 자세한 설치법을 알아보세요.
 
 
 
-### 기본 추적 스크립트 삽입
+<span class="end-point"></span>
+
+## 기본 추적 스크립트 삽입
 
 #### 추적 코드 스니펫
 
-[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"cafe24 bigin 삽입"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **cafe24 bigin 삽입** 태그의 내용은 아래와 같습니다.
+[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin 삽입"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **bigin 삽입** 태그의 내용은 아래와 같습니다.
 
 
 
-```html
+```javascript
 <script>
 (function() {
     var biginScript = document.createElement('script');
@@ -92,17 +97,18 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-**cafe24 bigin 삽입** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다..
+**bigin 삽입** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다..
 
 
 
-
+<span class="end-point"></span>
 
 ## 고유 사용자 식별
 
 1. **"Layout_stateLogon"** 모듈과 2. **"Layout_statelogoff"** 모듈을 통해서 사용자의 로그인 유무를 판별할 수 있습니다. 
 
 로그인 상태가 유지되는 상황에서는 **"Layout_stateLogon"**이 활성화되어 **"Layout_stateLogon"** 모듈의 UI가 출력되고 해당 기능을 활용할 수 있습니다. 
+
 반대로 로그아웃인 상태에선 **"Layout_statelogoff"** 가 활성화되며 **"Layout_stateLogoff"** 모듈의 UI와 기능이 사용됩니다.
 
 **Layout_stateLogon** 모듈 내부에 **로그인 사용자 정보**를 기록한 **hidden div 태그** 들을 추가합니다. 
@@ -114,11 +120,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-#### Layout_stateLogon 모듈 수정 
+#### 모듈 : Layout_stateLogon 모듈 수정 
 
 메인 레이아웃, 공통 레이아웃의 **Layout_stateLogon** 모듈을 아래와 같이 수정합니다. 
 
-```html
+```javascript
 <div module="Layout_stateLogon">
 	<a href="/member/modify.html">회원정보수정</a>
 	<a href="{$action_logout}" class="log">로그아웃</a>  
@@ -136,18 +142,9 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-#### 로그인 사용자 식별을 위한 gtm 컨테이너 구성 
+#### **태그 : bigin 로그인** 
 
-**"bigin 로그인"** 태그와 **"LayoutStateLogonExistingTrg"** 트리거가 사용됩니다.
-
-**" bigin 로그인"** 태그는 DOM scraping 과 bigin 로그인 사용자 식별을 수행하는 코드로 구성되며, 
-**"LayoutStateLogonExistingTrg"** 트리거는 **모든 페이지뷰**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
-
- 
-
- **태그 : cafe24 bigin 로그인** 
-
-~~~html
+~~~javascript
 <script>
 	function biginLoad(biginUser) {
 	    var timer = 0;
@@ -191,13 +188,15 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
- **트리거 : LayoutStateLogonExistingTrg** 
+#### **트리거 : LayoutStateLogonExistingTrg** 
+
+**"LayoutStateLogonExistingTrg"** 트리거는 **모든 페이지뷰**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
 
 ![loginTrg](http://support.bigin.io/images/cafe24-loginTri.png)
 
 
 
- **변수 : LayoutStateLogonExistingVar** 
+#### **변수 : LayoutStateLogonExistingVar** 
 
 맞춤 자바스크립트 유형의 변수를 사용합니다. 
 
@@ -215,24 +214,24 @@ function(){
 }
 ~~~
 
-
+<br><br>
 
 ### 로그아웃 추적  
 
+<br>
 
+<br>
 
-#### 로그아웃 추적을 위한 gtm 컨테이너 구성 
+로그아웃 추적을 위해서 **"bigin 로그아웃"** 태그와 **"logoutButtonClickedTrg"** 트리거가 사용됩니다.
 
-**"cafe24 bigin 로그아웃"** 태그와 **"logoutButtonClickedTrg"** 트리거가 사용됩니다.
-
-**"cafe24 bigin 로그아웃"** 태그는 즉시실행함수의 형태로 bigin 로그아웃 추적 코드를 실행합니다.
+**"bigin 로그아웃"** 태그는 즉시실행함수의 형태로써 bigin 로그아웃 추적 코드를 실행합니다.
 **"logoutButtonClickedTrg"** 트리거는 **클릭 - 모든 요소**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
 
  
 
- **태그 : cafe24 bigin 로그아웃** 
+####  **태그 : bigin 로그아웃** 
 
-```html
+```javascript 
 <script>
   (function(){
   	bigin.user("logout")
@@ -242,13 +241,13 @@ function(){
 
 
 
- **트리거 : logoutTrg** 
+#### **트리거 : logoutTrg** 
 
 ![cafe24-logoutTrg](http://support.bigin.io/images/cafe24-logoutTrg.png)
 
 
 
- **변수 : clickVar** 
+#### **변수 : clickVar** 
 
 맞춤 자바스크립트 유형의 변수를 사용합니다. 
 
@@ -266,7 +265,7 @@ function(){
 
 
 
-
+<span class="end-point"></span>
 
 ## 이커머스 추적 
 
@@ -281,64 +280,73 @@ function(){
 
 
 
-**상품목록 템플릿 수정** 
+cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다. 
 
-고도몰의 상품 리스트 페이제이 게재되는 상품들에 대한 치환코드는  보통 <code>goods/list/list-[seq]</code> 페이지에 기록되어 있습니다.
-<code>goods/list/list-[seq]</code> 페이지를 아래와 같이 수정해주세요.
+| 페이지           | 모듈명                                 |
+| ---------------- | -------------------------------------- |
+| 메인페이지       | product_listmain_[seq]                 |
+| 상품 분류 페이지 | product_listrecommend (추천 상품 목록) |
+| 상품 분류 페이지 | product_listnew (신상품 목록)          |
+| 상품 분류 페이지 | product_listnormal (일반상품 목록)     |
+| 검색 결과 페이지 | search_result (상품 검색 결과 목록)    |
+| 상품 상세 페이지 | product_relation (관련 상품 목록)      |
 
-~~~html
-{*** 갤러리형 | goods/list/list_01.html ***}
-<div class="item_gallery_type">
-    <!--{ ? goodsList }-->
-    <ul>
-        <!--{ @ goodsList }-->
-        <!--{ @ .value_ }-->
-        <li>
-            <div class="item_cont">
-                <div class="item_photo_box">
-                    <a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}"target="_blank">
-                        {..goodsImage}
-                    </a>
-                </div>
-                <div class="item_info_cont">
-                    <div class="item_tit_box">
-                        <span class="item_brand">
-                            <strong>[{..brandNm}]</strong>
-                            {..makerNm}
-                        </span>
-                        <a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}">
-                            <strong class="item_name">{..goodsNm}</strong>
-                            <span class="item_name_explain">{..shortDescription}</span>
+
+
+#### 모듈 : 상품 목록 모듈 수정 
+
+상품 목록 모듈의 html은 <code>ui</code> 태그 내부에 두 개의 <code>li</code> 태그들을 가집니다.
+두 <code>li</code> 태그 내부에 상품 데이터를 바인딩한 태그들을 아래와 같이 추가해줍니다. 
+
+```javascript
+<div module="상품 목록 모듈" class="ec-base-product">
+        <ul class="prdList grid2">
+            <li id="anchorBoxId_{$product_no}">
+                <div class="thumbnail">
+                    <div class="prdImg">
+                        <a href="{$link_product_detail}">
+                            <img src="{$image_medium}" id="{$image_medium_id}"/>
                         </a>
                     </div>
-                    <div class="item_money_box">
-                        <strong class="item_price">
-                            {..goodsPriceString}
-                        </strong>
+                </div>
+                
+ 				<!--  코드 추가 start -->               
+                <div class="bigin-product" style="display:none;">
+	                <div class="bigin-product-id" style="display:none;">"{$product_no}"</div>
+    	            <div class="bigin-product-name" style="display:none;">"{$product_name}"</div>
+        	        <div class="bigin-product-price" style="display:none;">"{$product_price}"</div>
+            	    <div class="bigin-product-brand" style="display:none;">"{$prd-brand}"</div>                                    
+                    <div class="bigin-product-thumbnail" style="display:none;">"{$image_medium}"</div>
+                </div>
+ 				<!--  코드 추가 end -->                               
+            </li>
+            <li id="anchorBoxId_{$product_no}">
+                <div class="thumbnail">
+                    <div class="prdImg">
+                        <a href="{$link_product_detail}">
+                            <img src="{$image_medium}" id="{$image_medium_id}"/>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <!------ bigin sdk Start  ------>
-            <div class="bigin-product" style="display:none;">
-				<div class="bigin-product-id" style="display:none;">{..goodsNo}</div>
-				<div class="bigin-product-image" style="display:none;">{..goodsImage}</div>
-				<div class="bigin-product-price" style="display:none;">{..goodsPrice}</div>
-				<div class="bigin-product-name" style="display:none;">{..goodsNm}</div>
-				<div class="bigin-product-brand" style="display:none;">{..brandNm}</div>
-            </div>
-            <!------ bigin sdk End  ------>            
-        </li>
-    </ul>
-</div>
-<!-- //item_gallery_type -->
+ 				<!--  코드 추가 start -->                   
+				<div class="bigin-product" style="display:none;">
+	                <div class="bigin-product-id" style="display:none;">"{$product_name}"</div>
+    	            <div class="bigin-product-name" style="display:none;">"{$product_name}"</div>
+        	        <div class="bigin-product-price" style="display:none;">"{$product_price}"</div>
+            	    <div class="bigin-product-brand" style="display:none;">"{$prd-brand}"</div>                                    
+                    <div class="bigin-product-thumbnail" style="display:none;">"{$image_medium}"</div>
+                </div>
+ 				<!--  코드 추가 end -->                   
+            </li>
+        </ul>
+    </div>
+```
 
-~~~
+<br><br>
 
+#### **태그 : bigin 상품링크클릭**
 
-
-**태그 : bigin 상품링크클릭**
-
-~~~html
+```javascript
 <script>
   (function(){
     var biginProductContainer;
@@ -367,19 +375,19 @@ function(){
     
   })()
 </script>
-~~~
+```
 
-
+<br><br>
 
 **트리거 : impressionTrg**
 
 ![impressionTrg](http://support.bigin.io/images/cafe24-impressionTrg.png)
 
+<br><br>
 
+#### **변수 : clickVar**
 
-변수 : clickVar
-
-~~~javascript
+```javascript
 function(){
 	var flag = false;
   	var regexProductDetail = new RegExp(/product\/.*?\/[0-9]+.*/);
@@ -392,15 +400,19 @@ function(){
     
 	return flag;
 }
-~~~
+```
+
+<br><br>
+
+### 제품의 노출
+
+**제품 상세 페이지**의 조회 시에 노출되는 제품의 상세정보들을 추적합니다. 
 
 
 
+#### **태그 : viewProduct**
 
-
-**태그 : viewProduct**
-
-~~~html
+~~~javascript
 <script>
   var callViewProduct = function(){
   	var biginProduct = {};
@@ -439,21 +451,31 @@ function(){
 </script>
 ~~~
 
+<br>
 
+<br>
 
-**트리거 : viewProductTrg**
+#### **트리거 : viewProductTrg**
 
 ![viewProductTrg](http://support.bigin.io/images/cafe24-viewProductTrg.png)
 
-**일부 페이지뷰** 유형의 트리거를 사용하며, <code>path name</code> 의 값을 통해서 페이지 식별을 함.
+**일부 페이지뷰** 유형의 트리거를 사용하며, <code>path name</code> 의 변수를 정규표현식을 활용해 페이지 식별을 합니다.
 
 
+
+<br>
 
 ### 장바구니 추가
 
-**태그 : bigin 장바구니 추가**
+상품 상세페이지에서 선택 상품을 장바구니에 추가 시, 해당 행동과 상품 정보를 추적합니다.	
+**bigin 장바구니 추가** 태그과 **addToCartTrg** 트리거가 사용됩니다. 	
+그리고 **addToCartTrg**는 요소 클릭 유형의 트리거로써, **clickVar** 변수를 활용합니다.
 
-~~~html
+<br>
+
+#### **태그 : bigin 장바구니 추가**
+
+~~~javascript
 <script>
 	(function(){
       	var biginProductList = [];
@@ -488,19 +510,49 @@ function(){
 </script>
 ~~~
 
+<br>
 
-
-**트리거 : addToCartTrg**
+#### **트리거 : addToCartTrg**
 
 ![addToCartTrg](http://support.bigin.io/images/cafe24-addToCartTrg.png)
 
 
 
-### 장바구니 갱신
+<br>
 
-**태그 : bigin 장바구니 갱신**
+#### **변수 : clickVar**
 
-~~~html
+```javascript
+function(){
+	var flag = false;
+  	var regexProductDetail = new RegExp(/product\/.*?\/[0-9]+.*/);
+  
+    // 상품 링크 클릭 
+	if({{Click Classes}}.indexOf("장바구니 버튼 태그 클래스명") > -1)){
+    	console.log('장바구니 추가 버튼 클릭 : ' + {{Click URL}});      
+    	flag = 'addToCart';
+    }  
+    
+	return flag;
+}
+```
+
+<br><br>
+
+
+
+
+
+### 장바구니 조회
+
+장바구니 페이지 조회 시, 장바구니에 담긴 상품 정보들을 추적합니다. 	
+**bigin 장바구니 조회** 태그과 **cartTrg** 트리거가 사용됩니다.
+
+<br>
+
+#### **태그 : bigin 장바구니 조회**
+
+~~~javascript
 <script>
   var callBiginCart = function(){
     var biginProductList = [];
@@ -521,14 +573,11 @@ function(){
   }
   
 	if(document.readyState != 'complete'){
-      	console.log("document.readyState != complete // in cart");      
     	window.addEventListener("load", function(){
-      	console.log("window.onload // in cart");                
 			callBiginCart();
         })
     }
  	else{
-      	console.log("document.readyState == complete // in cart");
     	callBiginCart();
     }
 </script>
@@ -536,21 +585,29 @@ function(){
 
 
 
-**트리거 : cartTrg**
+<br>
+
+#### **트리거 : cartTrg**
 
 ![cartTrg](http://support.bigin.io/images/cafe24-cartTrg.png)
 
 
 
+"장바구니 조회" 을 추적하기 위해 **일부 페이지뷰** 유형의 트리거를 사용하며, 장바구니 페이지의 <code>path name</code> 의 값을 정규표현식을 통해 식별합니다.
 
+<br>
 
 ### 장바구니 제거 
 
+장바구니에서 제거되는 상품의 정보를 추적합니다.
+**bigin 장바구니 제거** 태그과 **removeCartTrg** 트리거가 사용됩니다.	
+**removeCartTrg** 트리거는 요소 클릭 유형의 트리거로 **clickVar** 변수가 사용됩니다.
 
+<br>
 
-**태그 : bigin 장바구니 제거**
+#### **태그 : bigin 장바구니 제거**
 
-~~~html
+~~~javascript
 <script>
 	(function(){
 		var biginSelectedProductList = [];
@@ -571,21 +628,42 @@ function(){
 </script>
 ~~~
 
+<br>
 
-
-**트리거 : removeCartTrg**
+#### **트리거 : removeCartTrg**
 
 ![removeCartTrg](http://support.bigin.io/images/cafe24-removeCartTrg.png)
 
+<br>
 
+#### **변수 : clickVar**
+
+```javascript
+function(){
+	var flag = false;
+  	var regexProductDetail = new RegExp(/product\/.*?\/[0-9]+.*/);
+  
+    // 상품 링크 클릭 
+	if({{Click Classes}}.indexOf("장바구니 상품 삭제 버튼 태그 클래스명") > -1)){
+    	console.log('장바구니 상품 삭제 버튼 클릭 : ' + {{Click Classes}});      
+    	flag = 'removeCart';
+    }  
+    
+	return flag;
+}
+```
+
+<br>
 
 ### 체크아웃 프로세스 시작
 
+장바구니 페이지에서 체크아웃 프로세스를 진행하는 경우, 	
+**bigin 체크아웃 step 0** 태그와 **checkoutStep0Trg** 트리거를 통해서 체크아웃 프로세스 추적을 진행합니다.	
+**checkoutStep0Trg**는 요소 클릭 형식의 트리거로써 **clickVar** 변수를 사용합니다.
 
+#### **태그 : bigin 체크아웃 step 0**
 
-**태그 : bigin 체크아웃 step 0**
-
-~~~html
+~~~javascript
 <script> 
 	(function(){
 		var biginSelectedProductList = [];
@@ -610,21 +688,42 @@ function(){
 
 
 
-**트리거 : checkoutStep0Trg**
+#### **트리거 : checkoutStep0Trg**
 
-![checkoutStep0Trg](/Users/westlife/Desktop/checkoutStep0Trg.png)
-
-
+![checkoutStep0Trg](http://support.bigin.io/images/cafe24-checkoutStep0Trg.png)
 
 
+
+<br>
+
+#### **변수 : clickVar**
+
+```javascript
+function(){
+	var flag = false;
+  	var regexProductDetail = new RegExp(/product\/.*?\/[0-9]+.*/);
+  
+    // 상품 링크 클릭 
+	if({{Click Classes}}.indexOf("구매하기 버튼 태그 클래스명") > -1)){
+    	console.log('구매하기 버튼 클릭 : ' + {{Click Classes}});      
+    	flag = 'checkoutStep0';
+    }  
+    
+	return flag;
+}
+```
+
+<br>
 
 ### 체크아웃 프로세스 추적
 
+체크아웃 프로세스에 진입한 후, 각 단계와 옵션 정보를 추적합니다.	
+체크아웃 프로세스 추적을 위해 **bigin 체크아웃 프로세스 추적** 태그와 **checkoutStepNTrg** 트리거를 사용되며,	
+**checkoutStepNTrg** 트리거는 요소클릭 형식의 트리거로 **clickVar** 변수를 사용합니다.
 
+#### **태그 : bigin 체크아웃 프로세스 추적**
 
-**태그 : bigin 체크아웃 프로세스 추적**
-
-~~~html
+~~~javascript
 <script>
   (function(){
   	var checkedInput = document.querySelector("input[id*='addr_paymethod']:checked");
@@ -640,13 +739,32 @@ function(){
 
 
 
-**트리거 : checkoutStepNTrg**
+#### **트리거 : checkoutStepNTrg**
 
 ![checkoutStepNTrg](http://support.bigin.io/images/cafe24-checkoutStepNTrg.png)
 
 
 
+<br>
 
+#### **변수 : clickVar**
+
+```javascript
+function(){
+	var flag = false;
+  	var regexProductDetail = new RegExp(/product\/.*?\/[0-9]+.*/);
+  
+    // 상품 링크 클릭 
+	if({{Click Classes}}.indexOf("구매하기 버튼 태그 클래스명") > -1)){
+    	console.log('구매하기 버튼 클릭 : ' + {{Click Classes}});      
+    	flag = 'checkoutStep1';
+    }  
+    
+	return flag;
+}
+```
+
+<br>
 
 ### 제품 구매 완료
 
@@ -659,13 +777,15 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 | order_oversearesultlist (주문완료페이지 해외배송상품)    |
 | order_giftresultlist (주문완료페이지 상은품 리스트)      |
 
-주문 상품 목록 모듈 수정 
+<br>
+
+#### 모듈 : 주문 상품 목록 모듈 수정 
 
 주문된 상품의 데이터를 DOM scraping 방식으로 가져오기 위하여 아래와 같은 방식으로 모듈의 html 을 수정해야합니다.
 
 
 
-~~~html
+~~~javascript
 <tbody module="Order_normalresultlist">
                 <tr>
                     <td class="thumb">
@@ -727,7 +847,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 
 
-~~~html
+~~~javascript
 <div module="Order_result">
     // ....
     
@@ -752,11 +872,11 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 </div>
 ~~~
 
+<br>
 
+#### **태그 : bigin 구매안료**
 
-**태그 : bigin 구매안료**
-
-~~~html
+~~~javascript
 <script>
     (function(){
         bigin.event("bg:purchase" , {{data}})
@@ -764,23 +884,27 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 </script>
 ~~~
 
+<br>
 
-
-**트리거 : purchaseTrg**
+#### **트리거 : purchaseTrg**
 
 ![purchaseTrg](http://support.bigin.io/images/cafe24-purchaseTrg.png)
 
 
 
-
+<br>
 
 ### 제품의 환불
 
+거래된 제품의 환불을 추적합니다. 	
+**bigin 환불** 태그와 **refundTrg** 트리거를 사용합니다. 	
+**refundTrg** 트리거는 요소 클릭 형식의 트리거로써, **clickVar** 변수를 사용합니다.
 
+<br>
 
-**태그 : bigin 환불**
+#### **태그 : bigin 환불**
 
-~~~html
+~~~javascript
 <script>
   (function(){
     var orderId;
@@ -802,10 +926,31 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 
 
+<br>
 
+#### **트리거 : refundTrg**
 
-**트리거 : refundTrg**
+![refundTrg](http://support.bigin.io/images/cafe24-refundTrg.png)
 
-![refundTrg](http://support.bigin.io/image/cafe24-refundTrg.png)
+<br>
 
+#### **변수 : clickVar**
 
+```javascript
+function(){
+	var flag = false;
+  	var regexProductDetail = new RegExp(/product\/.*?\/[0-9]+.*/);
+  
+    // 상품 링크 클릭 
+	if({{Click Classes}}.indexOf("구매 취소 태그 클래스명") > -1)){
+    	console.log('구매 취소 태그 클릭 : ' + {{Click Classes}});      
+    	flag = 'refund';
+    }  
+    
+	return flag;
+}
+```
+
+<br>
+
+<span class="end-point"></span>

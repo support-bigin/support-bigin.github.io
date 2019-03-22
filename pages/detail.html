@@ -265,6 +265,9 @@
       * 해당 엘리먼트와 viewport 상단과의 거리를 의미함.
       */
       h2Elements.forEach(function (i, index) {
+        // console.log($(h2Elements[0]).offset().top);
+        // console.log($(".inner-content").scrollTop())
+        console.log($(".inner-content").scrollTop() - endPoints[0]);
         if ($(i).offset().top < 50 && $(".inner-content").scrollTop() - endPoints[index] > 50) {
           h2Offsets[index] = 1000000000000;
         } else {
@@ -290,7 +293,7 @@
 
       blockBodyScroll();
 
-      console.log(h2Offsets);
+      // console.log(h2Offsets);
     }
 
     // mobile version

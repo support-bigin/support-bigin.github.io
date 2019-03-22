@@ -293,73 +293,66 @@ function(){
 
 
 
-cafe24는 상품 리스트에 관한 모듈들이 있습니다. 
-
-| 페이지           | 모듈명                                 |
-| ---------------- | -------------------------------------- |
-| 메인페이지       | product_listmain_[seq]                 |
-| 상품 분류 페이지 | product_listrecommend (추천 상품 목록) |
-| 상품 분류 페이지 | product_listnew (신상품 목록)          |
-| 상품 분류 페이지 | product_listnormal (일반상품 목록)     |
-| 검색 결과 페이지 | search_result (상품 검색 결과 목록)    |
-| 상품 상세 페이지 | product_relation (관련 상품 목록)      |
 
 
+**상품목록 템플릿 수정** 
 
-상품 목록 모듈 수정 
+고도몰의 상품 리스트 페이제이 게재되는 상품들에 대한 치환코드는  보통 <code>goods/list/list-[seq]</code> 페이지에 기록되어 있습니다.
+<code>goods/list/list-[seq]</code> 페이지를 아래와 같이 수정해주세요.
 
-상품 목록 모듈의 html은 <code>ui</code> 태그 내부에 두 개의 <code>li</code> 태그들을 가집니다.
-두 <code>li</code> 태그 내부에 상품 데이터를 바인딩한 태그들을 아래와 같이 추가해줍니다. 
-
-```html
-<div module="상품 목록 모듈" class="ec-base-product">
-        <ul class="prdList grid2">
-            <li id="anchorBoxId_{$product_no}">
-                <div class="thumbnail">
-                    <div class="prdImg">
-                        <a href="{$link_product_detail}">
-                            <img src="{$image_medium}" id="{$image_medium_id}"/>
+```javascript
+{*** 갤러리형 | goods/list/list_01.html ***}
+<div class="item_gallery_type">
+    <!--{ ? goodsList }-->
+    <ul>
+        <!--{ @ goodsList }-->
+        <!--{ @ .value_ }-->
+        <li>
+            <div class="item_cont">
+                <div class="item_photo_box">
+                    <a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}"target="_blank">
+                        {..goodsImage}
+                    </a>
+                </div>
+                <div class="item_info_cont">
+                    <div class="item_tit_box">
+                        <span class="item_brand">
+                            <strong>[{..brandNm}]</strong>
+                            {..makerNm}
+                        </span>
+                        <a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}">
+                            <strong class="item_name">{..goodsNm}</strong>
+                            <span class="item_name_explain">{..shortDescription}</span>
                         </a>
                     </div>
-                </div>
-                
- 				<!--  코드 추가 start -->               
-                <div class="bigin-product" style="display:none;">
-	                <div class="bigin-product-id" style="display:none;">"{$product_no}"</div>
-    	            <div class="bigin-product-name" style="display:none;">"{$product_name}"</div>
-        	        <div class="bigin-product-price" style="display:none;">"{$product_price}"</div>
-            	    <div class="bigin-product-brand" style="display:none;">"{$prd-brand}"</div>                                    
-                    <div class="bigin-product-thumbnail" style="display:none;">"{$image_medium}"</div>
-                </div>
- 				<!--  코드 추가 end -->                               
-            </li>
-            <li id="anchorBoxId_{$product_no}">
-                <div class="thumbnail">
-                    <div class="prdImg">
-                        <a href="{$link_product_detail}">
-                            <img src="{$image_medium}" id="{$image_medium_id}"/>
-                        </a>
+                    <div class="item_money_box">
+                        <strong class="item_price">
+                            {..goodsPriceString}
+                        </strong>
                     </div>
                 </div>
- 				<!--  코드 추가 start -->                   
-				<div class="bigin-product" style="display:none;">
-	                <div class="bigin-product-id" style="display:none;">"{$product_name}"</div>
-    	            <div class="bigin-product-name" style="display:none;">"{$product_name}"</div>
-        	        <div class="bigin-product-price" style="display:none;">"{$product_price}"</div>
-            	    <div class="bigin-product-brand" style="display:none;">"{$prd-brand}"</div>                                    
-                    <div class="bigin-product-thumbnail" style="display:none;">"{$image_medium}"</div>
-                </div>
- 				<!--  코드 추가 end -->                   
-            </li>
-        </ul>
-    </div>
+            </div>
+            <!------ bigin sdk Start  ------>
+            <div class="bigin-product" style="display:none;">
+				<div class="bigin-product-id" style="display:none;">{..goodsNo}</div>
+				<div class="bigin-product-image" style="display:none;">{..goodsImage}</div>
+				<div class="bigin-product-price" style="display:none;">{..goodsPrice}</div>
+				<div class="bigin-product-name" style="display:none;">{..goodsNm}</div>
+				<div class="bigin-product-brand" style="display:none;">{..brandNm}</div>
+            </div>
+            <!------ bigin sdk End  ------>            
+        </li>
+    </ul>
+</div>
+<!-- //item_gallery_type -->
+
 ```
 
 
 
-**태그 : cafe24 bigin 상품링크클릭**
+**태그 : bigin 상품링크클릭**
 
-```html
+```javascript
 <script>
   (function(){
     var biginProductContainer;
@@ -394,7 +387,7 @@ cafe24는 상품 리스트에 관한 모듈들이 있습니다.
 
 **트리거 : impressionTrg**
 
-![impressionTrg](/Users/westlife/Desktop/impressionTrg.png)
+![impressionTrg](http://support.bigin.io/images/cafe24-impressionTrg.png)
 
 
 
@@ -410,24 +403,10 @@ function(){
     	console.log('상품 링크 클릭 : ' + {{Click URL}});      
     	flag = 'impression';
     }  
-  
-  	// 로그아웃 버튼의 클래스 명  
-  	if({{Click Classes}}.indexOf("btnLogout") > -1){
-    	console.log('로그아웃 버튼 클릭 : ' + {{Click Classes}});
-		flag = 'logout';
-    }
     
 	return flag;
 }
 ```
-
-
-
-
-
-### 제품의 노출
-
-**제품 상세 페이지**의 조회 시에 노출되는 제품의 상세정보들을 추적합니다. 
 
 
 
