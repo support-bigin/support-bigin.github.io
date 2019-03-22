@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/markdown/cafe24_guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/cafe24_guide.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/markdown/godomall_guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/godomall_guide.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -281,12 +280,12 @@
       <workItem from="1553043807775" duration="2071000" />
       <workItem from="1553127418253" duration="986000" />
       <workItem from="1553169516597" duration="97000" />
-      <workItem from="1553215317854" duration="2624000" />
+      <workItem from="1553215317854" duration="3174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241539000" />
+    <option name="totallyTimeSpent" value="242089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1064" y="-1057" width="1909" height="1057" extended-state="0" />

@@ -929,15 +929,37 @@ function(){
 
 
 
+<br>
 
+#### **변수 : clickVar**
+
+```javascript
+function(){
+	var flag = false;
+  	var regexProductDetail = new RegExp(/product\/.*?\/[0-9]+.*/);
+  
+    // 상품 링크 클릭 
+	if({{Click Classes}}.indexOf("구매하기 버튼 태그 클래스명") > -1)){
+    	console.log('구매하기 버튼 클릭 : ' + {{Click Classes}});      
+    	flag = 'checkoutStepN';
+    }  
+    
+	return flag;
+}
+```
+
+<br>
 
 ### 제품 구매 완료
 
-**구매완료 페이지 수정**
+고도몰 기반의 쇼핑몰은 구매 완료페이지에서 구매 상품에 대한 정보가 노출되지 않습니다.
+그 대신 **hidden input** 형식으로 제한된 상품 정보들만 제공됩니다. 
+
+#### **템플릿 : 구매완료 페이지 수정**
 
 페이지 상단 또는 하단에 아래의 스크립트를 추가해주세요.
 
-~~~html
+~~~javascript
 <script>
 	function callBiginPurchase(){
 		var data = {};
@@ -992,11 +1014,7 @@ function(){
 
 
 
-주문된 상품의 데이터를 DOM scraping 방식으로 가져오기 위하여 아래와 같은 방식으로 모듈의 html 을 수정해야합니다.
-
-
-
-**태그 : bigin 구매안료**
+#### **태그 : bigin 구매안료**
 
 ```html
 <script>
@@ -1008,9 +1026,9 @@ function(){
 
 
 
-**트리거 : purchaseTrg**
+#### **트리거 : purchaseTrg**
 
-![purchaseTrg](/Users/westlife/Desktop/purchaseTrg.png)
+![purchaseTrg](http://support.bigin.io/images/godo-purchaseTrg.png)
 
 
 
@@ -1023,9 +1041,9 @@ function(){
 
 
 
-**태그 : bigin 환불**
+#### **태그 : bigin 환불**
 
-```html
+```javascript
 <script>
   (function(){
     var orderId;
@@ -1048,9 +1066,9 @@ function(){
 
 
 
-**트리거 : refundTrg**
+#### **트리거 : refundTrg**
 
-![refundTrg](/Users/westlife/Desktop/refundTrg.png)
+![refundTrg](http://support.bigin.io/images/refundTrg.png)
 
 
 
