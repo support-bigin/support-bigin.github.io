@@ -39,6 +39,10 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
+<span class="end-point"></span>
+
+<br>
+
 ## 구글 태그매니저 설치 
 
 고도몰 관리자페이지에 접속한 후, **레이아웃의 페이지 소스** 내부에 **구글 태그매니저 스니펫**을 삽입합니다.	
@@ -470,7 +474,7 @@ function(){
 
 #### **태그 : viewProduct**
 
-~~~html
+~~~javascript
 <script>
     (function(){
         bigin.event("bg:viewProduct", {{data}})
@@ -581,7 +585,7 @@ function(){
 
 ![godo-addToCartTrg](http://support.bigin.io/images/godo-addToCartTrg.png)
 
-
+<br>
 
 ### 장바구니 조회
 
@@ -592,9 +596,9 @@ function(){
 **bigin 장바구니 조회** 태그와 **cartTrg**트리거가 사용됩니다.	
 **cartTrg** 트리거는 맞춤 이벤트 형식으로 <code>cart</code>라는 이름을 사용합니다.
 
-**장바구니 템플릿 수정**
+#### **템플릿 : 장바구니 템플릿 수정**
 
-~~~html
+~~~javascript
 {*** 장바구니 | front/order/cart.php ***}
 { # header }
 
@@ -653,11 +657,11 @@ function(){
 
 
 
+<br>
 
+#### **태그 : bigin 장바구니 **
 
-**태그 : bigin 장바구니 **
-
-```html
+```javascript
 <script>
     (function(){
         bigin.event("bg:cart" , {{data}})
@@ -665,11 +669,11 @@ function(){
 </script>
 ```
 
+<br>
 
+#### **트리거 : cartTrg**
 
-**트리거 : cartTrg**
-
-![godo-cartTrg](/Users/westlife/Desktop/godo-cartTrg.png)
+![godo-cartTrg](http://support.bigin.io/images/godo-cartTrg.png)
 
 
 
@@ -1016,7 +1020,7 @@ function(){
 
 #### **태그 : bigin 구매안료**
 
-```html
+```javascript
 <script>
     (function(){
         bigin.event("bg:purchase" , {{data}})
@@ -1068,11 +1072,11 @@ function(){
 
 #### **트리거 : refundTrg**
 
-![refundTrg](http://support.bigin.io/images/refundTrg.png)
+![refundTrg](http://support.bigin.io/images/godo-refundTrg.png)
 
 
 
-
+<span class="end-point"></span>
 
 
 
