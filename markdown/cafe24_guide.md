@@ -2,7 +2,7 @@
 
 ## 시작하기
 
-bigin sdk를 임대형 쇼핑몰 (cafe24, 고도몰, 메이크샵, 위사 등)에 설치하기 위해 아래의 방식들을 사용합니다. 
+bigin sdk를 cafe24 기반의 쇼핑몰에 설치하기 위해 아래의 방식들을 사용합니다. 
 
 1. **구글 태그매니저** 
 
@@ -10,20 +10,21 @@ bigin sdk를 임대형 쇼핑몰 (cafe24, 고도몰, 메이크샵, 위사 등)�
 
 2. **DOM scraping 방식**
 
-   - 임대형 쇼핑몰의 특성 상, 데이터 처리에 관여하는 비즈니스 로직을 공개하지 않는 경우가 있습니다.
+   - cafe24 기반의 쇼핑몰의 특성 상, 데이터 처리에 관여하는 비즈니스 로직을 공개하지 않는 경우가 있습니다.
 
-   - ​	1) **상품리스트** 페이지에서의 **상품 데이터 조회**,  
+     ​	1) **상품리스트** 페이지에서의 **상품 데이터 조회**,  
 
      ​	2) **게시판** 페이지에서 **게시글 정보 생성**
 
      ​	3) 상품 주문 시, **결제 정보 생성** 등
 
-     과 같은 비즈니스 로직은 관리자페이지에서 접근 할 수 없는 임대형 쇼핑몰이 존재합니다.
+     과 같은 비즈니스 로직은 관리자페이지에서 접근 할 수 없는 경우가 존재합니다.
      이와 같은 경우에 **DOM scraping** 방식을 사용합니다.
+
 
    
 
-   - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접적으로 접근하여 필요한 데이터를 가져오는 방식입니다. 손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden input 방식**의 추가적인 코드 설치가 필요합니다.
+   - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접적으로 접근하여 필요한 데이터를 가져오는 방식입니다. 손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden div 태그 **를 추가하는 부분이 필요합니다.
 
       
 
@@ -33,7 +34,8 @@ bigin sdk를 임대형 쇼핑몰 (cafe24, 고도몰, 메이크샵, 위사 등)�
 
 ## 카페24 bigin sdk 설치하기 
 
-//카페24는 **모듈**이라는 기능을 통해서 쇼핑몰의 기존적인 UI와 비즈니스 로직을 구성합니다. 
+카페24는 모듈과 변수이라는 개념을 통해서 페이지의 템플릿, 스타일, 기능을 구현합니다.
+[카페24의 모듈과 변수에 대한 사전 지식](<https://sdsupport.cafe24.com/board/tip/read_intro.html?no=191&board_no=5>)을 숙지하신 후, bigin sdk 설치를 시작해주시기 바랍니다.
 
 //모듈은 html, css, javascript 등으로 구성되며, 모듈을 삽입함으로써 모듈이 제공하는 기능을 사용할 수 있게 됩니다.
 
@@ -58,7 +60,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-### 기본 추적 스크립트 삽입 - 카페24
+### 기본 추적 스크립트 삽입
 
 #### 추적 코드 스니펫
 
@@ -136,9 +138,9 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 로그인 사용자 식별을 위한 gtm 컨테이너 구성 
 
-**"cafe24 bigin 로그인"** 태그와 **"LayoutStateLogonExistingTrg"** 트리거가 사용됩니다.
+**"bigin 로그인"** 태그와 **"LayoutStateLogonExistingTrg"** 트리거가 사용됩니다.
 
-**"cafe24 bigin 로그인"** 태그는 DOM scraping 과 bigin 로그인 사용자 식별을 수행하는 코드로 구성되며, 
+**" bigin 로그인"** 태그는 DOM scraping 과 bigin 로그인 사용자 식별을 수행하는 코드로 구성되며, 
 **"LayoutStateLogonExistingTrg"** 트리거는 **모든 페이지뷰**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
 
  
@@ -219,10 +221,6 @@ function(){
 
 
 
-#### Layout_stateLogon 모듈 수정 
-
-
-
 #### 로그아웃 추적을 위한 gtm 컨테이너 구성 
 
 **"cafe24 bigin 로그아웃"** 태그와 **"logoutButtonClickedTrg"** 트리거가 사용됩니다.
@@ -244,26 +242,24 @@ function(){
 
 
 
- **트리거 : logoutButtonClickedTrg** 
+ **트리거 : logoutTrg** 
 
-![cafe24_logout_trigger](http://support.bigin.io/images/cafe24_logout_trigger.png)
+![godo-logoutTrg](/Users/westlife/Desktop/godo-logoutTrg.png)
 
 
 
- **변수 : buttonClickedVar** 
+ **변수 : clickVar** 
 
 맞춤 자바스크립트 유형의 변수를 사용합니다. 
 
 ```javascript
 function(){
 	var flag = false;
-  
-  	// 로그아웃 버튼의 클래스 명  
-  	if({{Click Classes}}.indexOf("btnLogout") > -1){
-    	console.log('로그아웃 버튼 클릭 : ' + {{Click Classes}});
-		flag = 'logout';
-    }
-    
+
+  	if({{Click Classes}}.indexOf("logout") > -1){
+		console.log("로그아웃 버튼 클릭 : " + {{Click Classes}});
+      	flag = "logout"
+    }    
 	return flag;
 }
 ```
@@ -285,71 +281,62 @@ function(){
 
 
 
-cafe24는 상품 리스트에 관한 모듈들이 있습니다. 
+**상품목록 템플릿 수정** 
 
-| 페이지           | 모듈명                                 |
-| ---------------- | -------------------------------------- |
-| 메인페이지       | product_listmain_[seq]                 |
-| 상품 분류 페이지 | product_listrecommend (추천 상품 목록) |
-| 상품 분류 페이지 | product_listnew (신상품 목록)          |
-| 상품 분류 페이지 | product_listnormal (일반상품 목록)     |
-| 검색 결과 페이지 | search_result (상품 검색 결과 목록)    |
-| 상품 상세 페이지 | product_relation (관련 상품 목록)      |
-
-
-
-상품 목록 모듈 수정 
-
-상품 목록 모듈의 html은 <code>ui</code> 태그 내부에 두 개의 <code>li</code> 태그들을 가집니다.
-두 <code>li</code> 태그 내부에 상품 데이터를 바인딩한 태그들을 아래와 같이 추가해줍니다. 
+고도몰의 상품 리스트 페이제이 게재되는 상품들에 대한 치환코드는  보통 <code>goods/list/list-[seq]</code> 페이지에 기록되어 있습니다.
+<code>goods/list/list-[seq]</code> 페이지를 아래와 같이 수정해주세요.
 
 ~~~html
-<div module="상품 목록 모듈" class="ec-base-product">
-        <ul class="prdList grid2">
-            <li id="anchorBoxId_{$product_no}">
-                <div class="thumbnail">
-                    <div class="prdImg">
-                        <a href="{$link_product_detail}">
-                            <img src="{$image_medium}" id="{$image_medium_id}"/>
+{*** 갤러리형 | goods/list/list_01.html ***}
+<div class="item_gallery_type">
+    <!--{ ? goodsList }-->
+    <ul>
+        <!--{ @ goodsList }-->
+        <!--{ @ .value_ }-->
+        <li>
+            <div class="item_cont">
+                <div class="item_photo_box">
+                    <a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}"target="_blank">
+                        {..goodsImage}
+                    </a>
+                </div>
+                <div class="item_info_cont">
+                    <div class="item_tit_box">
+                        <span class="item_brand">
+                            <strong>[{..brandNm}]</strong>
+                            {..makerNm}
+                        </span>
+                        <a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}">
+                            <strong class="item_name">{..goodsNm}</strong>
+                            <span class="item_name_explain">{..shortDescription}</span>
                         </a>
                     </div>
-                </div>
-                
- 				<!--  코드 추가 start -->               
-                <div class="bigin-product" style="display:none;">
-	                <div class="bigin-product-id" style="display:none;">"{$product_no}"</div>
-    	            <div class="bigin-product-name" style="display:none;">"{$product_name}"</div>
-        	        <div class="bigin-product-price" style="display:none;">"{$product_price}"</div>
-            	    <div class="bigin-product-brand" style="display:none;">"{$prd-brand}"</div>                                    
-                    <div class="bigin-product-thumbnail" style="display:none;">"{$image_medium}"</div>
-                </div>
- 				<!--  코드 추가 end -->                               
-            </li>
-            <li id="anchorBoxId_{$product_no}">
-                <div class="thumbnail">
-                    <div class="prdImg">
-                        <a href="{$link_product_detail}">
-                            <img src="{$image_medium}" id="{$image_medium_id}"/>
-                        </a>
+                    <div class="item_money_box">
+                        <strong class="item_price">
+                            {..goodsPriceString}
+                        </strong>
                     </div>
                 </div>
- 				<!--  코드 추가 start -->                   
-				<div class="bigin-product" style="display:none;">
-	                <div class="bigin-product-id" style="display:none;">"{$product_name}"</div>
-    	            <div class="bigin-product-name" style="display:none;">"{$product_name}"</div>
-        	        <div class="bigin-product-price" style="display:none;">"{$product_price}"</div>
-            	    <div class="bigin-product-brand" style="display:none;">"{$prd-brand}"</div>                                    
-                    <div class="bigin-product-thumbnail" style="display:none;">"{$image_medium}"</div>
-                </div>
- 				<!--  코드 추가 end -->                   
-            </li>
-        </ul>
-    </div>
+            </div>
+            <!------ bigin sdk Start  ------>
+            <div class="bigin-product" style="display:none;">
+				<div class="bigin-product-id" style="display:none;">{..goodsNo}</div>
+				<div class="bigin-product-image" style="display:none;">{..goodsImage}</div>
+				<div class="bigin-product-price" style="display:none;">{..goodsPrice}</div>
+				<div class="bigin-product-name" style="display:none;">{..goodsNm}</div>
+				<div class="bigin-product-brand" style="display:none;">{..brandNm}</div>
+            </div>
+            <!------ bigin sdk End  ------>            
+        </li>
+    </ul>
+</div>
+<!-- //item_gallery_type -->
+
 ~~~
 
 
 
-**태그 : cafe24 bigin 상품링크클릭**
+**태그 : bigin 상품링크클릭**
 
 ~~~html
 <script>
@@ -402,24 +389,12 @@ function(){
     	console.log('상품 링크 클릭 : ' + {{Click URL}});      
     	flag = 'impression';
     }  
-  
-  	// 로그아웃 버튼의 클래스 명  
-  	if({{Click Classes}}.indexOf("btnLogout") > -1){
-    	console.log('로그아웃 버튼 클릭 : ' + {{Click Classes}});
-		flag = 'logout';
-    }
     
 	return flag;
 }
 ~~~
 
 
-
-
-
-### 제품의 노출
-
-**제품 상세 페이지**의 조회 시에 노출되는 제품의 상세정보들을 추적합니다. 
 
 
 

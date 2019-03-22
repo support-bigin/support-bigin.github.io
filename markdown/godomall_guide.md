@@ -23,7 +23,7 @@ bigin sdk를 고도몰 기반 쇼핑몰에 설치하기 위해 아래의 방식�
 
    
 
-   - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접적으로 접근하여 필요한 데이터를 가져오는 방식입니다. 손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden input 방식**의 추가적인 코드 설치가 필요합니다.
+   - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접적으로 접근하여 필요한 데이터를 가져오는 방식입니다. 손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden div 태그를 추가하는 코드가 필요합니다.
 
      
 
@@ -144,14 +144,14 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 로그인 사용자 식별을 위한 gtm 컨테이너 구성 
 
-**"cafe24 bigin 로그인"** 태그와 **"LayoutStateLogonExistingTrg"** 트리거가 사용됩니다.
+**"bigin 로그인"** 태그와 **"biginUserExistingTrg"** 트리거가 사용됩니다.
 
-**"cafe24 bigin 로그인"** 태그는 DOM scraping 과 bigin 로그인 사용자 식별을 수행하는 코드로 구성되며, 
-**"LayoutStateLogonExistingTrg"** 트리거는 **모든 페이지뷰**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
+**"bigin 로그인"** 태그는 DOM scraping 과 bigin 로그인 사용자 식별을 수행하는 코드로 구성되며, 
+**"biginUserExistingTrg"** 트리거는 **모든 페이지뷰**와 **맞춤 자바스크립트 변수**가 활성 조건인 트리거입니다.
 
  
 
- **태그 : cafe24 bigin 로그인** 
+ **태그 : bigin 로그인** 
 
 ```html
 <script>
@@ -197,26 +197,26 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
- **트리거 : LayoutStateLogonExistingTrg** 
+ **트리거 : biginUserExistingTrg** 
 
-![cafe24_login_trigger](http://support.bigin.io/images/cate24_login_trigger.png)
+![godo-loginTrg](/Users/westlife/Desktop/godo-loginTrg.png)
 
 
 
- **변수 : LayoutStateLogonExistingVar** 
+ **변수 : pageViewVar** 
 
 맞춤 자바스크립트 유형의 변수를 사용합니다. 
 
 ```javascript
 function(){
 	var flag = false;
-  	if(document.querySelector(".xans-layout-statelogon")){
-      	var biginUser = document.querySelector(".xans-layout-statelogon .bigin-user-id");
+  	if(document.querySelector(".bigin-user")){
+      	var biginUser = document.querySelector(".bigin-user .bigin-user-id");
       	if(biginUser){
 	    	flag = true;        
         }
     }
-  	console.log("LayoutStateLogonExistingVar");
+  	console.log(flag);
 	return flag;
 }
 ```
@@ -240,7 +240,7 @@ function(){
 
  
 
- **태그 : cafe24 bigin 로그아웃** 
+ **태그 : bigin 로그아웃** 
 
 ```html
 <script>
@@ -431,139 +431,237 @@ function(){
 
 
 
-**태그 : viewProduct**
+### 제품의 노출
+
+**제품 상세 페이지**의 조회 시에 노출되는 제품의 상세정보들을 추적합니다. 
+
+
+
+**상품상세화면 템플릿 수정**
+
+<code>goods/goods_view.html</code>를 아래와 같이 수정합니다.
 
 ```html
+{*** 상품상세화면 | goods/goods_view.php ***}
+{ # header }
+<div class="content_box">
+    // ...
+</div>
+
+<!-------- bigin sdk Start--------->
 <script>
-  var callViewProduct = function(){
-  	var biginProduct = {};
-    var biginProductImage;
-    
-    try{
-   		if(document.querySelector(".xans-product-image img")){
-        	biginProductImage = document.querySelector(".xans-product-image img");
-          	biginProduct.thumbnail = biginProductImage.src;
-        }
-		biginProduct.name = product_name;
-      	biginProduct.price = product_price;
-      	biginProduct.id = iProductNo;
-      	console.log("bigin eent");
-      	bigin.event("bg:viewProduct", biginProduct);
-      	
-    }catch(e){
-    	console.log(e);
+    var callViewProduct = function(){
+	    var biginProduct = {};
+    	biginProduct.id = '{goodsView.goodsNo}';
+	    biginProduct.name = '{goodsView.goodsNm}';
+    	biginProduct.price = '{goodsView.goodsPrice}';
+	    biginProduct.categories = ['{goodsView.cateNm}'];
+    	biginProduct.thumbnail = [document.querySelector('.thumbnail>a>img').src];    
+	    biginProduct.brand = '{goodsView.brandNm}';        
+        window.dataLayer.push(
+            {
+                event : "viewProduct",
+                data : biginProduct
+			}
+        )
     }
-  }
-  
-  if(document.readyState != 'complete'){
-    console.log("! complete");
-  	window.addEventListener("load", function(){
-    	if(document.readyState == 'complete'){
-              console.log("callback complete");
-        	callViewProduct();
-        }
+    
+    window.addEventListener("load", function(){
+        callViewProduct();
     })
-  }
-  else{
-    console.log("complete");    
-	callViewProduct();    
-  }
-  
 </script>
+<!-------- bigin sdk End--------->
+
+{=fbGoodsViewScript}
+{ # footer }
+
 ```
+
+
+
+**태그 : viewProduct**
+
+~~~html
+<script>
+    (function(){
+        bigin.event("bg:viewProduct", {{data}})
+    })()
+</script>
+~~~
 
 
 
 **트리거 : viewProductTrg**
 
-![viewProductTrg](/Users/westlife/Desktop/viewProductTrg.png)
 
-**일부 페이지뷰** 유형의 트리거를 사용하며, <code>path name</code> 의 값을 통해서 페이지 식별을 함.
+
+![godo-viewProductTrg](/Users/westlife/Desktop/godo-viewProductTrg.png)
+
+
+
+제품의 노출을 추적하기 위해 **일부 페이지뷰** 유형의 트리거를 사용하며, 제품 상세 페이지의 <code>path name</code> 의 값을 정규표현식을 통해 식별합니다.
 
 
 
 ### 장바구니 추가
 
-**태그 : bigin 장바구니 추가**
+상품상세화면 html 페이지에서 **장바구니 추가**에 해당 기능을 수행하는 함수가 공개되는 경우, 해당 함수를 활용하며, 
+그렇지 않은 경우, 아래의 가이드를 따라주시기 바랍니다.
 
-```html
+
+
+**상품상세화면 템플릿 수정**
+
+<code>goods/goods_view.html</code>를 아래와 같이 수정합니다.
+
+~~~html
+{*** 상품상세화면 | goods/goods_view.php ***}
+{ # header }
+<div class="content_box">
+    // ...
+</div>
+
+<!-------- bigin sdk Start--------->
 <script>
-	(function(){
-      	var biginProductList = [];
-      	if(has_option == "T"){
-			if(document.getElementsByClassName('option_box_id').length>0){
-           		for(var i=0;i<document.getElementsByClassName('option_box_id').length;i++){
-           			biginProductList.push({
-               		id : iProductNo,
-					name : product_name,
-					price : document.querySelectorAll('span[id*="option_box"]')[i].innerText.replace(/[^0-9]/g,""),
-		            variant:document.getElementsByClassName('product')[i].innerHTML.split('<span>')[1].split('</span>')[0],
-					thumbnail : [window.location.hostname + "/web/product/tiny" + product_image_tiny];                      
-        	        quantity:document.getElementById('option_box'+(i+1)+'_quantity').value
-		            }); 
-    	    	}
-	    	}        
-        }
-		else{
-        	var biginProduct = {};
-          	biginProduct.id = iProductNo;
-          	biginProduct.name = product_name;
-          	biginProduct.price = product_price;
-          	biginProduct.thumbnail = [window.location.hostname + "/web/product/tiny" + product_image_tiny];
-          	biginProduct.quantity = document.querySelector("#quantity").value;
-  			biginProductList.push(biginProduct);
-        }
+    var callViewProduct = function(){
+		// 생략
+    }
+    
+    var callAddToCart = function(){
+        var biginProductList = []
+		document.querySelectorAll("div[id*='option_display_item']").forEach(function(e, i){
+			var biginProduct = {};
+			biginProduct.id = e.querySelector("input[name*='goodsNo']").value;
+			biginProduct.name = e.querySelector("span.name").innerText;
+			biginProduct.quantity = e.querySelector("input[name*='goodsCnt']").value
+			biginProduct.price = e.querySelector(".price").innerText.replace(/[^0-9]/g, "");
+
+			biginProductList.push(biginProduct);
+		})
         
-        bigin.event("bg:cart" , {
-        	product: biginProductList;
+         window.dataLayer.push(
+            {
+                event : "addToCart",
+                data : {
+                    products : biginProductList
+                }
+			}
+        )
+    }
+    
+    window.addEventListener("load", function(){
+        callViewProduct();
+        document.querySelector("장바구니 버튼 태그 셀렉터").addEventListener("click" , function(){
+            callAddToCart();
         })
-	})()
+    })
 </script>
-```
+<!-------- bigin sdk End--------->
+
+{=fbGoodsViewScript}
+{ # footer }
+
+
+~~~
+
+
+
+
+
+**태그 : addToCart**
+
+~~~html
+<script>
+    (function(){
+        bigin.event("bg:addToCart" , {{data}})
+    })()
+</script>
+~~~
+
+
 
 
 
 **트리거 : addToCartTrg**
 
-![addToCartTrg](/Users/westlife/Desktop/addToCartTrg.png)
+![godo-addToCartTrg](/Users/westlife/Desktop/godo-addToCartTrg.png)
 
 
 
-### 장바구니 갱신
+### 장바구니 조회
 
-**태그 : bigin 장바구니 갱신**
+
+
+**장바구니 템플릿 수정**
+
+~~~html
+{*** 장바구니 | front/order/cart.php ***}
+{ # header }
+
+<div class="content_box">
+    <div class="order_wrap">
+        <div class="cart_cont">
+
+            <form id="frmCart" name="frmCart" method="post" target="ifrmProcess">
+                
+                <div class="cart_cont_list">
+
+                    <div class="order_table_type">
+                        <table>
+                        	</thead>
+                            </thead>
+                            <tbody>
+
+                            <!--{ @ .value_ }-->
+                            <!--{ @ ..value_ }-->
+                            <tr>
+                        	// ...
+<!------ bigin cart Start ------>                                
+<script>
+	var biginProductImage = document.querySelector("상품 이미지 태그 셀렉터").src;
+	var biginProductList = biginProductList || [];
+	var biginProduct = {};
+	biginProduct.id = "{=...goodsNo}";
+	biginProduct.name = "{=...goodsNm}";
+	biginProduct.quantity = "{=...goodsCnt}";
+	biginProduct.price = "{=...goodsPriceString}";
+    biginProduct.thumbnail = [biginProductImage];    
+	biginProductList.push(biginProduct)
+</script>
+<!------ bigin cart End ------>                                                                
+							// ...
+							</tr>
+                    </tbody>
+                    
+<!------ bigin sdk Start ------>                            
+<script>
+    window.addEventListener("load", function(){
+        window.dataLayer.push(
+            {
+                event : "cart",
+                data : {
+                    products : biginProductList
+                }
+            }
+        )
+    })
+</script>
+<!------ bigin sdk End ------>     
+{=fbCartScript}
+{ # footer }
+~~~
+
+
+
+
+
+**태그 : bigin 장바구니 **
 
 ```html
 <script>
-  var callBiginCart = function(){
-    var biginProductList = [];
-    aBasketProductData.forEach(function(e, i){
-    	var biginProduct = {};
-      	biginProduct.id = e.product_no;
-      	biginProduct.name = e.product_name;
-      	biginProduct.price = e.product_price;
-      	biginProduct.quantity = e.quantity;
-      	biginProduct.variant = e.opt_str ? e.opt_str : null;
-      	biginProduct.thumbnail = [];
-      	biginProductList.push(biginProduct);
-    })
-    
-    bigin.event("bg:cart", {
-    	products : biginProductList
-    })
-  }
-  
-	if(document.readyState != 'complete'){
-      	console.log("document.readyState != complete // in cart");      
-    	window.addEventListener("load", function(){
-      	console.log("window.onload // in cart");                
-			callBiginCart();
-        })
-    }
- 	else{
-      	console.log("document.readyState == complete // in cart");
-    	callBiginCart();
-    }
+    (function(){
+        bigin.event("bg:cart" , {{data}})
+    })()
 </script>
 ```
 
@@ -571,9 +669,7 @@ function(){
 
 **트리거 : cartTrg**
 
-![cartTrg](/Users/westlife/Desktop/cartTrg.png)
-
-
+![godo-cartTrg](/Users/westlife/Desktop/godo-cartTrg.png)
 
 
 
@@ -581,26 +677,90 @@ function(){
 
 
 
+**장바구니 템플릿 수정**
+
+```html
+{*** 장바구니 | front/order/cart.php ***}
+{ # header }
+
+<div class="content_box">
+    <div class="order_wrap">
+        <div class="cart_cont">
+
+            <form id="frmCart" name="frmCart" method="post" target="ifrmProcess">
+                
+                <div class="cart_cont_list">
+
+                    <div class="order_table_type">
+                        <table>
+                        	</thead>
+                            </thead>
+                            <tbody>
+
+                            <!--{ @ .value_ }-->
+                            <!--{ @ ..value_ }-->
+                            <tr>
+                        	// ...
+<!------ bigin cart Start ------>                                
+<script>
+	// 생략
+</script>
+<!------ bigin cart End ------>                                                                
+							// ...
+							</tr>
+                    </tbody>
+                    
+<!------ bigin sdk Start ------>                            
+<script>
+    
+    var callBiginTrack = function(param){
+        var biginSelectedProductList = [];
+		document.querySelectorAll("input[id*='cartSno']:checked").forEach(function(e, i){
+			biginSelectedProductList.push(biginProductList[i]);
+		})        
+        
+        if(param == 'remove'){
+	        window.dataLayer.push({
+    	        event : "removeCart",
+        	    data : {
+            	    products : biginSelectedProductList
+	            }
+    	    })            
+        }
+    }
+    
+    window.addEventListener("load", function(){
+        window.dataLayer.push(
+            {
+                event : "cart",
+                data : {
+                    products : biginProductList
+                }
+            }
+        )
+        
+        document.querySelector("상품 삭제 버튼 셀렉터").addEventListener("click" , function(){
+            callBiginTrack('remove');
+        })
+        
+    })
+</script>
+<!------ bigin sdk End ------>     
+{=fbCartScript}
+{ # footer }
+```
+
+
+
+
+
 **태그 : bigin 장바구니 제거**
 
 ```html
 <script>
-	(function(){
-		var biginSelectedProductList = [];
-		document.querySelectorAll("input[id*='basket_chk_id']:checked").forEach(function(e, i){
-			var biginProduct = {};
-			biginProduct.id = aBasketProductData[i].product_no;
-	  		biginProduct.name = aBasketProductData[i].product_name;
-		  	biginProduct.price = aBasketProductData[i].product_price;
-			biginProduct.quantity = aBasketProductData[i].quantity;
-		  	biginProduct.variant = aBasketProductData[i].opt_str ? aBasketProductData[i].opt_str : null;
-			biginProduct.thumbnail = [];
-	  		biginSelectedProductList.push(biginProduct);
-		})
-	bigin.event("bg:removeCart", {
-    	products : biginSelectedProductList
-    })
-  })()
+    (function(){
+        bigin.event("bg:removeCart" , {{data}})
+    })()
 </script>
 ```
 
@@ -608,7 +768,7 @@ function(){
 
 **트리거 : removeCartTrg**
 
-![removeCartTrg](/Users/westlife/Desktop/removeCartTrg.png)
+![godo-removeCartTrg](/Users/westlife/Desktop/godo-removeCartTrg.png)
 
 
 
@@ -616,28 +776,102 @@ function(){
 
 
 
+**장바구니 템플릿 수정**
+
+```html
+{*** 장바구니 | front/order/cart.php ***}
+{ # header }
+
+<div class="content_box">
+    <div class="order_wrap">
+        <div class="cart_cont">
+
+            <form id="frmCart" name="frmCart" method="post" target="ifrmProcess">
+                
+                <div class="cart_cont_list">
+
+                    <div class="order_table_type">
+                        <table>
+                        	</thead>
+                            </thead>
+                            <tbody>
+
+                            <!--{ @ .value_ }-->
+                            <!--{ @ ..value_ }-->
+                            <tr>
+                        	// ...
+<!------ bigin cart Start ------>                                
+<script>
+	// 생략
+</script>
+<!------ bigin cart End ------>                                                                
+							// ...
+							</tr>
+                    </tbody>
+                    
+<!------ bigin sdk Start ------>                            
+<script>
+    
+    var callBiginTrack = function(param){
+        var biginSelectedProductList = [];
+		document.querySelectorAll("input[id*='cartSno']:checked").forEach(function(e, i){
+			biginSelectedProductList.push(biginProductList[i]);
+		})        
+        
+        if(param == 'remove'){
+	        window.dataLayer.push({
+    	        event : "removeCart",
+        	    data : {
+            	    products : biginSelectedProductList
+	            }
+    	    })            
+        }
+        else if(param == 'checkout'){
+			window.dataLayer.push({
+    	        event : "checkoutStep0",
+        	    data : {
+            	    products : biginSelectedProductList
+	            }
+    	    })            
+        }
+    }
+    
+    
+    window.addEventListener("load", function(){
+        window.dataLayer.push(
+            {
+                event : "cart",
+                data : {
+                    products : biginProductList
+                }
+            }
+        )
+        
+        document.querySelector("상품 삭제 버튼 셀렉터").addEventListener("click" , function(){
+            callBiginTrack('remove');
+        })
+		document.querySelector("상품 구매 버튼 셀렉터").addEventListener("click" , function(){
+            callBiginTrack('checkout');
+        })
+        
+    })
+</script>
+<!------ bigin sdk End ------>     
+{=fbCartScript}
+{ # footer }
+```
+
+
+
+
+
 **태그 : bigin 체크아웃 step 0**
 
 ```html
-<script> 
-	(function(){
-		var biginSelectedProductList = [];
-		document.querySelectorAll("input[id*='basket_chk_id']:checked").forEach(function(e, i){
-			var biginProduct = {};
-			biginProduct.id = aBasketProductData[i].product_no;
-	  		biginProduct.name = aBasketProductData[i].product_name;
-		  	biginProduct.price = aBasketProductData[i].product_price;
-			biginProduct.quantity = aBasketProductData[i].quantity;
-		  	biginProduct.variant = aBasketProductData[i].opt_str ? aBasketProductData[i].opt_str : null;
-			biginProduct.thumbnail = [];
-	  		biginSelectedProductList.push(biginProduct);
-		})
-		bigin.event("bg:checkout", {
-          	step : 0,
-          	option : "옵션 정보",
-    		products : biginSelectedProductList
-	    })
-	})()
+<script>
+    (function(){
+        bigin.event("bg:checkout" , {{data}})
+    })()
 </script>
 ```
 
@@ -645,7 +879,7 @@ function(){
 
 **트리거 : checkoutStep0Trg**
 
-![checkoutStep0Trg](/Users/westlife/Desktop/checkoutStep0Trg.png)
+![godo-checkoutStep0Trg](/Users/westlife/Desktop/godo-checkoutStep0Trg.png)
 
 
 
@@ -660,8 +894,8 @@ function(){
 ```html
 <script>
   (function(){
-  	var checkedInput = document.querySelector("input[id*='addr_paymethod']:checked");
-	var payMethod = checkedInput.closest(".ec-base-label").querySelector("label").innerText;
+  	var checkedInput = document.querySelector("input[id*='settleKind']:checked");
+	var payMethod = checkedInput.closest(".form-element").querySelector("label").innerText;
     
     bigin.event("bg:checkout" , {
     	step : 1,
@@ -683,107 +917,66 @@ function(){
 
 ### 제품 구매 완료
 
-cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다. 
+**구매완료 페이지 수정**
 
-| 모듈명                                                   |
-| -------------------------------------------------------- |
-| order_normalresultlist (주문완료페이지 기본배송상품)     |
-| order_individualresultlist (주문완료페이지 개별배송상품) |
-| order_oversearesultlist (주문완료페이지 해외배송상품)    |
-| order_giftresultlist (주문완료페이지 상은품 리스트)      |
+페이지 상단 또는 하단에 아래의 스크립트를 추가해주세요.
 
-주문 상품 목록 모듈 수정 
+~~~html
+<script>
+	function callBiginPurchase(){
+		var data = {};
+		data.id = {orderInfo.orderNo};
+		data.affilation = '';
+		data.shipping = {=gd_isset(orderInfo.totalDeliveryCharge)};
+		data.price = {orderInfo.totalGoodsPrice};
+		data.payMethod = '{=gd_isset(orderInfo.settleName)}';
+	
+
+		function parse(string) {
+			var pairs = string.slice(1).split(',');
+      		var result = {};
+			pairs.forEach(function (pair) {
+				pair = pair.split(':');
+				result[pair[0]] = decodeURIComponent(pair[1] || '');
+			});
+		return JSON.parse(JSON.stringify(result));
+		}
+
+    	var productList = [];
+    	document.querySelectorAll('input').forEach(function(element){
+      		if(element.name == 'naver-common-inflow-script-order-item'){
+        		var product = parse(element.value);
+        		productList.push({
+          			'id' : product.goodsno.substring(1, product.goodsno.length-1),
+					'price' : (product.price/ Number(product.ea)),
+					'name' : product.goodsnm.substring(1, product.goodsnm.length-1),
+					'quantity' : Number(product.ea)
+        		});
+			}
+		});
+		window.dataLayer.push(
+			{'data' : undefined},
+			{
+				'event' : 'purchase',
+				'data' : {
+					'id' : data.id,
+					'affiliation' : data.affiliation,
+					'revenue' : data.price,
+					'paymethod' : data.payMethod,
+					'products' : productList
+				}
+			}
+		);
+	}
+	window.addEventListener("load", function(){
+		callBiginPurchase();
+	})
+</script>	
+~~~
+
+
 
 주문된 상품의 데이터를 DOM scraping 방식으로 가져오기 위하여 아래와 같은 방식으로 모듈의 html 을 수정해야합니다.
-
-
-
-```html
-<tbody module="Order_normalresultlist">
-                <tr>
-                    <td class="thumb">
-						// ... 
-                    </td>
-                    <td class="product">
-						// ... 
-                    </td>
-                    <td class="price">
-						// ... 
-                    </td>
-                    <td class="quantity">
-						// ...                         
-                    </td>
-
-                    <!---------- bigin purchase start ----------->
-                    <script>
-                    	var biginProductList = biginProductList || [];
-                        var biginProduct = {};
-                        biginProduct.id = "{$product_no}";
-                        biginProduct.name = "{$product_name}";
-                        biginProduct.price = "{$product_price}".replace(/[^0-9]/g,'');
-                        biginProduct.quantity = "{$product_quantity}";
-                        biginProduct.variant = "{$option_str}";
-                        biginProduct.thumbnail = ["{$product_image}"];
-                        biginProductList.push(biginProduct);
-                    </script>
-                    <!---------- bigin purchase end ----------->                    
-                </tr>
-                <tr>
-                    <td class="thumb">
-						// ... 
-                    </td>
-                    <td class="product">
-						// ... 
-                    </td>
-                    <td class="price">
-						// ... 
-                    </td>
-                    <td class="quantity">
-						// ...                         
-                    </td>
-                    <!---------- bigin purchase start ----------->
-                    <script>
-                    	var biginProductList = biginProductList || [];
-                        var biginProduct = {};
-                        biginProduct.id = "{$product_no}";
-                        biginProduct.name = "{$product_name}";
-                        biginProduct.price = "{$product_price}".replace(/[^0-9]/g,'');
-                        biginProduct.quantity = "{$product_quantity}";
-                        biginProduct.variant = "{$option_str}";
-                        biginProduct.thumbnail = ["{$product_image}"];
-                        biginProductList.push(biginProduct);
-                    </script>
-                    <!---------- bigin purchase end ----------->                                        
-                </tr>
-            </tbody>
-```
-
-
-
-```html
-<div module="Order_result">
-    // ....
-    
-    <script>
-        var callBiginPurchase = function(){
-            var biginPurchase = {};
-            biginPurchase.id = "{$order_id}";
-            biginPurchase.revenue = "{$total_product_price}";
-            biginPurchase.payMethod = "{$paymethod_name}";
-            biginPurchase.products = biginProductList;
-            window.dataLayer.push({
-                event : 'purchase',
-                data : biginPurchase
-            })
-        }
-        window.addEventListener("load", function(){
-            callBiginPurchase();
-        })
-    </script>
-    
-    // ...
-</div>
-```
 
 
 
@@ -809,6 +1002,9 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 ### 제품의 환불
 
+주문상세, 주문목록 html 페이지에서 **주문취소**에 해당 기능을 수행하는 함수가 공개되는 경우, 해당 함수를 활용하며, 
+그렇지 않은 경우, 아래의 가이드를 따라주시기 바랍니다.
+
 
 
 **태그 : bigin 환불**
@@ -819,8 +1015,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
     var orderId;
     
     try{
-		orderId = {{Click Element}}.getAttribute("onclick").match(/(?<=\(\').*?(?=\'\))/)[0].replace(/\'/g, "").replace(/\"/g, "");    
-    
+		orderId = {{Click Element}}.closest("tr[data-order-no]").getAttribute("data-order-no")
        	bigin.event("bg:refund" {
    			id : orderId
 	   	})
