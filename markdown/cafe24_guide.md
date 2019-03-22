@@ -22,7 +22,7 @@ bigin sdk를 cafe24 기반의 쇼핑몰에 설치하기 위해 아래의 방식�
      이와 같은 경우에 **DOM scraping** 방식을 사용합니다.
 
 
-   
+
 
    - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접적으로 접근하여 필요한 데이터를 가져오는 방식입니다. 손쉬운 **DOM scraping** 을 위해 가이드에 따른 **hidden div 태그 **를 추가하는 부분이 필요합니다.
 
@@ -193,7 +193,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
  **트리거 : LayoutStateLogonExistingTrg** 
 
-![cafe24_login_trigger](http://support.bigin.io/images/cafe24_login_trigger.png)
+![loginTrg](http://support.bigin.io/images/cafe24-loginTri.png)
 
 
 
