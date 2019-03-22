@@ -193,7 +193,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
  **트리거 : LayoutStateLogonExistingTrg** 
 
-![cafe24_login_trigger](http://support.bigin.io/images/cate24_login_trigger.png)
+![cafe24_login_trigger](http://support.bigin.io/images/cafe24_login_trigger.png)
 
 
 
@@ -244,7 +244,7 @@ function(){
 
  **트리거 : logoutTrg** 
 
-![godo-logoutTrg](/Users/westlife/Desktop/godo-logoutTrg.png)
+![cafe24-logoutTrg](http://support.bigin.io/images/cafe24-logoutTrg.png)
 
 
 
