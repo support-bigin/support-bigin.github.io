@@ -345,8 +345,8 @@
   window.addEventListener('load', function () {
     focusLeftNav();
     var hash = window.location.hash.replace("#", '');
-    goToH2(null, hash);
     initEndPoints();
+    goToH2(null, hash);
   })
 
   window.addEventListener('hashchange', function () {
