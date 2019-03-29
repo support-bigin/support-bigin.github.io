@@ -271,10 +271,12 @@
         // console.log($(h2Elements[0]).offset().top);
         // console.log($(".inner-content").scrollTop())
         console.log($(".inner-content").scrollTop() - endPoints[0]);
-        if ($(i).offset().top < 50 && $(".inner-content").scrollTop() - endPoints[index] > 50) {
+        if ($(i).offset().top < -70 && $(".inner-content").scrollTop() - endPoints[index] > -70) {
+        // if ($(i).offset().top < 0 && $(".inner-content").scrollTop() - endPoints[index] > 0) {
           h2Offsets[index] = 1000000000000;
         } else {
-          h2Offsets[index] = $(i).offset().top - 50;
+          // h2Offsets[index] = $(i).offset().top - 50;
+          h2Offsets[index] = $(i).offset().top;
         }
       })
 
@@ -566,12 +568,12 @@
 
     if (!str) {
       $(innerContent).animate({
-        scrollTop: (fromTop + $('#' + element.id).offset().top - 100)
+        scrollTop: (fromTop + $('#' + element.id).offset().top - 60)
       }, 500);
     }
     else {
       $(innerContent).animate({
-        scrollTop: (fromTop + $('#' + str).offset().top - 100)
+        scrollTop: (fromTop + $('#' + str).offset().top - 60)
       }, 0);
     }
   }

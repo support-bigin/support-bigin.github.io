@@ -19,8 +19,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="349" column="19" lean-forward="true" selection-start-line="349" selection-start-column="19" selection-end-line="349" selection-end-column="19" />
+            <state relative-caret-position="166">
+              <caret line="571" column="14" lean-forward="true" selection-start-line="571" selection-start-column="14" selection-end-line="571" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -38,8 +38,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>활용하여</find>
-      <find>gtm</find>
       <find>gtm_guide</find>
       <find>callback</find>
       <find>a</find>
@@ -59,7 +57,6 @@
       <find>console</find>
       <find>endPoints</find>
       <find>initEndPoints</find>
-      <find>goToH2</find>
       <find>createEvent</find>
       <find>createNewEvent</find>
       <find>usePrismJs</find>
@@ -68,6 +65,9 @@
       <find>innercon</find>
       <find>inner-contnet</find>
       <find>inner-content</find>
+      <find>goTo</find>
+      <find>goToH2</find>
+      <find>50</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -282,12 +282,12 @@
       <workItem from="1553169516597" duration="97000" />
       <workItem from="1553215317854" duration="3626000" />
       <workItem from="1553472352879" duration="4527000" />
-      <workItem from="1553841559180" duration="1211000" />
+      <workItem from="1553841559180" duration="2030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248279000" />
+    <option name="totallyTimeSpent" value="249098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
@@ -645,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="349" column="19" lean-forward="true" selection-start-line="349" selection-start-column="19" selection-end-line="349" selection-end-column="19" />
+        <state relative-caret-position="166">
+          <caret line="571" column="14" lean-forward="true" selection-start-line="571" selection-start-column="14" selection-end-line="571" selection-end-column="14" />
         </state>
       </provider>
     </entry>
