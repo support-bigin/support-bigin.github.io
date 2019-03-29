@@ -45,7 +45,6 @@
   </div>
 
 
-
   <div class="content">
     <div class="content-wrapper">
       <div class="side left menu nav">
@@ -165,7 +164,6 @@
   endPoints = [];
 
 
-
   var activeH2;
   var mobileInnerContentHeader = '';
 
@@ -235,6 +233,11 @@
       event.initEvent(eventName, true, true);
     }
     return event;
+  }
+
+  function notifyMarkDownParsed(innerContent) {
+    var event = createNewEvent('markdownRendered');
+    innerContent.dispatchEvent(event);
   }
 
   function usePrismJs() {
@@ -342,19 +345,19 @@
   })
 
 
-  window.addEventListener('load', function () {
+  // window.addEventListener('load', function () {
+  document.querySelector(".inner-content").addEventListener('markdownRendered', function () {
     focusLeftNav();
     var hash = window.location.hash.replace("#", '');
     initEndPoints();
     goToH2(null, hash);
   })
 
+
   window.addEventListener('hashchange', function () {
     var hash = window.location.hash.replace("#", '');
     goToH2(null, hash)
   })
-
-
 
 
   /********************************
@@ -363,9 +366,9 @@
    *
    *********************************/
 
-  function initEndPoints(){
+  function initEndPoints() {
     var spanList = document.getElementsByClassName('end-point');
-    for(var i = 0 ; i < spanList.length; i++){
+    for (var i = 0; i < spanList.length; i++) {
       endPoints[i] = $(spanList[i]).offset().top;
       console.log(endPoints[i]);
     }
@@ -544,6 +547,9 @@
 
       // 마크다운 화면 출력 후, 스피너 종료
       spinner.stop();
+
+      // 마크다운 화면 출력 후, 마크다운 html 활용을 위해 notify
+      notifyMarkDownParsed(innerContent);
 
       // 마크다운 내부 코드스니펫에 prism.css 적용시키는 함수.
       usePrismJs();
