@@ -235,9 +235,9 @@
     return event;
   }
 
-  function notifyMarkDownParsed(innerContent) {
-    var event = createNewEvent('markdownRendered');
-    innerContent.dispatchEvent(event);
+  function notifyMarkDownParsed() {
+    var event = createNewEvent('markdownRendered1');
+    window.dispatchEvent(event);
   }
 
   function usePrismJs() {
@@ -346,7 +346,7 @@
 
 
   // window.addEventListener('load', function () {
-  document.querySelector(".inner-content").addEventListener('markdownRendered', function () {
+  window.addEventListener('markdownRendered1', function () {
     focusLeftNav();
     var hash = window.location.hash.replace("#", '');
     initEndPoints();
