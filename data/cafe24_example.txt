@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+************** 메인 **********************
+			<!---- bigin start---->
+			<div class="bigin-product" style="display:none">
+        		<div class="bigin-product-id" style="display:none">{$product_no}</div>
+            	<div class="bigin-product-name" style="display:none">{$product_name}</div>
+                <div class="bigin-product-price" style="display:none">{$product_price}</div>
+                <div class="bigin-product-image" style="display:none">{$image_medium}</div>
+			</div>
+    	    <!---- bigin end ---->
+<!------ bigin impression start ------>
+<script>
+
+    function setClickListener(index, element){
+		var biginProduct = {};
+		var biginContainer = $(element).find(".bigin-product");
+		try{
+			biginProduct.id = $(biginContainer).find(".bigin-product-id").text();
+			biginProduct.name = $(biginContainer).find(".bigin-product-name").text();
+			biginProduct.price = $(biginContainer).find(".bigin-product-price").text();
+			biginProduct.thumbnail = [$(biginContainer).find(".bigin-product-image").text()];
+			biginProduct.list = window.location.pathname + "__" + $(element).closest(".xans-element-").find(".pro-title2").text();
+			biginProduct.position = index + 1;
+
+			$(element).find(".thumbnail>a").bind("touchend", function(){
+                if(typeof(bigin) != 'undefined'){
+					bigin.event("bg:impression" , biginProduct);
+                }
+			})
+			$(element).find(".description>.name>a").bind("touchend", function(){
+                if(typeof(bigin) != 'undefined'){
+					bigin.event("bg:impression" , biginProduct);
+                }
+			})
+
+		}catch(e){
+			console.log(e);
+		}
+	}
+
+    window.addEventListener('load' , function(){
+		$(".xans-product-listmain-1 li[id*='anchorBoxId']").each(function(index, element){
+			setClickListener(index, element);
+		})
+		$(".xans-product-listmain-2 li[id*='anchorBoxId']").each(function(index, element){
+			setClickListener(index, element);
+		})
+		$(".xans-product-listmain-3 li[id*='anchorBoxId']").each(function(index, element){
+			setClickListener(index, element);
+		})
+    })
+</script>
+<!------ bigin impression end ------->
+
+
+
+
+---고도몰
+<!------------bigin --------------->
+<script>
+	function setClickListener(index, element){
+		var biginProduct = {};
+		var biginContainer = $(element).find(".bigin-product");
+		try{
+			var thumbnail = $(element).find(".space>.thumbnail a img");
+			var imgSrc;
+			if(thumbnail){
+				imgSrc = window.location.hostname + $(thumbnail).attr('src');
+				biginProduct.thumbnail = [imgSrc];
+			}
+			biginProduct.id = $(biginContainer).find(".bigin-product-id").text();
+			biginProduct.name = $(biginContainer).find(".bigin-product-name").text();
+			biginProduct.price = $(biginContainer).find(".bigin-product-price").text();
+			biginProduct.price = parseInt(biginProduct.price);
+			biginProduct.list = window.location.pathname + "__" + $(biginContainer).find(".bigin-product-list").text();
+			biginProduct.position = index + 1;
+
+			$(element).find(".space>.thumbnail").bind("click", function(){
+                if(typeof(bigin) != 'undefined'){
+					window.dataLayer.push(
+						{data : undefined},
+						{
+							event : "impression",
+							data : biginProduct
+						}
+					)
+                }
+			})
+			$(element).find(".txt").bind("click", function(){
+                if(typeof(bigin) != 'undefined'){
+					window.dataLayer.push(
+						{data : undefined},
+						{
+							event : "impression",
+							data : biginProduct
+						}
+					)
+                }
+			})
+
+		}catch(e){
+			console.log(e);
+		}
+	}
+
+    window.addEventListener('load' , function(){
+		$(".view>.item-display-wrap .list>ul>li").each(function(index, element){
+			setClickListener(index, element);
+		})
+    })
+
+</script>
+<!------------bigin --------------->
+
+
+
+************** 상품 상세 **********************
+
+<!-- bigin start -->
+<script>
+    var getBiginProductList = function(){
+		var biginOptions;
+
+        if(option_stock_data){
+	        biginOptions = JSON.parse(option_stock_data);
+        }
+
+		var biginProductList = [];
+		$(".option_products .option_product").each(function(i ,e){
+			var biginProduct = {};
+            var biginOptionId = $(e).find("td>input[id*='option_box']").val();
+		    try{
+		    	biginProduct.id=iProductNo;
+        		biginProduct.name=product_name;
+				//biginProduct.price = $(e).find(".right>span[id*='option_box']").text().replace(/[^0-9]/g, '');
+                biginProduct.price = biginOptions[biginOptionId].option_price;
+				biginProduct.thumbnail = ['http://www.mybmeal.co.kr/web/product/tiny/'+ product_image_tiny];
+                if($(e).find(".quantity_opt").length < 1){
+                	biginProduct.quantity = 0;
+                }else{
+					biginProduct.quantity = $(e).find(".quantity_opt").val();
+                }
+				//biginProduct.variant = $(e).find(".product>span").text();
+                biginProduct.variant = biginOptions[biginOptionId].option_value;
+				biginProductList.push(biginProduct);
+		    }catch(e){
+				console.log(e);
+			}
+		})
+        return biginProductList;
+    }
+	function getBiginProduct(){
+		var biginProduct = {};
+		try{
+			biginProduct.id = iProductNo;
+			biginProduct.name = product_name;
+            if(typeof(product_sale_price) != "undefined"){
+            	biginProduct.price = product_sale_price;
+            }else{
+				biginProduct.price = product_price;
+            }
+			biginProduct.thumbnail = ['http://www.mybmeal.co.kr/web/product/tiny/'+ product_image_tiny];
+			biginProduct.quantity = $('#quantity').val();
+
+		}catch(e){
+			console.log(e);
+		}
+		return biginProduct;
+	}
+
+    window.addEventListener('load' , function(){
+		bigin.event("bg:viewProduct" , getBiginProduct())
+
+        $(".xans-product-action .btnArea.b_full.b_left>a.black").bind("click", function(){
+			if(typeof(bigin) != 'undefined'){
+
+                if(typeof(option_stock_data) != "undefined"){
+		            bigin.event("bg:checkout", {
+    	                step :0,
+    		            products : getBiginProductList()
+        		    });
+                }else{
+		            bigin.event("bg:checkout", {
+    	                step :0,
+    		            products : [getBiginProduct()]
+        		    });
+                }
+            }
+        })
+
+		$(".npay_btn_item").bind("click", function(){
+
+			if(typeof(bigin) != 'undefined'){
+                 if(typeof(option_stock_data) != "undefined"){
+		            bigin.event("bg:checkout", {
+    	                step :0,
+                        option: "naverpay",
+    		            products : getBiginProductList()
+        		    });
+                }else{
+		            bigin.event("bg:checkout", {
+    	                step :0,
+                        option: "naverpay",
+    		            products : [getBiginProduct()]
+        		    });
+                }
+            }
+        });
+
+		$(".xans-product-action .btnArea.b_half.b_left>a.white:first").bind("click", function(){
+
+			if(typeof(bigin) != 'undefined'){
+                 if(typeof(option_stock_data) != "undefined"){
+		            bigin.event("bg:addToCart", {
+    		            products : getBiginProductList()
+        		    });
+                }else{
+		            bigin.event("bg:addToCart", {
+    		            products : [getBiginProduct()]
+        		    });
+                }
+            }
+        });
+    });
+</script>
+
+<!-- bigin end -->
+
+
+
+
+
+
+*************************** 장바구니 ***************************8
+
+<!------------- bigin start -------------->
+<script>
+
+    function getProductCode(strCode){
+    	var strPCode = strCode;
+	    strPCode = strPCode.match(/product_no=\d+/);
+    	strPCode = String(strPCode);
+	    var intPCode = strPCode.match(/\d+/);
+    	if(intPCode != null && intPCode.length > 0) {
+	      return intPCode[0];
+    	}
+	    return '';
+	}
+      var biginProductList = biginProductList || [];
+      var biginProduct = {};
+	if(getProductCode('{$param}') != '') {
+		biginProduct.id = getProductCode('{$param}');
+		biginProduct.name = removeHtml('{$name}').trim();
+		biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
+		biginProduct.thumbnail = ['{$img}'];
+		biginProduct.quantity = '{$quantity}'.replace(/[^0-9\\.]+/g, '');
+		biginProduct.position = '{$chk_id}'.replace(/[^0-9]/g, '');
+		if('{$layer_option_str}'){
+			biginProduct.variant = '{$layer_option_str}';
+		}
+		biginProductList.push(biginProduct);
+    }
+</script>
+<!------------- bigin end -------------->
+
+
+<!-------------- bigin start ----------->
+<script>
+	function getBiginSelectedProductList(){
+		var biginTempSelectedProductList = Basket._getCheckedProduct();
+		var biginSelectedProductList = [];
+		for(var i = 0; i < biginTempSelectedProductList.length; i++){
+			biginSelectedProductList.push(biginProductList[biginTempSelectedProductList[i].seq]);
+		}
+		return biginSelectedProductList;
+	}
+
+    window.addEventListener('load' , function(){
+		if(typeof(biginProductList) != "undefined"){
+        	bigin.event('bg:cart', {
+            	products : biginProductList
+            });
+        }
+
+		$(".xans-order .xans-record- .btnArea .gRight>a").each(function(index, e){
+			$(e).bind("touchend", function(event){
+				if(typeof(bigin) != 'undefined'){
+					bigin.event("bg:checkout" , {
+						step : 0,
+						products : [biginProductList[index]]
+					})
+				}
+			})
+		})
+
+		$(".xans-order .xans-record- .btnArea .gLeft").find("a:first").each(function(index, e){
+			$(e).bind("touchend", function(event){
+				if(typeof(bigin) != 'undefined'){
+					bigin.event("bg:removeCart" , {
+						products : [biginProductList[index]]
+					})
+				}
+			})
+		})
+
+		$(".xans-order-selectorder .gLeft a.btnNormal").bind("touchend" , function(){
+			if(typeof(bigin) != "undefined"){
+				var biginSelectedProductList = getBiginSelectedProductList();
+                if(biginSelectedProductList.length > 0 && typeof(bigin) != 'undefined'){
+                	bigin.event("bg:removeCart", {
+                        products : biginSelectedProductList
+                    })
+                }
+			}
+		})
+
+		$(".xans-order-totalorder a.btnEm").bind("touchend" , function(){
+			if(typeof(bigin) != "undefined"){
+				var biginSelectedProductList = getBiginSelectedProductList();
+                if(biginSelectedProductList.length > 0 && typeof(bigin) != 'undefined'){
+                	bigin.event("bg:checkout", {
+                        step : 0,
+                        products : biginSelectedProductList
+                    })
+                }
+			}
+		})
+
+        $(".xans-order-totalorder a.btnSubmit").bind("touchend", function(){
+        	if(typeof(bigin) != "undefined" && biginProductList.length > 0){
+            	bigin.event("bg:checkout" , {
+                	step : 0,
+                    products : biginProductList
+                })
+            }
+        })
+
+        $(".npay_btn_item").bind("touchend", function(){
+        	if(typeof(bigin) != "undefined" && biginProductList.length > 0){
+            	bigin.event("bg:checkout" , {
+                	step : 0,
+                    option: "naverpay",
+                    products : biginProductList
+                })
+            }
+        })
+	})
+</script>
+<!-------------- bigin end ------------>
+
+
+8*********************옵션 장바구니 팝업**************************************
+
+<!-- bigin start -->
+<script>
+  var getBiginProductList = function(){
+    var biginOptions;
+
+    if(option_stock_data){
+      biginOptions = JSON.parse(option_stock_data);
+    }
+
+    var biginProductList = [];
+    $(".option_products .option_product").each(function(i ,e){
+      var biginProduct = {};
+      var biginOptionId = $(e).find("td>input[id*='option_box']").val();
+      try{
+        biginProduct.id=iProductNo;
+        biginProduct.name=product_name;
+        //biginProduct.price = $(e).find(".right>span[id*='option_box']").text().replace(/[^0-9]/g, '');
+        biginProduct.price = biginOptions[biginOptionId].option_price;
+        biginProduct.thumbnail = [window.location.hostname + '/web/product/tiny/'+ product_image_tiny];
+        if($(e).find(".quantity_opt").length < 1){
+          biginProduct.quantity = 0;
+        }else{
+          biginProduct.quantity = $(e).find(".quantity_opt").val();
+        }
+        //biginProduct.variant = $(e).find(".product>span").text();
+        biginProduct.variant = biginOptions[biginOptionId].option_value;
+        biginProductList.push(biginProduct);
+      }catch(e){
+        console.log(e);
+      }
+    })
+    return biginProductList;
+  }
+  function getBiginProduct(){
+    var biginProduct = {};
+    try{
+      biginProduct.id = iProductNo;
+      biginProduct.name = product_name;
+      if(typeof(product_sale_price) != "undefined"){
+        biginProduct.price = product_sale_price;
+      }else{
+        biginProduct.price = product_price;
+      }
+      biginProduct.thumbnail = [window.location.hostname + '/web/product/tiny/'+ product_image_tiny];
+      biginProduct.quantity = $('#quantity').val();
+
+    }catch(e){
+      console.log(e);
+    }
+    return biginProduct;
+  }
+
+  window.addEventListener('load' , function(){
+
+    $(".xans-product-action>.btnArea > a").bind("touchend", function(){
+      if(typeof(bigin) != 'undefined'){
+
+        if(typeof(option_stock_data) != "undefined"){
+          bigin.event("bg:checkout", {
+            step :0,
+            products : getBiginProductList()
+          });
+        }else{
+          bigin.event("bg:checkout", {
+            step :0,
+            products : [getBiginProduct()]
+          });
+        }
+      }
+    })
+
+    $(".npay_btn_item").bind("click", function(){
+
+      if(typeof(bigin) != 'undefined'){
+        if(typeof(option_stock_data) != "undefined"){
+          bigin.event("bg:checkout", {
+            step :0,
+            option: "naverpay",
+            products : getBiginProductList()
+          });
+        }else{
+          bigin.event("bg:checkout", {
+            step :0,
+            option: "naverpay",
+            products : [getBiginProduct()]
+          });
+        }
+      }
+    });
+
+    $(".xans-product-action >.btnArea>button:first").bind("touchend", function(){
+
+      if(typeof(bigin) != 'undefined'){
+        if(typeof(option_stock_data) != "undefined"){
+          bigin.event("bg:addToCart", {
+            products : getBiginProductList()
+          });
+        }else{
+          bigin.event("bg:addToCart", {
+            products : [getBiginProduct()]
+          });
+        }
+      }
+    });
+  });
+</script>
+
+<!-- bigin end -->
+
+
+
+**************************주문서 작성*******************************
+
+<script>
+  function getProductCode(strCode){
+    var strPCode = strCode;
+    strPCode = strPCode.match(/product_no=\d+/);
+    strPCode = String(strPCode);
+    var intPCode = strPCode.match(/\d+/);
+    if(intPCode != null && intPCode.length > 0) {
+      return intPCode[0];
+    }
+    return '';
+  }
+  function removeHtml(str){
+    var removed_str = str.replace(/\<.*?\>/g," ");
+    return removed_str;
+  }
+  function removeComma(str){
+    var removed_str = parseInt(str.replace(/,/g,""));
+    return removed_str;
+  }
+</script>
+
+<!------------- bigin start -------------->
+<script>
+  if(getProductCode('{$param}') != 0) {
+    var biginProductList = biginProductList || [];
+    var biginProduct = {};
+    biginProduct.id = getProductCode('{$param}');
+    biginProduct.name = removeHtml('{$product_name}').trim();
+    biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
+    biginProduct.thumbnail = ['{$product_image}'];
+    biginProduct.quantity = '{$product_quantity_text}'.replace(/[^0-9\\.]+/g, '');
+    biginProduct.variant = '{$option_str}';
+    biginProductList.push(biginProduct);
+  }
+</script>
+<!------------- bigin end -------------->
+
+<!------------- bigin start --------------->
+<script>
+  function getBiginPayMethod(){
+    var payMethod = '';
+    $('input[name=addr_paymethod]').each(function(i,item){
+      if($(this).is(':checked')){
+        if($(this).val() == 'card') {
+          payMethod = '카드'
+        } else if($(this).val() == 'tcash') {
+          payMethod = '실시간 계좌이체'
+        } else if($(this).val() == 'cell') {
+          payMethod = '휴대폰 결제'
+
+        } else if($(this).val() == 'cash') {
+          payMethod = '무통장입금'
+        } else if($(this).val() == 'icash') {
+          payMethod = '가상계좌'
+        } else if($(this).val() == 'kakaopay') {
+          payMethod = '카카오페이'
+        } else if($(this).val() == 'payco') {
+          payMethod = '페이코'
+        }
+      }
+    });
+    return payMethod;
+  }
+  window.addEventListener('load', function(){
+    $(".btnArea.b_center>a.black").bind("click", function(){
+      bigin.event("bg:checkout", {
+        step : 1,
+        option : getBiginPayMethod(),
+        product : biginProductList
+      });
+    })
+  })
+</script>
+<!------------- bigin end ---------------->
+
+
+
+(****************************주문 완료**********************************
+
+
+
+<script>
+
+        window.orderIdForEEC = '{$order_id}';
+        window.revenueForEEC = Number('{$result_order_price}'.replace(/[^0-9]/g, ''));
+        window.shippingForEEC = Number('{$normal_total_delv_price}'.replace(/[^0-9]/g, ''));
+
+
+  function getProductCode(strCode){
+    var strPCode = strCode;
+    strPCode = strPCode.match(/product_no=\d+/);
+    strPCode = String(strPCode);
+    var intPCode = strPCode.match(/\d+/);
+    if(intPCode != null && intPCode.length > 0) {
+      return intPCode[0];
+    }
+    return '';
+  }
+  function removeHtml(str){
+    var removed_str = str.replace(/\<.*?\>/g," ");
+    return removed_str;
+  }
+  function removeComma(str){
+    var removed_str = parseInt(str.replace(/,/g,""));
+    return removed_str;
+  }
+</script>
+
+
+<!-------------- bigin start ----------->
+<script>
+  function getCookie(cookie_name) {
+    var x, y;
+    var val = document.cookie.split(';');
+
+    for (var i = 0; i < val.length; i++) {
+      x = val[i].substr(0, val[i].indexOf('='));
+      y = val[i].substr(val[i].indexOf('=') + 1);
+      x = x.replace(/^\s+|\s+$/g, ''); // 앞과 뒤의 공백 제거하기
+      if (x == cookie_name) {
+        return unescape(y); // unescape로 디코딩 후 값 리턴
+      }
+    }
+  }
+  function setCookie(cookie_name, value, days) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + days);
+
+    var cookie_value = escape(value) + ((days == null) ? '' : ';    expires=' + exdate.toUTCString());
+    document.cookie = cookie_name + '=' + cookie_value;
+  }
+
+  window.addEventListener('load' , function(){
+    var biginPaymethod = $(".bigin-paymethod").text();
+    if(typeof(biginProductList) != "undefined"){
+      if(getCookie('bigin-transaction-id') != orderIdForEEC){
+        bigin.event('bg:purchase', {
+          id : orderIdForEEC,
+          revenue : revenueForEEC,
+          shipping: shippingForEEC,
+          paymethod : biginPaymethod,
+          products : biginProductList
+        });
+        setCookie('bigin-transaction-id' , orderIdForEEC);
+      }
+    }
+  })
+</script>
+<!-------------- bigin end ------------>
+
+
+
+
+
+주문 리스트
+
+
+<!--------------- bigin refund start -------------->
+<script>
+  window.addEventListener("load" , function(){
+    $(".bigin-refund-btn:not(.displaynone)").each(function(i, e){
+      $(e).bind("touchend", function(){
+        var callback = $(this).attr("onclick");
+        if(callback && typeof(bigin) != "undefined"){
+          var orderId = callback.toString().match(/(?<=cel\().*?(?=\))/)[0].replace(/\"/g,'').replace(/\'/g,'');
+          bigin.event("bg:refund", {
+            id : orderId
+          })
+        }
+      })
+    })
+  })
+</script>
+<!--------------- bigin refund end --------------->
+
+
+부분 환불
+
+
+<!---------------- bigin start ----------------->
+<script>
+	function getProductCode(strCode){
+    	var strPCode = strCode;
+	    strPCode = strPCode.match(/product_no=\d+/);
+    	strPCode = String(strPCode);
+	    var intPCode = strPCode.match(/\d+/);
+    	if(intPCode != null && intPCode.length > 0) {
+	      return intPCode[0];
+    	}
+	    return '';
+	}
+    function getBiginRefundProductList(){
+		var biginProductList = [];
+		$("input[name*='apply_product']:checked").each(function(i, e){
+            try{
+				var container = $(e).closest("tr.xans-record-");
+				var biginProduct = {};
+				biginProduct.id = getProductCode($(container).find(".thumb>a").attr("href"));
+				biginProduct.price = $(container).find(".price strong").text().replace(/[^0-9]/g, '');
+				biginProduct.quantity = $(container).find(".quantity").text().replace(/[^0-9]/g, '');
+				biginProduct.variant = $(container).find(".product .option").text().trim();
+
+				biginProductList.push(biginProduct);
+            }catch(e){
+            	console.log(e);
+            }
+		})
+
+        return biginProductList;
+    }
+
+    window.addEventListener("load", function(){
+
+        // 취소
+    	$(".xans-myshop-orderhistoryapplycancel .btnArea>a:first").bind("click", function(){
+ 			var biginProductList = getBiginRefundProductList();
+        	var biginOrderId = $(".line:first").text().replace("[", '').replace("]", '');
+        	if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined" && biginProductList.length > 0){
+                try{
+	            	bigin.event("bg:refund", {
+    	                id : biginOrderId,
+        	            products : biginProductList
+            	    })
+                }catch(e){
+                	console.log(e);
+                }
+            }
+        })
+        // 반품
+    	$(".xans-myshop-orderhistoryapplyreturn .btnArea>a:first").bind("click", function(){
+ 			var biginProductList = getBiginRefundProductList();
+        	var biginOrderId = $(".line:first").text().replace("[", '').replace("]", '');
+        	if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined" && biginProductList.length > 0){
+                try{
+	            	bigin.event("bg:refund", {
+    	                id : biginOrderId,
+        	            products : biginProductList
+            	    })
+                }catch(e){
+                	console.log(e);
+                }
+            }
+        })
+        // 교환
+//    	$(".xans-myshop-orderhistoryapplyexchange .btnArea .right>a").bind("click", function(){
+// 			var biginProductList = getBiginRefundProductList();
+//        	var biginOrderId = $(".line:first").text().replace("[", '').replace("]", '');
+//        	if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined" && biginProductList.length > 0){
+//                try{
+//	            	bigin.event("bg:refund", {
+//    	                id : biginOrderId,
+//        	            products : biginProductList
+//            	    })
+//                }catch(e){
+//                	console.log(e);
+//                }
+//            }
+//        })
+    })
+</script>
+<!---------------- bign end ------------------>
+
+
+
+<!---------------- bigin start ----------------->
+<script>
+	function getProductCode(strCode){
+    	var strPCode = strCode;
+	    strPCode = strPCode.match(/product_no=\d+/);
+    	strPCode = String(strPCode);
+	    var intPCode = strPCode.match(/\d+/);
+    	if(intPCode != null && intPCode.length > 0) {
+	      return intPCode[0];
+    	}
+	    return '';
+	}
+
+    function getBiginRefundProductList(){
+		var biginRefundProductList = [];
+    	if(typeof(aOrderProductData) != "undefined"){
+            $("input[name*='apply_product']").each(function(i, e){
+	        	//for(var i= 0; i<aOrderProductData.length; i++){
+                if(e.checked == true){
+    	        	var biginProduct = {};
+        	        biginProduct.id = aOrderProductData[i].product_no;
+            	    biginProduct.quantity = aOrderProductData[i].quantity;
+	                biginProduct.price = parseInt(aOrderProductData[i].product_price);
+    	            biginProduct.variant = aOrderProductData[i].opt_str;
+        	        biginRefundProductList.push(biginProduct)
+                }
+            	//}
+            });
+        }
+        return biginRefundProductList;
+    }
+
+    window.addEventListener("load", function(){
+
+        // 취소
+        if($(".xans-myshop-orderhistoryapplycancel .btnArea>a:first").length > 0){
+	    	$(".xans-myshop-orderhistoryapplycancel .btnArea>a:first").bind("touchend", function(){
+ 				var biginProductList = getBiginRefundProductList();
+        		var biginOrderId = aOrderProductData[0].order_id;
+	        	if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined" && biginProductList.length > 0){
+    	            try{
+	    	        	bigin.event("bg:refund", {
+    	    	            id : biginOrderId,
+        	    	        products : biginProductList
+	            	    })
+    	            }catch(e){
+        	        	console.log(e);
+            	    }
+	            }
+    	    })
+        }
+        // 반품
+        if($(".xans-myshop-orderhistoryapplyreturn .btnArea>a:first").length > 0){
+	    	$(".xans-myshop-orderhistoryapplyreturn .btnArea>a:first").bind("touchend", function(){
+ 				var biginProductList = getBiginRefundProductList();
+        		var biginOrderId = aOrderProductData[0].order_id;
+        		if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined" && biginProductList.length > 0){
+	                try{
+		            	bigin.event("bg:refund", {
+    		                id : biginOrderId,
+        		            products : biginProductList
+	            	    })
+    	            }catch(e){
+        	        	console.log(e);
+            	    }
+	            }
+    	    })
+        }
+
+        // 교환
+//    	$(".xans-myshop-orderhistoryapplyexchange .btnArea .right>a").bind("click", function(){
+// 			var biginProductList = getBiginRefundProductList();
+//        	var biginOrderId = $(".line:first").text().replace("[", '').replace("]", '');
+//        	if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined" && biginProductList.length > 0){
+//                try{
+//	            	bigin.event("bg:refund", {
+//    	                id : biginOrderId,
+//        	            products : biginProductList
+//            	    })
+//                }catch(e){
+//                	console.log(e);
+//                }
+//            }
+//        })
+    })
+</script>
+<!---------------- bign end ------------------>
+
+
+
+
+************************ 후기 작성 ****************************
+<!------------------ bigin review start ---------------->
+<script>
+	function guidGenerator() {
+			var S4 = function () {
+				return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+			};
+			return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
+		}
+		function getQueryParam(string) {
+			var pairs = string.slice(1).split('&');
+
+			var result = {};
+			pairs.forEach(function (pair) {
+				pair = pair.split('=');
+				result[pair[0]] = decodeURIComponent(pair[1] || '');
+  		    });
+
+      		return JSON.parse(JSON.stringify(result));
+    	}
+	function parseQuery(queryString) {
+    	var query = {};
+	    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+    	for (var i = 0; i < pairs.length; i++) {
+	        var pair = pairs[i].split('=');
+    	    query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+	    }
+    	return query;
+	}
+	var biginReview = function(){
+		var bigin = {};
+		bigin.title = $("input[name='subject']").val();
+		bigin.content = $("#content_IFRAME")[0].contentDocument.body.innerText
+
+		bigin.score = $("input[name='point']:checked").val();
+		bigin.id = guidGenerator();
+		bigin.product = parseQuery(window.location.search)['product_no'];
+		return bigin;
+	}
+
+
+
+    window.addEventListener("load" , function(){
+		$(".ec-base-button .gRight .allStore-color-btn1").click(function(){
+			if(typeof(bigin) != "undefined"){
+            	bigin.event("bg:review" , biginReview())
+            }
+        })
+    })
+</script>
+<!------------------ bigin review end  ---------------->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+고도몰 main
+
+			<div class="bigin-product" style="display:none">
+				<div class="bigin-product-id" style="display:none">{..goodsNo}</div>
+				<div class="bigin-product-price" style="display:none">{..goodsPrice}</div>
+				<div class="bigin-product-name" style="display:none">{..goodsNm}</div>
+				<div class="bigin-product-list" style="display:none">{mainData.themeNm}</div>
+			</div>
+
+			<!------------bigin --------------->
+            <script>
+            	function setClickListener(index, element){
+            		var biginProduct = {};
+            		var biginContainer = $(element).find(".bigin-product");
+            		try{
+            			var thumbnail = $(element).find(".space>.thumbnail a img");
+            			var imgSrc;
+            			if(thumbnail){
+            				imgSrc = window.location.hostname + $(thumbnail).attr('src');
+            				biginProduct.thumbnail = [imgSrc];
+            			}
+            			biginProduct.id = $(biginContainer).find(".bigin-product-id").text();
+            			biginProduct.name = $(biginContainer).find(".bigin-product-name").text();
+            			biginProduct.price = $(biginContainer).find(".bigin-product-price").text();
+            			biginProduct.price = parseInt(biginProduct.price);
+            			biginProduct.list = window.location.pathname + "__" + $(biginContainer).find(".bigin-product-list").text();
+            			biginProduct.position = index + 1;
+
+            			$(element).find(".space>.thumbnail").bind("click", function(){
+                            if(typeof(bigin) != 'undefined'){
+            					window.dataLayer.push(
+            						{data : undefined},
+            						{
+            							event : "impression",
+            							data : biginProduct
+            						}
+            					)
+                            }
+            			})
+            			$(element).find(".txt").bind("click", function(){
+                            if(typeof(bigin) != 'undefined'){
+            					window.dataLayer.push(
+            						{data : undefined},
+            						{
+            							event : "impression",
+            							data : biginProduct
+            						}
+            					)
+                            }
+            			})
+
+            		}catch(e){
+            			console.log(e);
+            		}
+            	}
+
+                window.addEventListener('load' , function(){
+            		$(".view>.item-display-wrap .list>ul>li").each(function(index, element){
+            			setClickListener(index, element);
+            		})
+                })
+
+            </script>
+            <!------------bigin ------
+            --------->
+
+
+
+
+
+
+
+
+
+
+
+                var bdGoodsQaId = '{bdGoodsQaId}';
+                var bdGoodsReviewId = '{bdGoodsReviewId}';
+                var goodsNo = '{goodsView.goodsNo}';
+            	var goodsNm = "{goodsView['goodsNmDetail']}";
+            	var brandNm = '{goodsView["brandNm"]}';
+            	var categoryNm = '{goodsView["cateNm"]}';
+            	var goodsPrice = '{goodsView["goodsPrice"]}';
+
+            	<!----------------bigin---------------->
+                <script>
+                	function getBiginProduct(){
+                		var biginProduct = {};
+                		biginProduct.id = goodsNo;
+                		biginProduct.name = goodsNm;
+                		biginProduct.brand = brandNm;
+                		biginProduct.category = [categoryNm];
+                		biginProduct.price = parseInt(goodsPrice);
+                		biginProduct.thumbnail = [window.location.hostname + $("#mainImage>img").attr('src')];
+                		biginProduct.quantity = 1;
+
+                		return biginProduct;
+
+                	}
+
+                	var getBiginProductList = function(){
+                		var biginOptions;
+
+                		var biginProductList = [];
+                		$(".order-goods").find('div[id*="option_display_item"]').each(function(i ,e){
+                			var biginProduct = {};
+                		    try{
+                		    	biginProduct.id = goodsNo;
+                        		biginProduct.name = goodsNm;
+                				var optionPrice = $(e).find(".price input[name*='option_price']").val();
+
+                                biginProduct.price = parseInt(optionPrice) + parseInt(goodsPrice);
+                				biginProduct.thumbnail = window.location.hostname + $("#mainImage img").attr('src');
+                				biginProduct.quantity = $(e).find(".price>.count>input").val();
+                				if($(".option_total_display_area").length > 0){
+                	                biginProduct.variant = $(e).find("span.name>strong").text()
+                				}
+                				biginProductList.push(biginProduct);
+                		    }catch(e){
+                				console.log(e);
+                			}
+                		})
+                        return biginProductList;
+                    }
+
+                	function unitPrice(price, quantity){
+                		var tempPrice = (""+price).replace(/[^0-9]/g,'');
+                		var tempQuantity = parseInt(quantity);
+                		tempPrice = parseInt(tempPrice);
+                		return tempPrice/tempQuantity;
+                	}
+
+                	function biginDetailFunc(){
+                		if(typeof(bigin) != "undefined"){
+                			var biginProduct = getBiginProduct();
+                			window.dataLayer.push(
+                				{data : undefined},
+                				{
+                					event : 'itemView',
+                					data : biginProduct
+                				}
+                			)
+                		}
+
+                		$("#bigin-cart-button").bind("click", function(){
+                			if(typeof(bigin) != "undefined"){
+                				var biginProductList = getBiginProductList();
+                				var cartData = {
+                					products : biginProductList
+                				};
+                				window.dataLayer.push(
+                					{data : undefined},
+                					{
+                						event : 'toCart',
+                						data : cartData
+                					}
+                				)
+                			}
+                		})
+                		$(".btn .skinbtn.point2.btn-add-order").bind("click", function(){
+                			if(typeof(bigin) != "undefined"){
+                				var biginProductList = getBiginProductList();
+                				var checkoutData = {
+                					step : 0,
+                					products : biginProductList
+                				};
+
+                				window.dataLayer.push(
+                					{data : undefined},
+                					{
+                						event : 'checkout',
+                						data : checkoutData
+                					}
+                				)
+                			}
+                		})
+                		$(".npay_btn_item").bind("click", function(){
+                			if(typeof(bigin) != "undefined"){
+                				var biginProductList = getBiginProductList();
+                				var checkoutData = {
+                					step : 0,
+                					option : 'naverpay',
+                					products : biginProductList
+                				};
+                				window.dataLayer.push(
+                					{data : undefined},
+                					{
+                						event : 'checkout',
+                						data : checkoutData
+                					}
+                				)
+                			}
+                		})
+                	}
+
+                	window.addEventListener("load", function(){
+                		biginDetailFunc();
+                	})
+
+                </script>
+                <!----------------bigin---------------->
+
+
+                561
+
+
+
+
+
+
+
+
+
+
+<!--------- bigin --------->
+						<script>
+							function unitPrice(price, quantity){
+								var tempPrice = (''+price).replace(/[^0-9]/g , "");
+								tempPrice = parseInt(tempPrice);
+								var tempQuantity = parseInt(quantity);
+								return tempPrice/tempQuantity;
+							}
+							var biginProductList = biginProductList || [];
+							var biginProduct = {};
+							try{
+								biginProduct.id = '{=...goodsNo}';
+								biginProduct.name = '{=...goodsNm}';
+								if('{=...goodsPriceString}'){
+									biginProduct.price = '{=...goodsPriceString}';
+
+								}else{
+									biginProduct.price = '{=gd_currency_display((...price['goodsPriceSum'] + ...price['optionPriceSum'] + ...price['optionTextPriceSum']))}';
+								}
+								biginProduct.quantity = '{=...goodsCnt}';
+								var biginThumbnail = `{=...goodsImage}`.match(/(?<=src=).*?(?= )/)[0].replace(/\"/g,'').replace(/\'/g,'');
+								biginProduct.thumbnail = [window.location.hostname + biginThumbnail];
+								biginProduct.price = unitPrice(biginProduct.price, biginProduct.quantity);
+                                <!--{ @ ...option }-->
+                                <!--{ ? ....optionName }-->
+									biginProduct.variable = '{=....optionValue}';
+                                <!--{ / }-->
+                                <!--{ / }-->
+                                <!--{ @ ...optionText }-->
+                                <!--{ ? ....optionValue }-->
+									biginProduct.variable = '{=....optionValue}';
+                                <!--{ / }-->
+                                <!--{ / }-->
+								biginProductList.push(biginProduct)
+							}catch(e){
+								console.log(e);
+							}
+
+						</script>
+<!--------- bigin --------->
+
+
+<!----------bigin---------->
+<script>
+	function biginSelectedEvent(param){
+		var biginSelectedProductList = [];
+		$('#frmCart  input:checkbox[name="cartSno[]"]').toArray().forEach(function(e, i){
+			if(e.checked){
+				if(typeof(biginProductList) != "undefined"){
+					biginSelectedProductList.push(biginProductList[i])
+				}
+			}
+		})
+
+		return biginSelectedProductList;
+	}
+
+	function biginCartFunc(){
+		if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined"){
+			window.dataLayer.push(
+				{data : undefined},
+				{
+					event : "cart",
+					data : {
+						products : biginProductList
+					}
+				}
+			)
+		}
+
+		$(".btn-justify button.cart-orderselect").bind('click', function(){
+			if(typeof(bigin) != 'undefined' && typeof(biginProductList) != "undefined"){
+				var biginSelectedProductList = biginSelectedEvent();
+				window.dataLayer.push(
+					{data : undefined},
+					{
+						event : "checkout",
+						data : {
+							step : 0,
+							products : biginSelectedProductList
+						}
+					}
+				)
+			}
+		})
+		$(".btn-justify button.cart-orderall").bind('click', function(){
+			if(typeof(bigin) != 'undefined' && typeof(biginProductList) != "undefined"){
+				window.dataLayer.push(
+					{data : undefined},
+					{
+						event : "checkout",
+						data : {
+							step : 0,
+							products : biginProductList
+						}
+					}
+				)
+			}
+		})
+
+		$(".btn-justify button.cart-cartdelete").bind('click', function(){
+			if(typeof(bigin) != 'undefined' && typeof(biginProductList) != "undefined"){
+				var biginSelectedProductList = biginSelectedEvent();
+				window.dataLayer.push(
+					{data : undefined},
+					{
+						event : "removeCart",
+						data : {
+							products : biginSelectedProductList
+						}
+					}
+				)
+			}
+		})
+
+		$(".npay_btn_item").bind('click', function(){
+			if(typeof(bigin) != 'undefined' && typeof(biginProductList) != "undefined"){
+				var biginSelectedProductList = biginSelectedEvent();
+				window.dataLayer.push(
+					{data : undefined},
+					{
+						event : "checkout",
+						data : {
+							step : 0,
+							option : "naverpay",
+							products : biginSelectedProductList
+						}
+					}
+				)
+			}
+		})
+	}
+
+
+	window.addEventListener("load", function(){
+		biginCartFunc();
+	})
+</script>
+<!----------bigin---------->
+
+
+
+
+
+
+
+
+<!------------------bigin------------------->
+<script>
+	function getBiginCookie(cookie_name) {
+	    var x, y;
+    	var val = document.cookie.split(';');
+
+	    for (var i = 0; i < val.length; i++) {
+			x = val[i].substr(0, val[i].indexOf('='));
+			y = val[i].substr(val[i].indexOf('=') + 1);
+			x = x.replace(/^\s+|\s+$/g, ''); // 앞과 뒤의 공백 제거하기
+			if (x == cookie_name) {
+				return unescape(y); // unescape로 디코딩 후 값 리턴
+			}
+		}
+	}
+	function setBiginCookie(cookie_name, value, days) {
+    	var exdate = new Date();
+    	exdate.setDate(exdate.getDate() + days);
+
+    	var cookie_value = escape(value) + ((days == null) ? '' : ';    expires=' + exdate.toUTCString());
+    	document.cookie = cookie_name + '=' + cookie_value;
+	}
+
+	function callBiginPurchase(){
+		var data = {};
+		data.id = {orderInfo.orderNo};
+		data.affilation = 'believe-nature';
+		data.shipping = {=gd_isset(orderInfo.totalDeliveryCharge)};
+		data.price = {orderInfo.totalGoodsPrice};
+		data.payMethod = '{=gd_isset(orderInfo.settleName)}';
+
+
+		function parse(string) {
+			var pairs = string.slice(1).split(',');
+      		var result = {};
+			pairs.forEach(function (pair) {
+				pair = pair.split(':');
+				result[pair[0]] = decodeURIComponent(pair[1] || '');
+			});
+		return JSON.parse(JSON.stringify(result));
+		}
+
+    	var productList = [];
+    	document.querySelectorAll('input').forEach(function(element){
+      		if(element.name == 'naver-common-inflow-script-order-item'){
+        		var product = parse(element.value);
+        		productList.push({
+          			'id' : product.goodsno.substring(1, product.goodsno.length-1),
+					'price' : (product.price/ Number(product.ea)),
+					'name' : product.goodsnm.substring(1, product.goodsnm.length-1),
+					'quantity' : Number(product.ea)
+        		});
+			}
+		});
+
+		if(getBiginCookie('bigin-transaction-id') != data.id){
+			window.dataLayer.push(
+				{'data' : undefined},
+				{
+					'event' : 'purchase',
+					'data' : {
+						'id' : data.id,
+						'affiliation' : data.affiliation,
+						'shipping' : data.shipping,
+						'revenue' : data.price,
+						'paymethod' : data.payMethod,
+						'products' : productList
+					}
+				}
+			);
+			setBiginCookie('bigin-transaction-id' , data.id);
+		}
+	}
+	window.addEventListener("load", function(){
+
+		callBiginPurchase();
+	})
+</script>
+<!------------------bigin------------------->
