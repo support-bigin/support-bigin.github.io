@@ -20,9 +20,9 @@ bigin 추적코드를 cafe24 기반의 쇼핑몰에 설치하기 위해 아래�
 
      ​	2) **게시판**( ex. <u>xxx.com/board/product/write.html</u> ) 페이지에서 **게시글 생성**
 
-     ​	3) **장바구니**( ex. <u>xxx.com/order/cart.html</u>)에서 **상품 제거** 등
+     ​	3) **장바구니**( ex. <u>xxx.com/order/cart.html</u>)에서 **상품 제거** 
 
-     과 같은 비즈니스 로직은 관리자페이지에서 접근 할 수 없는 경우가 존재합니다.	
+     등 과 같은 비즈니스 로직은 관리자페이지에서 접근 할 수 없는 경우가 존재합니다.	
      이와 같은 경우에 **DOM scraping** 방식을 사용합니다.
 
 
@@ -64,7 +64,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 추적 코드 스니펫
 
-[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin 삽입"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **bigin 삽입** 태그의 내용은 아래와 같습니다.
+[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin insert"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **bigin 삽입** 태그의 내용은 아래와 같습니다.
 
 
 
@@ -172,13 +172,13 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-**bigin login** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br>
-
-
-
-### 로그아웃 추적  
+**bigin login** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.
 
 <br>
+
+<br>
+
+### 로그아웃 추적  
 
 <br>
 
@@ -190,7 +190,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 #### **태그 : bigin 로그아웃** 
 
 ```javascript 
-<!----------- bigin user start ----------->
 <script>
 	window.addEventListener("load" , function(){
     	if(document.querySelector("로그아웃 버튼 셀렉터")){
@@ -200,7 +199,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
         }
     })    
 </script>
-<!----------- bigin use end ------------>
 ```
 
 
@@ -222,7 +220,10 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 이때, UI 레이어에 노출된 상품의 데이터(상품명, 가격, 설명 등)를 효율적으로 가져오기 위해서 **&lt;div style="display:none"&gt;&lt;/div&gt; 태그**를 삽입합니다. 
 그리고 **&lt;div style="display:none"&gt;&lt;/div&gt; 태그**  의 텍스트 노드의 값으로 상품 데이터를 취합니다.  
 
+아래의 예시는 메인페이지에서의 이커머스 추적을 설명합니다. 
 
+상품 목록 페이지(product/list.html), 검색결과 페이지(search.html)의 경우, 
+`bigin tracking in list.html` 태그와 `bigin tracking in search.html` 태그를 사용합니다. 
 
 #### 모듈 : 상품 목록 모듈 수정 
 
@@ -288,7 +289,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 <br><br>
 
-#### **태그 : bigin impression in main.html**
+#### **태그 : bigin tracking in main.html**
 
 ```javascript
 <!------ bigin impression start ------>
@@ -328,13 +329,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 		}) // 메인 상품
 		$(".xans-product-listmain-4 li[id*='anchorBoxId']").each(function(index, element){
 			setClickListener(index, element);
-		}) // 메인 상품
-		$(".xans-product-listnormal li[id*='anchorBoxId']").each(function(index, element){
-			setClickListener(index, element);
-		}) // 분류별 상품          
-		$(".xans-search-result li[id*='anchorBoxId']").each(function(index, element){
-			setClickListener(index, element);
-		}) // 검색 결과                  
+		}) // 메인 상품           
     })
 </script>
 <!------ bigin impression end ------->
@@ -344,13 +339,13 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 **트리거 : bigin main.html pageview trg**
 
-![bigin main.html pageview](http://support.bigin.io/images/cafe24-impressionTrg.png)
+![bigin main.html pageview](http://support.bigin.io/images/cafe-triggers/main_pageview.png)
 
 <br><br>
 
 ### 상품 상세 페이지에서의 이커머스 추적
 
-**제품 상세 페이지** 에서는 보통 상품 노출(bg:viewProduct), 장바구니 추가(bg:addToCart), 구매하기 (bg:checkout)의 이커머스 추적이 이루어집니다. 
+**제품 상세 페이지** 에서는 대개 상품 노출(bg:viewProduct), 장바구니 추가(bg:addToCart), 구매하기 (bg:checkout)의 이커머스 추적이 이루어집니다. 
 추가적인 추적코드를 설치하기 위해서는 아래의 코드를 수정해주시기 바랍니다. 
 
 상품 상세 페이지에서의 이커머스 추적 방식은 크게 **옵션이 존재하는 경우**와 **옵션이 존재하지 않는 경우**로 분류됩니다. 
@@ -481,13 +476,9 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 <br>
 
-#### **트리거 : viewProductTrg**
+#### **트리거 : bigin detail.html pageview**
 
-![viewProductTrg](http://support.bigin.io/images/cafe24-viewProductTrg.png)
-
-**일부 페이지뷰** 유형의 트리거를 사용하며, <code>path name</code> 의 변수를 정규표현식을 활용해 페이지 식별을 합니다.
-
-
+![viewProductTrg](http://support.bigin.io/imagcafe-triggers/detail_pageview.png)
 
 <br>
 
@@ -575,7 +566,7 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 
 <br><br>
 
-#### **태그 : bigin addToCart in cart.html**
+#### **태그 : bigin tracking in cart.html**
 
 ```javascript
 <!-------------- bigin start ----------->
@@ -673,7 +664,7 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 
 #### **트리거 : bigin cart.html pageview**
 
-![addToCartTrg](http://support.bigin.io/images/cafe24-addToCartTrg.png)
+![addToCartTrg](http://support.bigin.io/images/cafe-triggers/cart_pageview.png)
 
 
 
@@ -684,10 +675,9 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 ### 주문서 작성 페이지에서의 이머커스 추적
 
 체크아웃 프로세스에 진입한 후, 각 단계와 옵션 정보를 추적합니다.	
-체크아웃 프로세스 추적을 위해 **bigin 체크아웃 프로세스 추적** 태그와 **checkoutStepNTrg** 트리거를 사용되며,	
-**checkoutStepNTrg** 트리거는 요소클릭 형식의 트리거로 **clickVar** 변수를 사용합니다.
+체크아웃 프로세스 추적을 위해 **bigin tracking in orderform.html** 태그와 **bigin orderform.html pageview** 트리거를 사용됩니다.	
 
-장바구니 상품 모듈은 <code>tbody</code> 태그 내부에 두 개의 <code>tr</code> 태그들을 가집니다.
+주문서 작성페이지의 상품 모듈은 <code>tbody</code> 태그 내부에 두 개의 <code>tr</code> 태그들을 가집니다.
 두 <code>tr</code> 태그 내부에 상품 데이터를 바인딩한 태그들을 아래와 같이 추가해줍니다. 
 
 ```javascript
@@ -750,7 +740,7 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 
 <br>
 
-#### **태그 : bigin 체크아웃 프로세스 추적**
+#### **태그 : bigin tracking in orderform.html**
 
 ```javascript
 <script>
@@ -769,31 +759,11 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 
 
 
-#### **트리거 : checkoutStepNTrg**
+#### **트리거 : bigin orderform.html pageview**
 
 ![checkoutStepNTrg](http://support.bigin.io/images/cafe24-checkoutStepNTrg.png)
 
 
-
-<br>
-
-#### **변수 : clickVar**
-
-```javascript
-function(){
-	var flag = false;
-  	var regexProductDetail = new RegExp(/product\/.*?\/[0-9]+.*/);
-  
-    // 상품 링크 클릭 
-	if({{Click Classes}}.indexOf("구매하기 버튼 태그 클래스명") > -1)){
-    	console.log('구매하기 버튼 클릭 : ' + {{Click Classes}});      
-    	flag = 'checkoutStep1';
-    }  
-    
-	return flag;
-}
-
-```
 
 <br>
 
