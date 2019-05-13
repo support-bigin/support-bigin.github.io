@@ -182,7 +182,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 <br>
 
-로그아웃 추적을 위해서 **"bigin logout"** 태그와 **모든 페이지뷰** 트리거가 사용됩니다.
+로그아웃 추적을 위해서 **"bigin logout"** 태그와 **모든 페이지뷰** 트리거가 사용됩니다.<br>
 반드시 로그아웃 버튼의 selector를 명시하여 줍니다.
 
  
@@ -481,7 +481,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 #### **트리거 : bigin detail.html pageview**
 
-![viewProductTrg](http://support.bigin.io/imagcafe-triggers/detail_pageview.png)
+![viewProductTrg](http://support.bigin.io/images/cafe-triggers/detail_pageview.png)
 
 <br>
 
@@ -494,7 +494,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 
 
-#### 모듈 : 상품 목록 모듈 수정 
+#### 모듈 : 장바구니 상품 모듈 수정 
 
 cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니다. 
 
@@ -854,7 +854,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 
 
-#### **태그 : bigin tracking in order_result.html**
+##### **태그 : bigin tracking in order_result.html**
 
 ```javascript
 <!-------------- bigin start ----------->
@@ -901,9 +901,9 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 <br>
 
-#### **트리거 : purchaseTrg**
+#### **트리거 : bigin order_result.html pageview**
 
-![purchaseTrg](http://support.bigin.io/images/cafe24-purchaseTrg.png)
+![purchaseTrg](http://support.bigin.io/images/cafe-triggers/order_result_pageview.png)
 
 
 
@@ -912,12 +912,11 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 ### 주문 조회 페이지에서의 이커머스 추적
 
 거래된 제품의 환불을 추적합니다. 	
-**bigin 환불** 태그와 **refundTrg** 트리거를 사용합니다. 	
-**refundTrg** 트리거는 요소 클릭 형식의 트리거로써, **clickVar** 변수를 사용합니다.
+**bigin tracking in order-list.html** 태그와 **bigin order-list.html pageview** 트리거를 사용합니다. 	
 
 <br>
 
-#### **태그 : bigin 환불**
+#### **태그 : bigin tracking in order-list.html**
 
 ```javascript
 <!--------------- bigin refund start -------------->
@@ -941,9 +940,9 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 <br>
 
-#### **트리거 : refundTrg**
+#### **트리거 : bigin order-list.html pageview**
 
-![refundTrg](http://support.bigin.io/images/cafe24-refundTrg.png)
+![refundTrg](http://support.bigin.io/images/cafe-triggers/order_list_pageview.png)
 
 <br>
 
@@ -959,7 +958,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 <br>
 
-#### **태그 : bigin 환불**
+#### **태그 : bigin tracking in order-detail.html**
 
 ```javascript
 <!--------------- bigin refund start -------------->
@@ -980,9 +979,9 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 <br>
 
-#### **트리거 : refundTrg**
+#### **트리거 : bigin order-detail.html pageview**
 
-![refundTrg](http://support.bigin.io/images/cafe24-refundTrg.png)
+![refundTrg](http://support.bigin.io/images/cafe-triggers/order_detail_pageview.png)
 
 <br>
 
@@ -990,9 +989,8 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 ### 반품/교환/취소 페이지에서의 이커머스 추적
 
-제품의 부분 환불에 대한 이커머스 추적을 합니다. 	
-**bigin 환불** 태그와 **refundTrg** 트리거를 사용합니다. 	
-**refundTrg** 트리거는 요소 클릭 형식의 트리거로써, **clickVar** 변수를 사용합니다.
+거래된 제품의 부분 환불에 대한 이커머스 추적을 합니다. 	
+**bigin tracking in return.html** 태그와 **bigin return.html pageview** 트리거를 사용합니다. 	
 
 <br>
 
@@ -1066,7 +1064,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 #### **트리거 : bigin return.html pageview**
 
-![refundTrg](http://support.bigin.io/images/cafe24-refundTrg.png)
+![refundTrg](http://support.bigin.io/images/cafe-triggers/return_pageview.png)
 
 <br>
 
