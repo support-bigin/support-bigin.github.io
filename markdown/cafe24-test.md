@@ -14,7 +14,7 @@ bigin 추적코드를 cafe24 기반의 쇼핑몰에 설치하기 위해 아래�
 
 2. **DOM scraping**
 
-   - cafe24 기반의 쇼핑몰의 특성 상, 데이터 처리에 관여하는 비즈니스 로직을 공개하지 않는 경우가 있습니다.
+   - 임대형 쇼핑몰의 특성 상, 데이터 처리에 관여하는 비즈니스 로직을 공개하지 않는 경우가 있습니다.
 
      ​	1) **상품 목록** 페이지( ex. <u>xxx.com/product/list.html</u> ) 에서 노출되는 **상품 조회**,  
 
@@ -33,8 +33,6 @@ bigin 추적코드를 cafe24 기반의 쇼핑몰에 설치하기 위해 아래�
    
 
 
-<span class="end-point"></span>
-
 ### gtm 컨테이너 내려받기
 
 [cafe24_container.json](http://support.bigin.io/data/container.json) 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 추가( 또는 병합) 합니다.	
@@ -43,8 +41,6 @@ cafe24_container.json 파일은 bigin 기본 추적 스크립트의 삽입부터
 gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설명은 [이곳](https://support.google.com/tagmanager/answer/6106997?hl=en)를 참조해주세요.
 
 
-
-<span class="end-point"></span>
 
 ### 구글 태그매니저 설치
 
@@ -57,8 +53,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 [구글 태그 관리자 고객센터](https://support.google.com/tagmanager/answer/6103696?hl=ko) 또는 [구글 태그 관리자 개발가이드](https://developers.google.com/tag-manager/quickstart)에서 자세한 설치법을 알아보세요.
 
 
-
-<span class="end-point"></span>
 
 ### 기본 추적 스크립트 삽입
 
@@ -95,8 +89,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 **bigin 삽입** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> 그리고 `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다.
 
 
-
-<span class="end-point"></span>
 
 ### 고유 사용자 식별
 
@@ -138,7 +130,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-#### **태그 : bigin 로그인** 
+#### **태그 : bigin login** 
 
 ```javascript
 <script>
@@ -152,11 +144,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
                 clearInterval(interverId);
                 if (document.querySelector(".bigin-user")) {
                 	window.biginUser = {
-                  		"id": document.querySelector(".bigin-user-id").textContent,
-						"name": document.querySelector(".bigin-user-name").textContent,
-  	               		"nickname" : document.querySelector(".bigin-user-nickname").textContent,
-                  		"phoneCell": document.querySelector(".bigin-user-phone").textContent,
-                  		"email":  document.querySelector(".bigin-user-email").textContent
+						"id": document.querySelector(".bigin-user-id").textContent,
+                        "name": document.querySelector(".bigin-user-name").textContent,
+                        "nickname" : document.querySelector(".bigin-user-nickname").textContent,
+                        "phoneCell": document.querySelector(".bigin-user-phone").textContent,
+                        "email":  document.querySelector(".bigin-user-email").textContent
                 	};
 					bigin.user("profile", biginUser);
 				}
@@ -187,7 +179,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
  
 
-#### **태그 : bigin 로그아웃** 
+#### **태그 : bigin logout** 
 
 ```javascript 
 <script>
@@ -203,15 +195,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-**bigin login** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br>
-
-
-
-<span class="end-point"></span>
-
-### 이커머스 추적
+**bigin logout** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br>
 
 <br>
+
+### 이커머스 추적
 
 <br>
 
@@ -352,8 +340,8 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 **제품 상세 페이지** 에서는 대개 상품 노출(bg:viewProduct), 장바구니 추가(bg:addToCart), 구매하기 (bg:checkout)의 이커머스 추적이 이루어집니다. 
 추가적인 추적코드를 설치하기 위해서는 아래의 코드를 수정해주시기 바랍니다. 
 
-상품 상세 페이지에서의 이커머스 추적 방식은 크게 **옵션이 존재하는 경우**와 **옵션이 존재하지 않는 경우**로 분류됩니다. 
-옵션 상품은 <code>variant</code> 라는 제품 데이터를 가진 하나의 상품으로 취급합니다. 
+상품 상세 페이지에서의 이커머스 추적 방식은 크게 **옵션이 존재하는 경우**와 **옵션이 존재하지 않는 경우**로 분류됩니다.<br>
+옵션 상품의 경우, 해당 상품은 <code>variant</code> 라는 제품 데이터를 가진 하나의 상품으로 취급합니다. 
 
 
 
@@ -376,7 +364,6 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 		    try{
 		    	biginProduct.id=iProductNo;
         		biginProduct.name=product_name;
-				//biginProduct.price = $(e).find(".right>span[id*='option_box']").text().replace(/[^0-9]/g, '');
                 biginProduct.price = biginOptions[biginOptionId].option_price;
 				biginProduct.thumbnail = [window.location.hostname + '/web/product/tiny/'+ product_image_tiny];
                 if($(e).find(".quantity_opt").length < 1){
@@ -487,7 +474,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 ### 장바구니 페이지에서의 이커머스 추적
 
-장바구니 페이지에서는 장바구니 조회(bg:cart), 장바구니 제거 (bg:removeCart), 구매하기(bg:checkout) 등의 이커머스 추적이 이뤄집니다. 
+장바구니 페이지에서는 장바구니 조회(bg:cart), 장바구니 제거 (bg:removeCart), 구매하기(bg:checkout) 등의 이커머스 추적이 이뤄집니다. <br>
 추가적인 추적코드를 설치하기 위해서는 아래의 코드를 수정해주시기 바랍니다. 
 
 <br>
@@ -570,7 +557,6 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 #### **태그 : bigin tracking in cart.html**
 
 ```javascript
-<!-------------- bigin start ----------->
 <script>
 	function getBiginSelectedProductList(){
 		var biginTempSelectedProductList = Basket._getCheckedProduct();
@@ -658,7 +644,6 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
         })
 	})
 </script>
-<!-------------- bigin end ------------>
 ```
 
 <br>
@@ -755,7 +740,6 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
     })
   })
 </script>
-<!------------- bigin end ---------------->
 ```
 
 
@@ -857,7 +841,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 ##### **태그 : bigin tracking in order_result.html**
 
 ```javascript
-<!-------------- bigin start ----------->
 <script>
   function getCookie(cookie_name) {
     var x, y;
@@ -896,7 +879,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
     }
   })
 </script>
-<!-------------- bigin end ------------>
 ```
 
 <br>
@@ -919,7 +901,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 #### **태그 : bigin tracking in order-list.html**
 
 ```javascript
-<!--------------- bigin refund start -------------->
 <script>
 	$("주문 취소 버튼 셀렉터").each(function(i, e){
       $(e).bind("click", function(){
@@ -933,7 +914,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
       })
     })
 </script>
-<!--------------- bigin refund end --------------->
 ```
 
 
@@ -945,8 +925,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 ![refundTrg](http://support.bigin.io/images/cafe-triggers/order_list_pageview.png)
 
 <br>
-
-<span class="end-point"></span>
 
 
 
@@ -961,7 +939,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 #### **태그 : bigin tracking in order-detail.html**
 
 ```javascript
-<!--------------- bigin refund start -------------->
 <script>
 	$('취소하기 버튼 셀렉터').bind("click", function(){	
         if(typeof(bigin) != "undefined"){
@@ -972,7 +949,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 		}
 	})
 </script>
-<!--------------- bigin refund end --------------->
 ```
 
 
@@ -997,7 +973,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 #### **태그 : bigin tracking in return.html**
 
 ```javascript
-<!---------------- bigin start ----------------->
 <script>
 	function getProductCode(strCode){
     	var strPCode = strCode;
@@ -1055,7 +1030,6 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 		}
 	})
 </script>
-<!---------------- bign end ------------------>
 ```
 
 
