@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/images/godo-triggers/cart_pageview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/godo-triggers/goods_list_pageview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/godo-triggers/goods_view_pageview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/godo-triggers/index_pageview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/godo-triggers/order_end_pageview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/godo-triggers/order_pageview.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/markdown/cafe24-test.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/cafe24-test.md" afterDir="false" />
     </list>
@@ -20,8 +26,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="630">
+              <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -261,11 +267,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/godo-triggers" />
       <recent name="$PROJECT_DIR$/images/cafe-triggers" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/markdown" />
       <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
@@ -352,17 +358,18 @@
       <workItem from="1556842880391" duration="5274000" />
       <workItem from="1557280316929" duration="5567000" />
       <workItem from="1557473684334" duration="1192000" />
-      <workItem from="1557706192508" duration="7954000" />
+      <workItem from="1557706192508" duration="7991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270919000" />
+    <option name="totallyTimeSpent" value="270956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18581907" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18581907" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Nativescript Palette" order="3" />
@@ -371,7 +378,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32829374" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19762419" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19762419" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -712,8 +719,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="630">
+          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
         </state>
       </provider>
     </entry>
