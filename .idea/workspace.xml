@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/usage-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/usage-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cafe24_example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/cafe24_example.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/pages/detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="73" lean-forward="true" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+              <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -31,8 +29,8 @@
       <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="41" column="65" lean-forward="true" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+            <state relative-caret-position="615">
+              <caret line="41" column="65" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -46,11 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usage-policy.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="usage-policy.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/usage-policy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="180">
+              <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cafe24_example.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/cafe24_example.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="757" column="70" lean-forward="true" selection-start-line="757" selection-start-column="70" selection-end-line="757" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -77,9 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>a {</find>
-      <find>a:</find>
-      <find>addEventLis</find>
       <find>function parse</find>
       <find>container-json</find>
       <find>h2Elements</find>
@@ -104,9 +108,12 @@
       <find>goTo</find>
       <find>goToH2</find>
       <find>50</find>
-      <find>getProductCode</find>
       <find>removeH</find>
       <find>형채</find>
+      <find>impression</find>
+      <find>setClickListener</find>
+      <find>getProductCode</find>
+      <find>부분환</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -164,7 +171,6 @@
         <option value="$PROJECT_DIR$/markdown/gtm_guide.md" />
         <option value="$PROJECT_DIR$/images/06_결제완료.HTML" />
         <option value="$PROJECT_DIR$/data/cafe24_example.html" />
-        <option value="$PROJECT_DIR$/data/cafe24_example.txt" />
         <option value="$PROJECT_DIR$/markdown/installation.md" />
         <option value="$PROJECT_DIR$/markdown/insight.md" />
         <option value="$PROJECT_DIR$/markdown/live.md" />
@@ -175,6 +181,7 @@
         <option value="$PROJECT_DIR$/pages/detail.html" />
         <option value="$PROJECT_DIR$/pages/contact-us.html" />
         <option value="$PROJECT_DIR$/pages/usage-policy.html" />
+        <option value="$PROJECT_DIR$/data/cafe24_example.txt" />
       </list>
     </option>
   </component>
@@ -219,6 +226,11 @@
             <path>
               <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="support-bigin.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="support-bigin.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -334,36 +346,37 @@
       <workItem from="1556775252590" duration="853000" />
       <workItem from="1556842880391" duration="5274000" />
       <workItem from="1557280316929" duration="5567000" />
-      <workItem from="1557473684334" duration="1062000" />
+      <workItem from="1557473684334" duration="1192000" />
+      <workItem from="1557706192508" duration="4017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262835000" />
+    <option name="totallyTimeSpent" value="266982000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18581907" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="NativeScript" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32829374" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19762419" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18337408" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Nativescript Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32829374" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="NativeScript" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32829374" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19762419" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32829374" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/cafe24_example.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/markdown/godomall_guide.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -672,14 +678,14 @@
     <entry file="file://$PROJECT_DIR$/pages/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="73" lean-forward="true" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+          <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="41" column="65" lean-forward="true" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+        <state relative-caret-position="615">
+          <caret line="41" column="65" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -692,8 +698,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/usage-policy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="180">
+          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/cafe24_example.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="757" column="70" lean-forward="true" selection-start-line="757" selection-start-column="70" selection-end-line="757" selection-end-column="70" />
         </state>
       </provider>
     </entry>
