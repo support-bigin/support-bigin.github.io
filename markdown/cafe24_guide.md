@@ -515,8 +515,6 @@ function(){
 
 ![addToCartTrg](http://support.bigin.io/images/cafe24-addToCartTrg.png)
 
-
-
 <br>
 
 #### **변수 : clickVar**
@@ -537,10 +535,6 @@ function(){
 ```
 
 <br><br>
-
-
-
-
 
 ### 장바구니 조회
 

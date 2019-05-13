@@ -209,11 +209,13 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 <span class="end-point"></span>
 
-## 이커머스 추적 
+### 이커머스 추적
 
+<br>
 
+<br>
 
-### 상품 목록 페이지에서의 이커머스 추적
+#### 상품 목록 페이지에서의 이커머스 추적
 
 쇼핑몰의 랜딩페이지, 상품 분류 페이지, 검색 결과 페이지 등 **제품 상세페이지로의 링크** 가 노출되는 페이지에서 **제품 링크 클릭** 에 대한 이커머스 추적을 실행해야합니다.
 
@@ -225,7 +227,9 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 상품 목록 페이지(product/list.html), 검색결과 페이지(search.html)의 경우, 
 `bigin tracking in list.html` 태그와 `bigin tracking in search.html` 태그를 사용합니다. 
 
-#### 모듈 : 상품 목록 모듈 수정 
+<br>
+
+##### 모듈 : 상품 목록 모듈 수정
 
 cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다. 
 
@@ -289,7 +293,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 <br><br>
 
-#### **태그 : bigin tracking in main.html**
+###### **태그 : bigin tracking in main.html**
 
 ```javascript
 <!------ bigin impression start ------>
@@ -343,7 +347,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 <br><br>
 
-### 상품 상세 페이지에서의 이커머스 추적
+#### 상품 상세 페이지에서의 이커머스 추적
 
 **제품 상세 페이지** 에서는 대개 상품 노출(bg:viewProduct), 장바구니 추가(bg:addToCart), 구매하기 (bg:checkout)의 이커머스 추적이 이루어집니다. 
 추가적인 추적코드를 설치하기 위해서는 아래의 코드를 수정해주시기 바랍니다. 
@@ -351,10 +355,11 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 상품 상세 페이지에서의 이커머스 추적 방식은 크게 **옵션이 존재하는 경우**와 **옵션이 존재하지 않는 경우**로 분류됩니다. 
 옵션 상품은 <code>variant</code> 라는 제품 데이터를 가진 하나의 상품으로 취급합니다. 
 
-#### **태그 : bigin viewProduct in detail.html**
+
+
+##### 태그 : bigin viewProduct in detail.html
 
 ```javascript
-<!---- bigin start ---->
 <script>
     // 옵션상품이 존재하는 경우, 
     var getBiginProductList = function(){
@@ -468,8 +473,6 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
         });
     });
 </script>
-
-<!---- bigin end ---->
 ```
 
 <br>
@@ -486,8 +489,6 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 장바구니 페이지에서는 장바구니 조회(bg:cart), 장바구니 제거 (bg:removeCart), 구매하기(bg:checkout) 등의 이커머스 추적이 이뤄집니다. 
 추가적인 추적코드를 설치하기 위해서는 아래의 코드를 수정해주시기 바랍니다. 
-
-
 
 <br>
 
@@ -511,57 +512,57 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 
 ```javascript
 <table border="1" summary="" class="xans-element- xans-order- xans-order-normnormal xans-record-">
-            <tbody class="xans-element- xans-order xans-order-list center">
-                <tr>
-<!---- bigin cart start ---->
-<script>
-	function getProductCode(strCode){
-    	var strPCode = strCode;
-	    strPCode = strPCode.match(/product_no=\d+/);
-    	strPCode = String(strPCode);
-	    var intPCode = strPCode.match(/\d+/);
-    	if(intPCode != null && intPCode.length > 0) {
-	      return intPCode[0];
-    	}
-	    return '';
-	}    
-    var biginProductList = biginProductList || [];
-    var biginProduct = {};
-	if(getProductCode('{$param}') != ''){
-	    biginProduct.id = '{$product_no}';
-    	biginProduct.name = '{$name|striptag}';
-	    biginProduct.price = '{$product_price|striptag}'.replace(/[^0-9]/g,'');
-		biginProduct.quantity = '{$form.quantity}'.split('value="')[1].split('"')[0];
-	    if('{$layer_option_str}'){
-    	    biginProduct.variant = '{$layer_option_str}';
-	    }
-    	biginProduct.thumbnail = ['{$img}'];
-	    biginProductList.push(biginProduct);    
-	}
-</script>
-<!---- bigin cart end ---->
-                </tr>
-                <tr>
-<!---- bigin cart start ---->
-<script>
-    var biginProductList = biginProductList || [];
-    var biginProduct = {};
-	if(getProductCode('{$param}') != ''){
-	    biginProduct.id = '{$product_no}';
-    	biginProduct.name = '{$name|striptag}';
-	    biginProduct.price = '{$product_price|striptag}'.replace(/[^0-9]/g,'');
-		biginProduct.quantity = '{$form.quantity}'.split('value="')[1].split('"')[0];
-	    if('{$layer_option_str}'){
-    	    biginProduct.variant = '{$layer_option_str}';
-	    }
-    	biginProduct.thumbnail = ['{$img}'];
-	    biginProductList.push(biginProduct);    
-	}
-</script>
-<!---- bigin cart end ---->
-                </tr>
-            </tbody>
-        </table>
+	<tbody class="xans-element- xans-order xans-order-list center">
+		<tr>
+		<!---- bigin cart start ---->
+		<script>
+			function getProductCode(strCode){
+    			var strPCode = strCode;
+			    strPCode = strPCode.match(/product_no=\d+/);
+    			strPCode = String(strPCode);
+			    var intPCode = strPCode.match(/\d+/);
+    			if(intPCode != null && intPCode.length > 0) {
+			      return intPCode[0];
+		    	}
+	    		return '';
+			}    
+		    var biginProductList = biginProductList || [];
+		    var biginProduct = {};
+			if(getProductCode('{$param}') != ''){
+	    		biginProduct.id = '{$product_no}';
+		    	biginProduct.name = '{$name|striptag}';
+			    biginProduct.price = '{$product_price|striptag}'.replace(/[^0-9]/g,'');
+				biginProduct.quantity = '{$form.quantity}'.split('value="')[1].split('"')[0];
+			    if('{$layer_option_str}'){
+    			    biginProduct.variant = '{$layer_option_str}';
+			    }
+		    	biginProduct.thumbnail = ['{$img}'];
+	    		biginProductList.push(biginProduct);    
+			}
+		</script>
+		<!---- bigin cart end ---->
+        </tr>
+        <tr>
+		<!---- bigin cart start ---->
+		<script>
+		    var biginProductList = biginProductList || [];
+		    var biginProduct = {};
+			if(getProductCode('{$param}') != ''){
+			    biginProduct.id = '{$product_no}';
+		    	biginProduct.name = '{$name|striptag}';
+	    		biginProduct.price = '{$product_price|striptag}'.replace(/[^0-9]/g,'');
+				biginProduct.quantity = '{$form.quantity}'.split('value="')[1].split('"')[0];		
+			    if('{$layer_option_str}'){
+    			    biginProduct.variant = '{$layer_option_str}';
+			    }
+		    	biginProduct.thumbnail = ['{$img}'];
+	    		biginProductList.push(biginProduct);    
+			}
+		</script>
+		<!---- bigin cart end ---->
+		</tr>
+	</tbody>
+</table>
 ```
 
 <br><br>
@@ -761,7 +762,7 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 
 #### **트리거 : bigin orderform.html pageview**
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe24-checkoutStepNTrg.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
 
 
 
