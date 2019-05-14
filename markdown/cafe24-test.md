@@ -1,5 +1,4 @@
 # 임대형 솔루션의 설치 안내
-
 ## 시작하기
 
 bigin 추적코드를 임대형 쇼핑몰에 설치하기 위해 아래의 방식들을 사용합니다. 
@@ -36,7 +35,7 @@ bigin 추적코드를 임대형 쇼핑몰에 설치하기 위해 아래의 방�
 
 ### gtm 컨테이너 내려받기
 
-[cafe24_container.json](http://support.bigin.io/data/container.json) 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 추가( 또는 병합) 합니다.	
+<a href="/data/cafe24_container.json" download>cafw24_container.json</a> 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 추가( 또는 병합) 합니다.	
 cafe24_container.json 파일은 bigin 기본 추적 스크립트의 삽입부터 대부분의 추적 코드들을 구현한 gtm 컨테이너입니다.
 
 gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설명은 [이곳](https://support.google.com/tagmanager/answer/6106997?hl=en)를 참조해주세요.
@@ -1062,7 +1061,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 ### gtm 컨테이너 내려받기
 
-[godomall_container.json](http://support.bigin.io/data/container.json) 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 추가( 또는 병합) 합니다.	
+<a href="/data/godomall_container.json" download>godomall_container.json</a> 파일을 내려받은 후, 사용할 구글 태그매니저 컨테이너에 추가( 또는 병합) 합니다.	
 godomall_container.json 파일은 bigin 기본 추적 스크립트의 삽입부터 대부분의 추적 코드들을 구현한 gtm 컨테이너입니다.
 
 gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설명은 [이곳](https://support.google.com/tagmanager/answer/6106997?hl=en)를 참조해주세요.
