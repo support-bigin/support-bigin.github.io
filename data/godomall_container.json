@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2019-05-14 01:57:00",
+    "exportTime": "2019-05-14 05:36:19",
     "containerVersion": {
         "path": "accounts/4701961063/containers/11915168/versions/0",
         "accountId": "4701961063",
@@ -15,7 +15,7 @@
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1557729463001",
+            "fingerprint": "1557811569188",
             "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4701961063/containers/11915168/workspaces?apiLink=container"
         },
         "tag": [
@@ -53,7 +53,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<!----------- bigin user start ----------->\n<script>\n\twindow.addEventListener(\"load\" , function(){\n    \tif(document.querySelector(\"로그아웃 버튼 셀렉터\")){\n        \tdocument.querySelector(\"로그아웃 버튼 셀렉터\").addEventListener(\"click\" , function(){\n            \tbigin.user(\"logout\");\n            })\n        }\n    })    \n</script>\n<!----------- bigin use end ------------>"
+                        "value": "<script>\n\twindow.addEventListener(\"load\" , function(){\n    \tif(document.querySelector(\"로그아웃 버튼 셀렉터\")){\n        \tdocument.querySelector(\"로그아웃 버튼 셀렉터\").addEventListener(\"click\" , function(){\n            \tbigin.user(\"logout\");\n            })\n        }\n    })    \n</script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -61,7 +61,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1557729462987",
+                "fingerprint": "1557803859369",
                 "firingTriggerId": [
                     "2147479553"
                 ],
@@ -101,7 +101,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<script>\n    function setClickListener(index, element){\n\t\tvar biginProduct = {};\n\t\tvar biginContainer = $(element).find(\".bigin-product\");\n\t\ttry{\n\t\t\tbiginProduct.id = $(biginContainer).find(\".bigin-product-id\").text();\n\t\t\tbiginProduct.name = $(biginContainer).find(\".bigin-product-name\").text();\n\t\t\tbiginProduct.price = $(biginContainer).find(\".bigin-product-price\").text();\n\t\t\tbiginProduct.thumbnail = [$(biginContainer).find(\".bigin-product-image\").text()];\n\t\t\tbiginProduct.list = window.location.pathname + \"__\";\n\t\t\tbiginProduct.position = index + 1;\n\n\t\t\t$(element).find(\"a 태그 셀렉터\").bind(\"click\", function(){\n                if(typeof(bigin) != 'undefined'){\n\t\t\t\t\tbigin.event(\"bg:impression\" , biginProduct);\n                }\n\t\t\t})\n\n\t\t}catch(e){\n\t\t\tconsole.log(e);\n\t\t}\n\t}\n\n    window.addEventListener('load' , function(){\n       \n\t\t$(\".xans-product-listnormal li[id*='anchorBoxId']\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t}) // 분류별 상품    \n    })\n</script>"
+                        "value": "<script>\n    function setClickListener(index, element){\n\t\tvar biginProduct = {};\n\t\tvar biginContainer = $(element).find(\".bigin-product\");\n\t\ttry{\n\t\t\tbiginProduct.id = $(biginContainer).find(\".bigin-product-id\").text();\n\t\t\tbiginProduct.name = $(biginContainer).find(\".bigin-product-name\").text();\n\t\t\tbiginProduct.price = $(biginContainer).find(\".bigin-product-price\").text();\n\t\t\tbiginProduct.thumbnail = [$(biginContainer).find(\".bigin-product-image\").text()];\n\t\t\tbiginProduct.list = window.location.pathname + \"__\";\n\t\t\tbiginProduct.position = index + 1;\n\n\t\t\t$(element).find(\"a 태그 셀렉터\").bind(\"click\", function(){\n                if(typeof(bigin) != 'undefined'){\n\t\t\t\t\tbigin.event(\"bg:impression\" , biginProduct);\n                }\n\t\t\t})\n\n\t\t}catch(e){\n\t\t\tconsole.log(e);\n\t\t}\n\t}\n\n    window.addEventListener('load' , function(){\n       \n\t\t$(\".goods-list .item-display li\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t}) // 분류별 상품    \n    })\n</script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -109,7 +109,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1557732225129",
+                "fingerprint": "1557811486659",
                 "firingTriggerId": [
                     "7"
                 ],
@@ -125,7 +125,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<script>\n    function setClickListener(index, element){\n\t\tvar biginProduct = {};\n\t\tvar biginContainer = $(element).find(\".bigin-product\");\n\t\ttry{\n\t\t\tbiginProduct.id = $(biginContainer).find(\".bigin-product-id\").text();\n\t\t\tbiginProduct.name = $(biginContainer).find(\".bigin-product-name\").text();\n\t\t\tbiginProduct.price = $(biginContainer).find(\".bigin-product-price\").text();\n\t\t\tbiginProduct.thumbnail = [$(biginContainer).find(\".bigin-product-image\").text()];\n\t\t\tbiginProduct.list = window.location.pathname + \"__\";\n\t\t\tbiginProduct.position = index + 1;\n\n\t\t\t$(element).find(\"a 태그 셀렉터\").bind(\"click\", function(){\n                if(typeof(bigin) != 'undefined'){\n\t\t\t\t\tbigin.event(\"bg:impression\" , biginProduct);\n                }\n\t\t\t})\n\n\t\t}catch(e){\n\t\t\tconsole.log(e);\n\t\t}\n\t}\n\n    window.addEventListener('load' , function(){\n       \n\t\t$(\".xans-search-result li[id*='anchorBoxId']\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t}) // 검색 결과     \n    })\n</script>"
+                        "value": "<script>\n    function setClickListener(index, element){\n\t\tvar biginProduct = {};\n\t\tvar biginContainer = $(element).find(\".bigin-product\");\n\t\ttry{\n\t\t\tbiginProduct.id = $(biginContainer).find(\".bigin-product-id\").text();\n\t\t\tbiginProduct.name = $(biginContainer).find(\".bigin-product-name\").text();\n\t\t\tbiginProduct.price = $(biginContainer).find(\".bigin-product-price\").text();\n\t\t\tbiginProduct.thumbnail = [$(biginContainer).find(\".bigin-product-image\").text()];\n\t\t\tbiginProduct.list = window.location.pathname + \"__\";\n\t\t\tbiginProduct.position = index + 1;\n\n\t\t\t$(element).find(\"a 태그 셀렉터\").bind(\"click\", function(){\n                if(typeof(bigin) != 'undefined'){\n\t\t\t\t\tbigin.event(\"bg:impression\" , biginProduct);\n                }\n\t\t\t})\n\n\t\t}catch(e){\n\t\t\tconsole.log(e);\n\t\t}\n\t}\n\n    window.addEventListener('load' , function(){\n       \n\t\t$(\".goods-list .item-display li\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t}) // 검색 결과     \n    })\n</script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -133,7 +133,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1557732235920",
+                "fingerprint": "1557811239953",
                 "firingTriggerId": [
                     "14"
                 ],
@@ -173,7 +173,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<!------ bigin impression start ------>\n<script>\n    function setClickListener(index, element){\n\t\tvar biginProduct = {};\n\t\tvar biginContainer = $(element).find(\".bigin-product\");\n\t\ttry{\n\t\t\tbiginProduct.id = $(biginContainer).find(\".bigin-product-id\").text();\n\t\t\tbiginProduct.name = $(biginContainer).find(\".bigin-product-name\").text();\n\t\t\tbiginProduct.price = $(biginContainer).find(\".bigin-product-price\").text();\n\t\t\tbiginProduct.thumbnail = [$(biginContainer).find(\".bigin-product-image\").text()];\n\t\t\tbiginProduct.list = window.location.pathname + \"__\";\n\t\t\tbiginProduct.position = index + 1;\n\n\t\t\t$(element).find(\"a 태그 셀렉터\").bind(\"click\", function(){\n                if(typeof(bigin) != 'undefined'){\n\t\t\t\t\tbigin.event(\"bg:impression\" , biginProduct);\n                }\n\t\t\t})\n\n\t\t}catch(e){\n\t\t\tconsole.log(e);\n\t\t}\n\t}\n\n    window.addEventListener('load' , function(){\n       \n\t\t$(\".xans-product-listmain-1 li[id*='anchorBoxId']\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t})\n\t\t$(\".xans-product-listmain-2 li[id*='anchorBoxId']\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t})\n\t\t$(\".xans-product-listmain-3 li[id*='anchorBoxId']\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t})\n\t\t$(\".xans-product-listmain-4 li[id*='anchorBoxId']\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t})        \n    })\n</script>\n<!------ bigin impression end ------->"
+                        "value": "<script>\n    function setClickListener(index, element){\n\t\tvar biginProduct = {};\n\t\tvar biginContainer = $(element).find(\".bigin-product\");\n\t\ttry{\n\t\t\tbiginProduct.id = $(biginContainer).find(\".bigin-product-id\").text();\n\t\t\tbiginProduct.name = $(biginContainer).find(\".bigin-product-name\").text();\n\t\t\tbiginProduct.price = $(biginContainer).find(\".bigin-product-price\").text();\n\t\t\tbiginProduct.thumbnail = [$(biginContainer).find(\".bigin-product-image\").text()];\n\t\t\tbiginProduct.list = window.location.pathname + \"__\";\n\t\t\tbiginProduct.position = index + 1;\n\n\t\t\t$(element).find(\"a 태그 셀렉터\").bind(\"click\", function(){\n                if(typeof(bigin) != 'undefined'){\n\t\t\t\t\tbigin.event(\"bg:impression\" , biginProduct);\n                }\n\t\t\t})\n\n\t\t}catch(e){\n\t\t\tconsole.log(e);\n\t\t}\n\t}\n\n    window.addEventListener('load' , function(){\n       \n\t\t$(\".goods-content-1 .list li\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t})\n\t\t$(\".goods-content-2 .list li\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t})\n\t\t$(\".goods-content-3 .list li\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t})\n\t\t$(\".goods-content-4 .list li\").each(function(index, element){\n\t\t\tsetClickListener(index, element);\n\t\t})        \n    })\n</script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -181,7 +181,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1557732261165",
+                "fingerprint": "1557811317954",
                 "firingTriggerId": [
                     "8"
                 ],
@@ -197,7 +197,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<script>\n  window.addEventListener('load', function(){\n    $(\"주문하기 버튼 셀렉터\").bind(\"click\", function(){\n      bigin.event(\"bg:checkout\", {\n        step : 1,\n        option : '옵션 정보,\n        product : biginProductList\n      });\n    })\n  })\n</script>"
+                        "value": "<script>\n  window.addEventListener('load', function(){\n    $(\"주문하기 버튼 셀렉터\").bind(\"click\", function(){\n      bigin.event(\"bg:checkout\", {\n        step : 1,\n        option : '옵션 정보',\n        product : biginProductList\n      });\n    })\n  })\n</script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -205,7 +205,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1557798265423",
+                "fingerprint": "1557803578700",
                 "firingTriggerId": [
                     "12"
                 ],
@@ -221,7 +221,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<!-------------- bigin start ----------->\n<script>\n  function getCookie(cookie_name) {\n    var x, y;\n    var val = document.cookie.split(';');\n\n    for (var i = 0; i < val.length; i++) {\n      x = val[i].substr(0, val[i].indexOf('='));\n      y = val[i].substr(val[i].indexOf('=') + 1);\n      x = x.replace(/^\\s+|\\s+$/g, ''); // 앞과 뒤의 공백 제거하기\n      if (x == cookie_name) {\n        return unescape(y); // unescape로 디코딩 후 값 리턴\n      }\n    }\n  }\n  function setCookie(cookie_name, value, days) {\n    var exdate = new Date();\n    exdate.setDate(exdate.getDate() + days);\n\n    var cookie_value = escape(value) + ((days == null) ? '' : ';    expires=' + exdate.toUTCString());\n    document.cookie = cookie_name + '=' + cookie_value;\n  }\n\n  window.addEventListener('load' , function(){\n    var biginPaymethod = $(\".bigin-paymethod\").text();\n    if(typeof(biginProductList) != \"undefined\"){\n      if(getCookie('bigin-transaction-id') != orderIdForEEC){\n        bigin.event('bg:purchase', {\n          id : '거래 ID',\n          revenue : '상품의 총 가격',\n          shipping: '배송비',\n          paymethod : '거래 방식(ex. 무통장입금)',\n          products : biginProductList\n        });\n        setCookie('bigin-transaction-id' , '거래 ID');\n      }\n    }\n  })\n</script>\n<!-------------- bigin end ------------>"
+                        "value": "<!-------------- bigin start ----------->\n<script>\n  function getCookie(cookie_name) {\n    var x, y;\n    var val = document.cookie.split(';');\n\n    for (var i = 0; i < val.length; i++) {\n      x = val[i].substr(0, val[i].indexOf('='));\n      y = val[i].substr(val[i].indexOf('=') + 1);\n      x = x.replace(/^\\s+|\\s+$/g, ''); // 앞과 뒤의 공백 제거하기\n      if (x == cookie_name) {\n        return unescape(y); // unescape로 디코딩 후 값 리턴\n      }\n    }\n  }\n  function setCookie(cookie_name, value, days) {\n    var exdate = new Date();\n    exdate.setDate(exdate.getDate() + days);\n\n    var cookie_value = escape(value) + ((days == null) ? '' : ';    expires=' + exdate.toUTCString());\n    document.cookie = cookie_name + '=' + cookie_value;\n  }\n\n  window.addEventListener('load' , function(){\n    var biginPaymethod = $(\".bigin-paymethod\").text();\n    if(typeof(biginProductList) != \"undefined\"){\n      if(getCookie('bigin-transaction-id') != '거래 ID'){\n        bigin.event('bg:purchase', {\n          id : '거래 ID',\n          revenue : '상품의 총 가격',\n          shipping: '배송비',\n          paymethod : '거래 방식(ex. 무통장입금)',\n          products : biginProductList\n        });\n        setCookie('bigin-transaction-id' , '거래 ID');\n      }\n    }\n  })\n</script>\n<!-------------- bigin end ------------>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -229,7 +229,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1557742550488",
+                "fingerprint": "1557812168112",
                 "firingTriggerId": [
                     "11"
                 ],
@@ -357,7 +357,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "1557739440207"
+                "fingerprint": "1557811479917"
             },
             {
                 "accountId": "4701961063",
@@ -377,12 +377,12 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "goods_view.php"
+                                "value": "goods_view.html"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1557734033534"
+                "fingerprint": "1557811544038"
             },
             {
                 "accountId": "4701961063",
