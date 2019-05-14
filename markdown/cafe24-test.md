@@ -781,66 +781,84 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 ```javascript
 <tbody module="Order_normalresultlist">
-                <tr>
-                    <td class="thumb">
-						// ... 
-                    </td>
-                    <td class="product">
-						// ... 
-                    </td>
-                    <td class="price">
-						// ... 
-                    </td>
-                    <td class="quantity">
-						// ...                         
-                    </td>
+	<tr>
+    	<td class="thumb">
+			// ... 
+        </td>
+        <td class="product">
+			// ... 
+        </td>
+        <td class="price">
+			// ... 
+        </td>
+		<td class="quantity">
+			// ...                         
+        </td>
 
-					<!------------- bigin start -------------->                          
-					<script>
-						if(getProductCode('{$param}') != 0) {
-							var biginProductList = biginProductList || [];
-							var biginProduct = {};
-							biginProduct.id = getProductCode('{$param}');
-							biginProduct.name = removeHtml('{$product_name}').trim();
-							biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
-							biginProduct.thumbnail = ['{$product_image}'];
-							biginProduct.quantity = '{$product_quantity}'.replace(/[^0-9\\.]+/g, '');
-							biginProduct.variant = '{$option_str}';
-							biginProductList.push(biginProduct);        
-						}
-					</script>                      
-					<!------------- bigin end -------------->      
-                </tr>
-                <tr>
-                    <td class="thumb">
-						// ... 
-                    </td>
-                    <td class="product">
-						// ... 
-                    </td>
-                    <td class="price">
-						// ... 
-                    </td>
-                    <td class="quantity">
-						// ...                         
-                    </td>
-					<!------------- bigin start -------------->                          
-					<script>
-						if(getProductCode('{$param}') != 0) {
-							var biginProductList = biginProductList || [];
-							var biginProduct = {};
-							biginProduct.id = getProductCode('{$param}');
-							biginProduct.name = removeHtml('{$product_name}').trim();
-							biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
-							biginProduct.thumbnail = ['{$product_image}'];
-							biginProduct.quantity = '{$product_quantity}'.replace(/[^0-9\\.]+/g, '');
-							biginProduct.variant = '{$option_str}';
-							biginProductList.push(biginProduct);        
-						}
-					</script>                      
-					<!------------- bigin end -------------->      
-                </tr>
-            </tbody>
+		<!------------- bigin start -------------->                          
+		<script>
+			function getProductCode(strCode){
+		    	var strPCode = strCode;
+			    strPCode = strPCode.match(/product_no=\d+/);
+    			strPCode = String(strPCode);
+		    	var intPCode = strPCode.match(/\d+/);
+	    		if(intPCode != null && intPCode.length > 0) {
+		    	  return intPCode[0];
+	    		}
+			    return '';
+			}   	 
+			function removeHtml(str){
+	    		var removed_str = str.replace(/\<.*?\>/g," ");
+		    	return removed_str;
+			}
+			function removeComma(str){
+		    	var removed_str = parseInt(str.replace(/,/g,""));
+    			return removed_str;
+			}                        
+			if(getProductCode('{$param}') != 0) {
+				var biginProductList = biginProductList || [];
+				var biginProduct = {};
+				biginProduct.id = getProductCode('{$param}');
+				biginProduct.name = removeHtml('{$product_name}').trim();
+				biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
+				biginProduct.thumbnail = ['{$product_image}'];
+				biginProduct.quantity = '{$product_quantity}'.replace(/[^0-9\\.]+/g, '');
+				biginProduct.variant = '{$option_str}';
+				biginProductList.push(biginProduct);        
+			}
+		</script>                      
+		<!------------- bigin end -------------->      
+	</tr>
+    <tr>
+    	<td class="thumb">
+			// ... 
+        </td>
+        <td class="product">
+			// ... 
+        </td>
+        <td class="price">
+			// ... 
+        </td>
+        <td class="quantity">
+			// ...                         
+        </td>
+		<!------------- bigin start -------------->                          
+		<script>
+			if(getProductCode('{$param}') != 0) {
+				var biginProductList = biginProductList || [];
+				var biginProduct = {};
+				biginProduct.id = getProductCode('{$param}');
+				biginProduct.name = removeHtml('{$product_name}').trim();
+				biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
+				biginProduct.thumbnail = ['{$product_image}'];
+				biginProduct.quantity = '{$product_quantity}'.replace(/[^0-9\\.]+/g, '');
+				biginProduct.variant = '{$option_str}';
+				biginProductList.push(biginProduct);        
+			}
+		</script>                      
+		<!------------- bigin end -------------->      
+	</tr>
+</tbody>
 
 ```
 
@@ -874,7 +892,7 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
   window.addEventListener('load' , function(){
     var biginPaymethod = $(".bigin-paymethod").text();
     if(typeof(biginProductList) != "undefined"){
-      if(getCookie('bigin-transaction-id') != orderIdForEEC){
+      if(getCookie('bigin-transaction-id') != "거래 ID"){
         bigin.event('bg:purchase', {
           id : '거래 ID',
           revenue : '상품의 총 가격',
@@ -1333,6 +1351,8 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 ##### 태그 : bigin viewProduct in goods_view.php
 
+추가된 상품 목록을 `DOM Scraping` 해야하기 때문에 selector 수정이 필요합니다.
+
 ```javascript
 <script>
 	function getBiginProduct(){
@@ -1353,18 +1373,19 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 		var biginOptions;
 
 		var biginProductList = [];
+        
+        // 추가된 상품 정보 목록
 		$(".order-goods").find('div[id*="option_display_item"]').each(function(i ,e){
 			var biginProduct = {};
 		    try{
 		    	biginProduct.id = goodsNo;
         		biginProduct.name = goodsNm;
 				var optionPrice = $(e).find(".price input[name*='option_price']").val();
-				
                 biginProduct.price = parseInt(optionPrice) + parseInt(goodsPrice);
 				biginProduct.thumbnail = window.location.hostname + $("#mainImage img").attr('src');
 				biginProduct.quantity = $(e).find(".price>.count>input").val();
 				if($(".option_total_display_area").length > 0){
-	                biginProduct.variant = $(e).find("span.name>strong").text()				
+	                biginProduct.variant = $(e).find("span.name>strong").text()			
 				}
 				biginProductList.push(biginProduct);
 		    }catch(e){
@@ -1809,12 +1830,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 ### 주문 상세 페이지에서의 이커머스 추적
 
 거래된 제품의 환불을 추적합니다. 	
-**bigin 환불** 태그와 **refundTrg** 트리거를 사용합니다. 	
-**refundTrg** 트리거는 요소 클릭 형식의 트리거로써, **clickVar** 변수를 사용합니다.
+**bigin tracking in order_view.php** 태그와 **bigin order_view.php pageview** 트리거를 사용합니다. 	
 
 <br>
 
-#### **태그 : bigin tracking in order-detail.html**
+#### **태그 : bigin tracking in order_view.php**
 
 ```javascript
 <script>
@@ -1833,9 +1853,9 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 <br>
 
-#### **트리거 : bigin order-detail.html pageview**
+#### **트리거 : bigin order_view.php pageview**
 
-![refundTrg](http://support.bigin.io/images/cafe-triggers/order_detail_pageview.png)
+![refundTrg](http://support.bigin.io/images/godo-triggers/order_view_pageview.png)
 
 <br>
 

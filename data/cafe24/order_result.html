@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-KSF7549');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+<tbody module="Order_normalresultlist">
+<tr>
+  <td class="thumb">
+    // ...
+  </td>
+  <td class="product">
+    // ...
+  </td>
+  <td class="price">
+    // ...
+  </td>
+  <td class="quantity">
+    // ...
+  </td>
+
+  <!------------- bigin start -------------->
+  <script>
+    function getProductCode(strCode){
+      var strPCode = strCode;
+      strPCode = strPCode.match(/product_no=\d+/);
+      strPCode = String(strPCode);
+      var intPCode = strPCode.match(/\d+/);
+      if(intPCode != null && intPCode.length > 0) {
+        return intPCode[0];
+      }
+      return '';
+    }
+    function removeHtml(str){
+      var removed_str = str.replace(/\<.*?\>/g," ");
+      return removed_str;
+    }
+    function removeComma(str){
+      var removed_str = parseInt(str.replace(/,/g,""));
+      return removed_str;
+    }
+    if(getProductCode('product_no=123') != ''){
+      var biginProductList = biginProductList || [];
+      var biginProduct = {};
+      biginProduct.id = getProductCode('product_no=123');
+      biginProduct.name = removeHtml('{$product_name}').trim();
+      biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
+      biginProduct.thumbnail = ['{$product_image}'];
+      biginProduct.quantity = '{1}'.replace(/[^0-9\\.]+/g, '');
+      biginProduct.variant = '{$option_str}';
+      biginProductList.push(biginProduct);
+    }
+  </script>
+  <!------------- bigin end -------------->
+</tr>
+<tr>
+  <td class="thumb">
+    // ...
+  </td>
+  <td class="product">
+    // ...
+  </td>
+  <td class="price">
+    // ...
+  </td>
+  <td class="quantity">
+    // ...
+  </td>
+  <!------------- bigin start -------------->
+  <script>
+    if(getProductCode('product_no=123') != ''){
+      var biginProductList = biginProductList || [];
+      var biginProduct = {};
+      biginProduct.id = getProductCode('product_no=123');
+      biginProduct.name = removeHtml('{$product_name}').trim();
+      biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
+      biginProduct.thumbnail = ['{$product_image}'];
+      biginProduct.quantity = '1'.replace(/[^0-9\\.]+/g, '');
+      biginProduct.variant = '{$option_str}';
+      biginProductList.push(biginProduct);
+    }
+  </script>
+  <!------------- bigin end -------------->
+</tr>
+</tbody>
+</body>
+</html>

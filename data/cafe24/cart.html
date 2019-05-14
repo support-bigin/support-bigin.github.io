@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-KSF7549');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+
+<table border="1" summary="" class="xans-element- xans-order- xans-order-normnormal xans-record-">
+  <tbody class="xans-element- xans-order xans-order-list center">
+  <tr>
+    <td class="thumbnail"123123123></td>
+    <td class="price">234234234</td>
+    <td class="name">asdasdasdasd</td>
+    <!---- bigin cart start ---->
+    <script>
+      function getProductCode(strCode){
+        var strPCode = strCode;
+        strPCode = strPCode.match(/product_no=\d+/);
+        strPCode = String(strPCode);
+        var intPCode = strPCode.match(/\d+/);
+        if(intPCode != null && intPCode.length > 0) {
+          return intPCode[0];
+        }
+        return '';
+      }
+      var biginProductList = biginProductList || [];
+      var biginProduct = {};
+      if(getProductCode('product_no=1233') != ''){
+        biginProduct.id = '{$product_no}';
+        biginProduct.name = '{$name|striptag}';
+        biginProduct.price = '{$product_price|striptag}'.replace(/[^0-9]/g,'');
+        // biginProduct.quantity = '{$form.quantity}'.split('value="')[1].split('"')[0];
+        if('{$layer_option_str}'){
+          biginProduct.variant = '{$layer_option_str}';
+        }
+        biginProduct.thumbnail = ['{$img}'];
+        biginProductList.push(biginProduct);
+      }
+    </script>
+    <!---- bigin cart end ---->
+  </tr>
+  <tr>
+    <td class="thumbnail">123123123</td>
+    <td class="price">123123123123</td>
+    <td class="name">asdasdasdas</td>
+    <!---- bigin cart start ---->
+    <script>
+      var biginProductList = biginProductList || [];
+      var biginProduct = {};
+      if(getProductCode('product_no=123') != ''){
+        biginProduct.id = '{$product_no}';
+        biginProduct.name = '{$name|striptag}';
+        biginProduct.price = '{$product_price|striptag}'.replace(/[^0-9]/g,'');
+        // biginProduct.quantity = '{$form.quantity}'.split('value="')[1].split('"')[0];
+        if('{$layer_option_str}'){
+          biginProduct.variant = '{$layer_option_str}';
+        }
+        biginProduct.thumbnail = ['{$img}'];
+        biginProductList.push(biginProduct);
+      }
+    </script>
+    <!---- bigin cart end ---->
+  </tr>
+  </tbody>
+</table>
+
+<div class="cart">cart</div>
+<div class="npay_btn_item">buy</div>
+</body>
+</html>
