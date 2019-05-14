@@ -1,12 +1,8 @@
 # 임대형 솔루션의 설치 안내
 
+## 시작하기
 
-
-## 카페24
-
-### 시작하기
-
-bigin 추적코드를 cafe24 기반의 쇼핑몰에 설치하기 위해 아래의 방식들을 사용합니다. 
+bigin 추적코드를 임대형 쇼핑몰에 설치하기 위해 아래의 방식들을 사용합니다. 
 
 1. **구글 태그매니저** 
 
@@ -30,7 +26,12 @@ bigin 추적코드를 cafe24 기반의 쇼핑몰에 설치하기 위해 아래�
 - **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접 접근하여 필요한 데이터를 가져오는 방식입니다. 	
   손쉬운 **DOM scraping** 을 위해 가이드에 따른 **&lt;div style="display:none"&gt;&lt;/div&gt; 태그**를 추가하는 부분이 필요합니다.
 
-   
+  
+
+<span class="end-point"></span>
+
+## 카페24
+
 
 
 ### gtm 컨테이너 내려받기
@@ -43,8 +44,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 ### 구글 태그매니저 설치
-
-
 
 스마트 디자인 편집창을 열고 **기본 레이아웃**, **공통 레이아웃**에 **구글 태그매니저 스니펫**을 삽입합니다. 
 대부분의 페이지들은 **기본 레이아웃** 또는 **공통 레이아웃**, **팝업 레이아웃** 등의 레이아웃 내부에 위치합니다. 
@@ -86,15 +85,13 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-**bigin 삽입** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> 그리고 `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다.
+**bigin insert** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> 그리고 `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다.
 
 
 
 ### 고유 사용자 식별
 
-
-
-1. **"Layout_stateLogon"** 모듈과 2. **"Layout_statelogoff"** 모듈을 통해서 사용자의 로그인 유무를 판별할 수 있습니다. 
+고유 사용자 식별 추적을 위해서 **"Layout_stateLogon"** , **"Layout_statelogoff"** 모듈을 사용하며, <br>**"Layout_stateLogon"** 모듈과 **"Layout_statelogoff"** 모듈을 통해서 사용자의 로그인 유무를 판별할 수 있습니다. 
 
 로그인 상태에서는 **"Layout_stateLogon"**이 활성화되어 **"Layout_stateLogon"** 모듈의 UI가 출력되고 해당 기능을 활용할 수 있습니다. 
 
@@ -175,7 +172,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 <br>
 
 로그아웃 추적을 위해서 **"bigin logout"** 태그와 **모든 페이지뷰** 트리거가 사용됩니다.<br>
-반드시 로그아웃 버튼의 selector를 명시하여 줍니다.
+반드시 **bigin logout** 태그 내부에 로그아웃 버튼의 selector를 명시해 주어야합니다.
 
  
 
@@ -337,7 +334,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 #### 상품 상세 페이지에서의 이커머스 추적
 
-**제품 상세 페이지** 에서는 대개 상품 노출(bg:viewProduct), 장바구니 추가(bg:addToCart), 구매하기 (bg:checkout)의 이커머스 추적이 이루어집니다. 
+**제품 상세 페이지** 에서는 대개 `상품 노출(bg:viewProduct)`, `장바구니 추가(bg:addToCart)`, `구매하기 (bg:checkout)`의 이커머스 추적이 이루어집니다. <br>
 추가적인 추적코드를 설치하기 위해서는 아래의 코드를 수정해주시기 바랍니다. 
 
 상품 상세 페이지에서의 이커머스 추적 방식은 크게 **옵션이 존재하는 경우**와 **옵션이 존재하지 않는 경우**로 분류됩니다.<br>
@@ -474,7 +471,7 @@ cafe24는 아래 테이블과 같은 상품 리스트 모듈들이 있습니다.
 
 ### 장바구니 페이지에서의 이커머스 추적
 
-장바구니 페이지에서는 장바구니 조회(bg:cart), 장바구니 제거 (bg:removeCart), 구매하기(bg:checkout) 등의 이커머스 추적이 이뤄집니다. <br>
+장바구니 페이지에서는 `장바구니 조회(bg:cart)`, `장바구니 제거 (bg:removeCart)`, `구매하기(bg:checkout)` 등의 이커머스 추적이 이뤄집니다. <br>
 추가적인 추적코드를 설치하기 위해서는 아래의 코드를 수정해주시기 바랍니다. 
 
 <br>
@@ -501,6 +498,9 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 <table border="1" summary="" class="xans-element- xans-order- xans-order-normnormal xans-record-">
 	<tbody class="xans-element- xans-order xans-order-list center">
 		<tr>
+        <td class="thumbnail"></td>
+        <td class="price"></td>
+        <td class="name"></td>
 		<!---- bigin cart start ---->
 		<script>
 			function getProductCode(strCode){
@@ -530,6 +530,9 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 		<!---- bigin cart end ---->
         </tr>
         <tr>
+        <td class="thumbnail"></td>
+        <td class="price"></td>
+        <td class="name"></td>            
 		<!---- bigin cart start ---->
 		<script>
 		    var biginProductList = biginProductList || [];
@@ -669,57 +672,63 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 ```javascript
 <tbody class="xans-element- xans-order xans-order-individuallist center">
 	<tr>
-<!---- bigin cart start ---->
-	<script>
-		function getProductCode(strCode){
-	    	var strPCode = strCode;
-		    strPCode = strPCode.match(/product_no=\d+/);
-    		strPCode = String(strPCode);
-		    var intPCode = strPCode.match(/\d+/);
-    		if(intPCode != null && intPCode.length > 0) {
-	    	  return intPCode[0];
-	    	}
-		    return '';
-		}   	 
-		function removeHtml(str){
-    		var removed_str = str.replace(/\<.*?\>/g," ");
-	    	return removed_str;
-		}
-		function removeComma(str){
-	    	var removed_str = parseInt(str.replace(/,/g,""));
-    		return removed_str;
-		}
+        <td class="thumbnail"></td>
+        <td class="price"></td>
+        <td class="name"></td>    
+		<!---- bigin start ---->
+		<script>
+			function getProductCode(strCode){
+		    	var strPCode = strCode;
+			    strPCode = strPCode.match(/product_no=\d+/);
+    			strPCode = String(strPCode);
+		    	var intPCode = strPCode.match(/\d+/);
+	    		if(intPCode != null && intPCode.length > 0) {
+		    	  return intPCode[0];
+	    		}
+			    return '';
+			}   	 
+			function removeHtml(str){
+	    		var removed_str = str.replace(/\<.*?\>/g," ");
+		    	return removed_str;
+			}
+			function removeComma(str){
+		    	var removed_str = parseInt(str.replace(/,/g,""));
+    			return removed_str;
+			}
 
-    	var biginProductList = biginProductList || [];
-	    var biginProduct = {};
-		if(getProductCode('{$param}') != ''){
-		    biginProduct.id = getProductCode('{$param}');
-		    biginProduct.name = removeHtml('{$product_name}').trim();
-		    biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
-		    biginProduct.thumbnail = ['{$product_image}'];
-		    biginProduct.quantity = '{$product_quantity_text}'.replace(/[^0-9\\.]+/g, '');
-		    biginProduct.variant = '{$option_str}';
-		    biginProductList.push(biginProduct);
-		}
-	</script>
-	<!---- bigin cart end ---->
+	    	var biginProductList = biginProductList || [];
+		    var biginProduct = {};
+			if(getProductCode('{$param}') != ''){
+			    biginProduct.id = getProductCode('{$param}');
+			    biginProduct.name = removeHtml('{$product_name}').trim();
+			    biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
+			    biginProduct.thumbnail = ['{$product_image}'];
+			    biginProduct.quantity = '{$product_quantity_text}'.replace(/[^0-9\\.]+/g, '');	
+			    biginProduct.variant = '{$option_str}';
+			    biginProductList.push(biginProduct);
+			}
+		</script>
+		<!---- bigin cart end ---->
 	</tr>
     <tr>
-	<!---- bigin cart start ---->
-	<script>
-    	var biginProductList = biginProductList || [];
-	    var biginProduct = {};
-		if(getProductCode('{$param}') != ''){
-		    biginProduct.id = getProductCode('{$param}');
-		    biginProduct.name = removeHtml('{$product_name}').trim();
-		    biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
-		    biginProduct.thumbnail = ['{$product_image}'];
-		    biginProduct.quantity = '{$product_quantity_text}'.replace(/[^0-9\\.]+/g, '');
-		    biginProduct.variant = '{$option_str}';
-		    biginProductList.push(biginProduct);
-		}
-	</script>
-	<!---- bigin cart end ---->
+        <td class="thumbnail"></td>
+        <td class="price"></td>
+        <td class="name"></td>            
+		<!---- bigin cart start ---->
+		<script>
+	    	var biginProductList = biginProductList || [];
+		    var biginProduct = {};
+			if(getProductCode('{$param}') != ''){
+			    biginProduct.id = getProductCode('{$param}');
+			    biginProduct.name = removeHtml('{$product_name}').trim();
+			    biginProduct.price = '{$product_price}'.replace(/[^0-9]/g, '');
+		    	biginProduct.thumbnail = ['{$product_image}'];
+			    biginProduct.quantity = '{$product_quantity_text}'.replace(/[^0-9\\.]+/g, '');	
+			    biginProduct.variant = '{$option_str}';
+			    biginProductList.push(biginProduct);
+			}
+		</script>
+		<!---- bigin cart end ---->
 	</tr>
 </tbody>
 ```
@@ -756,12 +765,12 @@ cafe24는 아래 테이블과 같은 장바구니 상품 모듈들이 있습니�
 
 cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다. 
 
-| 모듈명                                                   |
-| -------------------------------------------------------- |
-| order_normalresultlist (주문완료페이지 기본배송상품)     |
-| order_individualresultlist (주문완료페이지 개별배송상품) |
-| order_oversearesultlist (주문완료페이지 해외배송상품)    |
-| order_giftresultlist (주문완료페이지 상은품 리스트)      |
+| 모듈명                       | 모듈코드                        |
+| ---------------------------- | ------------------------------- |
+| 주문완료페이지 기본배송상품  | xans-order_normalresultlist     |
+| 주문완료페이지 개별배송상품  | xans-order_individualresultlist |
+| 주문완료페이지 해외배송상품  | xans-order_oversearesultlist    |
+| 주문완료페이지 상은품 리스트 | xans-order_giftresultlist       |
 
 <br>
 
@@ -963,10 +972,15 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 
 
+
+
 ### 반품/교환/취소 페이지에서의 이커머스 추적
 
 거래된 제품의 부분 환불에 대한 이커머스 추적을 합니다. 	
 **bigin tracking in return.html** 태그와 **bigin return.html pageview** 트리거를 사용합니다. 	
+
+취소 페이지(cancel.html), 교환(exchange.html)의 경우, 
+`bigin tracking in cancel.html` 태그와 `bigin tracking in exchange.html` 태그를 사용합니다. 
 
 <br>
 
@@ -1042,35 +1056,9 @@ cafe24는 주문 상품 리스트에 관한 모듈들이 있습니다.
 
 <br>
 
+<span class="end-point"></span>
+
 ## 고도몰
-
-### 시작하기
-
-bigin 추적코드를 고도몰 쇼핑몰에 설치하기 위해 아래의 방식들을 사용합니다. 
-
-1. **구글 태그매니저** 
-
-   - 제공되는 gtm 컨테이너를 가이드에 따라 수정하여 쇼핑몰에 맞게 커스터마이징할 수 있습니다.
-
-2. **DOM scraping**
-
-   - 임대형 쇼핑몰의 특성 상, 데이터 처리에 관여하는 비즈니스 로직을 공개하지 않는 경우가 있습니다.
-
-     ​	1) **상품 목록** 페이지( ex. <u>xxx.com/goods/goods_list.php</u> ) 에서 노출되는 **상품 조회**,  
-
-     ​	2) **게시판**( ex. <u>xxx.com/board/goods/write.php</u> ) 페이지에서 **게시글 생성**
-
-     ​	3) **장바구니**( ex. <u>xxx.com/order/cart.php</u>)에서 **상품 제거** 
-
-     등 과 같은 비즈니스 로직은 관리자페이지에서 접근 할 수 없는 경우가 존재합니다.	
-     이와 같은 경우에 **DOM scraping** 방식을 사용합니다.
-
-
-
-- **DOM scraping 방식**은 HTML로 구성된 UI 레이어의 DOM 트리에 직접 접근하여 필요한 데이터를 가져오는 방식입니다. 	
-  손쉬운 **DOM scraping** 을 위해 가이드에 따른 **&lt;div style="display:none"&gt;&lt;/div&gt; 태그**를 추가하는 부분이 필요합니다.
-
-   
 
 ### gtm 컨테이너 내려받기
 
@@ -1272,7 +1260,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 ######  **태그 : bigin tracking in index.html**
 
 ```javascript
-<!------ bigin impression start ------>
 <script>
     function setClickListener(index, element){
 		var biginProduct = {};
@@ -1309,7 +1296,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 		}) // 메인 상품           
     })
 </script>
-<!------ bigin impression end ------->
 ```
 
 <br><br>
@@ -1454,7 +1440,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 ### 장바구니 페이지에서의 이커머스 추적
 
-장바구니 페이지에서는 장바구니 조회(bg:cart), 장바구니 제거 (bg:removeCart), 구매하기(bg:checkout) 등의 이커머스 추적이 이뤄집니다. <br>
+장바구니 페이지에서는 `장바구니 조회(bg:cart)`, `장바구니 제거 (bg:removeCart)`, `구매하기(bg:checkout)` 등의 이커머스 추적이 이뤄집니다. <br>
 추가적인 추적코드를 설치하기 위해서는 아래의 코드를 수정해주시기 바랍니다. 
 
 <br>
@@ -1515,16 +1501,19 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 <br><br>
 
-#### **태그 : bigin tracking in cart.html**
+#### **태그 : bigin tracking in cart.php**
 
 ```javascript
 <script>
 	function getBiginSelectedProductList(){
-		var biginTempSelectedProductList = Basket._getCheckedProduct();
 		var biginSelectedProductList = [];
-		for(var i = 0; i < biginTempSelectedProductList.length; i++){
-			biginSelectedProductList.push(biginProductList[biginTempSelectedProductList[i].seq]);
-		}
+		$('#frmCart  input:checkbox[name="cartSno[]"]').toArray().forEach(function(e, i){
+			if(e.checked){
+				if(typeof(biginProductList) != "undefined"){
+					biginSelectedProductList.push(biginProductList[i])				
+				}
+			}
+		})
 		return biginSelectedProductList;
 	}
 
@@ -1609,7 +1598,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 <br>
 
-#### **트리거 : bigin cart.html pageview**
+#### **트리거 : bigin cart.php pageview**
 
 ![addToCartTrg](http://support.bigin.io/images/godo-triggers/cart_pageview.png)
 
@@ -1682,7 +1671,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 <br>
 
-#### **태그 : bigin tracking in orderform.html**
+#### **태그 : bigin tracking in order.php**
 
 ```javascript
 <script>
@@ -1700,7 +1689,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-#### **트리거 : bigin orderform.html pageview**
+#### **트리거 : bigin order.php pageview**
 
 ![checkoutStepNTrg](http://support.bigin.io/images/godo-triggers/order_pageview.png)
 
@@ -1784,11 +1773,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 ### 주문 조회 페이지에서의 이커머스 추적
 
 거래된 제품의 환불을 추적합니다. 	
-**bigin tracking in order-list.html** 태그와 **bigin order-list.html pageview** 트리거를 사용합니다. 	
+**bigin tracking in order_list.php** 태그와 **bigin order_list.php pageview** 트리거를 사용합니다. 	
 
 <br>
 
-#### **태그 : bigin tracking in order-list.html**
+#### **태그 : bigin tracking in order-list.php**
 
 ```javascript
 <script>
@@ -1796,7 +1785,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
       $(e).bind("click", function(){
         var callback = $(this).attr("onclick");
         if(callback && typeof(bigin) != "undefined"){
-          var orderId = callback.toString().match(/(?<=cel\().*?(?=\))/)[0].replace(/\"/g,'').replace(/\'/g,'');
+          var orderId = "거래 ID";
           bigin.event("bg:refund", {
             id : orderId
           })
@@ -1810,9 +1799,9 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 <br>
 
-#### **트리거 : bigin order-list.html pageview**
+#### **트리거 : bigin order_list.php pageview**
 
-![refundTrg](http://support.bigin.io/images/cafe-triggers/order_list_pageview.png)
+![refundTrg](http://support.bigin.io/images/godo-triggers/order_list_pageview.png)
 
 <br>
 
@@ -1848,87 +1837,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 #### **트리거 : bigin order-detail.html pageview**
 
 ![refundTrg](http://support.bigin.io/images/cafe-triggers/order_detail_pageview.png)
-
-<br>
-
-
-
-### 반품/교환/취소 페이지에서의 이커머스 추적
-
-거래된 제품의 부분 환불에 대한 이커머스 추적을 합니다. 	
-**bigin tracking in return.html** 태그와 **bigin return.html pageview** 트리거를 사용합니다. 	
-
-<br>
-
-#### **태그 : bigin tracking in return.html**
-
-```javascript
-<script>
-	function getProductCode(strCode){
-    	var strPCode = strCode;
-	    strPCode = strPCode.match(/product_no=\d+/);
-    	strPCode = String(strPCode);
-	    var intPCode = strPCode.match(/\d+/);
-    	if(intPCode != null && intPCode.length > 0) {
-	      return intPCode[0];
-    	}
-	    return '';
-	}
-	function getBiginRefundProductList(){
-		var biginRefundProductList = [];
-    	if(typeof(aOrderProductData) != "undefined"){
-			$("input[name*='apply_product']").each(function(i, e){
-				if(e.checked == true){
-    	        	var biginProduct = {};
-        	        biginProduct.id = aOrderProductData[i].product_no;
-            	    biginProduct.quantity = $(e).closest('tr').find("input[id*='quantity_id']").val();;
-	                biginProduct.price = parseInt(aOrderProductData[i].product_price);
-    	            biginProduct.variant = aOrderProductData[i].opt_str;
-        	        biginRefundProductList.push(biginProduct)
-                }
-            });
-        }
-        return biginRefundProductList;
-    }
-	$(".xans-myshop-orderhistoryapplycancel .btnArea>a:first").bind("click", function(){
-		var biginProductList = getBiginRefundProductList();
-        var biginOrderId = '거래 ID';
-		if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined" && biginProductList.length > 0){
-			try{
-	        	bigin.event("bg:refund", {
-    	        	id : biginOrderId,
-        	        products : biginProductList
-				})
-			}catch(e){
-            	console.log(e);
-			}
-		}
-	})
-        // 반품
-    $(".xans-myshop-orderhistoryapplyreturn .btnArea>a:first").bind("click", function(){
- 		var biginProductList = getBiginRefundProductList();
-        var biginOrderId = '거래 ID';
-        if(typeof(bigin) != "undefined" && typeof(biginProductList) != "undefined" && biginProductList.length > 0){
-        	try{
-	        	bigin.event("bg:refund", {
-    	        	id : biginOrderId,
-        	        products : biginProductList
-            	})
-			}catch(e){
-            	console.log(e);
-			}
-		}
-	})
-</script>
-```
-
-
-
-<br>
-
-#### **트리거 : bigin return.html pageview**
-
-![refundTrg](http://support.bigin.io/images/cafe-triggers/return_pageview.png)
 
 <br>
 
