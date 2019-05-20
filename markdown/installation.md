@@ -24,9 +24,9 @@ bigin의 WEB SDK는 웹사이트에 삽입되는 스크립트 형태로, 웹사�
 2. 아래의 설명에 따라 추적 ID를 찾습니다. 추적 코드 스니펫에 이 추적 ID를 사용합니다.
 3. bigin.js 추적 코드 스크립트를 복사하여 추적할 각 웹페이지에 삽입합니다. 각 페이지의 시작 태그인 `head` 태그 상단에 추적 코드 스크립트를 추가합니다.
 
-```
-웹사이트의 SDK의 경우 구글 태그매니저(GTM)의 설치를 지원합니다. 구글 태그매니저의 설치방법은 [여기](#sectionLink)를 참고하세요. 
-```
+<pre>
+웹사이트의 SDK의 경우 구글 태그매니저(GTM)의 설치를 지원합니다. 구글 태그매니저의 설치방법은 <a href="http://support.bigin.io/pages/detail.html?kind=gtm_guide#gtm_guide_0" target="_blank">여기</a>를 참고하세요. 
+</pre>
 
 
 
