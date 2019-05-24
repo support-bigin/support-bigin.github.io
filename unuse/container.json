@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2019-05-24 01:23:04",
+    "exportTime": "2019-03-13 06:54:52",
     "containerVersion": {
         "path": "accounts/4701388612/containers/11263608/versions/0",
         "accountId": "4701388612",
@@ -15,327 +15,15 @@
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1558423821603",
+            "fingerprint": "1552460073858",
             "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4701388612/containers/11263608/workspaces?apiLink=container"
         },
         "tag": [
             {
                 "accountId": "4701388612",
                 "containerId": "11263608",
-                "tagId": "6",
-                "name": "bigin_Cart",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:cart\",{{data}} );\n    })();\n  </script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660791568",
-                "firingTriggerId": [
-                    "11"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "8",
-                "name": "bigin_Checkout",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:checkout\",{{data}} );\n    })();\n  </script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660687286",
-                "firingTriggerId": [
-                    "6"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "1",
-                "name": "bigin_Configuration",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "<script>\n\t(function() {\n      \tbigin.config({{data}})\n\t})();\n</script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660708237",
-                "firingTriggerId": [
-                    "18"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "15",
-                "name": "bigin_Custom Event",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "<script>\n  (function(){\n  \tbigin.event({{eventName}}, {{data}});\n  })()\n</script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660660693",
-                "firingTriggerId": [
-                    "22"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "14",
-                "name": "bigin_Disconnect User",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "<script>\n(function () {\n   bigin.user(\"logout\");\n})();  \n</script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660716428",
-                "firingTriggerId": [
-                    "15"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "16",
-                "name": "bigin_GPS Tracking",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "<script>\n  (function(){\n  \tbigin.user(\"location\")\n  })()\n</script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660637191",
-                "firingTriggerId": [
-                    "24"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "13",
-                "name": "bigin_Identify User",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "<script>\n(function () {\n    bigin.user(\"profile\", {{data}});\n})();\n</script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660760335",
-                "firingTriggerId": [
-                    "14"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "7",
-                "name": "bigin_Impression",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:impression\",{{data}} );\n    })();\n  </script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660725561",
-                "firingTriggerId": [
-                    "9"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "4",
-                "name": "bigin_Item To Cart",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:addToCart\",{{data}} );\n    })();\n  </script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660668818",
-                "firingTriggerId": [
-                    "12"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "3",
-                "name": "bigin_Purchase",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:purchase\",{{data}} );\n    })();\n  </script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660772485",
-                "firingTriggerId": [
-                    "5"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "11",
-                "name": "bigin_Refund",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:refund\",{{data}} );\n    })();\n  </script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660732046",
-                "firingTriggerId": [
-                    "7"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "5",
-                "name": "bigin_Remove Cart",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:removeCart\",{{data}} );\n    })();\n  </script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660742190",
-                "firingTriggerId": [
-                    "13"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "tagId": "10",
-                "name": "bigin_Review",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:review\",{{data}} );\n    })();\n  </script>"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1558660802146",
-                "firingTriggerId": [
-                    "8"
-                ],
-                "tagFiringOption": "ONCE_PER_EVENT"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
                 "tagId": "12",
-                "name": "bigin_SPA Tracking Pageview",
+                "name": "bigin SPA 페이지뷰",
                 "type": "html",
                 "parameter": [
                     {
@@ -349,7 +37,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1558660651313",
+                "fingerprint": "1552028626751",
                 "firingTriggerId": [
                     "16"
                 ],
@@ -358,14 +46,14 @@
             {
                 "accountId": "4701388612",
                 "containerId": "11263608",
-                "tagId": "2",
-                "name": "bigin_Tracking Script",
+                "tagId": "3",
+                "name": "bigin 구매",
                 "type": "html",
                 "parameter": [
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<script>(function () {\n  \tvar biginScript = document.createElement('script');\n\tbiginScript.type = 'text/javascript';\n  \tbiginScript.async = true;\n\tbiginScript.src = 'https://sdk.bigin.io/v1/bigin.sdk.js';\n\n  \tbiginScript.onload = function () {\n    \n\tbigin.config({\n\t    projectID:\t\"YOUR_PROJECT_ID\",\n\t\tdomain: \"https://i.bigin.io\",\n\t\ttrack: ['sessions', 'views', 'clicks', 'scrolls'],\n\t\ttrackLocation: false,\n\t\tcurrencyCode: \"KRW\"\n    \t});\n  };\n\n  var s = document.getElementsByTagName('script')[0];\n  s.parentNode.insertBefore(biginScript, s);\n})();\n</script>"
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:purchase\",{{data}} );\n    })();\n  </script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -373,7 +61,103 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1558660751138",
+                "fingerprint": "1552028637979",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "14",
+                "name": "bigin 로그아웃",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n(function () {\n   bigin.user(\"logout\");\n})();  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028646439",
+                "firingTriggerId": [
+                    "15"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "13",
+                "name": "bigin 로그인",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n(function () {\n    bigin.user(\"profile\", {{data}});\n})();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028655701",
+                "firingTriggerId": [
+                    "14"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "10",
+                "name": "bigin 리뷰",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:review\",{{data}} );\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028665640",
+                "firingTriggerId": [
+                    "8"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "2",
+                "name": "bigin 삽입",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>(function () {\n  \tvar biginScript = document.createElement('script');\n\tbiginScript.type = 'text/javascript';\n  \tbiginScript.async = true;\n\tbiginScript.src = 'https://sdk.bigin.io/v1/bigin.sdk.js';\n\n  \tbiginScript.onload = function () {\n    \n\tbigin.config({\n    projectID:\t\"YOUR_PROJECT_ID\",\n\turl: \"https://i.bigin.io\",\n\ttrack: ['sessions', 'views', 'clicks', 'scrolls'],\n\ttrackLocation: false,\n\tcurrencyCode: \"KRW\"\n    });\n  };\n\n  var s = document.getElementsByTagName('script')[0];\n  s.parentNode.insertBefore(biginScript, s);\n})();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552460038998",
                 "firingTriggerId": [
                     "17"
                 ],
@@ -382,8 +166,152 @@
             {
                 "accountId": "4701388612",
                 "containerId": "11263608",
+                "tagId": "1",
+                "name": "bigin 설정",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n\t(function() {\n      \ttry{\n\t\t\tbigin.config({{data}});        \n        }catch(e){\n        }\n\n\t})();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028774446",
+                "firingTriggerId": [
+                    "18"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "16",
+                "name": "bigin 위치정보수집",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  (function(){\n  \tbigin.user(\"location\")\n  })()\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552377887025",
+                "firingTriggerId": [
+                    "24"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "6",
+                "name": "bigin 장바구니갱신",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:cart\",{{data}} );\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028689917",
+                "firingTriggerId": [
+                    "11"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "5",
+                "name": "bigin 장바구니제거",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:removeCart\",{{data}} );\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028698653",
+                "firingTriggerId": [
+                    "13"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "4",
+                "name": "bigin 장바구니추가 트리거",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:addToCart\",{{data}} );\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028711571",
+                "firingTriggerId": [
+                    "12"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "7",
+                "name": "bigin 제품링크클릭",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:impression\",{{data}} );\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028719581",
+                "firingTriggerId": [
+                    "9"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
                 "tagId": "9",
-                "name": "bigin_View Product",
+                "name": "bigin 제품상세보기",
                 "type": "html",
                 "parameter": [
                     {
@@ -397,9 +325,81 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1558660678302",
+                "fingerprint": "1552028726823",
                 "firingTriggerId": [
                     "10"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "8",
+                "name": "bigin 체크아웃",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:checkout\",{{data}} );\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028734401",
+                "firingTriggerId": [
+                    "6"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "15",
+                "name": "bigin 커스텀이벤트",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  (function(){\n  \tbigin.event({{eventName}}, {{data}});\n  })()\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552375290342",
+                "firingTriggerId": [
+                    "22"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "tagId": "11",
+                "name": "bigin 환불",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "  <script>\n    (function () {\n\t\tbigin.event(\"bg:refund\",{{data}} );\n    })();\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1552028743342",
+                "firingTriggerId": [
+                    "7"
                 ],
                 "tagFiringOption": "ONCE_PER_EVENT"
             }
@@ -408,341 +408,8 @@
             {
                 "accountId": "4701388612",
                 "containerId": "11263608",
-                "triggerId": "17",
-                "name": "all Pageview",
-                "type": "PAGEVIEW",
-                "fingerprint": "1558660935099"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "11",
-                "name": "bigin_Cart",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "cart"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660921915"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "6",
-                "name": "bigin_Checkout",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "checkout"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660950854"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "18",
-                "name": "bigin_Configuration",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "config"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660915269"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "22",
-                "name": "bigin_Custom Event",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "custom"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660896895"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "15",
-                "name": "bigin_Disconnect User",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "logout"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660828365"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "24",
-                "name": "bigin_GPS Tracking",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "location"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660863792"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "14",
-                "name": "bigin_Identify User",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "login"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660851597"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "9",
-                "name": "bigin_Impression",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "impression"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660872916"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "12",
-                "name": "bigin_Item To Cart",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "addToCart"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660904988"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "5",
-                "name": "bigin_Purchase",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "purchase"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660837777"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "7",
-                "name": "bigin_Refund",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "refund"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660944525"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "13",
-                "name": "bigin_Remove Cart",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "removeCart"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660879991"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
-                "triggerId": "8",
-                "name": "bigin_Review",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "review"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1558660844183"
-            },
-            {
-                "accountId": "4701388612",
-                "containerId": "11263608",
                 "triggerId": "16",
-                "name": "bigin_SPA Tracking Pageview",
+                "name": "bigin SPA 페이지뷰 트리거",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
                     {
@@ -761,13 +428,263 @@
                         ]
                     }
                 ],
-                "fingerprint": "1558660820392"
+                "fingerprint": "1552028558525"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "5",
+                "name": "bigin 구매 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "purchase"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028312507"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "15",
+                "name": "bigin 로그아웃 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "logout"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028519470"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "14",
+                "name": "bigin 로그인 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "login"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028499331"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "8",
+                "name": "bigin 리뷰 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "review"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028367463"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "18",
+                "name": "bigin 설정 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "config"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028770789"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "24",
+                "name": "bigin 위치정보수집 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "location"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552377883341"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "11",
+                "name": "bigin 장바구니갱신 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028439280"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "13",
+                "name": "bigin 장바구니제거 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "removeCart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028479780"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "12",
+                "name": "bigin 장바구니추가",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "addToCart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028458869"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "9",
+                "name": "bigin 제품링크클릭 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "impression"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028394627"
             },
             {
                 "accountId": "4701388612",
                 "containerId": "11263608",
                 "triggerId": "10",
-                "name": "bigin_View Product",
+                "name": "bigin 제품상세보기 트리거",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
                     {
@@ -786,7 +703,90 @@
                         ]
                     }
                 ],
-                "fingerprint": "1558660888554"
+                "fingerprint": "1552028413861"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "6",
+                "name": "bigin 체크아웃 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "checkout"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028329910"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "22",
+                "name": "bigin 커스텀이벤트 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "custom"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552375284923"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "17",
+                "name": "bigin 페이지로드 트리거",
+                "type": "PAGEVIEW",
+                "fingerprint": "1552028602555"
+            },
+            {
+                "accountId": "4701388612",
+                "containerId": "11263608",
+                "triggerId": "7",
+                "name": "bigin 환불 트리거",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "refund"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1552028349163"
             }
         ],
         "variable": [

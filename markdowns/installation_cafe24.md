@@ -72,7 +72,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 ### 추적 코드 스니펫
 
-[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **`bigin insert` ** 태그를 통해서 **bigin.js** 가 프로젝트 내부에 로드됩니다. 아래의 **bigin 기본 추적 스크립트** 태그를 참고하세요.
+[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **`bigin_Tracking Script` ** 태그를 통해서 **bigin.js** 가 프로젝트 내부에 로드됩니다. 아래의 **bigin 기본 추적 스크립트** 태그를 참고하세요.
 
 기본 추적 스크립트에서 `projectID` 와 `domain` 을 insight.bigin.io 에서 생성한 데이터를 수집할 프로젝트의 정보와 동일하게 변경해야 합니다.
 
@@ -98,7 +98,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 </script>
 ```
 
-**`bigin insert`** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 조회가 동작할 때마다, 매 회 호출됩니다.<br>
+**`bigin_Tracking Script`** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 조회가 동작할 때마다, 매 회 호출됩니다.<br>
 
 
 

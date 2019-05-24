@@ -56,7 +56,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 추적 코드 스니펫
 
-[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin insert"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **bigin 삽입** 태그의 내용은 아래와 같습니다.
+[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin_Tracking Script"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **bigin 삽입** 태그의 내용은 아래와 같습니다.
 
 
 
@@ -84,7 +84,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-**bigin insert** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> 그리고 `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다.
+**bigin_Tracking Script** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> 그리고 `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다.
 
 
 
@@ -1102,7 +1102,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 추적 코드 스니펫
 
-[godomall_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin insert"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **bigin insert** 태그의 내용은 아래와 같습니다.
+[godomall_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **"bigin_Tracking Script"** 태그를 통해서 **bigin.sdk.js** 가 프로젝트 내부에 로드됩니다. **bigin_Tracking Script** 태그의 내용은 아래와 같습니다.
 
 
 
@@ -1130,7 +1130,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-**bigin insert** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> 그리고 `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다.
+**bigin_Tracking Script** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 변경 시, 매회 호출됩니다.<br> 그리고 `projectID` 가 실제 프로젝트의 추적ID와 같도록 변경해주어야 합니다.
 
 
 

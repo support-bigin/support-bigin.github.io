@@ -40,7 +40,7 @@ bigin 추적 스크립트를 임대형 쇼핑몰에 설치하기 위해 아래�
 
   
 
-
+<span class="end-point"></span>
 
 ## 구글 태그매니저 설치
 
@@ -67,12 +67,12 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 
 
-
+<span class="end-point"></span>
 ## 기본 추적 스크립트 삽입
 
 ### 추적 코드 스니펫
 
-[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **`bigin insert` ** 태그를 통해서 **bigin.js** 가 프로젝트 내부에 로드됩니다. 아래의 **bigin 기본 추적 스크립트** 태그를 참고하세요.
+[cafe24_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **`bigin_Tracking Script`** 태그를 통해서 **bigin.js** 가 프로젝트 내부에 로드됩니다. 아래의 **bigin 기본 추적 스크립트** 태그를 참고하세요.
 
 기본 추적 스크립트에서 `projectID` 을 insight.bigin.io 에서 생성한 데이터를 수집할 프로젝트의 정보와 동일하게 변경해야 합니다.
 
@@ -98,10 +98,10 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 </script>
 ```
 
-**`bigin insert`** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 조회가 동작할 때마다, 매 회 호출됩니다.<br>
+**`bigin_Tracking Script`** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 조회가 동작할 때마다, 매 회 호출됩니다.<br>
 
 
-
+<span class="end-point"></span>
 ## 고유 사용자 식별
 
 고유 사용자 식별 추적을 위해서 **`Layout_stateLogon`** , **`Layout_statelogoff`** 모듈을 사용하며, <br>**`Layout_stateLogon`** 모듈과 **`Layout_statelogoff`** 모듈을 통해서 고유 사용자의 통합과 분리를 로그인 시점으로 구분할 수 있습니다. 
@@ -176,8 +176,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 <br>
 
 <br>
+<span class="end-point"></span>
 
-## 고유 사용자 식별의 종료  
+<br>
+
+<h2>고유 사용자 식별 종료</h2>
 
 <br>
 
@@ -207,6 +210,9 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 **`bigin_Disconnect User`** 태그의 트리거는 **모든 페이지뷰** 로 설정되어 있어 페이지 조회 시, 매회 호출됩니다.<br>
 
 <br>
+<span class="end-point"></span>
+
+
 
 ## 이커머스 이벤트 추적
 
@@ -217,18 +223,18 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 이커머스 이벤트 추적은 아래의 목적으로 이벤트를 수집합니다.
 
-* 제품의 목록 위치,순서 등 방문자가 제품을 조회한 노출 위치를 전송합니다. [제품 노출](#)
-* 제품의 세부정보 페이지를 추적하여 제품의 실적을 파악합니다. [제품 세부정보 페이지 조회](#)
-* 제품을 장바구니에 담는 횟수와 제품의 정보를 추적합니다. [제품 장바구니에 추가](#)
-* 장바구니에 담긴 제품의 정보와 목록을 추적합니다. [장바구니 조회](#)
-* 장바구니에서 제품을 제외할 경우, 제외된 제품의 정보를 추적합니다. [장바구니에서 삭제](#)
-* 결제 단계 및 결제와 관련된 옵션과 단계에 도달한 제품의 정보를 추적합니다. [체크아웃 프로세스](#)
-* 발생한 거래의 데이터를 수집하며, 거래에 포함된 제품의 정보와 할인,제휴사를 추적합니다. [제품 구매](#)
-* 발생한 거래 취소될 경우, 취소된 거래 데이터와 제품을 추적합니다. [제품 환불](#)
+* 제품의 목록 위치,순서 등 방문자가 제품을 조회한 노출 위치를 전송합니다. [제품 노출](#impression)
+* 제품의 세부정보 페이지를 추적하여 제품의 실적을 파악합니다. [제품 세부정보 페이지 조회](#viewProduct)
+* 제품을 장바구니에 담는 횟수와 제품의 정보를 추적합니다. [제품 장바구니에 추가](#addToCart)
+* 장바구니에 담긴 제품의 정보와 목록을 추적합니다. [장바구니 조회](#cart)
+* 장바구니에서 제품을 제외할 경우, 제외된 제품의 정보를 추적합니다. [장바구니에서 삭제](#removeCart)
+* 결제 단계 및 결제와 관련된 옵션과 단계에 도달한 제품의 정보를 추적합니다. [체크아웃 프로세스](#checkout)
+* 발생한 거래의 데이터를 수집하며, 거래에 포함된 제품의 정보와 할인,제휴사를 추적합니다. [제품 구매](#purchase)
+* 발생한 거래 취소될 경우, 취소된 거래 데이터와 제품을 추적합니다. [제품 환불](#refund)
 
 <br>
 
-### 제품 노출
+<h3 id="impression">제품 노출</h3>
 
 쇼핑몰의 랜딩페이지, 상품 분류 페이지, 검색 결과 페이지 등 **제품 상세페이지로의 링크** 가 노출되는 페이지에서 **제품 링크 클릭** 에 대한 이커머스 행동을 추적할 수 있습니다. 제품 노출에 대한 이벤트는 `bg:impression` 으로 추적하며, 상품 목록과 목록에서의 게재위치를 함께 전송할 수 있습니다.
 
@@ -331,11 +337,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 트리거 : bigin_Impression
 
-![bigin main.html pageview](http://support.bigin.io/images/cafe-triggers/main_pageview.png)
+![bigin main.html pageview](http://support.bigin.io/images/cafe24-event/bigin_Impression.png)
 
 <br><br>
 
-### 제품 세부정보 페이지 조회
+<h3 id="viewProduct">제품 세부정보 페이지 조회</h3>
 
 페이지 URL이 <u>xxx.com/product/detail.html</u> 또는 <u>xxx.com/product/상품명/상품번호</u> 에 해당하는 제품 상세페이지 조회시, 제품의 세부정보를 추적할 수 있습니다. 제품 세부정보 페이지 조회에 대한 이벤트는 `bg:viewProduct` 으로 추적하며, 제품의 세부정보를 전송할 수 있습니다.
 
@@ -369,11 +375,13 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### **트리거 : bigin_View Product**
 
-![viewProductTrg](http://support.bigin.io/images/cafe-triggers/detail_pageview.png)
+![viewProductTrg](http://support.bigin.io/images/cafe24-event/bigin_viewProduct.png)
 
 <br>
 
-### 제품 장바구니에 추가
+
+
+<h3 id="addToCart">제품 장바구니에 추가</h3>
 
 사용자가 특정 제품을 장바구니에 추가하는 행동을 추적합니다. 장바구니 조회에 대한 이벤트는 `bg:addToCart` 로 추적하며, 장바구니에 추가된 제품 정보를 전송할 수 있습니다.
 
@@ -452,11 +460,13 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### **트리거 : bigin_Item To Cart**
 
-![viewProductTrg](http://support.bigin.io/images/cafe-triggers/detail_pageview.png)
+![viewProductTrg](http://support.bigin.io/images/cafe24-event/bigin_ItemToCart.png)
 
 <br>
 
-### 장바구니 조회
+
+
+<h3 id="cart">장바구니 조회</h3>
 
 사용자가 장바구니를 조회할 때 담겨져있는 제품들의 정보를 추적합니다. 장바구니 조회에 대한 이벤트는 `bg:cart` 로 추적하며, 장바구니에 담긴 제품 정보를 전송할 수 있습니다.
 
@@ -565,13 +575,13 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### **트리거 : bigin_Cart**
 
-![addToCartTrg](http://support.bigin.io/images/cafe-triggers/cart_pageview.png)
+![addToCartTrg](http://support.bigin.io/images/cafe24-event/bigin_cart.png)
 
 
 
 <br><br>
 
-### 제품 장바구니에서 삭제
+<h3 id="removeCart">제품 장바구니에서 삭제</h3>
 
 장바구니에서 하나 이상의 제품을 제거할 때 제품의 정보와 사용자의 행동을 수집하기 위하여 추적합니다. 장바구니에서 삭제된 제품 추적에 대한 이벤트는 `bg:removeCart`로 추적할 수 있습니다.
 
@@ -603,7 +613,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 제품 장바구니에서 삭제 추적 트리거 : bigin_Remove Cart_allProducts
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-event/bigin_removeCartAllProducts.png)
 
 
 
@@ -640,7 +650,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 제품 장바구니에서 삭제 추적 트리거 : bigin_Remove Cart_manyProducts
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-event/bigin_removeCartManyProducts.png)
 
 
 
@@ -671,11 +681,11 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 제품 장바구니에서 삭제 추적 트리거 : bigin_Remove Cart_singleProduct
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-event/bigin_removeCartSingleProduct.png)
 
 
 
-### 체크아웃 프로세스
+<h3 id="checkout">체크아웃 프로세스</h3>
 
 제품을 구매하는 사용자의 체크아웃 페이지 단계를 추적합니다. 체크아웃 프로세스 추적에 대한 이벤트는 `bg:checkout`으로 추적하며, 체크아웃 페이지의 각 단계를 추적할 수 있습니다.  
 
@@ -757,7 +767,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 제품 상세 페이지의 체크아웃프로세스 추적 트리거 : bigin_Checkout
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-event/bigin_checkout.png)
 
 
 
@@ -795,7 +805,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 장바구니의 체크아웃프로세스 추적 트리거 : bigin_Checkout_allProducts
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-event/bigin_checkoutAllProducts.png)
 
 
 
@@ -833,7 +843,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 장바구니의 체크아웃프로세스 추적 트리거 : bigin_Checkout_manyProducts
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-event/bigin_checkoutManyProducts.png)
 
 
 
@@ -865,7 +875,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### 장바구니의 체크아웃프로세스 추적 트리거 : bigin_Checkout_singleProduct
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-event/bigin_checkoutSingleProduct.png)
 
 
 
@@ -980,13 +990,15 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### **트리거 : bigin_Checkout_allProducts**
 
-![checkoutStepNTrg](http://support.bigin.io/images/cafe-triggers/orderform_pageview.png)
+![checkoutStepNTrg](http://support.bigin.io/images/cafe24-event/bigin_checkoutAllProducts.png)
 
 
 
 
 
-### 제품 구매
+
+
+<h3 id="purchase">제품 구매</h3>
 
 사용자가 제품 구매를 완료하면 구매한 제품의 데이터를 수집합니다. 제품 구매에 대한 이벤트는 `bg:purchase` 으로 추적하며, 구매한 제품 정보를 전송할 수 있습니다.
 
@@ -1142,13 +1154,15 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### **트리거 : bigin_Purchase**
 
-![purchaseTrg](http://support.bigin.io/images/cafe-triggers/order_result_pageview.png)
+![purchaseTrg](http://support.bigin.io/images/cafe24-event/bigin_purchase.png)
 
 
 
 <br>
 
-### 부분 환불
+
+
+<h3 id ="refund">부분 환불</h3>
 
 거래된 제품의 부분 환불을 추적합니다. **`bigin_Refund_product`** 태그와  트리거를 사용합니다. 	<br>부분 환불의 추적이 이뤄지는 페이지는 취소 페이지(cancel.html), 교환(exchange.html)이며, <br>
  `Click Class`  가 취소하기 버튼의 선택자(selector)로 제한된 일부 요소 클릭 트리거를 사용합니다.  
@@ -1196,7 +1210,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### **트리거 : bigin_Refund_product**
 
-![refundTrg](http://support.bigin.io/images/cafe-triggers/order_list_pageview.png)
+![refundTrg](http://support.bigin.io/images/cafe24-event/bigin_refundProducts.png)
 
 <br>
 
@@ -1229,5 +1243,6 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 #### **트리거 : bigin_Refund_transaction**
 
-![refundTrg](http://support.bigin.io/images/cafe-triggers/return_pageview.png)
+![refundTrg](http://support.bigin.io/images/cafe24-event/bigin_refundTransaction.png)
 
+<span class="end-point"></span>
