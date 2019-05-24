@@ -6,7 +6,7 @@
 
 ## 구글 태그매니저로 시작하기
 
-비긴 애널리틱스의 추적코드(bigin.js) 설치는 구글 태그매니저(Google Tag Manger)를 통해 설치할 수 있도록 지원하고 있습니다. 아래의 문서를 통해 구글 태그매니저를 활용한 bigin.js의 SDK 설치를 시작할 수 있습니다.
+비긴 애널리틱스의 추적코드(bigin.js) 설치는 구글 태그매니저(Google Tag Manger)를 통해 설치할 수 있도록 지원하고 있습니다. <br>아래의 문서를 통해 구글 태그매니저를 활용한 bigin.js의 SDK 설치를 시작할 수 있습니다.
 
 
 <span class="end-point"></span>
@@ -89,17 +89,13 @@ container.json 에 설정된 **태그**들은 **bigin** 객체의 내장 함수�
 dataLayer.push({
     event : "impression", // "bigin 제품링크클릭 트리거" 활성화
     data : {
-        products : [
-            {
-				'id' : 'P12345',
-				'name' : 'Blue Jean',
-				'category' : ['남성','하의','청바지'],
-				'brand' : 'Bigin', 
-				'list' : '검색',
-				'position' : '3',
-				'thumbnail' : ['imageUrl']
-            }
-        ]
+        'id' : 'P12345',
+		'name' : 'Blue Jean',
+		'category' : ['남성','하의','청바지'],
+		'brand' : 'Bigin', 
+		'list' : '검색',
+		'position' : '3',
+		'thumbnail' : ['imageUrl']
     } // data 값은 "bigin 제품링크클릭" 태그의 {{data}}에 바인딩
 }) 
 ~~~
@@ -428,14 +424,14 @@ dataLayer.push({
 	            'id' : 'P12345', // (필수) 제품의 고유 ID.
     	        'name' : 'BlueJean', // (필수) 제품 이름.
         	    'quantity' : 1, // 제품이 담긴 수량
-	            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+	            'variant' : 'IndigoBlue', // 제품의 변형 옵션
     	        'price' : 19200 // 제품의 가격
         	},
 	        {
     	        'id' : 'P12345',
         	    'name' : 'BlueJean',
             	'quantity' : 1,
-	            'variant' : ['LightBlue','32'],
+	            'variant' : 'LightBlue',
     	        'price' : 25000
         	}
         ]
@@ -458,14 +454,14 @@ dataLayer.push({
 	            'id' : 'P12345', // (필수) 제품의 고유 ID.
     	        'name' : 'BlueJean', // (필수) 제품 이름.
         	    'quantity' : 1, // 제품이 담긴 수량
-	            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+	            'variant' : 'IndigoBlue', // 제품의 변형 옵션
     	        'price' : 19200 // 제품의 가격
         	},
 	        {
     	        'id' : 'P12345',
         	    'name' : 'BlueJean',
             	'quantity' : 1,
-	            'variant' : ['LightBlue','32'],
+	            'variant' : 'LightBlue',
     	        'price' : 25000
         	}
         ]
@@ -488,14 +484,14 @@ dataLayer.push({
 	            'id' : 'P12345', // (필수) 제품의 고유 ID.
     	        'name' : 'BlueJean', // (필수) 제품 이름.
         	    'quantity' : 1, // 제품이 담긴 수량
-	            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+	            'variant' : 'IndigoBlue', // 제품의 변형 옵션
     	        'price' : 19200 // 제품의 가격
         	},
 	        {
     	        'id' : 'P12345',
         	    'name' : 'BlueJean',
             	'quantity' : 1,
-	            'variant' : ['LightBlue','32'],
+	            'variant' : 'LightBlue',
     	        'price' : 25000
         	}
         ]
@@ -520,14 +516,14 @@ dataLayer.push({
 	            'id' : 'P12345', // (필수) 제품의 고유 ID.
     	        'name' : 'BlueJean', // (필수) 제품 이름.
         	    'quantity' : 1, // 제품이 담긴 수량
-	            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+	            'variant' : 'IndigoBlue', // 제품의 변형 옵션
     	        'price' : 19200 // 제품의 가격
         	},
 	        {
     	        'id' : 'P12345',
         	    'name' : 'BlueJean',
             	'quantity' : 1,
-	            'variant' : ['LightBlue','32'],
+	            'variant' : 'LightBlue',
     	        'price' : 25000
         	}
         ]
@@ -557,7 +553,7 @@ dataLayer.push({
             	'name' : 'BlueJean', // (필수) 이름.
 	            'quantity' : 1, // (필수) 제품 구매 수량.
     	        'category' : ['남성','하의','청바지'], // 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.
-        	    'variant' : ['33/31','IndigoBlue' ],
+        	    'variant' : '33/31',
             	'brand' : 'Bigin', 
 	            'thumbnail' : ['imageURL'],
     	        'price' : 19200
@@ -605,7 +601,7 @@ dataLayer.push({
 	        {
     	        'id' : 'P12345', // (필수) 환불 제품의 고유 ID.
         	    'quantity' : 1, // (필수) 환불 제품의 수량.
-            	'variant' : ['32','IndigoBlue']
+            	'variant' : '32',
 	        }
     	]
     }

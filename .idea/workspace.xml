@@ -2,32 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/markdown/data_processing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/markdown/filter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/markdown/installation_gtm.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/markdown/installation_javascript.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/markdown/metric_customevent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/markdown/metric_standard.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unuse/container.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cafe24_container.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/cafe24_container.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/container.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/container.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/godomall_container.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/godomall_container.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/clubclio.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/clubclio.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/faq.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/faq.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/godomall-test.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/godomall-test.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/hosted_web_install.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/hosted_web_install.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/insight.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/insight.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/live.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/live.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/management.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/management.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/system.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/system.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/user.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/user.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdowns/installation_cafe24 복사본.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/installation_cafe24.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdowns/installation_cafe24.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdowns/installation_cafe24.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdowns/installation_godo 복사본.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/installation_godo.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdowns/installation_godo.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdowns/installation_godo.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdowns/metric_standard.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdowns/metric_standard.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/gtm_guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/gtm_guide.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/installation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/installation_cafe24.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/installation_cafe24.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/installation_godo.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/installation_godo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/installation_gtm.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/installation_gtm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/installation_javascript.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/installation_javascript.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdowns/installation_gtm.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdowns/installation_gtm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdowns/installation_javascript.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdowns/installation_javascript.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unuse/management.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/management.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unuse/system.md" beforeDir="false" afterPath="$PROJECT_DIR$/unuse/system.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,14 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="metric_customevent.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/markdown/metric_customevent.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -66,7 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>usePrismJs</find>
       <find>notifyMarkDownParsed</find>
       <find>notify</find>
       <find>innercon</find>
@@ -87,15 +78,16 @@
       <find>data/</find>
       <find>[여기](#sectionLink)</find>
       <find>측정항목</find>
-      <find>cafe24_container.json</find>
       <find>bigin insert</find>
       <find>bigin_Tracking Script</find>
       <find>bigin_tracking</find>
       <find>bigin_insert</find>
       <find>GTM</find>
       <find>체크아웃 -</find>
-      <find>data/con</find>
       <find>분석</find>
+      <find>data/con</find>
+      <find>variant</find>
+      <find>cafe24_container.json</find>
     </findStrings>
     <replaceStrings>
       <replace>bigin_install_gtm</replace>
@@ -137,7 +129,6 @@
         <option value="$PROJECT_DIR$/markdown/gtm_guide.md" />
         <option value="$PROJECT_DIR$/images/06_결제완료.HTML" />
         <option value="$PROJECT_DIR$/data/cafe24_example.html" />
-        <option value="$PROJECT_DIR$/pages/main.html" />
         <option value="$PROJECT_DIR$/pages/contact-us.html" />
         <option value="$PROJECT_DIR$/pages/usage-policy.html" />
         <option value="$PROJECT_DIR$/data/cafe24_example.txt" />
@@ -160,14 +151,15 @@
         <option value="$PROJECT_DIR$/markdown/insight.md" />
         <option value="$PROJECT_DIR$/markdowns/metric_standard.md" />
         <option value="$PROJECT_DIR$/markdown/metric_standard.md" />
-        <option value="$PROJECT_DIR$/markdown/installation_javascript.md" />
-        <option value="$PROJECT_DIR$/markdown/installation_godo.md" />
         <option value="$PROJECT_DIR$/markdown/data_processing.md" />
-        <option value="$PROJECT_DIR$/markdown/installation_cafe24.md" />
         <option value="$PROJECT_DIR$/data/cafe24_container.json" />
-        <option value="$PROJECT_DIR$/markdown/installation_gtm.md" />
-        <option value="$PROJECT_DIR$/pages/detail.html" />
         <option value="$PROJECT_DIR$/markdown/metric_customevent.md" />
+        <option value="$PROJECT_DIR$/markdown/installation_javascript.md" />
+        <option value="$PROJECT_DIR$/markdown/installation_gtm.md" />
+        <option value="$PROJECT_DIR$/markdown/installation_cafe24.md" />
+        <option value="$PROJECT_DIR$/markdown/installation_godo.md" />
+        <option value="$PROJECT_DIR$/pages/detail.html" />
+        <option value="$PROJECT_DIR$/pages/main.html" />
       </list>
     </option>
   </component>
@@ -216,12 +208,7 @@
             <path>
               <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="support-bigin.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="support-bigin.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="support-bigin.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="markdowns" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -232,7 +219,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="metric&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/metric_customevent.md&#10;detailhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;installation.&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation_gtm.md&#10;container.jso&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/data/container.json&#10;cafe24_container.json&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/data/cafe24_container.json&#10;installa&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation_gtm.md&#10;installation&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation_gtm.md&#10;detail.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;insight.md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;user.&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/user.md&#10;live.&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/live.md&#10;.md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/management.md&#10;system.md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;syst&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;install&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation.md&#10;hosted&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/hosted_web_install.md&#10;cafe&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/cafe24-test.md&#10;insight&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;gtm&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/gtm_guide.md&#10;mainhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;gtm_guide&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/gtm_guide.md&#10;d&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/download.js&#10;markdown.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;mark&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;searchhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;main&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;usage&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;maincss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;main.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;contact-us.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contactuscss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;prism.js&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/prism.js&#10;mainht&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;detailcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;searchcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/search.css&#10;scrollcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/scrollbar.css&#10;contactushtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;spin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/spin.css&#10;conta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact-us.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;svg&#9;null&#9;null&#10;main.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;sp&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;usagepolicycss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;spinjs&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;usage-&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;prism.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/prism.css&#10;mar&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;insta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation3.md" />
+    <property name="SearchEverywhereHistoryKey" value="main.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/data/cafe24/main.html&#10;detail.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;installation_godo&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation_godo.md&#10;install&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation_cafe24.md&#10;installation&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation_javascript.md&#10;metric&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/metric_customevent.md&#10;detailhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/detail.html&#10;installation.&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation_gtm.md&#10;container.jso&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/data/container.json&#10;cafe24_container.json&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/data/cafe24_container.json&#10;installa&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/installation_gtm.md&#10;insight.md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;user.&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/user.md&#10;live.&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/live.md&#10;.md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/management.md&#10;system.md&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;syst&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/system.md&#10;hosted&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/hosted_web_install.md&#10;cafe&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/cafe24-test.md&#10;insight&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/insight.md&#10;gtm&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/gtm_guide.md&#10;mainhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;gtm_guide&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/markdown/gtm_guide.md&#10;d&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/download.js&#10;markdown.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;mark&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css&#10;searchhtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/search.html&#10;main&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;usage&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/usage-policy.html&#10;maincss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;contact-us.html&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contactuscss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;prism.js&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/prism.js&#10;mainht&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/main.html&#10;detailcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/detail.css&#10;searchcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/search.css&#10;scrollcss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/scrollbar.css&#10;contactushtml&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;spin&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/spin.css&#10;conta&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/pages/contact-us.html&#10;contact-us.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/contact-us.css&#10;svg&#9;null&#9;null&#10;main.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/main.css&#10;sp&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;usagepolicycss&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;spinjs&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/js/spin.js&#10;usage-&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/usage-policy.css&#10;prism.css&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/prism.css&#10;mar&#9;FILE&#9;file:///Users/westlife/projects/bigin/support-bigin.github.io/css/github-markdown.css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -341,12 +328,12 @@
       <workItem from="1558395098975" duration="643000" />
       <workItem from="1558404957695" duration="113000" />
       <workItem from="1558422171231" duration="1359000" />
-      <workItem from="1558654881467" duration="3497000" />
+      <workItem from="1558654881467" duration="4764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285390000" />
+    <option name="totallyTimeSpent" value="286657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
@@ -462,13 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -536,13 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/cafe24/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -680,26 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/markdown/installation_godo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-12324">
-            <caret line="185" column="31" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/markdown/installation_javascript.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="530">
-            <caret line="550" lean-forward="true" selection-start-line="550" selection-end-line="550" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/markdown/data_processing.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -714,16 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/markdown/installation_cafe24.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="195">
-            <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -748,23 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/markdown/installation_gtm.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="147">
-            <caret line="481" column="13" lean-forward="true" selection-start-line="481" selection-start-column="13" selection-end-line="481" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="62" column="97" lean-forward="true" selection-start-line="62" selection-start-column="97" selection-end-line="62" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/markdown/metric_standard.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -778,10 +704,71 @@
     <entry file="file://$PROJECT_DIR$/markdown/metric_customevent.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <first_editor relative-caret-position="270">
+            <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markdown/installation_javascript.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="155">
+            <caret line="224" column="3" lean-forward="true" selection-start-line="224" selection-start-column="3" selection-end-line="224" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markdown/installation_gtm.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="141">
+            <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markdown/installation_cafe24.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="224">
+            <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markdown/installation_godo.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="293">
+            <caret line="70" column="16" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/cafe24/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>

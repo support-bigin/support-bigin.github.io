@@ -396,14 +396,14 @@ bigin.event("bg:addToCart",{
             'id' : 'P12345', // (필수) 제품의 고유 ID.
             'name' : 'BlueJean', // (필수) 제품 이름.
             'quantity' : 1, // 제품이 담긴 수량
-            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+            'variant' : 'IndigoBlue', // 제품의 변형 옵션
             'price' : 19200 // 제품의 가격
         },
         {
             'id' : 'P12345',
             'name' : 'BlueJean',
             'quantity' : 1,
-            'variant' : ['LightBlue','32'],
+            'variant' : 'LightBlue',
             'price' : 25000
         }
     ]

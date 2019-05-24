@@ -72,7 +72,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 
 ### 추적 코드 스니펫
 
-[godomall_container.json](http://support.bigin.io/pages/%5Bhttp://www.google.co.kr%5D(http://www.google.co.kr/)) 의 태그 중 **`bigin_Tracking Script`** 태그를 통해서 **bigin.js** 가 프로젝트 내부에 로드됩니다. **bigin_Tracking Script** 태그의 내용은 아래와 같습니다.
+<a href="../data/godomall_container.json" download>godomall_container.json</a> 의 태그 중 **`bigin_Tracking Script`** 태그를 통해서 **bigin.js** 가 프로젝트 내부에 로드됩니다. **bigin_Tracking Script** 태그의 내용은 아래와 같습니다.
 
 기본 추적 스크립트에서 `projectID`을 insight.bigin.io 에서 생성한 데이터를 수집할 프로젝트의 정보와 동일하게 변경해야 합니다.
 

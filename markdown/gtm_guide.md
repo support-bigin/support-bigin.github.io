@@ -437,14 +437,14 @@ dataLayer.push({
 	            'id' : 'P12345', // (필수) 제품의 고유 ID.
     	        'name' : 'BlueJean', // (필수) 제품 이름.
         	    'quantity' : 1, // 제품이 담긴 수량
-	            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+	            'variant' : 'IndigoBlue', // 제품의 변형 옵션
     	        'price' : 19200 // 제품의 가격
         	},
 	        {
     	        'id' : 'P12345',
         	    'name' : 'BlueJean',
             	'quantity' : 1,
-	            'variant' : ['LightBlue','32'],
+	            'variant' : 'LightBlue',
     	        'price' : 25000
         	}
         ]
@@ -467,14 +467,14 @@ dataLayer.push({
 	            'id' : 'P12345', // (필수) 제품의 고유 ID.
     	        'name' : 'BlueJean', // (필수) 제품 이름.
         	    'quantity' : 1, // 제품이 담긴 수량
-	            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+	            'variant' : 'IndigoBlue', // 제품의 변형 옵션
     	        'price' : 19200 // 제품의 가격
         	},
 	        {
     	        'id' : 'P12345',
         	    'name' : 'BlueJean',
             	'quantity' : 1,
-	            'variant' : ['LightBlue','32'],
+	            'variant' : 'LightBlue',
     	        'price' : 25000
         	}
         ]
@@ -499,14 +499,14 @@ dataLayer.push({
 	            'id' : 'P12345', // (필수) 제품의 고유 ID.
     	        'name' : 'BlueJean', // (필수) 제품 이름.
         	    'quantity' : 1, // 제품이 담긴 수량
-	            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+	            'variant' : 'IndigoBlue', // 제품의 변형 옵션
     	        'price' : 19200 // 제품의 가격
         	},
 	        {
     	        'id' : 'P12345',
         	    'name' : 'BlueJean',
             	'quantity' : 1,
-	            'variant' : ['LightBlue','32'],
+	            'variant' : 'LightBlue',
     	        'price' : 25000
         	}
         ]
@@ -533,14 +533,14 @@ dataLayer.push({
 	            'id' : 'P12345', // (필수) 제품의 고유 ID.
     	        'name' : 'BlueJean', // (필수) 제품 이름.
         	    'quantity' : 1, // 제품이 담긴 수량
-	            'variant' : ['IndigoBlue','32'], // 제품의 변형 옵션
+	            'variant' : 'IndigoBlue', // 제품의 변형 옵션
     	        'price' : 19200 // 제품의 가격
         	},
 	        {
     	        'id' : 'P12345',
         	    'name' : 'BlueJean',
             	'quantity' : 1,
-	            'variant' : ['LightBlue','32'],
+	            'variant' : 'LightBlue',
     	        'price' : 25000
         	}
         ]
@@ -572,7 +572,7 @@ dataLayer.push({
             	'name' : 'BlueJean', // (필수) 이름.
 	            'quantity' : 1, // (필수) 제품 구매 수량.
     	        'category' : ['남성','하의','청바지'], // 제품의 카테고리. 하위 카테고리의 설정은 배열의 순서로 설정됩니다.
-        	    'variant' : ['33/31','IndigoBlue' ],
+        	    'variant' : 'IndigoBlue',
             	'brand' : 'Bigin', 
 	            'thumbnail' : ['imageURL'],
     	        'price' : 19200
@@ -626,7 +626,7 @@ dataLayer.push({
 	        {
     	        'id' : 'P12345', // (필수) 환불 제품의 고유 ID.
         	    'quantity' : 1, // (필수) 환불 제품의 수량.
-            	'variant' : ['32','IndigoBlue']
+            	'variant' : 'IndigoBlue'
 	        }
     	]
     }
