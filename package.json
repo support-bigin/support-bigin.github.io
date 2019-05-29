@@ -17,5 +17,17 @@
   },
   "homepage": "https://github.com/support-bigin/support-bigin.github.io#readme",
   "dependencies": {
+    "browser-sync": "^2.24.6",
+    "casperjs": "*",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-load-plugins": "^1.5.0",
+    "jsdoc": "*",
+    "jshint": "*",
+    "open": "0.0.5",
+    "rimraf": "^2.6.2",
+    "run-sequence": "^2.2.1",
+    "webpack": "4.16.3",
+    "webpack-cli": "^2.1.4"
   }
 }
