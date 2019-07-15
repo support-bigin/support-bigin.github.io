@@ -29,23 +29,8 @@
 
 ```javascript
 <script>
-(function() {
-    var biginScript = document.createElement('script');
-    biginScript.type = 'text/javascript';
-    biginScript.async = true;
-    biginScript.src = 'https://sdk.bigin.io/v1/bigin.sdk.js'; // bigin SDK 버전
-    biginScript.onload = function() {
-        bigin.config({
-            projectID: "프로젝트 ID", // 프로젝트의 고유 추적 ID 입니다. 'G924TSD55D-2'
-            domain: "https://i.bigin.io",
-            track: ['session', 'view', 'click', 'scroll'], // 자동 추적(AutoTrack)이 가능한 이벤트와 제스처
-            trackLocation: false, // 모바일 접속 시 위치정보 수집 허용
-            currencyCode: "KRW" // 표시 통화
-        });
-    };
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(biginScript, s);
-})();
+(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
+(window, document, 'script', 'bigin', '프로젝트 ID');
 </script>
 ```
 위의 스니펫은 해당 웹사이트에 bigin.js 를 비동기적으로 삽입합니다.
@@ -54,29 +39,6 @@
 
 추적데이터를 서버로 전송하는 코드는 biginScript가 로드된 시점 이후부터 호출되어야 합니다.
 
-### 구버전 IE에서의 bigin sdk 설치
-bigin sdk는 아래의 추적 코드 스니펫을 삽입을 통하여 IE 6 버전까지 지원이 가능합니다. 
-```javascript
-
-// 기본 추적 코드 스니펫
-(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
-(window, document, 'script', 'bigin', '프로젝트 ID');
-
-// 현지 통화의 설정 ex) KRW, EUR, USD 
-// 프로젝트 currencyCode를 기입하지 않으면 'KRW'로 설정됩니다.
-(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
-(window, document, 'script', 'bigin', '프로젝트 ID', '프로젝트 currencyCode');
-
-// bigin.track('view')를 통하여 개별적으로 페이지뷰 추적하는 경우, 
-// 아래와 같이, 7 번째 인자를 ['session' , 'click' , 'scroll']로 설정할 수 있습니다.   
-(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
-(window, document, 'script', 'bigin', '프로젝트 ID', null, ['session', 'click', 'scroll']);
-
-// 8 번째 인자를 true로 설정하는 경우, 
-// 이벤트들이 https://i.bigin.io 로 전송되지 않고, console에 출력됩니다.    
-(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
-(window, document, 'script', 'bigin', '프로젝트 ID', "KRW", ['session', 'view', 'click', 'scroll'], true);
-```
 
 
 
@@ -86,23 +48,26 @@ bigin sdk는 아래의 추적 코드 스니펫을 삽입을 통하여 IE 6 버�
 
 bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있습니다. 아래에서 선택적으로 추적되는 추적항목을 확인하세요.
 
-```javascript
-track : [
-    'session', // 사용자 방문의 단위를 수집하기 위한 단위입니다. 가능한 이 데이터는 추적을 권장합니다.
-    'view', // 사용자의 페이지 조회를 수집할 수 있습니다. SPA(SinglePageApplication)은 별도의 설정이 필요합니다.
-    'click', // 마우스로 클릭하는 모든 클릭이벤트를 수집합니다. 특정 이벤트의 추적은 CustomEvent 의 추적을 이용하세요.
-    'scroll' // 웹사이트 내의 스크롤 이벤트를 수집합니다.
-]         
+```javascript         
+// 기본 추적 스니펫에서 추적 항목 설정
+<script>   
+(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
+(window, document, 'script', 'bigin', '프로젝트 ID', null, [
+  'session', // 사용자 방문의 단위를 수집하기 위한 단위입니다. 가능한 이 데이터는 추적을 권장합니다.
+  'view', // 사용자의 페이지 조회를 수집할 수 있습니다. SPA(SinglePageApplication)은 별도의 설정이 필요합니다.
+  'click', // 마우스로 클릭하는 모든 클릭이벤트를 수집합니다. 특정 이벤트의 추적은 CustomEvent 의 추적을 이용하세요.
+  'scroll' // 웹사이트 내의 스크롤 이벤트를 수집합니다.
+  ]);
+</script>  
 ```
 
 ```javascript
+// 아래의 코드처럼 개별적인 추적 항목 설정도 가능합니다. 
 (function() {
     bigin.track('session');
+    bigin.track('view');
     bigin.track('click');
     bigin.track('scroll');
-    bigin.track('link');
-    bigin.track('form');
-    bigin.track('error');
 })();
 ```
 
@@ -118,6 +83,7 @@ track : [
 단일 페이지 어플리케이션 (SPA; Single Page Application) 으로 개발된 웹사이트의 경우, 페이지 조회 이벤트의 별도 추적이 필요합니다.
 
 ```javascript
+
 (function() {
     bigin.track('views', {
         page : '/productDetail/12345' // (옵션) pagePath 또는 window.location.pathname 로 추적합니다.
@@ -135,6 +101,15 @@ track : [
 2. 기본 설정에 따라 **대한민국 통화(KRW)** 로 설정
 
 ```javascript
+// 기본 추적 스니펫에서 현지 통화의 설정
+<script>
+(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
+(window, document, 'script', 'bigin', '프로젝트 ID', '프로젝트 currencyCode');
+</script>
+```
+
+```javascript
+// 아래의 코드처럼 개별적인 통화 설정도 가능합니다.
 (function() {
     bigin.config({
         currencyCode : "KRW"

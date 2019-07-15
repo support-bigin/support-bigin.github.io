@@ -132,23 +132,8 @@ dataLayer.push({
 
 ```javascript
 <script>
-(function() {
-    var biginScript = document.createElement('script');
-    biginScript.type = 'text/javascript';
-    biginScript.async = true;
-    biginScript.src = 'https://sdk.bigin.io/v1/bigin.sdk.js'; // bigin SDK 버전
-    biginScript.onload = function() {
-        bigin.config({
-            projectID: "프로젝트 ID", // 프로젝트의 고유 추적 ID 입니다. 'G924TSD55D-2'
-            domain: "https://i.bigin.io",
-            track: ['session', 'view', 'click', 'scroll'], // 자동 추적(AutoTrack)이 가능한 이벤트와 제스처
-            trackLocation: false, // 모바일 접속 시 위치정보 수집 허용
-            currencyCode: "KRW" // 표시 통화
-        });
-    };
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(biginScript, s);
-})();
+(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
+(window, document, 'script', 'bigin', '프로젝트 ID');
 </script>
 ```
 
