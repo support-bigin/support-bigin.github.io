@@ -13,7 +13,6 @@
 웹사이트의 SDK의 경우 구글 태그매니저(GTM)의 설치를 지원합니다. 구글 태그매니저의 설치방법은 [여기](http://support.bigin.io/pages/detail.html?kind=installation_gtm#installaion_gtm_0)를 참고하세요. 
 
 
-<span class="end-point"></span>
 ### 추적 ID 찾기
 
 추적 ID를 찾으려면 다음 단계를 따르세요.
@@ -49,12 +48,33 @@
 })();
 </script>
 ```
-
 위의 스니펫은 해당 웹사이트에 bigin.js 를 비동기적으로 삽입합니다.
 
 모든 추적은 추적코드 스니펫이 기술된 biginScript 스크립트가 로드된 이후부터 가능합니다.
 
 추적데이터를 서버로 전송하는 코드는 biginScript가 로드된 시점 이후부터 호출되어야 합니다.
+
+### 구버전 IE에서의 bigin sdk 설치
+bigin sdk는 아래의 추적 코드 스니펫을 삽입을 통하여 IE 6 버전까지 지원이 가능합니다. 
+```javascript
+
+// 기본 추적 코드 스니펫
+(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
+(window, document, 'script', 'bigin', '프로젝트 ID');
+
+// 현지 통화의 설정 ex) KRW, EUR, USD 
+// 프로젝트 currencyCode를 기입하지 않으면 'KRW'로 설정됩니다.
+(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
+(window, document, 'script', 'bigin', '프로젝트 ID', '프로젝트 currencyCode');
+
+// bigin.track('view')를 통하여 개별적으로 페이지뷰 추적하는 경우, 
+// 아래와 같이, 7 번째 인자를 ['session' , 'click' , 'scroll']로 설정할 수 있습니다.   
+(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
+(window, document, 'script', 'bigin', '프로젝트 ID', null, ['session', 'click', 'scroll']);
+
+```
+
+
 
 
 
@@ -117,7 +137,6 @@ track : [
     });
 })();
 ```
-
 
 <span class="end-point"></span>
 ## 고유 사용자 식별
