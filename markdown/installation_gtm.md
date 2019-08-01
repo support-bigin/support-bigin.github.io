@@ -132,8 +132,27 @@ dataLayer.push({
 
 ```javascript
 <script>
-(function (w, d, s, l, i, c, e, t) {var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {debug:t, projectID: i, currencyCode: c, track: e}; if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { var r = setInterval(function () { if (w[l] !== undefined) { clearInterval(r); w[l].config(h); } }, 50); } else { j.onload = function () { w[l].config(h) }; } f.parentNode.insertBefore(j, f); })
-(window, document, 'script', 'bigin', '프로젝트 ID');
+  (function (w, d, s, l, i, c, e, t) {
+    var f = d.getElementsByTagName(s)[0], j = d.createElement(s); 
+    j.async = true; 
+    j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {
+      debug:t,
+       projectID: i, 
+       currencyCode: c, 
+       track: e
+    }; 
+    if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { 
+      var r = setInterval(function () { 
+        if (w[l] !== undefined) { 
+          clearInterval(r); 
+          w[l].config(h); 
+        } 
+      }, 50); } 
+    else { 
+      j.onload = function () { 
+        w[l].config(h) 
+      }; 
+    }f.parentNode.insertBefore(j, f); })(window, document, 'script', 'bigin', '프로젝트 ID');
 </script>
 ```
 
