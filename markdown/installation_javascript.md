@@ -32,7 +32,7 @@
     (function (w, d, s, l, i, c) {
       var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
       j.async = true;
-      j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js’; 
+      j.src = "https://sdk.bigin.io/v1/bigin.sdk.js"; 
       var u = navigator.userAgent.toLowerCase(), h = {
         projectID: i,
         currencyCode: c
