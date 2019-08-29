@@ -100,7 +100,7 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
       }
       f.parentNode.insertBefore(j, f);
     })
-    (window, document, 'script', 'bigin', '프로젝트 ID', "KOR");
+    (window, document, 'script', 'bigin', '프로젝트 ID', "KRW");
 </script>
 ```
 
