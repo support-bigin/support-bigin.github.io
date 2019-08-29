@@ -75,7 +75,7 @@ bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있�
     (function (w, d, s, l, i, c) {
       var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
       j.async = true;
-      j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js’; 
+      j.src = "https://sdk.bigin.io/v1/bigin.sdk.js"; 
       var u = navigator.userAgent.toLowerCase(), h = {
         projectID: i,
         currencyCode: c
@@ -143,7 +143,7 @@ bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있�
     (function (w, d, s, l, i, c) {
       var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
       j.async = true;
-      j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js’; 
+      j.src = "https://sdk.bigin.io/v1/bigin.sdk.js"; 
       var u = navigator.userAgent.toLowerCase(), h = {
         projectID: i,
         currencyCode: c
