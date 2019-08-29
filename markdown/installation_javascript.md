@@ -29,29 +29,29 @@
 
 ```javascript
 <script>
-(function (w, d, s, l, i, c, e, t) {
-  var f = d.getElementsByTagName(s)[0], j = d.createElement(s); 
-  j.async = true; 
-  j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {
-    debug:t, 
-    projectID: i, 
-    currencyCode: c, 
-    track: e
-  }; 
-  if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) {
-    var r = setInterval(function () { 
-      if (w[l] !== undefined) { 
-        clearInterval(r); 
-        w[l].config(h); 
-      } 
-      }, 50); } 
-      else { 
-    j.onload = function () { 
-      w[l].config(h) 
-    }; 
-  } 
-  f.parentNode.insertBefore(j, f); 
-})(window, document, 'script', 'bigin', '프로젝트 ID');
+    (function (w, d, s, l, i, c) {
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+      j.async = true;
+      j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js’; 
+      var u = navigator.userAgent.toLowerCase(), h = {
+        projectID: i,
+        currencyCode: c
+      };
+      if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) {
+        var r = setInterval(function () {
+          if (w[l] !== undefined) {
+            clearInterval(r);
+            w[l].config(h);
+          }
+        }, 50);
+      } else {
+        j.onload = function () {
+          w[l].config(h)
+        };
+      }
+      f.parentNode.insertBefore(j, f);
+    })
+    (window, document, 'script', 'bigin', '프로젝트 ID', "KOR");
 </script>
 ```
 위의 스니펫은 해당 웹사이트에 bigin.js 를 비동기적으로 삽입합니다.
@@ -72,33 +72,29 @@ bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있�
 ```javascript         
 // 기본 추적 스니펫에서 추적 항목 설정
 <script>   
-(function (w, d, s, l, i, c, e, t) {
-  var f = d.getElementsByTagName(s)[0], j = d.createElement(s); 
-  j.async = true; 
-  j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {
-    debug:t, 
-    projectID: i, 
-    currencyCode: c, 
-    track: e
-    }; 
-  if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { 
-    var r = setInterval(function () { 
-      if (w[l] !== undefined) { 
-        clearInterval(r); 
-        w[l].config(h); 
-      } 
-    }, 50); } 
-  else { 
-    j.onload = function () { 
-      w[l].config(h) 
-    }; 
-  } f.parentNode.insertBefore(j, f); 
-  })(window, document, 'script', 'bigin', '프로젝트 ID', null, [
-  'session', // 사용자 방문의 단위를 수집하기 위한 단위입니다. 가능한 이 데이터는 추적을 권장합니다.
-  'view', // 사용자의 페이지 조회를 수집할 수 있습니다. SPA(SinglePageApplication)은 별도의 설정이 필요합니다.
-  'click', // 마우스로 클릭하는 모든 클릭이벤트를 수집합니다. 특정 이벤트의 추적은 CustomEvent 의 추적을 이용하세요.
-  'scroll' // 웹사이트 내의 스크롤 이벤트를 수집합니다.
-  ]);
+    (function (w, d, s, l, i, c) {
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+      j.async = true;
+      j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js’; 
+      var u = navigator.userAgent.toLowerCase(), h = {
+        projectID: i,
+        currencyCode: c
+      };
+      if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) {
+        var r = setInterval(function () {
+          if (w[l] !== undefined) {
+            clearInterval(r);
+            w[l].config(h);
+          }
+        }, 50);
+      } else {
+        j.onload = function () {
+          w[l].config(h)
+        };
+      }
+      f.parentNode.insertBefore(j, f);
+    })
+    (window, document, 'script', 'bigin', '프로젝트 ID', "KOR");
 </script>  
 ```
 
@@ -144,27 +140,29 @@ bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있�
 ```javascript
 // 기본 추적 스니펫에서 현지 통화의 설정
 <script>
-  (function (w, d, s, l, i, c, e, t) {
-    var f = d.getElementsByTagName(s)[0], j = d.createElement(s); 
-    j.async = true; 
-    j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {
-      debug:t, 
-      projectID: i, 
-      currencyCode: c, 
-      track: e
-    }; 
-    if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { 
-      var r = setInterval(function () { 
-        if (w[l] !== undefined) { 
-          clearInterval(r); 
-          w[l].config(h); 
-        } 
-      }, 50); } 
-    else {
-      j.onload = function () {
-        w[l].config(h) 
-      }; 
-    } f.parentNode.insertBefore(j, f); })(window, document, 'script', 'bigin', '프로젝트 ID', '프로젝트 currencyCode');
+    (function (w, d, s, l, i, c) {
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+      j.async = true;
+      j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js’; 
+      var u = navigator.userAgent.toLowerCase(), h = {
+        projectID: i,
+        currencyCode: c
+      };
+      if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) {
+        var r = setInterval(function () {
+          if (w[l] !== undefined) {
+            clearInterval(r);
+            w[l].config(h);
+          }
+        }, 50);
+      } else {
+        j.onload = function () {
+          w[l].config(h)
+        };
+      }
+      f.parentNode.insertBefore(j, f);
+    })
+    (window, document, 'script', 'bigin', '프로젝트 ID', '프로젝트 currencyCode');
 </script>
 ```
 
