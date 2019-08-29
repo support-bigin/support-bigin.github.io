@@ -154,7 +154,7 @@ dataLayer.push({
       }
       f.parentNode.insertBefore(j, f);
     })
-    (window, document, 'script', 'bigin', '프로젝트 ID', "KOR");
+    (window, document, 'script', 'bigin', '프로젝트 ID', "KRW");
 </script>
 ```
 
