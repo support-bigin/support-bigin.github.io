@@ -77,27 +77,30 @@ gtm 컨테이너의 **내려받기**와 **가져오기**에 대한 자세한 설
 기본 추적 스크립트에서 `projectID`을 insight.bigin.io 에서 생성한 데이터를 수집할 프로젝트의 정보와 동일하게 변경해야 합니다.
 
 ```javascript
-<script>
-  (function (w, d, s, l, i, c, e, t) {
-    var f = d.getElementsByTagName(s)[0], j = d.createElement(s); 
-    j.async = true; 
-    j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js', u = navigator.userAgent.toLowerCase(), h = {
-      debug:t, 
-      projectID: i, 
-      currencyCode: c, 
-      track: e}; 
-    if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) { 
-      var r = setInterval(function () { 
-        if (w[l] !== undefined) { 
-          clearInterval(r); 
-          w[l].config(h); 
-        } 
-      }, 50); } 
-    else { 
-      j.onload = function () { 
-        w[l].config(h) 
-      }; 
-    } f.parentNode.insertBefore(j, f); })(window, document, 'script', 'bigin', '프로젝트 ID');
+<script>    
+    (function (w, d, s, l, i, c) {
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+      j.async = true;
+      j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js’; 
+      var u = navigator.userAgent.toLowerCase(), h = {
+        projectID: i,
+        currencyCode: c
+      };
+      if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) {
+        var r = setInterval(function () {
+          if (w[l] !== undefined) {
+            clearInterval(r);
+            w[l].config(h);
+          }
+        }, 50);
+      } else {
+        j.onload = function () {
+          w[l].config(h)
+        };
+      }
+      f.parentNode.insertBefore(j, f);
+    })
+    (window, document, 'script', 'bigin', '프로젝트 ID', "KOR");
 </script>
 ```
 
