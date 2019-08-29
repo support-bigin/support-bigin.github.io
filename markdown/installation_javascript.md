@@ -51,7 +51,7 @@
       }
       f.parentNode.insertBefore(j, f);
     })
-    (window, document, 'script', 'bigin', '프로젝트 ID', "KOR");
+    (window, document, 'script', 'bigin', '프로젝트 ID', "KRW");
 </script>
 ```
 위의 스니펫은 해당 웹사이트에 bigin.js 를 비동기적으로 삽입합니다.
@@ -94,7 +94,7 @@ bigin SDK는 선택적으로 기본적인 사용자 행동을 추적할 수 있�
       }
       f.parentNode.insertBefore(j, f);
     })
-    (window, document, 'script', 'bigin', '프로젝트 ID', "KOR");
+    (window, document, 'script', 'bigin', '프로젝트 ID', "KRW");
 </script>  
 ```
 
