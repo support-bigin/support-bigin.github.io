@@ -1,0 +1,613 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2019-11-20 00:34:28",
+    "containerVersion": {
+        "path": "accounts/6000105777/containers/30111735/versions/0",
+        "accountId": "6000105777",
+        "containerId": "30111735",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6000105777/containers/30111735",
+            "accountId": "6000105777",
+            "containerId": "30111735",
+            "name": "godo-renew",
+            "publicId": "GTM-TPLWCKF",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1574150735135",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000105777/containers/30111735/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "4",
+                "name": "bigin_Disconnect User",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n    window.addEventListener(\"load\" , function(){\n        if(document.querySelector(\"로그아웃 버튼 셀렉터\")){\n            document.querySelector(\"로그아웃 버튼 셀렉터\").addEventListener(\"click\" , function(){\n                bigin.user(\"logout\");\n            })\n        }\n    })    \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574150876790",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "10",
+                "name": "bigin_Refund",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n\tfunction getBiginProductList(){\n\t\tvar biginProduct = {};\n\t\tvar biginProductList = [];\n\t\tbiginProduct.id = '제품 번호';\n\t\tbiginProduct.name = '제품 이름';\n\t\tbiginProduct.price = '제품 가격';\n\t\tbiginProduct.quantity = '제품 수량';\n\t\tbiginProduct.thumbnail = ['제품 썸네일 URL'];\n\t\tbiginProductList.push(biginProduct)\n\t\t\n\t\treturn biginProductList;\n\t}\n\t\n  // 전체 환불인 경우, \n\t(function(){\n\t\tif(bigin && bigin.event){\n\t\t\tbigin.event('bg:refund', {\n\t\t\t\tid : '거래 ID'\n\t\t\t});\n\t\t}\n\t})()\n\n\t// 부분 환불인 경우, \n  \n\t<!--\n\t(function(){\n\t\tvar biginProductList = getBiginProductList();\n\t\tif(bigin && bigin.event){\n\t\t\tif(biginProductList && Array.isArray(biginProductList) && biginProductList.length > 0){\n\t\t\t\tbigin.event('bg:refund', {\n\t\t\t\t\tid : '거래 ID',\n\t\t\t\t\tproducts : biginProductList\n\t\t\t\t});\n\t\t\t}\n\t\t}\n\t})()\n\t-->\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574150876791",
+                "firingTriggerId": [
+                    "9"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "11",
+                "name": "bigin_Tracking Script",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  (function(w, d, s, l, i, c) {\n    var f = d.getElementsByTagName(s)[0], j = d.createElement(s);\n    j.async = true;\n    j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js';\n    var u = navigator.userAgent.toLowerCase(), h = {\n      projectID: i,\n      currencyCode: c\n    };\n    if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) {\n      var r = setInterval(function () {\n        if (w[l] !== undefined) {\n          clearInterval(r);\n          w[l].config(h);\n        }\n      }, 50);\n    } else {\n      j.onload = function () {\n        w[l].config(h)\n      };\n    }\n    f.parentNode.insertBefore(j, f);\n  })(window, document, 'script', 'bigin', 'xxxxxxxx-x', \"KRW\");\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574150876792",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "13",
+                "name": "bigin_Cart",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n\t(function(){\n\t  if(bigin && bigin.event){\n\t    if(biginProductList && Array.isArray(biginProductList) && biginProductList.length > 0){\n\t      bigin.event(\"bg:cart\", {\n\t        products : biginProductList\n        })                \n      }\n    }\n  })()  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574150876793",
+                "firingTriggerId": [
+                    "12"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "14",
+                "name": "bigin_Identify User",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n\tvar handleLoad = function () {\n\t\tvar timer = 0;\n\t\tvar interverId = setInterval(function() {\n\t\t\ttimer += 500;\n\t\t\tif (timer >= 5000 ||(!document.querySelector(\".bigin-user\") || document.querySelector(\".bigin-user-id\").textContent)){\n\t\t\t\tclearInterval(interverId);\n\t\t\t\tif (document.querySelector(\".bigin-user\")) {\n\t\t\t\t\twindow.biginUser = {\n\t\t\t\t\t\t\"id\": document.querySelector(\".bigin-user-id\").textContent,\n\t\t\t\t\t\t\"name\": document.querySelector(\".bigin-user-name\").textContent,\n\t\t\t\t\t\t\"nickname\" : document.querySelector(\".bigin-user-nickname\").textContent,\n\t\t\t\t\t\t\"phoneCell\": document.querySelector(\".bigin-user-phone\").textContent,\n\t\t\t\t\t\t\"email\":  document.querySelector(\".bigin-user-email\").textContent\n\t\t\t\t\t};\n\t\t\t\t\tbigin.user(\"profile\", biginUser);\n\t\t\t\t}\n\t\t\t}\n\t\t}, 500);\n\t}\n\twindow.addEventListener(\"load\", function(){handleLoad();})\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574150876794",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "16",
+                "name": "bigin_View Product",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n\tvar goodsNo = '{goodsView.goodsNo}'; // 제품 번호\n  var goodsNm = \"{goodsView['goodsNmDetail']}\";    // 제품명\n  var brandNm = '{goodsView[\"brandNm\"]}';    // 브랜드명\n  var categoryNm = '{goodsView[\"cateNm\"]}';    // 카테고리명\n  var goodsPrice = '{goodsView[\"goodsPrice\"]}';    // 제품 가격\n\n\t(function(){\n\t  var biginProduct = {};\n    biginProduct.id = goodsNo;\n    biginProduct.name = goodsNm;\n    biginProduct.brand = brandNm;\n    biginProduct.category = [categoryNm];\n    biginProduct.price = parseInt(goodsPrice);\n    biginProduct.thumbnail = [window.location.hostname + $(\"#mainImage>img\").attr('src')];\n\t\t// 추가적인 제품 정보를 biginProduct 에 등록해주시기 바랍니다.\n    if(typeof(bigin) != 'undefined'){\n\t    bigin.event(\"bg:viewProduct\", biginProduct)\n    }\n  })()  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574151838066",
+                "firingTriggerId": [
+                    "15"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "17",
+                "name": "bigin_Checkout",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nfunction getBiginProductList(){\n  var biginProductList = [];\n  var biginProduct = {};\n  biginProduct.id= '제품 번호';\n  biginProduct.name= '제품 이름';\n  biginProduct.price = '상품 가격';\n  biginProduct.thumbnail = ['제품 썸네일 URL'];\n  biginProduct.quantity = '제품 수량'\n  biginProduct.variant = '제품 변형 옵션';\n\n\t// 체크아웃을 시도하는 모든 제품의 정보를 biginProductList에 담아주세요.\n  biginProductList.push(biginProduct);\n\n  return biginProductList;        \n}\n\n(function(){\n  var biginProductList;\n  biginProductList = getBiginProductList();\n\tif(bigin && bigin.event){\n\t  if(biginProductList && Array.isArray(biginProductList) && biginProductList.length > 0){\n\t    bigin.event(\"bg:checkout\", {\n\t\t  step : '결제 단계 정보',\n\t\t  // 제품 상세 페이지 또는 장바구니 페이지의 경우, step : 0\n\t\t  // 그 외의 체크아웃 단계의 페이지의 경우, step : 1 이상의 정수\n\t\t  option : '결제 옵션 정보',\n\t\t  products : biginProductList\n\t\t})\n    }\n  }\n})() \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574150876795",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "18",
+                "name": "bigin_Item To Cart",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n\tvar goodsNo = '{goodsView.goodsNo}'; // 제품 번호\n  var goodsNm = \"{goodsView['goodsNmDetail']}\";    // 제품명\n  var brandNm = '{goodsView[\"brandNm\"]}';    // 브랜드명\n  var categoryNm = '{goodsView[\"cateNm\"]}';    // 카테고리명\n  var goodsPrice = '{goodsView[\"goodsPrice\"]}';    // 제품 가격\n// 제품 상세 페이지의 경우, \n// goodsNo, goodsNm, brandNm 와 같은 전역변수가 제공됩니다. \n// 나머지 제품의 정보는 DOM scraping 방식으로 획득할 수 있습니다.\n\nfunction getBiginProductList(){\n\tvar biginProductList = [];\n\tvar biginProduct = {};\n  biginProduct.id=goodsNo;\n  biginProduct.name=goodsNm;\n  biginProduct.price = '제품 가격';\n  biginProduct.thumbnail = ['제품 썸네일 URL'];\n\tbiginProduct.quantity = '제품 수량'\n  biginProduct.variant = '제품 변형 옵션';\n\n\t// 장바구니 추가를 시도하는 모든 제품의 정보를 biginProductList에 담아주세요.\n  biginProductList.push(biginProduct);\n\n\treturn biginProductList;        \n}\n\n(function(){\n\tvar biginProductList;\n  biginProductList = getBiginProductList();\n\tif(Array.isArray(biginProductList)){\n\t  if(biginProductList.length > 0 && bigin && bigin.event){\n\t    bigin.event(\"bg:addToCart\", {\n\t\t    products : biginProductList\n\t\t  })\n    }\n  }\n})() \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574152083411",
+                "firingTriggerId": [
+                    "3"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "19",
+                "name": "bigin_Impression",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>  \n\t(function(){\n\t  try{\n\t    var link = {{Click Element}};\n      var biginProductWrapper = $(link).closest(\"단일 제품을 포함하는 태그의 셀렉터\").find(\".bigin-product\");\n      var biginProduct = {};\n\n      biginProduct.id = $(biginProductWrapper).find('.bigin-product-id').text();\n      biginProduct.name = $(biginProductWrapper).find('.bigin-product-name').text();\n      biginProduct.price = $(biginProductWrapper).find('.bigin-product-price').text();\n      biginProduct.list = window.location.hostname + \"상세 영역 ex. MD-추천, 신상품\";\n      biginProduct.position = $(biginProductWrapper).find('.bigin-product-position').text();  \n      biginProduct.thumbnail = [$(biginProductWrapper).find(\".bigin-product-thumbnail\").text()];\n\t\t\t// 추가적인 정보를 biginProduct 에 등록해주시기 바랍니다.\n      if(bigin && bigin.event){\n\t      bigin.event(\"bg:impression\", biginProduct)\n      }        \n    }catch(){\n\n    }    \n  })()  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574151631177",
+                "firingTriggerId": [
+                    "6"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "20",
+                "name": "bigin_Remove Cart",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n\t(function(){\n\t  if(typeof(bigin) != \"undefined\" && typeof(biginProductList) != \"undefined\"){\n\t    if(Array.isArray(biginProductList) && biginProductList.length > 0){\n\t\t\t\tbigin.event(\"bg:removeCart\", {\n\t        products : biginProductList\n        })\n      }\n    }\n\t})()  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574150876797",
+                "firingTriggerId": [
+                    "8"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "tagId": "21",
+                "name": "bigin_Purchase",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nfunction getBiginProductList(){\n\tvar biginProductList = [];\n\tvar biginProduct = {};\n  biginProduct.id= '제품 번호';\n  biginProduct.name= '제품 이름';\n  biginProduct.price = '상품 가격';\n  biginProduct.thumbnail = ['제품 썸네일 URL'];\n\tbiginProduct.quantity = '제품 수량'\n  biginProduct.variant = '제품 변형 옵션';\n\n\t// 구매된 모든 제품의 정보를 biginProductList에 담아주세요.\n  biginProductList.push(biginProduct);\n\n\treturn biginProductList;        \n}\n\n(function(){\n\tvar biginProductList;\n  biginProductList = getBiginProductList();\n\tif(bigin && bigin.event){\n\t  if(biginProductList && Array.isArray(biginProductList) && biginProductList.length > 0){\n\t    bigin.event(\"bg:purchase\", {\n\t\t\tid : '거래 ID',\n\t\t\trevenue : '거래 수익',\n\t\t\taffiliation : '제휴사',\n\t\t\tcoupon : '쿠폰',\n\t\t\tshipping : '배송비',\n\t\t    products : biginProductList\n\t\t\t// 위 사항 외의 거래 정보를 추가해주시기 바랍니다.\n\t\t  })\n    }\n  }\n})() \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1574152736828",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "triggerId": "3",
+                "name": "bigin_Item To Cart",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Classes}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "장바구니 버튼 class 명"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1574150876783"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "triggerId": "5",
+                "name": "bigin_Purchase",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "구매 완료 페이지 URL의 정규표현식"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1574150876784"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "triggerId": "6",
+                "name": "bigin_Impression",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "제품 상세페이지 URL의 정규표현식"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1574150876785"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "triggerId": "7",
+                "name": "bigin_Checkout",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Classes}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "구매하기 버튼 class 명"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1574150876785"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "triggerId": "8",
+                "name": "bigin_Remove Cart",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Classes}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "전체상품 비우기 버튼 class 명"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1574150876786"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "triggerId": "9",
+                "name": "bigin_Refund",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Classes}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "주문 취소 버튼 class 명"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1574150876787"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "triggerId": "12",
+                "name": "bigin_Cart",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "장바구니 페이지 URL 정규표현식"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1574150876788"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "triggerId": "15",
+                "name": "bigin_View Product",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "제품 상세 페이지의 URL 정규표현식"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1574150876789"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6000105777",
+                "containerId": "30111735",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            }
+        ],
+        "fingerprint": "1574210068259",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000105777/containers/30111735/versions/0?apiLink=version"
+    }
+}
