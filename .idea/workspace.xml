@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a8572-0da3-4e21-9fbe-43b461d35061" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/data/cafe24/container.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/godomall/container.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cafe24/container.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/cafe24/container.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/godomall/container.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/godomall/container.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="container.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="container.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/cafe24/container.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="705" column="26" lean-forward="true" selection-start-line="705" selection-start-column="26" selection-end-line="705" selection-end-column="26" />
+            <state relative-caret-position="75">
+              <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -39,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="container.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="container.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/godomall/container.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="612" column="21" lean-forward="true" selection-start-line="612" selection-start-column="21" selection-end-line="612" selection-end-column="21" />
+            <state relative-caret-position="75">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -173,8 +172,8 @@
         <option value="$PROJECT_DIR$/markdown/installation_godo.md" />
         <option value="$PROJECT_DIR$/markdown/installation_cafe24.md" />
         <option value="$PROJECT_DIR$/markdown/installation_javascript.md" />
-        <option value="$PROJECT_DIR$/data/cafe24/container.html" />
         <option value="$PROJECT_DIR$/data/godomall/container.html" />
+        <option value="$PROJECT_DIR$/data/cafe24/container.html" />
       </list>
     </option>
   </component>
@@ -270,11 +269,11 @@
       <recent name="$PROJECT_DIR$/data/product" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/godomall" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/markdown" />
       <recent name="$PROJECT_DIR$/images/cafe24-event" />
       <recent name="$PROJECT_DIR$/markdowns" />
-      <recent name="$PROJECT_DIR$/images/godo-triggers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -370,7 +369,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302034000" />
+    <option name="totallyTimeSpent" value="302977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -422,14 +421,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/markdown/godomall_guide.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/markdown/gtm_guide.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -817,20 +808,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/cafe24/container.html">
+    <entry file="file://$PROJECT_DIR$/data/godomall/Dashboard.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="705" column="26" lean-forward="true" selection-start-line="705" selection-start-column="26" selection-end-line="705" selection-end-column="26" />
+        <state relative-caret-position="116">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/godomall/container.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/godomall/container.html">
+    <entry file="file://$PROJECT_DIR$/data/cafe24/container.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="612" column="21" lean-forward="true" selection-start-line="612" selection-start-column="21" selection-end-line="612" selection-end-column="21" />
+        <state relative-caret-position="75">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
